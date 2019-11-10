@@ -1,4 +1,4 @@
-// Componenets==============
+// Components==============
 import { createGlobalStyle } from "styled-components";
 import { flexUnit } from "./Mixins";
 // =========================
@@ -9,9 +9,9 @@ const GlobalStyles = createGlobalStyle`
    /* Global style ============================*/
    /* =========================================*/
    
-   /* body {
+   body {
       color: ${({ theme }) => theme.black};
-   } */
+   }
 
    /* =========================================*/
    /* Font ====================================*/
@@ -19,6 +19,7 @@ const GlobalStyles = createGlobalStyle`
 
    html {
       font-family: raleway;
+      background-color: ${({ theme }) => theme.white};
    }
 
    h1 {

@@ -1,4 +1,5 @@
 require("dotenv").config();
+const path = require("path");
 
 module.exports = {
    siteMetadata: {
@@ -13,6 +14,7 @@ module.exports = {
       `gatsby-plugin-styled-components`,
       `gatsby-transformer-sharp`,
       `gatsby-plugin-sharp`,
+      `gatsby-plugin-netlify`,
       {
          resolve: `gatsby-source-filesystem`,
          options: {
@@ -21,13 +23,19 @@ module.exports = {
          }
       },
       {
+         resolve: "gatsby-plugin-root-import",
+         options: {
+            assets: path.join(__dirname, "src/assets")
+         }
+      },
+      {
          resolve: `gatsby-plugin-manifest`,
          options: {
             name: `new`,
             short_name: `new`,
             start_url: `/`,
-            background_color: `#6b37bf`,
-            theme_color: `#6b37bf`,
+            background_color: `#fbf4ea`,
+            theme_color: `#fbf4ea`,
             display: `standalone`,
             icon: `icon/icon.png`
          }
@@ -45,8 +53,15 @@ module.exports = {
       //     resolve: `gatsby-source-contentful`,
       //     options: {
       //        spaceId: process.env.CONTENTFUL_SPACE_ID,
-      //        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+      //        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      //        host: process.env.CONTENTFUL_HOST
       //     }
       //  },
+      // {
+      //    resolve: `gatsby-plugin-google-analytics`,
+      //    options: {
+      //       trackingId: "XX-XXXXXXXX-X"
+      //    }
+      // }
    ]
 };
