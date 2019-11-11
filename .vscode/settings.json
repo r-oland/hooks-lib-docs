@@ -25,15 +25,7 @@
       },
       {
          "icon": "component",
-         "extensions": ["global-layout-components"]
-      },
-      {
-         "icon": "component",
-         "extensions": ["global-ui-components"]
-      },
-      {
-         "icon": "component",
-         "extensions": ["page-components"]
+         "extensions": ["Component-groups"]
       }
    ]
 }
