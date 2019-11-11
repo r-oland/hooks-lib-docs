@@ -100,7 +100,14 @@ export default function Nav({
    };
 
    const subSelect = category => {
-      setSubSelected(category);
+      const Query = window.matchMedia("(min-width: 650px)");
+
+      if (Query.matches) {
+         setSubSelected(category);
+      } else {
+         setSubSelected(category);
+         setIsFoldedOut(false);
+      }
    };
 
    return (
