@@ -23,7 +23,7 @@ const Flex = styled.div`
    align-items: center;
 `;
 
-export default function Layout() {
+export default function Layout({ children }) {
    const [isFoldedOut, setIsFoldedOut] = useState(true);
    const [category, setCategory] = useState(
       <Flex>
@@ -40,6 +40,7 @@ export default function Layout() {
                isFoldedOut={isFoldedOut}
                setIsFoldedOut={setIsFoldedOut}
             />
+            {children}
             <Wrapper isFoldedOut={isFoldedOut}>{category}</Wrapper>
          </OverFlowFix>
          <GlobalStyles />

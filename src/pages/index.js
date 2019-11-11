@@ -8,7 +8,7 @@ export default function index() {
    return (
       <Layout>
          <Head
-            title="Home"
+            title="Components"
             description="Page description goes here"
             keywords="content"
          />
