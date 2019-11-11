@@ -79,34 +79,34 @@ const GlobalStyles = createGlobalStyle`
    }
 
    h1 {
-      ${flexUnit(4, 36, 65, "vw", "font-size")}
-   }
-
-   h2 {
       ${flexUnit(4, 32, 55, "vw", "font-size")}
    }
 
+   h2 {
+      ${flexUnit(3, 24, 34, "vw", "font-size")}
+   }
+
    h3 {
-      ${flexUnit(4, 30, 45, "vw", "font-size")}
+      ${flexUnit(2, 20, 25, "vw", "font-size")}
    }
 
    h4 {
-      ${flexUnit(4, 27.5, 40, "vw", "font-size")}
+      ${flexUnit(2, 20, 25, "vw", "font-size")}
    }
 
    h5 {
-      ${flexUnit(4, 24, 35, "vw", "font-size")}
+      ${flexUnit(2, 20, 25, "vw", "font-size")}
    }
 
    h6 {
-      ${flexUnit(4, 22, 30, "vw", "font-size")}
+      ${flexUnit(2, 20, 25, "vw", "font-size")}
    }
 
    p,
    a,
    strong,
    span {
-      ${flexUnit(4, 16, 20, "vw", "font-size")}
+      ${flexUnit(2.5, 16, 17, "vw", "font-size")}
    }
 
    /* =========================================*/

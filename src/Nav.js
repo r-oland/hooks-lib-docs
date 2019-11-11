@@ -37,9 +37,9 @@ const TextWrapper = styled.div`
 `;
 
 const S = styled.p`
-   ${flexUnit(2, 14, 15, "vw", "font-size")}
+   ${flexUnit(2.5, 15, 16, "vw", "font-size")}
    padding-left: 2em;
-   margin: 0 0 0.3em;
+   margin: 0 0 0.5em;
    cursor: pointer;
    color: #616161;
    color: ${({ category, selected }) =>
@@ -49,9 +49,9 @@ const S = styled.p`
 `;
 
 const M = styled.p`
-   ${flexUnit(2, 16, 17, "vw", "font-size")}
+   ${flexUnit(2.5, 16, 17, "vw", "font-size")}
    padding-left: 1em;
-   margin: 1.55em 0 0.5em;
+   margin: 1.5em 0 0.7em;
    cursor: pointer;
    color: ${({ category, selected }) =>
       category === selected ? `black` : `#616161`};
@@ -60,7 +60,7 @@ const M = styled.p`
 `;
 
 const L = styled.p`
-   ${flexUnit(2, 18, 19, "vw", "font-size")}
+   ${flexUnit(2.5, 18, 19, "vw", "font-size")}
    font-weight: 600;
    margin: 0;
 `;

@@ -15,7 +15,7 @@ export default function Head({ title, description, keywords }) {
       }
    `);
    const siteTitle = data.site.siteMetadata.title;
-   const primaryColor = "#fff";
+   const primaryColor = "#3D8693";
 
    return (
       <Helmet>
