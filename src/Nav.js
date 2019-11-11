@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import ButtonsDropdown from "./Component-groups/ButtonsDropdown";
 import ButtonsNormal from "./Component-groups/ButtonsNormal";
+import MenuHamburger from "./Component-groups/MenuHamburger";
 import { flexUnit } from "./style/Mixins";
 
 // =========================
@@ -65,9 +66,10 @@ const L = styled.p`
 `;
 
 const Collapse = styled.div`
-   display: ${({ category, selected }) =>
-      category === selected ? `block` : `none`};
-   transition: 2s;
+   max-height: ${({ category, selected }) =>
+      category === selected ? `20vh` : `0`};
+   transition: 0.5s;
+   overflow: hidden;
 `;
 
 const Divider = styled.div`
@@ -146,7 +148,18 @@ export default function Nav({
                >
                   Menus
                </M>
-               <Collapse category={`Menus`} selected={selected}></Collapse>
+               <Collapse category={`Menus`} selected={selected}>
+                  <S
+                     onClick={event => {
+                        changeCategory(<MenuHamburger />);
+                        subSelect(event.target.innerText);
+                     }}
+                     category={`Hamburger`}
+                     selected={subSelected}
+                  >
+                     Hamburger
+                  </S>
+               </Collapse>
                <M
                   onClick={event => {
                      select(event.target.innerText);
