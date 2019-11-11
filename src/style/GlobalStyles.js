@@ -105,7 +105,7 @@ const GlobalStyles = createGlobalStyle`
    p,
    a,
    strong,
-   span {
+   span,button {
       ${flexUnit(2.5, 16, 17, "vw", "font-size")}
    }
 
@@ -130,6 +130,16 @@ const GlobalStyles = createGlobalStyle`
    address {
       line-height: 1.2;
       padding: 0;
+   }
+
+   button {
+      background: none;
+      color: inherit;
+      border: none;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+      outline: inherit
    }
 
    pre {

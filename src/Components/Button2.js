@@ -3,5 +3,5 @@ import React from "react";
 // =========================
 
 export default function Button2() {
-   return <div>Button2</div>;
+   return <h2>Button2</h2>;
 }
