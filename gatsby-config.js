@@ -3,13 +3,13 @@ const path = require("path");
 
 module.exports = {
    siteMetadata: {
-      title: `New project`,
-      description: `undefined`,
-      author: `Roland Branten`
-      //siteUrl: ``,
+      title: `Components`,
+      description: `Collection of components`,
+      author: `Roland Branten`,
+      siteUrl: `https://componentsrb.netlify.com/`
    },
    plugins: [
-      // `gatsby-plugin-sitemap`,
+      `gatsby-plugin-sitemap`,
       `gatsby-plugin-react-helmet`,
       `gatsby-plugin-styled-components`,
       `gatsby-transformer-sharp`,
@@ -31,9 +31,9 @@ module.exports = {
       {
          resolve: `gatsby-plugin-manifest`,
          options: {
-            name: `new`,
-            short_name: `new`,
-            start_url: `/`,
+            name: `Components`,
+            short_name: `Components`,
+            start_url: `https://componentsrb.netlify.com/`,
             background_color: `#fbf4ea`,
             theme_color: `#fbf4ea`,
             display: `standalone`,
@@ -49,19 +49,5 @@ module.exports = {
             }
          }
       }
-      //   {
-      //     resolve: `gatsby-source-contentful`,
-      //     options: {
-      //        spaceId: process.env.CONTENTFUL_SPACE_ID,
-      //        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-      //        host: process.env.CONTENTFUL_HOST
-      //     }
-      //  },
-      // {
-      //    resolve: `gatsby-plugin-google-analytics`,
-      //    options: {
-      //       trackingId: "XX-XXXXXXXX-X"
-      //    }
-      // }
    ]
 };
