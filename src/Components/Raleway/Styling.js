@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { flexUnit } from "../../style/Mixins";
 // =========================
 
+// add to mixins
+
 export const S = styled.p`
   ${flexUnit(2.5, 15, 16, "vw", "font-size")}
   line-height: 1.3;
@@ -19,6 +21,8 @@ export const L = styled.p`
   font-weight: 500;
   line-height: 1.4;
 `;
+
+// add to global components
 
 // h1 {
 //   ${flexUnit(4, 32, 55, "vw", "font-size")}

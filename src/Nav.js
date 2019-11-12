@@ -2,7 +2,8 @@
 import MenuImp from "assets/Menu.inline.svg";
 import React, { useState } from "react";
 import styled from "styled-components";
-import Raleway from "./Component-groups/Raleway";
+import ButtonsNormal from "./Component-groups/ButtonsNormal";
+import Raleway from "./Component-groups/FontsRaleway";
 import { flexUnit } from "./style/Mixins";
 
 // =========================
@@ -122,7 +123,18 @@ export default function Nav({
           >
             Buttons
           </M>
-          <Collapse category={`Buttons`} selected={selected}></Collapse>
+          <Collapse category={`Buttons`} selected={selected}>
+            <S
+              onClick={event => {
+                changeCategory(<ButtonsNormal />);
+                subSelect(event.target.innerText);
+              }}
+              category={`Normal`}
+              selected={subSelected}
+            >
+              Normal
+            </S>
+          </Collapse>
           <M
             onClick={event => {
               select(event.target.innerText);
