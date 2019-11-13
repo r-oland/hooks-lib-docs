@@ -9,8 +9,8 @@ export const BigSquareButton = styled.div`
   ${flexUnit(2, 17, 19, "vw", "font-size")}
   font-weight: 600;
   display: inline-block;
-  padding: 1.2em 2em;
-  border-radius: 2px;
+  padding: 1.2em 1.8em;
+  border-radius: 6px;
   cursor: pointer;
 
   &:hover {

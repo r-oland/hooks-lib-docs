@@ -105,7 +105,9 @@ const GlobalStyles = createGlobalStyle`
    p,
    a,
    strong,
-   span {
+   span, 
+   li
+    {
       ${flexUnit(2.5, 16, 17, "vw", "font-size")}
    }
 

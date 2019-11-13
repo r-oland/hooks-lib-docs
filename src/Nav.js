@@ -2,8 +2,10 @@
 import MenuImp from "assets/Menu.inline.svg";
 import React, { useState } from "react";
 import styled from "styled-components";
+import ButtonsDropdown from "./Component-groups/ButtonsDropdown";
 import ButtonsNormal from "./Component-groups/ButtonsNormal";
 import Raleway from "./Component-groups/FontsRaleway";
+import Navigation from "./Component-groups/Navigation";
 import { flexUnit } from "./style/Mixins";
 
 // =========================
@@ -66,7 +68,7 @@ const L = styled.p`
 
 const Collapse = styled.div`
   max-height: ${({ category, selected }) =>
-    category === selected ? `20vh` : `0`};
+    category === selected ? `400px` : `0`};
   transition: 0.5s;
   overflow: hidden;
 `;
@@ -134,6 +136,16 @@ export default function Nav({
             >
               Normal
             </S>
+            <S
+              onClick={event => {
+                changeCategory(<ButtonsDropdown />);
+                subSelect(event.target.innerText);
+              }}
+              category={`Dropdown`}
+              selected={subSelected}
+            >
+              Dropdown
+            </S>
           </Collapse>
           <M
             onClick={event => {
@@ -144,7 +156,18 @@ export default function Nav({
           >
             Menus
           </M>
-          <Collapse category={`Menus`} selected={selected}></Collapse>
+          <Collapse category={`Menus`} selected={selected}>
+            <S
+              onClick={event => {
+                changeCategory(<Navigation />);
+                subSelect(event.target.innerText);
+              }}
+              category={`Navigation`}
+              selected={subSelected}
+            >
+              Navigation
+            </S>
+          </Collapse>
           <M
             onClick={event => {
               select(event.target.innerText);
