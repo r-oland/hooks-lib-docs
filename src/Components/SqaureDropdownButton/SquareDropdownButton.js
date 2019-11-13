@@ -42,24 +42,28 @@ const Content = styled.p`
 const DropdownArrowSvg = styled(DropdownArrowImp)`
   grid-row: 1;
   grid-column: 2/3;
-  width: 300%;
+  transform: translatex(100%);
 `;
 
 const Items = styled.div`
   position: absolute;
-  max-height: ${({ isExpended }) => (isExpended === true ? `400px` : "0px")};
+  max-height: ${({ isExpended }) => (isExpended === true ? `600%` : "0px")};
+  visibility: ${({ isExpended }) =>
+    isExpended === true ? `visible` : "hidden"};
   text-align: left;
   padding: 0 1em 0 1em;
   background-color: ${({ theme }) => theme.white};
   border-radius: 5px;
   margin-top: 5px;
   box-shadow: 0px 4px 8px rgba(112, 112, 112, 0.15);
-  transition: 0.3s;
+  transition: 0.5s;
   min-width: 120%;
   z-index: 100;
 
   ul {
-    display: ${({ isExpended }) => (isExpended === true ? `initial` : "none")};
+    opacity: ${({ isExpended }) => (isExpended === true ? `1` : "0")};
+    margin: 0;
+    transition: 0.2s ease-in;
   }
 
   li {

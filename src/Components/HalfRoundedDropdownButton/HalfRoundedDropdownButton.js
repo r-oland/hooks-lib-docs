@@ -42,12 +42,14 @@ const Content = styled.p`
 const DropdownArrowSvg = styled(DropdownArrowImp)`
   grid-row: 1;
   grid-column: 2/3;
-  width: 300%;
+  transform: translateX(100%);
 `;
 
 const Items = styled.div`
   position: absolute;
-  max-height: ${({ isExpended }) => (isExpended === true ? `500px` : "0px")};
+  max-height: ${({ isExpended }) => (isExpended === true ? `600%` : "0%")};
+  visibility: ${({ isExpended }) =>
+    isExpended === true ? `visible` : "hidden"};
   text-align: left;
   padding: 0 1em 0 1em;
   background-color: ${({ theme }) => theme.white};
@@ -59,7 +61,9 @@ const Items = styled.div`
   z-index: 100;
 
   ul {
-    display: ${({ isExpended }) => (isExpended === true ? `initial` : "none")};
+    opacity: ${({ isExpended }) => (isExpended === true ? `1` : "0")};
+    transition: 0.2s ease-in;
+    margin: 0;
   }
 
   li {
