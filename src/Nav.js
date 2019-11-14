@@ -5,6 +5,8 @@ import styled from "styled-components";
 import ButtonsDropdown from "./Component-groups/ButtonsDropdown";
 import ButtonsNormal from "./Component-groups/ButtonsNormal";
 import Raleway from "./Component-groups/FontsRaleway";
+import Hamburger from "./Component-groups/Hamburger";
+import MenuDropdown from "./Component-groups/MenuDropdown";
 import Navigation from "./Component-groups/Navigation";
 import { flexUnit } from "./style/Mixins";
 
@@ -166,6 +168,26 @@ export default function Nav({
               selected={subSelected}
             >
               Navigation
+            </S>
+            <S
+              onClick={event => {
+                changeCategory(<MenuDropdown />);
+                subSelect(event.target.innerText);
+              }}
+              category={`Menu dropdown`}
+              selected={subSelected}
+            >
+              Menu dropdown
+            </S>
+            <S
+              onClick={event => {
+                changeCategory(<Hamburger />);
+                subSelect(event.target.innerText);
+              }}
+              category={`Hamburger`}
+              selected={subSelected}
+            >
+              Hamburger
             </S>
           </Collapse>
           <M

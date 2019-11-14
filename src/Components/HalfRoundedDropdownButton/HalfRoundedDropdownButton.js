@@ -63,7 +63,7 @@ const Items = styled.div`
   ul {
     opacity: ${({ isExpended }) => (isExpended === true ? `1` : "0")};
     transition: 0.2s ease-in;
-    margin: 0;
+    margin: 0.5em 0;
   }
 
   li {
