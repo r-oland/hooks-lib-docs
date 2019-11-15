@@ -46,31 +46,44 @@ const Card = styled.div`
     cardIsVisible === true ? `visible` : "hidden"};
   background-color: ${({ theme }) => theme.white};
   box-shadow: 0px 4px 8px rgba(112, 112, 112, 0.15);
+  border-radius: 10px;
   position: absolute;
   top: 60px;
   transition: 0.5s ease-in-out;
   width: 100%;
   z-index: 100;
+  text-align: left;
 
   @media screen and (min-width: 600px) {
-    width: 200%;
-    left: -50%;
+    width: 175%;
+    left: -37.5%;
+  }
+
+  .dropdownItem {
+    border-bottom: rgba(112, 112, 112, 0.15) 2px solid;
+    margin: 1em;
+    padding: 1em;
+    transition: 0.6s;
+
+    &:hover {
+      transform: translateX(7.5px);
+    }
   }
 
   p {
     color: ${({ theme }) => theme.primary};
-    margin: 0;
-    padding: 1em;
-    border-bottom: rgba(112, 112, 112, 0.15) 2px solid;
+    margin: 0 0 0.4em;
+    ${flexUnit(1.5, 17.5, 18.5, "vw", "font-size")}
+  }
 
-    &:hover {
-      color: ${({ theme }) => theme.white};
-      background-color: ${({ theme }) => theme.primary};
-    }
+  .subDropdownText {
+    color: ${({ theme }) => theme.gray};
+    margin-left: 1.5em;
+    font-weight: 400;
   }
 `;
 
-export default function MenuCardDropdown({ children, name }) {
+export default function MenuCardDropdown2({ children, name }) {
   const [cardIsVisible, setCardIsVisible] = useState(false);
 
   const handleChange = () =>
@@ -97,8 +110,8 @@ export default function MenuCardDropdown({ children, name }) {
   );
 }
 
-/* <MenuCardDropdown name="Dropdown item">
+/* <MenuCardDropdown2 name="Dropdown item">
 <p>Title 1</p>
 <p>Title 2 </p>
 <p>Title 3</p>
-</MenuCardDropdown> */
+</MenuCardDropdown2> */
