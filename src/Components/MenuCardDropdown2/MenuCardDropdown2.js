@@ -61,9 +61,10 @@ const Card = styled.div`
 
   .dropdownItem {
     border-bottom: rgba(112, 112, 112, 0.15) 2px solid;
-    margin: 1em;
-    padding: 1em;
+    margin: 0;
+    padding: 1.3em 1.5em;
     transition: 0.6s;
+    opacity: ${({ cardIsVisible }) => (cardIsVisible === true ? `1` : "0")};
 
     &:hover {
       transform: translateX(7.5px);
@@ -78,7 +79,7 @@ const Card = styled.div`
 
   .subDropdownText {
     color: ${({ theme }) => theme.gray};
-    margin-left: 1.5em;
+    margin-left: 1em;
     font-weight: 400;
   }
 `;
@@ -86,8 +87,15 @@ const Card = styled.div`
 export default function MenuCardDropdown2({ children, name }) {
   const [cardIsVisible, setCardIsVisible] = useState(false);
 
-  const handleChange = () =>
-    cardIsVisible === false ? setCardIsVisible(true) : setCardIsVisible(false);
+  const handleChange = () => {
+    const Query = window.matchMedia("(min-width: 800px)");
+
+    if (cardIsVisible === false && Query.matches) {
+      setCardIsVisible(true);
+    } else if (cardIsVisible === true && Query.matches) {
+      setCardIsVisible(false);
+    }
+  };
 
   const handleClickChange = () => {
     const Query = window.matchMedia("(max-width: 800px)");
@@ -100,7 +108,7 @@ export default function MenuCardDropdown2({ children, name }) {
   };
 
   return (
-    <Wrapper onMouseOver={handleChange} onMouseOut={handleChange}>
+    <Wrapper onMouseEnter={handleChange} onMouseLeave={handleChange}>
       <Grid onClick={handleClickChange}>
         <Item cardIsVisible={cardIsVisible}>{name}</Item>
         <MenuDropdownArrowSvg cardIsVisible={cardIsVisible} />

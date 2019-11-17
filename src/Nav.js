@@ -245,24 +245,24 @@ export default function Nav({
             onClick={event => {
               select(event.target.innerText);
             }}
-            category={`Forums`}
+            category={`Forms`}
             selected={selected}
           >
-            Forums
+            Forms
           </M>
-          <Collapse category={`Forums`} selected={selected}></Collapse>
+          <Collapse category={`Forms`} selected={selected}></Collapse>
           <M
             onClick={event => {
               select(event.target.innerText);
             }}
-            category={`Others`}
+            category={`Footers`}
             selected={selected}
           >
-            Others
+            Footers
           </M>
-          <Collapse category={`Others`} selected={selected}></Collapse>
+          <Collapse category={`Footers`} selected={selected}></Collapse>
           <Divider />
-          <L>Utilities</L>
+          <L>Libraries</L>
           <M
             onClick={event => {
               select(event.target.innerText);
