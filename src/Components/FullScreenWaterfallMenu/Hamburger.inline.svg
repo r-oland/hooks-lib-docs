@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="41.905" height="16.888" viewBox="0 0 41.905 16.888">
+  <g data-name="Simple full screen waterfall menu" transform="translate(-756.337 -369.335)">
+    <path id="menu" data-name="Path 1" d="M1.288,0H24.476a1.288,1.288,0,1,1,0,2.576H1.288A1.288,1.288,0,1,1,1.288,0Z" transform="matrix(0.819, 0.574, -0.574, 0.819, 757.815, 369.335)" fill="#343333"/>
+    <path id="menu" data-name="Path 2" d="M1.288,0H24.476a1.288,1.288,0,0,1,1.288,1.288h0a1.288,1.288,0,0,1-1.288,1.288H1.288A1.288,1.288,0,0,1,0,1.288H0A1.288,1.288,0,0,1,1.288,0Z" transform="matrix(-0.819, 0.574, -0.574, -0.819, 798.242, 371.446)" fill="#343333"/>
+  </g>
+</svg>

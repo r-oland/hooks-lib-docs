@@ -2,11 +2,16 @@
 import MenuImp from "assets/Menu.inline.svg";
 import React, { useState } from "react";
 import styled from "styled-components";
+import AddOns from "./Component-groups/AddOns";
 import ButtonsDropdown from "./Component-groups/ButtonsDropdown";
 import ButtonsNormal from "./Component-groups/ButtonsNormal";
+import Cards from "./Component-groups/Cards";
+import Collapse from "./Component-groups/Collapse";
+import Dividers from "./Component-groups/Dividers";
 import Raleway from "./Component-groups/FontsRaleway";
 import Hamburger from "./Component-groups/Hamburger";
 import MenuDropdown from "./Component-groups/MenuDropdown";
+import Modals from "./Component-groups/Modals";
 import Navigation from "./Component-groups/Navigation";
 import { flexUnit } from "./style/Mixins";
 
@@ -68,7 +73,7 @@ const L = styled.p`
   margin: 0;
 `;
 
-const Collapse = styled.div`
+const Collap = styled.div`
   max-height: ${({ category, selected }) =>
     category === selected ? `400px` : `0`};
   transition: 0.5s;
@@ -127,7 +132,7 @@ export default function Nav({
           >
             Buttons
           </M>
-          <Collapse category={`Buttons`} selected={selected}>
+          <Collap category={`Buttons`} selected={selected}>
             <S
               onClick={event => {
                 changeCategory(<ButtonsNormal />);
@@ -148,7 +153,7 @@ export default function Nav({
             >
               Dropdown
             </S>
-          </Collapse>
+          </Collap>
           <M
             onClick={event => {
               select(event.target.innerText);
@@ -158,7 +163,7 @@ export default function Nav({
           >
             Menus
           </M>
-          <Collapse category={`Menus`} selected={selected}>
+          <Collap category={`Menus`} selected={selected}>
             <S
               onClick={event => {
                 changeCategory(<Navigation />);
@@ -189,9 +194,10 @@ export default function Nav({
             >
               Hamburger
             </S>
-          </Collapse>
+          </Collap>
           <M
             onClick={event => {
+              changeCategory(<Cards />);
               select(event.target.innerText);
             }}
             category={`Cards`}
@@ -199,9 +205,10 @@ export default function Nav({
           >
             Cards
           </M>
-          <Collapse category={`Cards`} selected={selected}></Collapse>
+          <Collap category={`Cards`} selected={selected}></Collap>
           <M
             onClick={event => {
+              changeCategory(<Dividers />);
               select(event.target.innerText);
             }}
             category={`Dividers`}
@@ -209,7 +216,7 @@ export default function Nav({
           >
             Dividers
           </M>
-          <Collapse category={`Dividers`} selected={selected}></Collapse>
+          <Collap category={`Dividers`} selected={selected}></Collap>
           <M
             onClick={event => {
               select(event.target.innerText);
@@ -219,7 +226,38 @@ export default function Nav({
           >
             Interactive
           </M>
-          <Collapse category={`Interactive`} selected={selected}></Collapse>
+          <Collap category={`Interactive`} selected={selected}>
+            <S
+              onClick={event => {
+                changeCategory(<Collapse />);
+                subSelect(event.target.innerText);
+              }}
+              category={`Collapse`}
+              selected={subSelected}
+            >
+              Collapse
+            </S>
+            <S
+              onClick={event => {
+                changeCategory(<AddOns />);
+                subSelect(event.target.innerText);
+              }}
+              category={`Add ons`}
+              selected={subSelected}
+            >
+              Add ons
+            </S>
+            <S
+              onClick={event => {
+                changeCategory(<Modals />);
+                subSelect(event.target.innerText);
+              }}
+              category={`Modals`}
+              selected={subSelected}
+            >
+              Modals
+            </S>
+          </Collap>
           <M
             onClick={event => {
               select(event.target.innerText);
@@ -229,7 +267,7 @@ export default function Nav({
           >
             Typography
           </M>
-          <Collapse category={`Typography`} selected={selected}>
+          <Collap category={`Typography`} selected={selected}>
             <S
               onClick={event => {
                 changeCategory(<Raleway />);
@@ -240,7 +278,7 @@ export default function Nav({
             >
               Raleway
             </S>
-          </Collapse>
+          </Collap>
           <M
             onClick={event => {
               select(event.target.innerText);
@@ -250,17 +288,7 @@ export default function Nav({
           >
             Forms
           </M>
-          <Collapse category={`Forms`} selected={selected}></Collapse>
-          <M
-            onClick={event => {
-              select(event.target.innerText);
-            }}
-            category={`Footers`}
-            selected={selected}
-          >
-            Footers
-          </M>
-          <Collapse category={`Footers`} selected={selected}></Collapse>
+          <Collap category={`Forms`} selected={selected}></Collap>
           <Divider />
           <L>Libraries</L>
           <M

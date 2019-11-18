@@ -11,6 +11,8 @@ const NavWrapper = styled.div`
     fixed === true &&
     css`
       position: fixed;
+      top: 0;
+      left: 0;
     `}
 `;
 
