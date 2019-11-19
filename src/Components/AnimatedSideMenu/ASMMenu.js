@@ -66,7 +66,7 @@ export default function ASMMenu({ menuState, setMenuState }) {
     <Hide>
       <Menu menuState={menuState}>
         <Container>
-          <ul menuState={menuState}>
+          <ul>
             <li onClick={changeMenu}>page 1</li>
 
             <li onClick={changeMenu}>page 2</li>

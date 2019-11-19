@@ -199,6 +199,7 @@ export default function Nav({
             onClick={event => {
               changeCategory(<Cards />);
               select(event.target.innerText);
+              subSelect(event.target.innerText);
             }}
             category={`Cards`}
             selected={selected}
@@ -210,6 +211,7 @@ export default function Nav({
             onClick={event => {
               changeCategory(<Dividers />);
               select(event.target.innerText);
+              subSelect(event.target.innerText);
             }}
             category={`Dividers`}
             selected={selected}
@@ -294,6 +296,7 @@ export default function Nav({
           <M
             onClick={event => {
               select(event.target.innerText);
+              subSelect(event.target.innerText);
             }}
             category={`Carousel`}
             selected={selected}
@@ -303,6 +306,7 @@ export default function Nav({
           <M
             onClick={event => {
               select(event.target.innerText);
+              subSelect(event.target.innerText);
             }}
             category={`Maps`}
             selected={selected}
@@ -312,6 +316,7 @@ export default function Nav({
           <M
             onClick={event => {
               select(event.target.innerText);
+              subSelect(event.target.innerText);
             }}
             category={`Typed`}
             selected={selected}

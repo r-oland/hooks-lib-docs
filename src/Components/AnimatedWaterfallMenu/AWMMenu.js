@@ -54,7 +54,7 @@ export default function AWMMenu({ menuState, setMenuState, fixed }) {
   return (
     <MenuWrapper menuState={menuState} fixed={fixed}>
       <Container>
-        <ul menuState={menuState}>
+        <ul>
           <li onClick={changeMenu}>page 1</li>
 
           <li onClick={changeMenu}>page 2</li>
