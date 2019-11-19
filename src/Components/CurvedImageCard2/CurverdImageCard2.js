@@ -23,11 +23,11 @@ const Image = styled(Img)`
 `;
 
 const CurveSvg = styled(CurveImp)`
-  height: 100%;
+  height: 105%;
   width: 40%;
   position: absolute;
   left: 18.5%;
-  top: 0;
+  top: -2.5%;
   transform: scale(1);
 
   #changeColor {

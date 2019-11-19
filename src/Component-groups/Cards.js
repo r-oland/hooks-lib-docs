@@ -55,7 +55,7 @@ export default function Cards() {
         <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/WaveCard/WaveCard.js">
           <WaveCard img={data.file.childImageSharp.fluid}></WaveCard>
         </Clipboard>
-        <Clipboard data-clipboard-text="d:/Freelancing/Code/Real projects/Components/src/Components/CurvedImageCard2/CurverdImageCard2.js">
+        <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/CurvedImageCard2/CurverdImageCard2.js">
           <CurvedImageCard2
             img={data.file.childImageSharp.fluid}
           ></CurvedImageCard2>

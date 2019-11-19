@@ -22,8 +22,10 @@ const Image = styled(Img)`
 
 const CurveSvg = styled(CurveImp)`
   position: absolute;
-  right: 0;
-  transform: translateY(-50%) scale(1, 1);
+  right: -5%;
+  height: 10%;
+  width: 110%;
+  transform: translateY(-60%);
 
   #changeColor {
     fill: ${({ theme }) => theme.white};
