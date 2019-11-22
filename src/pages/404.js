@@ -1,9 +1,9 @@
 // Components==============
+import { flexUnit } from "mixins";
 import React from "react";
 import styled from "styled-components";
 import Head from "../Layout/Head";
 import Layout from "../Layout/Layout";
-import { flexUnit } from "../style/Mixins";
 // =========================
 
 const F0F = styled.h1`

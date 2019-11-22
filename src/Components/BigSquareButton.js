@@ -1,6 +1,6 @@
 // Components==============
+import { flexUnit } from "mixins";
 import styled from "styled-components";
-import { flexUnit } from "../style/Mixins";
 // =========================
 
 export const BigSquareButton = styled.div`
@@ -10,7 +10,7 @@ export const BigSquareButton = styled.div`
   font-weight: 600;
   display: inline-block;
   padding: 1.2em 1.8em;
-  border-radius: 6px;
+  border-radius: ${({ theme }) => theme.borderRadius};
   cursor: pointer;
 
   &:hover {

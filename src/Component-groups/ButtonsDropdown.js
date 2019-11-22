@@ -1,4 +1,5 @@
 // Components==============
+import { Container } from "mixins";
 import React from "react";
 import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
@@ -6,7 +7,6 @@ import HalfRoundedDropdownButton from "../Components/HalfRoundedDropdownButton/H
 import HalfRoundedDropdownButton2 from "../Components/HalfRoundedDropdownButton2/HalfRoundedDropdownButton2";
 import SquareDropdownButton from "../Components/SqaureDropdownButton/SquareDropdownButton";
 import SquareDropdownButton2 from "../Components/SqaureDropdownButton2/SqaureDropdownButton2";
-import { Container } from "../style/Mixins";
 // =========================
 
 const Wrapper = styled(Container)`

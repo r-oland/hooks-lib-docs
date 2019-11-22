@@ -1,16 +1,15 @@
 // Components==============
 import Stock1Imp from "assets/Stock1.inline.svg";
+import { Container } from "mixins";
 import React from "react";
 import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
 import { BigSquareButton } from "../Components/BigSquareButton";
-import { HalfRoundedButton } from "../Components/HalfRoundedButton";
 import { IconButton } from "../Components/IconButton";
 import { RoundedButton } from "../Components/RoundedButton";
 import SlideInButton from "../Components/SlideInButton";
 import { SquareButton } from "../Components/SquareButton";
 import { TransparentButton } from "../Components/TransparentButton";
-import { Container } from "../style/Mixins";
 // =========================
 
 const Wrapper = styled(Container)`
@@ -46,9 +45,6 @@ export default function ButtonsNormal() {
     <Wrapper>
       <h2>Normal buttons</h2>
       <Grid>
-        <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/HalfRoundedButton.js">
-          <HalfRoundedButton>Button text</HalfRoundedButton>
-        </Clipboard>
         <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/RoundedButton.js">
           <RoundedButton>Button text</RoundedButton>
         </Clipboard>

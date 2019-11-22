@@ -1,5 +1,6 @@
 // Components==============
 import { graphql, useStaticQuery } from "gatsby";
+import { Container } from "mixins";
 import React from "react";
 import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
@@ -8,7 +9,6 @@ import CurvedImageCard2 from "../Components/CurvedImageCard2/CurverdImageCard2";
 import SimpleImageCard from "../Components/SimpleImageCard";
 import { SimpleShadowCard } from "../Components/SimpleShadowCard";
 import WaveCard from "../Components/WaveCard/WaveCard";
-import { Container } from "../style/Mixins";
 // =========================
 
 const Wrapper = styled(Container)`

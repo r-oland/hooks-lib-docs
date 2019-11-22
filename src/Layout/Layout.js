@@ -1,10 +1,10 @@
 // Components==============
 import Icon from "assets/Icon.svg";
+import { OverFlowFix } from "mixins";
 import React, { useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import Nav from "../Nav";
 import GlobalStyles from "../style/GlobalStyles";
-import { OverFlowFix } from "../style/Mixins";
 import { Variables } from "../style/themes";
 // =========================
 

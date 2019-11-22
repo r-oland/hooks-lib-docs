@@ -74,7 +74,7 @@ const GlobalStyles = createGlobalStyle`
    }
 
    html {
-      font-family: raleway;
+      font-family: Raleway;
       background-color: ${({ theme }) => theme.white};
    }
 
@@ -121,8 +121,22 @@ const GlobalStyles = createGlobalStyle`
       box-sizing: border-box;
    }
 
-   body {
-      margin: 0;
+
+   body,
+   h1,
+   h2,
+   h3,
+   h4,
+   p,
+   ul,
+   ol,
+   li,
+   figure,
+   figcaption,
+   blockquote,
+   dl,
+   dd {
+   margin: 0;
    }
 
    p,
@@ -130,7 +144,7 @@ const GlobalStyles = createGlobalStyle`
    ol,
    dl,
    address {
-      line-height: 1.2;
+      line-height: ${({ theme }) => theme.lineHeight.s3};
       padding: 0;
    }
 

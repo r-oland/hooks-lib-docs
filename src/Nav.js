@@ -1,5 +1,6 @@
 // Components==============
 import MenuImp from "assets/Menu.inline.svg";
+import { flexUnit } from "mixins";
 import React, { useState } from "react";
 import styled from "styled-components";
 import AddOns from "./Component-groups/AddOns";
@@ -13,7 +14,6 @@ import Hamburger from "./Component-groups/Hamburger";
 import MenuDropdown from "./Component-groups/MenuDropdown";
 import Modals from "./Component-groups/Modals";
 import Navigation from "./Component-groups/Navigation";
-import { flexUnit } from "./style/Mixins";
 
 // =========================
 

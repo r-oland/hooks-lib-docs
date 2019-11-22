@@ -1,6 +1,6 @@
 // Components==============
+import { flexUnit } from "mixins";
 import styled from "styled-components";
-import { flexUnit } from "../style/Mixins";
 // =========================
 
 export const TransparentButton = styled.div`

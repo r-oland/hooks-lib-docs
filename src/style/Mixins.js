@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+// FLex unit
+
 export function flexUnit(amount, min, max, unit = "vw", prop = "font-size") {
   const minBreakpoint = (min / amount) * 100;
   const maxBreakpoint = max ? (max / amount) * 100 : false;
@@ -24,10 +26,14 @@ export function flexUnit(amount, min, max, unit = "vw", prop = "font-size") {
    `;
 }
 
+// overflow fix
+
 export const OverFlowFix = styled.div`
   overflow: hidden;
   position: relative;
 `;
+
+// Container
 
 export const Container = styled.div`
   margin: 0 2.5%;
@@ -39,4 +45,22 @@ export const Container = styled.div`
   @media screen and (min-width: 1200px) {
     margin: 0 7.5%;
   }
+`;
+
+// Font sizes
+
+export const Xs = styled.p`
+  font-size: 14px;
+`;
+
+export const S = styled.p`
+  ${flexUnit(2.5, 15, 16, "vw", "font-size")}
+`;
+
+export const M = styled.p`
+  ${flexUnit(2.5, 16, 17, "vw", "font-size")}
+`;
+
+export const L = styled.p`
+  ${flexUnit(2.5, 18, 19, "vw", "font-size")}
 `;

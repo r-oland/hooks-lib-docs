@@ -1,7 +1,7 @@
 // Components==============
+import { flexUnit } from "mixins";
 import React, { useState } from "react";
 import styled from "styled-components";
-import { flexUnit } from "../../style/Mixins";
 import MenuDropdownArrowImp from "./MenuDropdownArrow.inline.svg";
 // =========================
 

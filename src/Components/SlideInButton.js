@@ -1,9 +1,9 @@
 // Components==============
 // =========================
 // Components==============
+import { flexUnit } from "mixins";
 import React from "react";
 import styled from "styled-components";
-import { flexUnit } from "../style/Mixins";
 // =========================
 
 const ButtonWrapper = styled.div`

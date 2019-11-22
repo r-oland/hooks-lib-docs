@@ -1,7 +1,7 @@
 // Components==============
+import { Container, flexUnit } from "mixins";
 import React from "react";
 import styled from "styled-components";
-import { Container, flexUnit } from "../../style/Mixins";
 // =========================
 
 const MenuWrapper = styled.div`

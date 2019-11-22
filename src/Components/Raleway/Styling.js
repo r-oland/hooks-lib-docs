@@ -1,25 +1,24 @@
 // Components==============
+import { flexUnit } from "mixins";
 import styled from "styled-components";
-import { flexUnit } from "../../style/Mixins";
 // =========================
 
 // add to mixins
 
+export const Xs = styled.p`
+  font-size: 14px;
+`;
+
 export const S = styled.p`
   ${flexUnit(2.5, 15, 16, "vw", "font-size")}
-  line-height: 1.3;
 `;
 
 export const M = styled.p`
   ${flexUnit(2.5, 16, 17, "vw", "font-size")}
-  font-weight: 500;
-  line-height: 1.3;
 `;
 
 export const L = styled.p`
   ${flexUnit(2.5, 18, 19, "vw", "font-size")}
-  font-weight: 500;
-  line-height: 1.4;
 `;
 
 // add to global components
