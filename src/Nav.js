@@ -23,7 +23,7 @@ const NavWrapper = styled.div`
   position: fixed;
   left: ${({ isFoldedOut }) => (isFoldedOut === true ? `0` : `-350px`)};
   top: 0;
-  background-color: ${({ theme }) => theme.white};
+  background-color: ${({ theme: { white } }) => white};
   overflow-x: hidden;
   overflow-y: scroll;
 `;

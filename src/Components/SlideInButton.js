@@ -1,18 +1,20 @@
 // Components==============
 // =========================
 // Components==============
-import { flexUnit } from "mixins";
+import { M } from "mixins";
 import React from "react";
 import styled from "styled-components";
 // =========================
 
 const ButtonWrapper = styled.div`
   position: relative;
-  background-color: ${({ theme }) => theme.white};
-  color: ${({ theme }) => theme.black};
+  background-color: ${({ theme: { white } }) => white};
+  color: ${({ theme: { black } }) => black};
+  border-radius: ${({ theme: { borderRadius } }) => borderRadius};
   display: inline-block;
-  border-radius: 2px;
   cursor: pointer;
+  overflow: hidden;
+  box-shadow: ${({ theme: { shadow } }) => shadow.small};
 `;
 
 const Grid = styled.div`
@@ -26,23 +28,23 @@ const Grid = styled.div`
     }
 
     .content {
-      color: ${({ theme }) => theme.white};
+      color: ${({ theme: { white } }) => white};
     }
   }
 `;
 
 const Slider = styled.div`
   width: 100%;
-  background-color: ${({ theme }) => theme.primary};
+  background-color: ${({ theme: { primary } }) => primary.s4};
   grid-row: 1;
-  transition: 1s;
+  transition: 0.8s;
 `;
 
-const Content = styled.p`
-  ${flexUnit(2, 16, 18, "vw", "font-size")}
-  font-weight: 400;
-  margin: 0;
-  padding: 0.6em 2.5em 0.6em 0.75em;
+const Content = styled(M)`
+  font-weight: ${({ theme: { fontWeight } }) => fontWeight.bold};
+  padding: ${({ theme: { spacing } }) =>
+    `${spacing.s3} ${spacing.s7} ${spacing.s3} ${spacing.s4}`};
+
   grid-row: 1;
   justify-self: flex-start;
   transition: 0.3s;

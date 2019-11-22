@@ -75,7 +75,7 @@ const GlobalStyles = createGlobalStyle`
 
    html {
       font-family: Raleway;
-      background-color: ${({ theme }) => theme.white};
+      background-color: ${({ theme: { gray } }) => gray.s1};
    }
 
    h1 {

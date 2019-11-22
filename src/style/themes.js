@@ -2,13 +2,15 @@ export const Variables = {
   white: "#ffffff",
   black: "#212121",
   gray: {
-    s1: "#E8E8E8",
-    s2: "#D9D9D9",
-    s3: "#C2C2C2",
-    s4: "#949494",
-    s5: "#6E6E6E",
-    s6: "#5C5C5C",
-    s7: "#474747"
+    s1: "#F9F9F9",
+    s2: "#E8E8E8",
+    s3: "#D9D9D9",
+    s4: "#C2C2C2",
+    s5: "#949494",
+    s6: "#6E6E6E",
+    s7: "#5C5C5C",
+    s8: "#474747",
+    s9: "#2B2B2B"
   },
   primary: {
     s1: "HSL(185, 29%, 63%)",
@@ -24,6 +26,7 @@ export const Variables = {
   borderRadius2: "15px",
   fontWeight: {
     normal: "400",
+    semiBold: "500",
     bold: "600"
   },
   lineHeight: {
@@ -52,38 +55,35 @@ export const Variables = {
     s2: "0.5em",
     s3: "0.75em",
     s4: "1em",
-    s5: "1.5em",
-    s6: "2em",
-    s7: "3em",
-    s8: "4em",
-    s9: "6em",
-    s10: "8em",
-    s11: "12em",
-    s12: "16em",
-    s13: "24em",
-    s14: "30em",
-    s15: "48em"
+    s5: "1.25em",
+    s6: "1.5em",
+    s7: "2em",
+    s8: "3em",
+    s9: "4em",
+    s10: "6em",
+    s11: "8em",
+    s12: "12em",
+    s13: "16em",
+    s14: "24em",
+    s15: "30em",
+    s16: "48em"
   },
   rSpacing: {
     s1: "0.25rem",
     s2: "0.5rem",
     s3: "0.75rem",
     s4: "1rem",
-    s5: "1.5rem",
-    s6: "2rem",
-    s7: "3rem",
-    s8: "4rem",
-    s9: "6rem",
-    s10: "8rem",
-    s11: "12rem",
-    s12: "16rem",
-    s13: "24rem",
-    s14: "30rem",
-    s15: "48rem"
-  },
-  //
-  //
-  white: "#F5F5F5",
-  primary: "#3D8693",
-  secondary: "#50B0A2"
+    s5: "1.25rem",
+    s6: "1.5rem",
+    s7: "2rem",
+    s8: "3rem",
+    s9: "4rem",
+    s10: "6rem",
+    s11: "8rem",
+    s12: "12rem",
+    s13: "16rem",
+    s14: "24rem",
+    s15: "30rem",
+    s16: "48rem"
+  }
 };

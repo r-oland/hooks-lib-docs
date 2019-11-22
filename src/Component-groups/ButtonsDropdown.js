@@ -3,10 +3,8 @@ import { Container } from "mixins";
 import React from "react";
 import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
-import HalfRoundedDropdownButton from "../Components/HalfRoundedDropdownButton/HalfRoundedDropdownButton";
-import HalfRoundedDropdownButton2 from "../Components/HalfRoundedDropdownButton2/HalfRoundedDropdownButton2";
-import SquareDropdownButton from "../Components/SqaureDropdownButton/SquareDropdownButton";
-import SquareDropdownButton2 from "../Components/SqaureDropdownButton2/SqaureDropdownButton2";
+import SimpleDropdownButton from "../Components/SimpleDropdownButton/SimpleDropdownButton";
+import SimpleDropdownButton2 from "../Components/SimpleDropdownButton2/SimpleDropdownButton2";
 // =========================
 
 const Wrapper = styled(Container)`
@@ -25,37 +23,21 @@ export default function ButtonsDropdown() {
     <Wrapper>
       <h2>Dropdown buttons</h2>
       <Grid>
-        <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/HalfRoundedDropdownButton/HalfRoundedDropdownButton.js">
-          <HalfRoundedDropdownButton buttonText={`button text`}>
+        <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SimpleDropdownButton/SimpleDropdownButton.js">
+          <SimpleDropdownButton buttonText={`button text`}>
             <li>Choice one</li>
             <li>Choice two</li>
             <li>Choice three</li>
             <li>Choice four</li>
-          </HalfRoundedDropdownButton>
+          </SimpleDropdownButton>
         </Clipboard>
-        <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/HalfRoundedDropdownButton/HalfRoundedDropdownButton2.js">
-          <HalfRoundedDropdownButton2 buttonText={`button text`}>
+        <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SimpleDropdownButton/SimpleDropdownButton2.js">
+          <SimpleDropdownButton2 buttonText={`button text`}>
             <li>Choice one</li>
             <li>Choice two</li>
             <li>Choice three</li>
             <li>Choice four</li>
-          </HalfRoundedDropdownButton2>
-        </Clipboard>
-        <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/HalfRoundedDropdownButton/SquareDropdownButton.js">
-          <SquareDropdownButton buttonText={`button text`}>
-            <li>Choice one</li>
-            <li>Choice two</li>
-            <li>Choice three</li>
-            <li>Choice four</li>
-          </SquareDropdownButton>
-        </Clipboard>
-        <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/HalfRoundedDropdownButton/SquareDropdownButton2.js">
-          <SquareDropdownButton2 buttonText={`button text`}>
-            <li>Choice one</li>
-            <li>Choice two</li>
-            <li>Choice three</li>
-            <li>Choice four</li>
-          </SquareDropdownButton2>
+          </SimpleDropdownButton2>
         </Clipboard>
       </Grid>
     </Wrapper>

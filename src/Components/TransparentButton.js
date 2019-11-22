@@ -1,22 +1,21 @@
 // Components==============
-import { flexUnit } from "mixins";
+import { M } from "mixins";
 import styled from "styled-components";
 // =========================
 
-export const TransparentButton = styled.div`
-  color: ${({ theme }) => theme.white};
-  border: ${({ theme }) => theme.white} 2px solid;
-  ${flexUnit(2, 17, 19, "vw", "font-size")}
-  font-weight: 500;
+export const TransparentButton = styled(M)`
+  color: ${({ theme: { white } }) => white};
+  border: ${({ theme: { white } }) => white} 2px solid;
+  font-weight: ${({ theme: { fontWeight } }) => fontWeight.semiBold};
   display: inline-block;
-  padding: 0.6em 1.6em;
-  border-radius: 2px;
+  padding: ${({ theme: { spacing } }) => `${spacing.s2} ${spacing.s6}`};
+  border-radius: ${({ theme: { borderRadius } }) => borderRadius};
   cursor: pointer;
 
   &:hover {
-    border: ${({ theme }) => theme.black} 2px solid;
-    background-color: ${({ theme }) => theme.black};
-    color: ${({ theme }) => theme.white};
+    border: ${({ theme: { black } }) => black} 2px solid;
+    background-color: ${({ theme: { black } }) => black};
+    color: ${({ theme: { white } }) => white};
     transition: all 0.2s ease-in-out;
   }
 `;

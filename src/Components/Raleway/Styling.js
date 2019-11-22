@@ -1,25 +1,23 @@
 // Components==============
-import { flexUnit } from "mixins";
-import styled from "styled-components";
 // =========================
 
 // add to mixins
 
-export const Xs = styled.p`
-  font-size: 14px;
-`;
+// export const Xs = styled.p`
+//   font-size: 14px;
+// `;
 
-export const S = styled.p`
-  ${flexUnit(2.5, 15, 16, "vw", "font-size")}
-`;
+// export const S = styled.p`
+//   ${flexUnit(2.5, 15, 16, "vw", "font-size")}
+// `;
 
-export const M = styled.p`
-  ${flexUnit(2.5, 16, 17, "vw", "font-size")}
-`;
+// export const M = styled.p`
+//   ${flexUnit(2.5, 16, 17, "vw", "font-size")}
+// `;
 
-export const L = styled.p`
-  ${flexUnit(2.5, 18, 19, "vw", "font-size")}
-`;
+// export const L = styled.p`
+//   ${flexUnit(2.5, 18, 19, "vw", "font-size")}
+// `;
 
 // add to global components
 

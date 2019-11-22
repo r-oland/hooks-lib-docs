@@ -2,7 +2,7 @@
 import { flexUnit } from "mixins";
 import React, { useState } from "react";
 import styled from "styled-components";
-import DropdownArrowImp from ".//DropdownArrow.inline.svg";
+import DropdownArrowImp from "./DropdownArrow.inline.svg";
 // =========================
 
 const Grid = styled.div`
@@ -42,12 +42,12 @@ const Content = styled.p`
 const DropdownArrowSvg = styled(DropdownArrowImp)`
   grid-row: 1;
   grid-column: 2/3;
-  transform: translateX(100%);
+  transform: translatex(100%);
 `;
 
 const Items = styled.div`
   position: absolute;
-  max-height: ${({ isExpended }) => (isExpended === true ? `600%` : "0%")};
+  max-height: ${({ isExpended }) => (isExpended === true ? `600%` : "0px")};
   visibility: ${({ isExpended }) =>
     isExpended === true ? `visible` : "hidden"};
   text-align: left;
@@ -56,14 +56,14 @@ const Items = styled.div`
   border-radius: 5px;
   margin-top: 5px;
   box-shadow: 0px 4px 8px rgba(112, 112, 112, 0.15);
-  transition: 0.3s;
+  transition: 0.5s;
   min-width: 120%;
   z-index: 100;
 
   ul {
     opacity: ${({ isExpended }) => (isExpended === true ? `1` : "0")};
-    transition: 0.2s ease-in;
     margin: 0.5em 0;
+    transition: 0.2s ease-in;
   }
 
   li {
@@ -71,14 +71,13 @@ const Items = styled.div`
     border-radius: 5px;
 
     &:hover {
-      background-color: ${({ theme }) => theme.primary};
-      color: ${({ theme }) => theme.white};
+      color: ${({ theme }) => theme.primary};
       transition: background-color 0.3s;
     }
   }
 `;
 
-export default function HalfRoundedDropdownButton({ children, buttonText }) {
+export default function SimpleDropdownButton2({ children, buttonText }) {
   const [isExpended, setIsExpended] = useState(false);
 
   const handleEvent = () =>
@@ -99,9 +98,9 @@ export default function HalfRoundedDropdownButton({ children, buttonText }) {
   );
 }
 
-/* <HalfRoundedDropdownButton buttonText={`button text`}>
+/* <SimpleDropdownButton2 buttonText={`button text`}>
 <li>one</li>
 <li>two</li>
 <li>three</li>
 <li>four</li>
-</HalfRoundedDropdownButton> */
+</SimpleDropdownButton2> */
