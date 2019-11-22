@@ -26,7 +26,7 @@ const Margin = styled(Clipboard)`
 `;
 
 const BackgroundColor = styled.div`
-  background-color: ${({ theme }) => theme.primary};
+  background-color: ${({ theme: { primary } }) => primary.s4};
 `;
 
 export default function Navigation() {

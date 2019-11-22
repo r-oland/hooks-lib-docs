@@ -11,6 +11,6 @@ export const HalfRoundedSmall = styled(HalfRoundedSmallImp)`
   /* set position absolute to this element and position relative + zIndex to previous/next element for smooth overlap */
 
   #changeColor {
-    fill: ${({ theme }) => theme.primary};
+    fill: ${({ theme: { primary} }) => primary.s4};
   }
 `;

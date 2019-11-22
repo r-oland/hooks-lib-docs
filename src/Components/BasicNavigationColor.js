@@ -6,7 +6,7 @@ import styled, { css } from "styled-components";
 
 const NavWrapper = styled.div`
   width: 100vw;
-  background-color: ${({ theme }) => theme.primary};
+  background-color: ${({ theme: { primary } }) => primary.s4};
 
   ${({ fixed }) =>
     fixed === true &&
@@ -27,7 +27,7 @@ const FlexContainer = styled(Container)`
 const Logo = styled.div`
   font-weight: 600;
   ${flexUnit(2, 19, 20, "vw", "font-size")}
-  color: ${({ theme }) => theme.white};
+  color: ${({ theme: { white } }) => white};
 `;
 
 const MenuItems = styled.ul`
@@ -35,7 +35,7 @@ const MenuItems = styled.ul`
   justify-content: flex-end;
   align-items: center;
   margin: 0;
-  color: ${({ theme }) => theme.white};
+  color: ${({ theme: { white } }) => white};
 
   @media screen and (min-width: 900px) {
     display: flex;
@@ -48,16 +48,16 @@ const MenuItems = styled.ul`
     ${flexUnit(1.5, 17, 18, "vw", "font-size")}
 
     &:hover {
-      color: ${({ theme }) => theme.black};
+      color: ${({ theme: { black } }) => black};
       transform: translateY(-4px);
     }
   }
 
   a {
-    color: ${({ theme }) => theme.white};
+    color: ${({ theme: { white } }) => white};
 
     &:hover {
-      color: ${({ theme }) => theme.black};
+      color: ${({ theme: { black } }) => black};
     }
   }
 `;

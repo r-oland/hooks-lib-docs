@@ -8,8 +8,8 @@ const MenuWrapper = styled.div`
   /* @media screen and (min-width: 1000px) {
     display: none;
   } */
-  background-color: ${({ theme }) => theme.primary};
-  color: ${({ theme }) => theme.white};
+  background-color: ${({ theme: { primary } }) => primary.s4};
+  color: ${({ theme: { white } }) => white};
   max-height: ${({ menuState }) => (menuState === "open" ? "60vh" : `0`)};
   visibility: ${({ menuState }) =>
     menuState === "open" ? "visible" : `hidden`};
@@ -32,16 +32,16 @@ const MenuWrapper = styled.div`
 
   li {
     cursor: pointer;
-    border: ${({ theme }) => theme.white} 2px solid;
-    border-radius: 5px;
+    border: ${({ theme: { white } }) => white} 2px solid;
+    border-radius: ${({ theme: { borderRadius } }) => borderRadius};
     padding: 1em;
     ${flexUnit(3, 17, 18, "vw", "font-size")}
     transition: 0.2s;
 
     &:hover {
-      border: ${({ theme }) => theme.white} 2px solid;
-      background-color: ${({ theme }) => theme.white};
-      color: ${({ theme }) => theme.primary};
+      border: ${({ theme: { white } }) => white} 2px solid;
+      background-color: ${({ theme: { white } }) => white};
+      color: ${({ theme: { primary } }) => primary.s4};
     }
   }
 `;

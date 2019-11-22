@@ -31,7 +31,7 @@ export default function ButtonsDropdown() {
             <li>Choice four</li>
           </SimpleDropdownButton>
         </Clipboard>
-        <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SimpleDropdownButton/SimpleDropdownButton2.js">
+        <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SimpleDropdownButton2/SimpleDropdownButton2.js">
           <SimpleDropdownButton2 buttonText={`button text`}>
             <li>Choice one</li>
             <li>Choice two</li>

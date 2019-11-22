@@ -11,7 +11,7 @@ const Hide = styled.div`
 `;
 
 const Menu = styled.div`
-  background-color: ${({ theme }) => theme.white};
+  background-color: ${({ theme: { white } }) => white};
   width: ${({ menuState }) =>
     menuState === "open" ? "calc(250px + 10vw)" : `0`};
   visibility: ${({ menuState }) =>
@@ -38,7 +38,7 @@ const Menu = styled.div`
     border-bottom: 1px solid black;
 
     &:hover {
-      color: ${({ theme }) => theme.primary};
+      color: ${({ theme: { primary } }) => primary.s4};
     }
   }
 `;

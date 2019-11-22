@@ -1,5 +1,5 @@
 // Components==============
-import { flexUnit } from "mixins";
+import { M } from "mixins";
 import React, { useState } from "react";
 import styled from "styled-components";
 import DropdownArrowImp from "./DropdownArrow.inline.svg";
@@ -18,31 +18,29 @@ const Wrapper = styled.div`
 
 const HalfRoundedButton = styled.div`
   background-color: ${({ theme, isExpended }) =>
-    isExpended === true ? `${theme.primary}` : `${theme.secondary}`};
-  padding: 0.6em 1.6em;
-  border-radius: 15px;
+    isExpended === true ? `${theme.primary.s4.s5}` : `${theme.primary.s4.s4}`};
+  border-radius: ${({ theme: { borderRadius } }) => borderRadius};
   cursor: pointer;
 
   &:hover {
-    background-color: ${({ theme }) => theme.primary};
+    background-color: ${({ theme: { primary } }) => primary.s4};
     transition: all 0.2s ease-in-out;
   }
 `;
 
-const Content = styled.p`
+const Content = styled(M)`
   margin: 0;
-  ${flexUnit(2, 17, 19, "vw", "font-size")}
-  font-weight: 600;
-  color: ${({ theme }) => theme.white};
+  font-weight: ${({ theme: { fontWeight } }) => fontWeight.bold};
+  color: ${({ theme: { white } }) => white};
   grid-row: 1;
   grid-column: 1/3;
-  padding: 0 0.4em;
+  padding: ${({ theme: { spacing } }) => `${spacing.s2} ${spacing.s6}`};
 `;
 
 const DropdownArrowSvg = styled(DropdownArrowImp)`
   grid-row: 1;
   grid-column: 2/3;
-  transform: translateX(100%);
+  transform: translateX(-9px);
 `;
 
 const Items = styled.div`
@@ -51,11 +49,11 @@ const Items = styled.div`
   visibility: ${({ isExpended }) =>
     isExpended === true ? `visible` : "hidden"};
   text-align: left;
-  padding: 0 1em 0 1em;
-  background-color: ${({ theme }) => theme.white};
-  border-radius: 5px;
-  margin-top: 5px;
-  box-shadow: 0px 4px 8px rgba(112, 112, 112, 0.15);
+  padding: ${({ theme: { spacing } }) => `${spacing.s2} ${spacing.s4}`};
+  background-color: ${({ theme: { white } }) => white};
+  border-radius: ${({ theme: { borderRadius } }) => borderRadius};
+  margin-top: ${({ theme: { spacing } }) => `${spacing.s1}`};
+  box-shadow: ${({ theme: { doubleShadow } }) => doubleShadow.small};
   transition: 0.3s;
   min-width: 120%;
   z-index: 100;
@@ -63,16 +61,18 @@ const Items = styled.div`
   ul {
     opacity: ${({ isExpended }) => (isExpended === true ? `1` : "0")};
     transition: 0.2s ease-in;
-    margin: 0.5em 0;
+    margin: ${({ theme: { spacing } }) => `${spacing.s2} 0`};
   }
 
   li {
-    padding: 0.65em 1em 0.65em 0.5em;
-    border-radius: 5px;
+    padding: ${({ theme: { spacing } }) =>
+      `${spacing.s2} ${spacing.s4} ${spacing.s2} ${spacing.s2}`};
+
+    border-radius: ${({ theme: { borderRadius } }) => borderRadius};
 
     &:hover {
-      background-color: ${({ theme }) => theme.primary};
-      color: ${({ theme }) => theme.white};
+      background-color: ${({ theme: { primary } }) => primary.s5};
+      color: ${({ theme: { white } }) => white};
       transition: background-color 0.3s;
     }
   }

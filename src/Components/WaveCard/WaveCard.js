@@ -5,12 +5,12 @@ import Wave from "./Wave.svg";
 // =========================
 
 const Card = styled.div`
-  background-color: ${({ theme }) => theme.primary};
+  background-color: ${({ theme: { primary } }) => primary.s4};
   position: relative;
-  border-radius: 15px;
+  border-radius: ${({ theme: { borderRadius2 } }) => borderRadius2};
   box-shadow: 0px 4px 11px rgba(112, 112, 112, 0.2);
   width: 100%;
-  height: 500px;
+  height: 400px;
   margin: 0 auto;
   overflow: hidden;
 `;

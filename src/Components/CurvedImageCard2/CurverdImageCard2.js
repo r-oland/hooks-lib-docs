@@ -9,7 +9,8 @@ import CurveImp from "./Curve.inline.svg";
 const Card = styled.div`
   display: flex;
   position: relative;
-  border-radius: 15px;
+  border-radius: ${({ theme: { borderRadius2 } }) => borderRadius2};
+  background-color: ${({ theme: { white } }) => white};
   box-shadow: 0px 4px 11px rgba(112, 112, 112, 0.2);
   width: 100%;
   height: 200px;
@@ -31,7 +32,7 @@ const CurveSvg = styled(CurveImp)`
   transform: scale(1);
 
   #changeColor {
-    fill: ${({ theme }) => theme.white};
+    fill: ${({ theme: { white } }) => white};
   }
 `;
 

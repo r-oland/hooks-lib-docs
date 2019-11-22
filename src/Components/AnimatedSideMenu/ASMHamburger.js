@@ -29,7 +29,7 @@ const MenuSvg = styled(Hamburger)`
   transition: 0.5s;
 
   #menu {
-    fill: ${({ theme }) => theme.black};
+    fill: ${({ theme: { black } }) => black};
   }
 `;
 

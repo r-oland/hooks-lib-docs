@@ -6,15 +6,16 @@ import styled from "styled-components";
 
 const Card = styled.div`
   position: relative;
-  border-radius: 15px;
+  overflow: hidden;
+  background-color: ${({ theme: { white } }) => white};
+  border-radius: ${({ theme: { borderRadius2 } }) => borderRadius2};
   box-shadow: 0px 4px 11px rgba(112, 112, 112, 0.2);
   width: 100%;
-  height: 500px;
+  height: 400px;
   margin: 0 auto;
 `;
 
 const Image = styled(Img)`
-  border-radius: 15px 15px 0 0;
   height: 45%;
 `;
 

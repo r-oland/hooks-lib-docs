@@ -6,7 +6,7 @@ import styled, { css } from "styled-components";
 
 const NavWrapper = styled.div`
   width: 100vw;
-  background-color: ${({ theme }) => theme.primary};
+  background-color: ${({ theme: { primary } }) => primary.s4};
 
   ${({ fixed }) =>
     fixed === true &&
@@ -26,7 +26,7 @@ const FlexContainer = styled(Container)`
 `;
 
 const Logo = styled.div`
-  color: ${({ theme }) => theme.white};
+  color: ${({ theme: { white } }) => white};
   font-weight: 600;
   ${flexUnit(2, 19, 20, "vw", "font-size")}
 `;

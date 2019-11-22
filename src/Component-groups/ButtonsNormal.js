@@ -23,7 +23,7 @@ const Grid = styled.div`
 
 const Stock1Svg = styled(Stock1Imp)`
   .color {
-    fill: ${({ theme }) => theme.white};
+    fill: ${({ theme: { white } }) => white};
   }
 
   width: 50%;

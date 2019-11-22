@@ -8,7 +8,7 @@ const NavWrapper = styled.div`
   width: 100vw;
   transition: 0.5s;
   background-color: ${({ top, theme }) =>
-    top === true ? `initial` : `${theme.primary}`};
+    top === true ? `initial` : `${theme.primary.s4}`};
 
   ${({ fixed }) =>
     fixed === true &&
@@ -38,7 +38,7 @@ const MenuItems = styled.ul`
   margin: 0;
   transition: 0.5s;
   color: ${({ top, theme }) =>
-    top === true ? `${theme.gray}` : `${theme.white}`};
+    top === true ? `${theme.gray.s7}` : `${theme.white}`};
 
   @media screen and (min-width: 900px) {
     display: flex;
@@ -51,18 +51,13 @@ const MenuItems = styled.ul`
     ${flexUnit(1.5, 17, 18, "vw", "font-size")}
 
     &:hover {
-      color: ${({ theme }) => theme.primary};
-      transform: translateY(-4px);
+      transform: translateY(-2px);
     }
   }
 
   a {
     color: ${({ top, theme }) =>
-      top === true ? `${theme.gray}` : `${theme.white}`};
-
-    &:hover {
-      color: ${({ theme }) => theme.primary};
-    }
+      top === true ? `${theme.gray.s7}` : `${theme.white}`};
   }
 `;
 

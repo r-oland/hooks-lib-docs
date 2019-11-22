@@ -39,7 +39,7 @@ const MenuItems = styled.ul`
   justify-content: flex-end;
   align-items: center;
   margin: 0;
-  color: ${({ theme }) => theme.gray};
+  color: ${({ theme: { gray } }) => gray.s7};
 
   li {
     padding-left: calc(3em + 1vw);
@@ -48,16 +48,16 @@ const MenuItems = styled.ul`
     ${flexUnit(1.5, 17, 18, "vw", "font-size")}
 
     &:hover {
-      color: ${({ theme }) => theme.primary};
+      color: ${({ theme: { primary } }) => primary.s4};
       transform: translateY(-4px);
     }
   }
 
   a {
-    color: ${({ theme }) => theme.gray};
+    color: ${({ theme: { gray } }) => gray.s7};
 
     &:hover {
-      color: ${({ theme }) => theme.primary};
+      color: ${({ theme: { primary } }) => primary.s4};
     }
   }
 `;

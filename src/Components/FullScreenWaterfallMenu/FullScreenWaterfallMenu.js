@@ -28,7 +28,7 @@ const MenuSvg = styled(Hamburger)`
 `;
 
 const MenuUnfolded = styled.div`
-   background-color: ${({ theme }) => theme.primary};
+   background-color: ${({ theme: { primary } }) => primary.s4};
    z-index: 30;
    position: fixed;
    left: 0;
@@ -50,7 +50,7 @@ const MenuUnfolded = styled.div`
       margin: 0;
       cursor: pointer;
       ${flexUnit(6, 23, 30, "vw", "font-size")}
-      color: ${({ theme }) => theme.white};
+      color: ${({ theme: { white } }) => white};
       &:hover {
          transform: translateY(-5px);
          transition: 0.5s;

@@ -23,7 +23,7 @@ const Item = styled.div`
   grid-row: 1;
   grid-column: 1/3;
   color: ${({ theme, cardIsVisible }) =>
-    cardIsVisible === true ? theme.primary : theme.gray};
+    cardIsVisible === true ? theme.primary.s4 : theme.gray.s7};
   transition: 0.2s;
 `;
 
@@ -35,7 +35,7 @@ const MenuDropdownArrowSvg = styled(MenuDropdownArrowImp)`
 
   .svgColor {
     fill: ${({ theme, cardIsVisible }) =>
-      cardIsVisible === true ? theme.primary : theme.gray};
+      cardIsVisible === true ? theme.primary.s4 : theme.gray.s7};
   }
 `;
 
@@ -44,9 +44,9 @@ const Card = styled.div`
     cardIsVisible === true ? `1500%` : "0px"};
   visibility: ${({ cardIsVisible }) =>
     cardIsVisible === true ? `visible` : "hidden"};
-  background-color: ${({ theme }) => theme.white};
+  background-color: ${({ theme: { white } }) => white};
   box-shadow: 0px 4px 8px rgba(112, 112, 112, 0.15);
-  border-radius: 10px;
+  border-radius: ${({ theme: { borderRadius2 } }) => borderRadius2};
   position: absolute;
   top: 60px;
   transition: 0.5s ease-in-out;
@@ -84,7 +84,7 @@ const Card = styled.div`
   }
 
   p {
-    color: ${({ theme }) => theme.primary};
+    color: ${({ theme: { primary } }) => primary.s4};
     margin: 0 0 0.4em;
     ${flexUnit(1.5, 17.5, 18.5, "vw", "font-size")}
     grid-column: 2/3;
@@ -92,7 +92,7 @@ const Card = styled.div`
   }
 
   .subDropdownText {
-    color: ${({ theme }) => theme.gray};
+    color: ${({ theme: { gray } }) => gray.s7};
     font-weight: 400;
     grid-column: 2/3;
     grid-row: 2;

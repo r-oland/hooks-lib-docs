@@ -7,11 +7,11 @@ import SwitchImp from "./Switch.inline.svg";
 const Wrapper = styled.div`
   margin: 0 auto;
   width: 100%;
-  background-color: ${({ theme }) => theme.white};
+  background-color: ${({ theme: { white } }) => white};
   transition: 0.8s;
   border: #8a8a8a 0.5px solid;
   box-shadow: 0px 0px 20px rgba(112, 112, 112, 0.08);
-  border-radius: 20px;
+  border-radius: ${({ theme: { borderRadius2 } }) => borderRadius2};
   padding: 1em 1em;
   text-align: left;
 `;
@@ -35,7 +35,7 @@ const SwitchSvg = styled(SwitchImp)`
   transition: 0.5s;
 
   #changeColor {
-    fill: ${({ theme }) => theme.primary};
+    fill: ${({ theme: { primary } }) => primary.s4};
   }
 `;
 
