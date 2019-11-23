@@ -20,11 +20,6 @@ const Elements = styled.div`
 
 const Margin = styled(Clipboard)`
   margin-bottom: 3em;
-  width: 100%;
-
-  @media screen and (min-width: 600px) {
-    width: 500px;
-  }
 `;
 
 export default function Hamburger() {

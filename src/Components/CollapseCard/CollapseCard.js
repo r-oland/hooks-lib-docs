@@ -6,12 +6,12 @@ import SwitchImp from "./Switch.inline.svg";
 
 const Wrapper = styled.div`
   margin: 0 auto;
-  width: 100%;
+  max-width: ${({ theme: { spacing } }) => spacing.s16};
   background-color: ${({ theme: { white } }) => white};
   transition: 0.8s;
   box-shadow: ${({ theme: { shadow } }) => shadow.small};
   border-radius: ${({ theme: { borderRadius2 } }) => borderRadius2};
-  padding: 1em 1em;
+  padding: ${({ theme: { spacing } }) => `${spacing.s4} ${spacing.s4}`};
   text-align: left;
 `;
 
