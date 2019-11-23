@@ -1,5 +1,5 @@
 // Components==============
-import { Container, flexUnit } from "mixins";
+import { Container } from "mixins";
 import React from "react";
 import styled from "styled-components";
 // =========================
@@ -32,10 +32,8 @@ const Menu = styled.div`
 
   li {
     cursor: pointer;
-    ${flexUnit(3, 17, 18, "vw", "font-size")}
     transition: 0.2s;
     margin: 4em 0;
-    border-bottom: 1px solid black;
 
     &:hover {
       color: ${({ theme: { primary } }) => primary.s4};

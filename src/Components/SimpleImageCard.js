@@ -9,7 +9,7 @@ const Card = styled.div`
   overflow: hidden;
   background-color: ${({ theme: { white } }) => white};
   border-radius: ${({ theme: { borderRadius2 } }) => borderRadius2};
-  box-shadow: 0px 4px 11px rgba(112, 112, 112, 0.2);
+  box-shadow: ${({ theme: { shadow } }) => shadow.medium};
   width: 100%;
   height: 400px;
   margin: 0 auto;

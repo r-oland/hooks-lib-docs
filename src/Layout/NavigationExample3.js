@@ -27,7 +27,7 @@ const FlexContainer = styled(Container)`
 
 const Logo = styled.div`
   color: ${({ theme: { white } }) => white};
-  font-weight: 600;
+  font-weight: ${({ theme: { fontWeight } }) => fontWeight.bold};
   ${flexUnit(2, 19, 20, "vw", "font-size")}
 `;
 

@@ -1,5 +1,5 @@
 // Components==============
-import { flexUnit } from "mixins";
+import { flexUnit, L } from "mixins";
 import React, { useState } from "react";
 import styled from "styled-components";
 import Hamburger from "./Hamburger.inline.svg";
@@ -28,34 +28,34 @@ const MenuSvg = styled(Hamburger)`
 `;
 
 const MenuUnfolded = styled.div`
-   background-color: ${({ theme: { primary } }) => primary.s4};
-   z-index: 30;
-   position: fixed;
-   left: 0;
-   top: ${({ menuState }) => (menuState === "closed" ? "-100vh" : "0vh")};
-   height: 100vh;
-   width: 100vw;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   text-align: center;
-   transition: 0.8s;
+  background-color: ${({ theme: { primary } }) => primary.s4};
+  z-index: 30;
+  position: fixed;
+  left: 0;
+  top: ${({ menuState }) => (menuState === "closed" ? "-100vh" : "0vh")};
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: 0.8s;
 
-   li {
-      padding: 2.5em 0;
-   }
+  li {
+    padding: 2.5em 0;
+  }
 
-   p {
-      margin: 0;
-      cursor: pointer;
-      ${flexUnit(6, 23, 30, "vw", "font-size")}
-      color: ${({ theme: { white } }) => white};
-      &:hover {
-         transform: translateY(-5px);
-         transition: 0.5s;
-      }
-   }
+  p {
+    ${flexUnit(3, 20, 25, "vw", "font-size")}
+    cursor: pointer;
+    font-weight: ${({ theme: { fontWeight } }) => fontWeight.bold};
+    color: ${({ theme: { white } }) => white};
+    &:hover {
+      transform: translateY(-5px);
+      transition: 0.5s;
+    }
+  }
 `;
 
 export default function FullScreenWaterfallMenu() {
@@ -73,19 +73,19 @@ export default function FullScreenWaterfallMenu() {
       <MenuUnfolded menuState={menuState}>
         <ul>
           <li onClick={changeMenu}>
-            <p>page 1</p>
+            <L>page 1</L>
           </li>
 
           <li onClick={changeMenu}>
-            <p>page 2</p>
+            <L>page 2</L>
           </li>
 
           <li onClick={changeMenu}>
-            <p>page 3</p>
+            <L>page 3</L>
           </li>
 
           <li onClick={changeMenu}>
-            <p>page 4</p>
+            <L>page 4</L>
           </li>
         </ul>
       </MenuUnfolded>

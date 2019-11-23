@@ -6,7 +6,7 @@ import styled, { css } from "styled-components";
 
 const NavWrapper = styled.div`
   width: 100vw;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: ${({ theme: { shadow } }) => shadow.medium};
 
   ${({ fixed }) =>
     fixed === true &&
@@ -25,7 +25,7 @@ const FlexContainer = styled(Container)`
 `;
 
 const Logo = styled.div`
-  font-weight: 600;
+  font-weight: ${({ theme: { fontWeight } }) => fontWeight.bold};
   ${flexUnit(2, 19, 20, "vw", "font-size")}
 `;
 
@@ -42,9 +42,8 @@ const MenuItems = styled.ul`
 
   li {
     padding-left: calc(3em + 1vw);
-    font-weight: 500;
+    font-weight: ${({ theme: { fontWeight } }) => fontWeight.semiBold};
     transition: 0.3s;
-    ${flexUnit(1.5, 17, 18, "vw", "font-size")}
 
     &:hover {
       color: ${({ theme: { primary } }) => primary.s4};

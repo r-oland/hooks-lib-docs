@@ -24,7 +24,7 @@ const FlexContainer = styled(Container)`
 `;
 
 const Logo = styled.div`
-  font-weight: 600;
+  font-weight: ${({ theme: { fontWeight } }) => fontWeight.bold};
   ${flexUnit(2, 19, 20, "vw", "font-size")}
 `;
 
@@ -41,12 +41,11 @@ const MenuItems = styled.ul`
 
   li {
     padding-left: calc(3em + 1vw);
-    font-weight: 500;
+    font-weight: ${({ theme: { fontWeight } }) => fontWeight.semiBold};
     transition: 0.3s;
-    ${flexUnit(1.5, 17, 18, "vw", "font-size")}
 
     &:hover {
-      color: ${({ theme: { primary} }) => primary.s4};
+      color: ${({ theme: { primary } }) => primary.s4};
       transform: translateY(-4px);
     }
   }
@@ -55,7 +54,7 @@ const MenuItems = styled.ul`
     color: ${({ theme: { gray } }) => gray.s7};
 
     &:hover {
-      color: ${({ theme: { primary} }) => primary.s4};
+      color: ${({ theme: { primary } }) => primary.s4};
     }
   }
 `;

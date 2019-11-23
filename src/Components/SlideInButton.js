@@ -41,10 +41,9 @@ const Slider = styled.div`
 `;
 
 const Content = styled(M)`
-  font-weight: ${({ theme: { fontWeight } }) => fontWeight.bold};
   padding: ${({ theme: { spacing } }) =>
-    `${spacing.s3} ${spacing.s7} ${spacing.s3} ${spacing.s4}`};
-
+    `${spacing.s2} ${spacing.s7} ${spacing.s2} ${spacing.s4}`};
+  font-weight: ${({ theme: { fontWeight } }) => fontWeight.semiBold};
   grid-row: 1;
   justify-self: flex-start;
   transition: 0.3s;

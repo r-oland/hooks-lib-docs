@@ -69,7 +69,7 @@ const M = styled.p`
 
 const L = styled.p`
   ${flexUnit(2.5, 18, 19, "vw", "font-size")}
-  font-weight: 600;
+  font-weight: ${({ theme: { fontWeight } }) => fontWeight.bold};
   margin: 0;
 `;
 

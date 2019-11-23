@@ -1,5 +1,5 @@
 // Components==============
-import { Container, flexUnit } from "mixins";
+import { Container } from "mixins";
 import React from "react";
 import styled from "styled-components";
 // =========================
@@ -22,24 +22,21 @@ const MenuWrapper = styled.div`
   ul {
     opacity: ${({ menuState }) => (menuState === "open" ? "1" : `0`)};
     transition: 0.8s;
-    margin: 0;
+    margin: 0 auto;
     padding: 0.5em 1em 2em;
     text-align: center;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
-    grid-gap: 2em 2em;
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
   }
 
   li {
+    display: inline-block;
     cursor: pointer;
-    border: ${({ theme: { white } }) => white} 2px solid;
-    border-radius: ${({ theme: { borderRadius } }) => borderRadius};
     padding: 1em;
-    ${flexUnit(3, 17, 18, "vw", "font-size")}
     transition: 0.2s;
 
     &:hover {
-      border: ${({ theme: { white } }) => white} 2px solid;
       background-color: ${({ theme: { white } }) => white};
       color: ${({ theme: { primary } }) => primary.s4};
     }

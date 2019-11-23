@@ -18,19 +18,19 @@ const Wrapper = styled.div`
 
 const HalfRoundedButton = styled.div`
   background-color: ${({ theme, isExpended }) =>
-    isExpended === true ? `${theme.primary.s4.s5}` : `${theme.primary.s4.s4}`};
+    isExpended === true ? `${theme.primary.s5}` : `${theme.primary.s4}`};
   border-radius: ${({ theme: { borderRadius } }) => borderRadius};
   cursor: pointer;
 
   &:hover {
-    background-color: ${({ theme: { primary } }) => primary.s4};
+    background-color: ${({ theme: { primary } }) => primary.s5};
     transition: all 0.2s ease-in-out;
   }
 `;
 
 const Content = styled(M)`
   margin: 0;
-  font-weight: ${({ theme: { fontWeight } }) => fontWeight.bold};
+  font-weight: ${({ theme: { fontWeight } }) => fontWeight.semiBold};
   color: ${({ theme: { white } }) => white};
   grid-row: 1;
   grid-column: 1/3;

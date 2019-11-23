@@ -1,5 +1,4 @@
 // Components==============
-import { flexUnit } from "mixins";
 import React, { useState } from "react";
 import styled from "styled-components";
 import MenuDropdownArrowImp from "./MenuDropdownArrow.inline.svg";
@@ -7,8 +6,7 @@ import MenuDropdownArrowImp from "./MenuDropdownArrow.inline.svg";
 
 const Wrapper = styled.div`
   margin-left: calc(2em + 1vw);
-  font-weight: 500;
-  ${flexUnit(1.5, 17, 18, "vw", "font-size")}
+  font-weight: ${({ theme: { fontWeight } }) => fontWeight.semiBold};
   position: relative;
 `;
 
@@ -45,7 +43,7 @@ const Card = styled.div`
   visibility: ${({ cardIsVisible }) =>
     cardIsVisible === true ? `visible` : "hidden"};
   background-color: ${({ theme: { white } }) => white};
-  box-shadow: 0px 4px 8px rgba(112, 112, 112, 0.15);
+  box-shadow: ${({ theme: { shadow } }) => shadow.medium};
   border-radius: ${({ theme: { borderRadius2 } }) => borderRadius2};
   position: absolute;
   top: 60px;
@@ -85,15 +83,15 @@ const Card = styled.div`
 
   p {
     color: ${({ theme: { primary } }) => primary.s4};
+    font-weight: ${({ theme: { fontWeight } }) => fontWeight.bold};
     margin: 0 0 0.4em;
-    ${flexUnit(1.5, 17.5, 18.5, "vw", "font-size")}
     grid-column: 2/3;
     grid-row: 1;
   }
 
   .subDropdownText {
     color: ${({ theme: { gray } }) => gray.s7};
-    font-weight: 400;
+    font-weight: ${({ theme: { fontWeight } }) => fontWeight.normal};
     grid-column: 2/3;
     grid-row: 2;
   }
