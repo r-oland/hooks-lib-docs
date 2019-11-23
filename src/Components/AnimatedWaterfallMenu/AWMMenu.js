@@ -1,7 +1,7 @@
 // Components==============
-import { Container } from "mixins";
 import React from "react";
 import styled from "styled-components";
+import { Container } from "../../style/Mixins";
 // =========================
 
 const MenuWrapper = styled.div`
@@ -16,29 +16,31 @@ const MenuWrapper = styled.div`
   position: ${({ fixed }) => (fixed === true ? `fixed` : `block`)};
   top: 70px;
   right: 0;
-  z-index: 100;
+  z-index: 150;
   transition: 0.8s;
 
   ul {
     opacity: ${({ menuState }) => (menuState === "open" ? "1" : `0`)};
     transition: 0.8s;
     margin: 0 auto;
-    padding: 0.5em 1em 2em;
+    padding-bottom: ${({ theme: { spacing } }) => spacing.s5};
     text-align: center;
-    display: flex;
-    justify-content: space-between;
-    max-width: 400px;
   }
 
   li {
-    display: inline-block;
     cursor: pointer;
-    padding: 1em;
+    display: inline-block;
+    background-color: ${({ theme: { white } }) => white};
+    color: ${({ theme: { primary } }) => primary.s6};
+    padding: ${({ theme: { spacing } }) => `${spacing.s2} ${spacing.s7}`};
+    margin: ${({ theme: { spacing } }) => `${spacing.s3} ${spacing.s4}`};
     transition: 0.2s;
+    font-weight: ${({ theme: { fontWeight } }) => fontWeight.bold};
+    border-radius: ${({ theme: { borderRadius } }) => borderRadius};
 
     &:hover {
-      background-color: ${({ theme: { white } }) => white};
-      color: ${({ theme: { primary } }) => primary.s4};
+      background-color: ${({ theme: { primary } }) => primary.s6};
+      color: ${({ theme: { white } }) => white};
     }
   }
 `;

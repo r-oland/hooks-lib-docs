@@ -9,8 +9,8 @@ const Card = styled.div`
   position: relative;
   border-radius: ${({ theme: { borderRadius2 } }) => borderRadius2};
   box-shadow: ${({ theme: { shadow } }) => shadow.medium};
-  width: 100%;
-  height: 400px;
+  max-width: ${({ theme: { spacing } }) => spacing.s14};
+  height: ${({ theme: { spacing } }) => spacing.s14};
   margin: 0 auto;
   overflow: hidden;
 `;
@@ -20,7 +20,6 @@ const WaveSVG = styled.img`
   height: 45%;
   position: absolute;
   bottom: 0;
-  transform: scale(1.1);
 `;
 
 export default function WaveCard() {

@@ -13,7 +13,7 @@ const SvgWrapper = styled.div`
   height: 25px;
   cursor: pointer;
   position: relative;
-  z-index: 150;
+  z-index: 151;
   ${flexUnit(6, 30, 33, "vw", "width")}
 
   &:hover {

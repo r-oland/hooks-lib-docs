@@ -20,7 +20,7 @@ const FlexContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 65px;
+  height: ${({ theme: { spacing } }) => spacing.s9};
 `;
 
 const Logo = styled.div`
@@ -32,7 +32,6 @@ const MenuItems = styled.ul`
   display: none;
   justify-content: flex-end;
   align-items: center;
-  margin: 0;
   color: ${({ theme: { gray } }) => gray.s7};
 
   @media screen and (min-width: 900px) {
@@ -40,13 +39,13 @@ const MenuItems = styled.ul`
   }
 
   li {
-    padding-left: calc(3em + 1vw);
+    padding-left: ${({ theme: { spacing } }) => spacing.s8};
     font-weight: ${({ theme: { fontWeight } }) => fontWeight.semiBold};
     transition: 0.3s;
 
     &:hover {
       color: ${({ theme: { primary } }) => primary.s4};
-      transform: translateY(-4px);
+      transform: translateY(-2px);
     }
   }
 

@@ -12,28 +12,31 @@ const Hide = styled.div`
 
 const Menu = styled.div`
   background-color: ${({ theme: { white } }) => white};
-  width: ${({ menuState }) =>
-    menuState === "open" ? "calc(250px + 10vw)" : `0`};
+  width: ${({ menuState, theme: { spacing } }) =>
+    menuState === "open" ? spacing.s13 : `0`};
   visibility: ${({ menuState }) =>
     menuState === "open" ? "visible" : `hidden`};
   position: fixed;
   height: 100vh;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 150;
   transition: 0.8s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
   ul {
-    display: inline-block;
     opacity: ${({ menuState }) => (menuState === "open" ? "1" : `0`)};
     transition: 0.8s;
-    margin-top: 5em;
   }
 
   li {
     cursor: pointer;
     transition: 0.2s;
-    margin: 4em 0;
+    padding: ${({ theme: { spacing } }) => `${spacing.s6} 0 `};
+    font-weight: ${({ theme: { fontWeight } }) => fontWeight.bold};
 
     &:hover {
       color: ${({ theme: { primary } }) => primary.s4};
@@ -48,7 +51,7 @@ const Blur = styled.div`
     menuState === "open" ? `visible` : `hidden`};
   height: 100vh;
   width: 100vw;
-  z-index: 99;
+  z-index: 149;
   background-color: black;
   top: 0;
   left: 0;

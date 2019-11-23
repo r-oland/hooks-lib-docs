@@ -15,8 +15,7 @@ const MenuSvg = styled(Hamburger)`
   ${flexUnit(6, 30, 33, "vw", "width")}
   cursor: pointer;
   position: relative;
-  z-index: 150;
-  margin: 0;
+  z-index: 151;
   transform: ${({ menustate }) =>
     menustate === "open" ? "rotate(180deg)" : "rotate(0)"};
   transition: 0.5s;
@@ -29,7 +28,7 @@ const MenuSvg = styled(Hamburger)`
 
 const MenuUnfolded = styled.div`
   background-color: ${({ theme: { primary } }) => primary.s4};
-  z-index: 30;
+  z-index: 150;
   position: fixed;
   left: 0;
   top: ${({ menuState }) => (menuState === "closed" ? "-100vh" : "0vh")};
@@ -43,7 +42,7 @@ const MenuUnfolded = styled.div`
   transition: 0.8s;
 
   li {
-    padding: 2.5em 0;
+    padding: ${({ theme: { spacing } }) => `${spacing.s7}`};
   }
 
   p {

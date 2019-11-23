@@ -10,8 +10,8 @@ const Card = styled.div`
   background-color: ${({ theme: { white } }) => white};
   border-radius: ${({ theme: { borderRadius2 } }) => borderRadius2};
   box-shadow: ${({ theme: { shadow } }) => shadow.medium};
-  width: 100%;
-  height: 400px;
+  max-width: ${({ theme: { spacing } }) => spacing.s14};
+  height: ${({ theme: { spacing } }) => spacing.s14};
   margin: 0 auto;
 `;
 

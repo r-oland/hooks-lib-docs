@@ -42,7 +42,7 @@ export default function Hamburger() {
           </NavigationExample3>
           <AWMMenu menuState={menuState} setMenuState={setMenuState} />
         </Margin>
-        <Margin data-clipboard-text="d:/Freelancing/Code/Real projects/Components/src/Components/AnimatedSideMenu/ASMHamburger.js">
+        <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/AnimatedSideMenu/ASMHamburger.js">
           <NavigationExample2>
             <ASMHamburger menuState={menuState2} setMenuState={setMenuState2} />
           </NavigationExample2>

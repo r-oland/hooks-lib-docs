@@ -70,7 +70,6 @@ const M = styled.p`
 const L = styled.p`
   ${flexUnit(2.5, 18, 19, "vw", "font-size")}
   font-weight: ${({ theme: { fontWeight } }) => fontWeight.bold};
-  margin: 0;
 `;
 
 const Collap = styled.div`

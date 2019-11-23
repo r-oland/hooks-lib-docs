@@ -38,7 +38,6 @@ const MenuItems = styled.ul`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin: 0;
   color: ${({ theme: { gray } }) => gray.s7};
 
   li {

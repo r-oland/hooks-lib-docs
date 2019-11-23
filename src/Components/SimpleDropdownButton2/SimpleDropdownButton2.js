@@ -29,7 +29,6 @@ const HalfRoundedButton = styled.div`
 `;
 
 const Content = styled(M)`
-  margin: 0;
   font-weight: ${({ theme: { fontWeight } }) => fontWeight.semiBold};
   color: ${({ theme: { white } }) => white};
   grid-row: 1;
@@ -91,7 +90,7 @@ export default function SimpleDropdownButton2({ children, buttonText }) {
         </Grid>
       </HalfRoundedButton>
       <Items isExpended={isExpended}>
-        <ul isExpended={isExpended}>{children}</ul>
+        <ul>{children}</ul>
       </Items>
     </Wrapper>
   );

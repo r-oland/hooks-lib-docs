@@ -23,14 +23,13 @@ const Flex = styled.div`
 
   p {
     font-weight: ${({ theme: { fontWeight } }) => fontWeight.semiBold};
-    margin: 0;
   }
 `;
 
 const SwitchSvg = styled(SwitchImp)`
   width: 11px;
-  transform: ${({ menuState }) =>
-    menuState === "open" ? `rotate(0)` : `rotate(45deg)`};
+  transform: ${({ menustate }) =>
+    menustate === "open" ? `rotate(0)` : `rotate(45deg)`};
   transition: 0.5s;
 
   #changeColor {
@@ -57,7 +56,7 @@ export default function CollapseCard() {
     <Wrapper menuState={menuState}>
       <Flex onClick={changeMenu}>
         <p>dummy question text bla bla?</p>
-        <SwitchSvg menuState={menuState} />
+        <SwitchSvg menustate={menuState} />
       </Flex>
       <Fold menuState={menuState}>
         <p>

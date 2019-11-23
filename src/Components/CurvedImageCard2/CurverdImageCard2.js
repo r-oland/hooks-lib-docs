@@ -12,8 +12,8 @@ const Card = styled.div`
   border-radius: ${({ theme: { borderRadius2 } }) => borderRadius2};
   background-color: ${({ theme: { white } }) => white};
   box-shadow: ${({ theme: { shadow } }) => shadow.medium};
-  width: 100%;
-  height: 200px;
+  max-width: ${({ theme: { spacing } }) => spacing.s14};
+  height: ${({ theme: { spacing } }) => spacing.s12};
   margin: 0 auto;
   overflow: hidden;
 `;
@@ -29,7 +29,6 @@ const CurveSvg = styled(CurveImp)`
   position: absolute;
   left: 18.5%;
   top: -2.5%;
-  transform: scale(1);
 
   #changeColor {
     fill: ${({ theme: { white } }) => white};
