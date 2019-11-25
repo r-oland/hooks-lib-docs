@@ -1,5 +1,5 @@
 // Components==============
-import { Container, L, M, S, Xs } from "mixins";
+import { Container, L, S, Xs } from "mixins";
 import React from "react";
 import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
@@ -30,7 +30,7 @@ export default function Raleway() {
         <Margin />
         <L>This is a large text</L>
         <Margin />
-        <M>This is a medium text</M>
+        <p>This is a medium text</p>
         <Margin />
         <S>This is a small text</S>
         <Margin />
@@ -45,14 +45,14 @@ export default function Raleway() {
           sequi eveniet culpa?
         </L>
         <Margin />
-        <M>
+        <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo illum
           nam perspiciatis ullam aliquam dolor non placeat odio voluptatem
           expedita minima vel fugit ipsum quia, corporis, iusto veritatis vero?
           Eligendi asperiores rerum totam sunt, placeat vel! Velit suscipit sed,
           iure, iste, voluptate repellendus possimus blanditiis harum earum
           sequi eveniet culpa?
-        </M>
+        </p>
         <Margin />
         <S>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo illum

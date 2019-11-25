@@ -7,6 +7,7 @@ import AddOns from "./Component-groups/AddOns";
 import ButtonsDropdown from "./Component-groups/ButtonsDropdown";
 import ButtonsNormal from "./Component-groups/ButtonsNormal";
 import Cards from "./Component-groups/Cards";
+import Carousel from "./Component-groups/Carousel";
 import Collapse from "./Component-groups/Collapse";
 import Dividers from "./Component-groups/Dividers";
 import Raleway from "./Component-groups/FontsRaleway";
@@ -294,6 +295,7 @@ export default function Nav({
           <L>Libraries</L>
           <M
             onClick={event => {
+              changeCategory(<Carousel />);
               select(event.target.innerText);
               subSelect(event.target.innerText);
             }}

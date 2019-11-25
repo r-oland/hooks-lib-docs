@@ -34,9 +34,9 @@ const Flex = styled.div`
 const SwitchSvg = styled(SwitchImp)`
   position: absolute;
   right: 0;
-  width: 11px;
+  width: 14px;
   transform: ${({ menustate }) =>
-    menustate === "open" ? `rotate(0)` : `rotate(45deg)`};
+    menustate === "open" ? `rotate(0)` : `rotate(90deg)`};
   transition: 0.5s;
 
   #changeColor {
@@ -60,7 +60,7 @@ const Fold = styled.div`
   }
 `;
 
-export default function CollapseCard({ initial, children }) {
+export default function CollapseCard2({ initial, children }) {
   const [menuState, setMenuState] = useState("closed");
 
   function changeMenu() {
