@@ -4,6 +4,7 @@ import { Container } from "mixins";
 import React from "react";
 import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
+import CTACard from "../Components/CTACard";
 import CurvedImageCard from "../Components/CurvedImageCard/CurverdImageCard";
 import CurvedImageCard2 from "../Components/CurvedImageCard2/CurverdImageCard2";
 import SimpleImageCard from "../Components/SimpleImageCard";
@@ -59,6 +60,9 @@ export default function Cards() {
           <CurvedImageCard2
             img={data.file.childImageSharp.fluid}
           ></CurvedImageCard2>
+        </Clipboard>
+        <Clipboard data-clipboard-text="vscode://file/">
+          <CTACard cta={"Call to action"}></CTACard>
         </Clipboard>
       </Grid>
     </Wrapper>

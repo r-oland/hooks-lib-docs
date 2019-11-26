@@ -7,7 +7,12 @@ import styled from "styled-components";
 // =========================
 
 const Slider2 = styled(Slider)`
+  cursor: pointer;
   padding-top: ${({ theme: { spacing } }) => spacing.s1};
+
+  .slick-center {
+    cursor: initial;
+  }
 
   .slick-slide {
     padding: 0 ${({ theme: { spacing } }) => `${spacing.s1}`};
