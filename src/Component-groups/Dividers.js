@@ -2,8 +2,10 @@
 import React from "react";
 import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
+import { Cylinder } from "../Components/Cylinder/Cylinder";
 import { HalfRoundedLarge } from "../Components/HalfRoundedLarge/HalfRoundedLarge";
 import { HalfRoundedSmall } from "../Components/HalfRoundedSmall/HalfRoundedSmall";
+import { Hill } from "../Components/Hill/Hill";
 import { Ramp2 } from "../Components/Ramp2/Ramp2";
 import { RampLarge } from "../Components/RampLarge/RampLarge";
 import { RampSmall } from "../Components/RampSmall/RampSmall";
@@ -59,6 +61,12 @@ export default function Navigation() {
             <Waves2 />
           </Clipboard>
         </BackgroundColor>
+        <Clipboard data-clipboard-text="vscode://file/">
+          <Cylinder />
+        </Clipboard>
+        <Clipboard data-clipboard-text="vscode://file/">
+          <Hill />
+        </Clipboard>
       </Elements>
     </div>
   );
