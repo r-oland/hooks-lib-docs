@@ -61,10 +61,10 @@ export default function Navigation() {
             <Waves2 />
           </Clipboard>
         </BackgroundColor>
-        <Clipboard data-clipboard-text="vscode://file/">
+        <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/Cylinder/Cylinder.js">
           <Cylinder />
         </Clipboard>
-        <Clipboard data-clipboard-text="vscode://file/">
+        <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/Hill/Hill.js">
           <Hill />
         </Clipboard>
       </Elements>
