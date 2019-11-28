@@ -1,9 +1,8 @@
 // Components==============
-import { M } from "mixins";
 import styled from "styled-components";
 // =========================
 
-export const SimpleButton = styled(M)`
+export const SimpleButton = styled.p`
   background-color: ${({ theme: { primary } }) => primary.s4};
   color: ${({ theme: { white } }) => white};
   font-weight: ${({ theme: { fontWeight } }) => fontWeight.semiBold};

@@ -61,7 +61,7 @@ export default function Cards() {
             img={data.file.childImageSharp.fluid}
           ></CurvedImageCard2>
         </Clipboard>
-        <Clipboard data-clipboard-text="vscode://file/">
+        <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/CTACard.js">
           <CTACard cta={"Call to action"}></CTACard>
         </Clipboard>
       </Grid>
