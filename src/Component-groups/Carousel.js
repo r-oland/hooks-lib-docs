@@ -1,5 +1,5 @@
 // Components==============
-import { useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
 import { Container } from "mixins";
 import React, { useState } from "react";

@@ -64,3 +64,23 @@ export const M = styled.p`
 export const L = styled.p`
   ${flexUnit(2.5, 18, 19, "vw", "font-size")}
 `;
+
+// styled underline
+
+export const StyledUnderline = styled.span`
+  cursor: pointer;
+  border-bottom: 1px solid
+    ${({ theme: { primary } }) => primary.s4.replace("1)", "0.3)")};
+  box-shadow: 0px -4px 0px ${({ theme: { primary } }) =>
+      primary.s4.replace("1)", "0.3)")} inset;
+  transition: 0.2s;
+
+  &:hover {
+    border-bottom: 1px solid
+      ${({ theme: { primary } }) => primary.s4.replace("1)", "0)")};
+    box-shadow: 0px -4px 0px ${({ theme: { primary } }) =>
+        primary.s4.replace("1)", "0)")} inset;
+    background-color: ${({ theme: { primary } }) =>
+      primary.s4.replace("1)", "0.3)")};
+  }
+`;

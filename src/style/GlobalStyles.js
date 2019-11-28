@@ -18,7 +18,7 @@ const GlobalStyles = createGlobalStyle`
    /* =========================================*/
    /* Global style ============================*/
    /* =========================================*/
-   
+
    body {
       color: ${({ theme: { black } }) => black};
    }

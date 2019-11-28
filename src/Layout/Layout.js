@@ -2,6 +2,7 @@
 import Icon from "assets/Icon.svg";
 import { OverFlowFix } from "mixins";
 import React, { useState } from "react";
+import Clipboard from "react-clipboard.js";
 import styled, { ThemeProvider } from "styled-components";
 import Nav from "../Nav";
 import GlobalStyles from "../style/GlobalStyles";
@@ -40,7 +41,9 @@ export default function Layout({ children }) {
   const [isFoldedOut, setIsFoldedOut] = useState(true);
   const [category, setCategory] = useState(
     <Flex>
-      <IconSVG src={Icon} alt="Icon" />
+      <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components">
+        <IconSVG src={Icon} alt="Icon" />
+      </Clipboard>
     </Flex>
   );
 

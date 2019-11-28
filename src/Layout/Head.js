@@ -5,27 +5,27 @@ import { Helmet } from "react-helmet";
 // =========================
 
 export default function Head({ title, description, keywords }) {
-   const data = useStaticQuery(graphql`
-      query MyQuery {
-         site {
-            siteMetadata {
-               title
-            }
-         }
+  const data = useStaticQuery(graphql`
+    query MyQuery {
+      site {
+        siteMetadata {
+          title
+        }
       }
-   `);
-   const siteTitle = data.site.siteMetadata.title;
-   const primaryColor = "#3D8693";
+    }
+  `);
+  const siteTitle = data.site.siteMetadata.title;
+  const primaryColor = ({ theme: { primary } }) => primary.s4;
 
-   return (
-      <Helmet>
-         <meta name="theme-color" content={primaryColor} />
-         <meta name="author" content="Roland Branten"></meta>
-         <meta name="designer" content="Roland Branten"></meta>
-         <meta name="description" content={description} />
-         <meta name="keywords" content={keywords} />
-         <title>{`${siteTitle} | ${title}`}</title>
-         <html lang="en" />
-      </Helmet>
-   );
+  return (
+    <Helmet>
+      <meta name="theme-color" content={primaryColor} />
+      <meta name="author" content="Roland Branten"></meta>
+      <meta name="designer" content="Roland Branten"></meta>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <title>{`${siteTitle} | ${title}`}</title>
+      <html lang="en" />
+    </Helmet>
+  );
 }
