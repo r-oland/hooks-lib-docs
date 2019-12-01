@@ -16,6 +16,7 @@ import Maps from "./Component-groups/Maps";
 import MenuDropdown from "./Component-groups/MenuDropdown";
 import Modals from "./Component-groups/Modals";
 import Navigation from "./Component-groups/Navigation";
+import Slider from "./Component-groups/Slider";
 
 // =========================
 
@@ -260,6 +261,16 @@ export default function Nav({
               selected={subSelected}
             >
               Modals
+            </S>
+            <S
+              onClick={event => {
+                changeCategory(<Slider />);
+                subSelect(event.target.innerText);
+              }}
+              category={`Slider`}
+              selected={subSelected}
+            >
+              Slider
             </S>
           </Collap>
           <M
