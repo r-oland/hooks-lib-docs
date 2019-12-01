@@ -6,7 +6,7 @@ import styled, { css } from "styled-components";
 
 const NavWrapper = styled.div`
   width: 100vw;
-  box-shadow: ${({ theme: { shadow } }) => shadow.medium};
+  box-shadow: ${({ theme: { shadow } }) => shadow.small};
 
   ${({ fixed }) =>
     fixed === true &&
@@ -14,6 +14,7 @@ const NavWrapper = styled.div`
       position: fixed;
       top: 0;
       left: 0;
+      z-index: 148;
     `}
 `;
 
@@ -42,7 +43,7 @@ const MenuItems = styled.ul`
   li {
     padding-left: ${({ theme: { spacing } }) => spacing.s8};
     font-weight: ${({ theme: { fontWeight } }) => fontWeight.semiBold};
-    transition: 0.3s;
+    transition: 0.2s;
 
     &:hover {
       color: ${({ theme: { primary } }) => primary.s4};

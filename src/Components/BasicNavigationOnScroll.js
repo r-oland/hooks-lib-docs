@@ -16,6 +16,7 @@ const NavWrapper = styled.div`
       position: fixed;
       top: 0;
       left: 0;
+      z-index: 148;
     `}
 `;
 
@@ -50,6 +51,7 @@ const MenuItems = styled.ul`
 
     &:hover {
       transform: translateY(-2px);
+      color: ${({ theme: { primary } }) => primary.s7};
     }
   }
 

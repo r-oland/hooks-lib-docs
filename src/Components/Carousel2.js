@@ -26,8 +26,10 @@ export default function Carousel2({ children }) {
   const [nav2, setNav2] = useState(null);
 
   const mediaQ = () => {
-    const Query1 = window.matchMedia("(min-width: 450px)");
-    const Query2 = window.matchMedia("(min-width: 700px)");
+    const Query1 =
+      typeof window !== "undefined" && window.matchMedia("(min-width: 450px)");
+    const Query2 =
+      typeof window !== "undefined" && window.matchMedia("(min-width: 700px)");
 
     if (Query1.matches && Query2.matches) {
       return 3;

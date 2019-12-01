@@ -36,14 +36,14 @@ export const OverFlowFix = styled.div`
 // Container
 
 export const Container = styled.div`
-  margin: 0 2.5%;
+  margin: 0 5%;
 
   @media screen and (min-width: 768px) {
-    margin: 0 5%;
+    margin: 0 6.5%;
   }
 
   @media screen and (min-width: 1200px) {
-    margin: 0 7.5%;
+    margin: 0 8%;
   }
 `;
 

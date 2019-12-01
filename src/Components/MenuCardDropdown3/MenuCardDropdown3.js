@@ -100,7 +100,8 @@ export default function MenuCardDropdown3({ children, name }) {
   const [cardIsVisible, setCardIsVisible] = useState("false");
 
   const handleChange = () => {
-    const Query = window.matchMedia("(min-width: 800px)");
+    const Query =
+      typeof window !== "undefined" && window.matchMedia("(min-width: 800px)");
 
     if (cardIsVisible === "false" && Query.matches) {
       setCardIsVisible("true");
@@ -110,7 +111,8 @@ export default function MenuCardDropdown3({ children, name }) {
   };
 
   const handleClickChange = () => {
-    const Query = window.matchMedia("(max-width: 800px)");
+    const Query =
+      typeof window !== "undefined" && window.matchMedia("(max-width: 800px)");
 
     if (cardIsVisible === "false") {
       setCardIsVisible("true");

@@ -12,6 +12,7 @@ import Collapse from "./Component-groups/Collapse";
 import Dividers from "./Component-groups/Dividers";
 import Raleway from "./Component-groups/FontsRaleway";
 import Hamburger from "./Component-groups/Hamburger";
+import Maps from "./Component-groups/Maps";
 import MenuDropdown from "./Component-groups/MenuDropdown";
 import Modals from "./Component-groups/Modals";
 import Navigation from "./Component-groups/Navigation";
@@ -108,7 +109,8 @@ export default function Nav({
   };
 
   const subSelect = category => {
-    const Query = window.matchMedia("(min-width: 650px)");
+    const Query =
+      typeof window !== "undefined" && window.matchMedia("(min-width: 650px)");
 
     if (Query.matches) {
       setSubSelected(category);
@@ -306,6 +308,7 @@ export default function Nav({
           </M>
           <M
             onClick={event => {
+              changeCategory(<Maps />);
               select(event.target.innerText);
               subSelect(event.target.innerText);
             }}
