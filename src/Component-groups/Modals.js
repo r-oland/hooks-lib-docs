@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
 import { SimpleButton } from "../Components/SimpleButton";
-import SimpleModal from "../Components/SimpleModal";
+import SimpleModal from "../Components/SimpleModal/SimpleModal";
 // =========================
 
 const Wrapper = styled(Container)`
@@ -31,7 +31,7 @@ export default function Modals() {
     <Wrapper>
       <h2>Modals</h2>
       <Grid>
-        <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SimpleModal.js">
+        <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SimpleModal/SimpleModal.js">
           <SimpleButton onClick={handleChange}>Click me</SimpleButton>
           <SimpleModal modalIsOpen={modalIsOpen} handleChange={handleChange}>
             <p>

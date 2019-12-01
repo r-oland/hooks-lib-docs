@@ -1,6 +1,7 @@
 // Components==============
 import React from "react";
 import styled from "styled-components";
+import OutsideListener from "./OutsideListener";
 // =========================
 
 const Shade = styled.div`
@@ -58,14 +59,16 @@ export default function SimpleModal({ modalIsOpen, children, handleChange }) {
   return (
     <div>
       <Shade modalIsOpen={modalIsOpen} />
-      <Modal modalIsOpen={modalIsOpen}>
-        <OverflowDiv>
-          <p className="close" onClick={handleChange}>
-            close
-          </p>
-          {children}
-        </OverflowDiv>
-      </Modal>
+      <OutsideListener modalIsOpen={modalIsOpen} handleChange={handleChange}>
+        <Modal modalIsOpen={modalIsOpen}>
+          <OverflowDiv>
+            <p className="close" onClick={handleChange}>
+              close
+            </p>
+            {children}
+          </OverflowDiv>
+        </Modal>
+      </OutsideListener>
     </div>
   );
 }

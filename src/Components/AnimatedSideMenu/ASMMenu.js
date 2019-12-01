@@ -78,7 +78,7 @@ export default function ASMMenu({ menuState, setMenuState }) {
           </ul>
         </Container>
       </Menu>
-      <Blur menuState={menuState} />
+      <Blur menuState={menuState} onClick={changeMenu} />
     </Hide>
   );
 }
