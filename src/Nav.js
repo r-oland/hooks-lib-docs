@@ -1,6 +1,5 @@
 // Components==============
 import MenuImp from "assets/Menu.inline.svg";
-import { Link } from "gatsby";
 import { flexUnit } from "mixins";
 import React, { useState } from "react";
 import styled from "styled-components";
@@ -297,18 +296,17 @@ export default function Nav({
               Raleway
             </S>
           </Collap>
-          <Link to="/formTest">
-            <M
-              // onClick={event => {
-              //   select(event.target.innerText);
-              // }}
-
-              category={`Forms`}
-              selected={selected}
-            >
-              Forms
-            </M>
-          </Link>
+          {/* <Link to="/formTest"> */}
+          <M
+            onClick={event => {
+              select(event.target.innerText);
+            }}
+            category={`Forms`}
+            selected={selected}
+          >
+            Forms
+          </M>
+          */}
           <Collap category={`Forms`} selected={selected}>
             <S
               onClick={event => {

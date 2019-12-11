@@ -41,7 +41,7 @@ module.exports = {
         icon: `icon/icon.png`
       }
     },
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
