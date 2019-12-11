@@ -11,6 +11,7 @@ import Carousel from "./Component-groups/Carousel";
 import Collapse from "./Component-groups/Collapse";
 import Dividers from "./Component-groups/Dividers";
 import Raleway from "./Component-groups/FontsRaleway";
+import Form from "./Component-groups/Form";
 import Hamburger from "./Component-groups/Hamburger";
 import Maps from "./Component-groups/Maps";
 import MenuDropdown from "./Component-groups/MenuDropdown";
@@ -303,7 +304,18 @@ export default function Nav({
           >
             Forms
           </M>
-          <Collap category={`Forms`} selected={selected}></Collap>
+          <Collap category={`Forms`} selected={selected}>
+            <S
+              onClick={event => {
+                changeCategory(<Form />);
+                subSelect(event.target.innerText);
+              }}
+              category={`Form`}
+              selected={subSelected}
+            >
+              Form
+            </S>
+          </Collap>
           <Divider />
           <L>Libraries</L>
           <M
