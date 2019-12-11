@@ -13,10 +13,16 @@ const FormCard = styled.form`
   display: flex;
   flex-direction: column;
   max-width: 600px;
+  text-align: center;
 
   input,
   textarea {
     margin-bottom: ${({ theme: { spacing } }) => spacing.s4};
+    border-radius: ${({ theme: { borderRadius } }) => borderRadius};
+    border: none;
+    box-shadow: ${({ theme: { shadow } }) => shadow.small};
+
+    min-height: 50px;
   }
 `;
 
