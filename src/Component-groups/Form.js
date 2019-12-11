@@ -32,7 +32,7 @@ function encode(data) {
     .join("&");
 }
 
-export default function Contact() {
+export default function Form() {
   const [state, setState] = React.useState({});
 
   const handleChange = e => {
