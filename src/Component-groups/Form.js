@@ -22,20 +22,14 @@ export default function Form() {
     <Center>
       <Title>Form</Title>
       <form
-        name="Test Form"
-        method="POST"
+        name="contact"
+        method="post"
         data-netlify="true"
-        action="/success/"
+        data-netlify-honeypot="bot-field"
       >
-        <input type="hidden" name="form-name" value="Test Form" />
-        <div>
-          <label>Your Email:</label>
-          <input type="email" name="email" />
-        </div>
-        <div>
-          <label>Message:</label>
-          <textarea name="message" />
-        </div>
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="email" name="email" />
+        <textarea name="message" />
         <button type="submit">Send</button>
       </form>
       <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/Raleway/Font-face.txt">
