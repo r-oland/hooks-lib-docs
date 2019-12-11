@@ -1,5 +1,6 @@
 // Components==============
 import MenuImp from "assets/Menu.inline.svg";
+import { Link } from "gatsby";
 import { flexUnit } from "mixins";
 import React, { useState } from "react";
 import styled from "styled-components";
@@ -27,6 +28,7 @@ const NavWrapper = styled.div`
   position: fixed;
   left: ${({ isFoldedOut }) => (isFoldedOut === true ? `0` : `-350px`)};
   top: 0;
+  z-index: 500;
   background-color: ${({ theme: { white } }) => white};
   overflow-x: hidden;
   overflow-y: scroll;
@@ -40,7 +42,7 @@ const Menu = styled(MenuImp)`
   transform: ${({ isfoledout }) =>
     isfoledout === "true" ? `rotate(270deg)` : `rotate(90deg)`};
   transition: 1s;
-  z-index: 1;
+  z-index: 501;
   cursor: pointer;
 `;
 
@@ -295,15 +297,18 @@ export default function Nav({
               Raleway
             </S>
           </Collap>
-          <M
-            onClick={event => {
-              select(event.target.innerText);
-            }}
-            category={`Forms`}
-            selected={selected}
-          >
-            Forms
-          </M>
+          <Link to="/formTest">
+            <M
+              // onClick={event => {
+              //   select(event.target.innerText);
+              // }}
+
+              category={`Forms`}
+              selected={selected}
+            >
+              Forms
+            </M>
+          </Link>
           <Collap category={`Forms`} selected={selected}>
             <S
               onClick={event => {
