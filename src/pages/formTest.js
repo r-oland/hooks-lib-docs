@@ -1,6 +1,31 @@
 import { navigate } from "gatsby-link";
 import React from "react";
+import styled from "styled-components";
+import { SimpleButton } from "../Components/SimpleButton";
 import Layout from "../Layout/Layout";
+import { Container } from "../style/Mixins";
+
+const Title = styled.h2`
+  text-align: center;
+`;
+
+const FormCard = styled.form`
+  margin: ${({ theme: { spacing } }) => spacing.s8} auto 0;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  text-align: center;
+
+  input,
+  textarea {
+    margin-bottom: ${({ theme: { spacing } }) => spacing.s4};
+    border-radius: ${({ theme: { borderRadius } }) => borderRadius};
+    border: none;
+    box-shadow: ${({ theme: { shadow } }) => shadow.small};
+
+    min-height: 50px;
+  }
+`;
 
 function encode(data) {
   return Object.keys(data)
@@ -32,48 +57,30 @@ export default function Contact() {
 
   return (
     <Layout>
-      <h2>Contact</h2>
-      <form
-        name="contact"
-        method="post"
-        action="/success/"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        onSubmit={handleSubmit}
-      >
-        {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-        <input type="hidden" name="form-name" value="contact" />
-        <p hidden>
-          <label>
-            Don’t fill this out:{" "}
-            <input name="bot-field" onChange={handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            Your name:
-            <br />
-            <input type="text" name="name" onChange={handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            Your email:
-            <br />
-            <input type="email" name="email" onChange={handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            Message:
-            <br />
-            <textarea name="message" onChange={handleChange} />
-          </label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
-      </form>
+      <Container>
+        <Title>Form</Title>
+        <FormCard
+          name="test"
+          method="post"
+          action="/success/"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          onSubmit={handleSubmit}
+        >
+          {/* The `hidden` fields are required to support form submissions without JavaScript */}
+          <input type="hidden" name="bot-field" />
+          <input type="hidden" name="form-name" value="test" />
+          <input type="text" name="name" onChange={handleChange} />
+
+          <input type="email" name="email" onChange={handleChange} />
+
+          <textarea name="message" onChange={handleChange} />
+
+          <SimpleButton as="button" type="submit">
+            Send
+          </SimpleButton>
+        </FormCard>
+      </Container>
     </Layout>
   );
 }

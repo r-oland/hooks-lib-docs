@@ -58,7 +58,7 @@ export default function Contact() {
     <Container>
       <Title>Form</Title>
       <FormCard
-        name="Test"
+        name="test"
         method="post"
         action="/success/"
         data-netlify="true"
@@ -67,7 +67,7 @@ export default function Contact() {
       >
         {/* The `hidden` fields are required to support form submissions without JavaScript */}
         <input type="hidden" name="bot-field" />
-        <input type="hidden" name="form-name" value="Test" />
+        <input type="hidden" name="form-name" value="test" />
         <input type="text" name="name" onChange={handleChange} />
 
         <input type="email" name="email" onChange={handleChange} />
