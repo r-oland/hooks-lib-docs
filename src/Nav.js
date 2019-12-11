@@ -296,7 +296,6 @@ export default function Nav({
               Raleway
             </S>
           </Collap>
-          {/* <Link to="/formTest"> */}
           <M
             onClick={event => {
               select(event.target.innerText);
@@ -306,7 +305,6 @@ export default function Nav({
           >
             Forms
           </M>
-          */}
           <Collap category={`Forms`} selected={selected}>
             <S
               onClick={event => {
