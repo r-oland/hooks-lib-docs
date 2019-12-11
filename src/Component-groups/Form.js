@@ -27,7 +27,7 @@ export default function Form() {
         data-netlify="true"
         action="/success/"
       >
-        <input type="hidden" name="form-name" value="Contact Form" />
+        <input type="hidden" name="form-name" value="Test Form" />
         <div>
           <label>Your Email:</label>
           <input type="email" name="email" />
