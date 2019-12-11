@@ -71,6 +71,7 @@ export default function Form() {
         <input type="text" name="name" onChange={handleChange} />
 
         <input type="email" name="email" onChange={handleChange} />
+        <input type="file" name="file" />
 
         <textarea name="message" onChange={handleChange} />
 
