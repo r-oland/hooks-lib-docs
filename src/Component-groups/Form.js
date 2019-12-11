@@ -74,7 +74,9 @@ export default function Contact() {
 
         <textarea name="message" onChange={handleChange} />
 
-        <SimpleButton type="submit">Send</SimpleButton>
+        <SimpleButton as="button" type="submit">
+          Send
+        </SimpleButton>
       </FormCard>
     </Container>
   );
