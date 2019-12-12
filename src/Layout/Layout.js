@@ -5,6 +5,7 @@ import { ThemeProvider } from "styled-components";
 import Nav from "../Nav";
 import GlobalStyles from "../style/GlobalStyles";
 import { Variables } from "../style/themes";
+import IEWarning from "./IE/IEWarning";
 // =========================
 
 export default function Layout({
@@ -17,6 +18,7 @@ export default function Layout({
   return (
     <ThemeProvider theme={Variables}>
       <OverFlowFix>
+        <IEWarning />
         <Nav
           category={category}
           setCategory={setCategory}
