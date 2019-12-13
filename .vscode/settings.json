@@ -27,5 +27,6 @@
       "icon": "component",
       "extensions": ["Component-groups"]
     }
-  ]
+  ],
+  "cSpell.language": "nl, en"
 }

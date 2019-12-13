@@ -76,6 +76,11 @@ const GlobalStyles = createGlobalStyle`
    html {
       font-family: Raleway;
       background-color: ${({ theme: { gray } }) => gray.s1};
+
+      input, select, textarea{
+         font-family: Raleway;
+         font-size: 14px;
+      }
    }
 
    h1 {
@@ -208,6 +213,7 @@ const GlobalStyles = createGlobalStyle`
    img {
       border-style: none;
    }
+
    `;
 
 export default GlobalStyles;
