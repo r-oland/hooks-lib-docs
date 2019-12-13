@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import JobForm from "../Components/JobForm";
+import JobForm from "../Components/JobForm/JobForm";
 import { Container } from "../style/Mixins";
 
 const Title = styled.h2`
