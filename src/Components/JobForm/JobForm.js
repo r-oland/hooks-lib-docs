@@ -212,6 +212,7 @@ export default function JobForm() {
           />
           <label
             id="placeholdInput"
+            name="CV"
             htmlFor="file"
             filefield={fileField}
             tobigmessage={toBigMessage}
