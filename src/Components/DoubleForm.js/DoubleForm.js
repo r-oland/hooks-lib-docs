@@ -129,6 +129,10 @@ const FormText = styled.div`
   }
 `;
 
+const HideForm2 = styled.div`
+  display: none;
+`;
+
 export default function DoubleForm() {
   const F1 = "Offerte";
   const F2 = "Afspraak";
@@ -147,6 +151,9 @@ export default function DoubleForm() {
             </p>
           </FormText>
           <Form1 F1={F1} />
+          <HideForm2>
+            <Form2 F2={F2} />
+          </HideForm2>
         </div>
       );
     } else if (selectedForm === F2) {
