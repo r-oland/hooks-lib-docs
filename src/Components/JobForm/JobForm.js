@@ -8,18 +8,32 @@ import BijlagenImp from "./Bijlagen.inline.svg";
 // =========================
 
 const FormCard = styled.div`
-  border-top: ${({ theme: { spacing } }) => spacing.s9}
-    ${({ theme: { primary } }) => primary.s5.replace("1)", "0.7)")} solid;
   margin: ${({ theme: { spacing } }) => `${spacing.s8} auto `};
-  padding: ${({ theme: { spacing } }) => `${spacing.s8} ${spacing.s10}`};
-  max-width: 800px;
+  padding: ${({ theme: { spacing } }) => `${spacing.s7} ${spacing.s6}`};
   background-color: ${({ theme: { white } }) => white};
   box-shadow: ${({ theme: { shadow } }) => shadow.medium};
+  border-top: ${({ theme: { spacing } }) => spacing.s8}
+    ${({ theme: { primary } }) => primary.s5.replace("1)", "0.7)")} solid;
+
+  @media screen and (min-width: 500px) {
+    padding: ${({ theme: { spacing } }) => `${spacing.s8} ${spacing.s8}`};
+  }
+
+  @media screen and (min-width: 900px) {
+    padding: ${({ theme: { spacing } }) => `${spacing.s8} ${spacing.s10}`};
+    border-top: ${({ theme: { spacing } }) => spacing.s9}
+      ${({ theme: { primary } }) => primary.s5.replace("1)", "0.7)")} solid;
+    max-width: 800px;
+  }
 `;
 
 const Form = styled.form`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+
+  @media screen and (min-width: 900px) {
+    grid-template-columns: 1fr 1fr;
+  }
 
   .formElement {
     margin-bottom: ${({ theme: { spacing } }) => spacing.s5};
@@ -29,12 +43,16 @@ const Form = styled.form`
     textarea,
     label {
       padding: ${({ theme: { spacing } }) => ` 11px ${spacing.s4}`};
-      width: 250px;
+      width: 100%;
       border-radius: ${({ theme: { borderRadius } }) => borderRadius};
       border: none;
       background-color: ${({ theme: { primary } }) =>
         primary.s7.replace("1)", "0.05)")};
       color: ${({ theme: { gray } }) => gray.s8};
+
+      @media screen and (min-width: 900px) {
+        width: 250px;
+      }
     }
   }
 `;
@@ -48,13 +66,17 @@ const Label = styled(Xs)`
 const VoorNaam = styled.div``;
 
 const AchterNaam = styled.div`
-  justify-self: end;
+  @media screen and (min-width: 900px) {
+    justify-self: end;
+  }
 `;
 
 const Mail = styled.div``;
 
 const Telefoon = styled.div`
-  justify-self: end;
+  @media screen and (min-width: 900px) {
+    justify-self: end;
+  }
 `;
 
 const Functie = styled.div`
@@ -67,7 +89,9 @@ const Functie = styled.div`
 `;
 
 const GeboorteDatum = styled.div`
-  justify-self: end;
+  @media screen and (min-width: 900px) {
+    justify-self: end;
+  }
 `;
 
 const CV = styled.div`
@@ -116,7 +140,9 @@ const BijlagenSvg = styled(BijlagenImp)`
 `;
 
 const Bericht = styled.div`
-  grid-column: 1/3;
+  @media screen and (min-width: 900px) {
+    grid-column: 1/3;
+  }
 
   #bericht {
     width: 100%;
@@ -127,10 +153,14 @@ const Bericht = styled.div`
 const FormButton = styled(SimpleButton)`
   max-width: 170px;
   margin: ${({ theme: { spacing } }) => spacing.s4} auto 0;
-  grid-column: 1/3;
+
+  @media screen and (min-width: 900px) {
+    grid-column: 1/3;
+  }
 `;
 
 export default function JobForm() {
+  const formName = "newForm";
   const initialMessage = "Voeg bestand toe";
   const toBigMessage = "TE GROOT (max 500kb)";
   const noFileMessage = "Geen bestand";
@@ -148,7 +178,7 @@ export default function JobForm() {
   const handleSubmit = e => {
     e.preventDefault();
     if (fileField !== toBigMessage) {
-      document.querySelector(`#test2`).submit();
+      document.querySelector(`#${formName}`).submit();
     }
   };
 
@@ -161,8 +191,8 @@ export default function JobForm() {
   return (
     <FormCard>
       <Form
-        id="test2"
-        name="test2"
+        id={formName}
+        name={formName}
         method="post"
         action="/success/"
         data-netlify="true"
@@ -170,7 +200,7 @@ export default function JobForm() {
         onSubmit={handleSubmit}
       >
         <input type="hidden" name="bot-field" />
-        <input type="hidden" name="form-name" value="test2" />
+        <input type="hidden" name="form-name" value={formName} />
         {/* The `hidden` fields are required to support form submissions without JavaScript */}
         <VoorNaam className="formElement">
           <Label>Voornaam</Label>
