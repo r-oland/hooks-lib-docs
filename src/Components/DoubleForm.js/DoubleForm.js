@@ -133,6 +133,8 @@ const HideForm2 = styled.div`
   display: none;
 `;
 
+// add succes.js page to pages
+
 export default function DoubleForm() {
   const F1 = "Offerte";
   const F2 = "Afspraak";

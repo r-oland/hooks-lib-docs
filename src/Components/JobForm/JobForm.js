@@ -159,6 +159,8 @@ const FormButton = styled(SimpleButton)`
   }
 `;
 
+// add succes.js page to pages
+
 export default function JobForm() {
   const formName = "newForm";
   const initialMessage = "Voeg bestand toe";
