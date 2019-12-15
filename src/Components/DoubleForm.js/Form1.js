@@ -111,7 +111,7 @@ export default function Form1({ F1 }) {
         <textarea name="Bericht" id="bericht" required />
       </Bericht>
       <FormButton as="button" type="submit" className="formElement">
-        Stuur sollicitatie
+        Verstuur
       </FormButton>
     </Form>
   );

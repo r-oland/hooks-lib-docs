@@ -149,7 +149,7 @@ export default function DoubleForm() {
           <Form1 F1={F1} />
         </div>
       );
-    } else {
+    } else if (selectedForm === F2) {
       return (
         <div>
           <FormText>
