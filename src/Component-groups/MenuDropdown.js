@@ -67,7 +67,7 @@ export default function MenuDropdown() {
           </MenuCardDropdown2>
           <li>Menu Item 3</li>
         </NavigationExample>
-        <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/MenuCardDropdown/MenuCardDropdown2.js">
+        <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/MenuCardDropdown2/MenuCardDropdown2.js">
           select
         </Margin>
 
@@ -92,7 +92,7 @@ export default function MenuDropdown() {
           </MenuCardDropdown3>
           <li>Menu Item 3</li>
         </NavigationExample>
-        <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/MenuCardDropdown/MenuCardDropdown3.js">
+        <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/MenuCardDropdown3/MenuCardDropdown3.js">
           select
         </Margin>
       </Elements>

@@ -2,6 +2,7 @@
 import { graphql, useStaticQuery } from "gatsby";
 import { Container } from "mixins";
 import React from "react";
+import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
 import CTACard from "../Components/CTACard";
 import CurvedImageCard from "../Components/CurvedImageCard/CurverdImageCard";
@@ -22,7 +23,7 @@ const Grid = styled.div`
   margin: 4em 0;
 `;
 
-const Clip = styled(Container)`
+const Clip = styled(Clipboard)`
   display: block;
   margin: 0 auto;
   padding-top: 1em;
