@@ -8,7 +8,6 @@ import styled from "styled-components";
 import Carousel1 from "../Components/Carousel1/Carousel1";
 import Slide1 from "../Components/Carousel2/Slide1";
 import Slide2 from "../Components/Carousel2/Slide2";
-import { SimpleButton } from "../Components/SimpleButton";
 
 // =========================
 
@@ -16,8 +15,8 @@ const Wrapper = styled(Container)`
   text-align: center;
 `;
 
-const CopyButton = styled(SimpleButton)`
-  margin: ${({ theme: { spacing } }) => `${spacing.s8}`} 0;
+const Clip = styled(Clipboard)`
+  padding: 2em 0;
 `;
 
 const SlideImage = styled(Img)`
@@ -103,9 +102,9 @@ export default function Carousel() {
         <SlideImage fluid={Image4} alt="dog4" />
       </Carousel1>
 
-      <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/Carousel1/Carousel1.js">
-        <CopyButton>select</CopyButton>
-      </Clipboard>
+      <Clip data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/Carousel1/Carousel1.js">
+        select
+      </Clip>
 
       <Slide1 setNav1={setNav1} nav2={nav2}>
         <SlideImage2 fluid={Image1} alt="dog1" />
@@ -120,9 +119,9 @@ export default function Carousel() {
         <SlideImage3 fluid={Image4} alt="dog4" />
       </Slide2>
 
-      <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/Carousel2/Slide1.js">
-        <CopyButton>select</CopyButton>
-      </Clipboard>
+      <Clip data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/Carousel2/Slide1.js">
+        select
+      </Clip>
     </Wrapper>
   );
 }

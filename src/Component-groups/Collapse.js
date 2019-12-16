@@ -20,7 +20,9 @@ const Elements = styled.div`
 `;
 
 const Margin = styled(Clipboard)`
-  margin-bottom: 3em;
+  display: block;
+  margin: 0 auto 3em;
+  padding-top: 1em;
 `;
 
 export default function Hamburger() {
@@ -28,23 +30,24 @@ export default function Hamburger() {
     <Container>
       <Title>Collapse elements</Title>
       <Elements>
+        <CollapseCard initial={"This could be a question as a example?"}>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore ea
+          ratione libero non. Laudantium rerum numquam quo tenetur, nihil, sit,
+          ullam incidunt illo repudiandae voluptates placeat earum error at quod
+          pariatur sed quia. Laudantium sequi et commodi laborum itaque quaerat.
+        </CollapseCard>
         <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/CollapseCard/CollapseCard.js">
-          <CollapseCard initial={"This could be a question as a example?"}>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore ea
-            ratione libero non. Laudantium rerum numquam quo tenetur, nihil,
-            sit, ullam incidunt illo repudiandae voluptates placeat earum error
-            at quod pariatur sed quia. Laudantium sequi et commodi laborum
-            itaque quaerat.
-          </CollapseCard>
+          select
         </Margin>
+
+        <CollapseCard2 initial={"This could be a question as a example?"}>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore ea
+          ratione libero non. Laudantium rerum numquam quo tenetur, nihil, sit,
+          ullam incidunt illo repudiandae voluptates placeat earum error at quod
+          pariatur sed quia. Laudantium sequi et commodi laborum itaque quaerat.
+        </CollapseCard2>
         <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/CollapseCard2/CollapseCard2.js">
-          <CollapseCard2 initial={"This could be a question as a example?"}>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore ea
-            ratione libero non. Laudantium rerum numquam quo tenetur, nihil,
-            sit, ullam incidunt illo repudiandae voluptates placeat earum error
-            at quod pariatur sed quia. Laudantium sequi et commodi laborum
-            itaque quaerat.
-          </CollapseCard2>
+          select
         </Margin>
       </Elements>
     </Container>

@@ -20,7 +20,9 @@ const Elements = styled.div`
 `;
 
 const Margin = styled(Clipboard)`
-  margin-bottom: 3em;
+  padding-bottom: 3em;
+  display: block;
+  margin: 0 auto;
 `;
 
 const Stock2SVG = styled.img``;
@@ -34,59 +36,64 @@ export default function MenuDropdown() {
     <div style={{ minHeight: `120vh` }}>
       <Title>Menu dropdowns</Title>
       <Elements>
+        <NavigationExample>
+          <li>Menu Item 1</li>
+          <MenuCardDropdown name="Dropdown item 2">
+            <p>Title 1</p>
+            <p>Title 2 </p>
+            <p>Title 3</p>
+          </MenuCardDropdown>
+          <li>Menu Item 3</li>
+        </NavigationExample>
         <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/MenuCardDropdown/MenuCardDropdown.js">
-          <NavigationExample>
-            <li>Menu Item 1</li>
-            <MenuCardDropdown name="Dropdown item 2">
+          select
+        </Margin>
+
+        <NavigationExample>
+          <li>Menu Item 1</li>
+          <MenuCardDropdown2 name="Dropdown item 2">
+            <div className="dropdownItem">
               <p>Title 1</p>
-              <p>Title 2 </p>
+              <div className="subDropdownText">Additional text</div>
+            </div>
+            <div className="dropdownItem">
+              <p>Title 2</p>
+              <div className="subDropdownText">Additional text</div>
+            </div>
+            <div className="dropdownItem">
               <p>Title 3</p>
-            </MenuCardDropdown>
-            <li>Menu Item 3</li>
-          </NavigationExample>
-        </Margin>
+              <div className="subDropdownText">Additional text</div>
+            </div>
+          </MenuCardDropdown2>
+          <li>Menu Item 3</li>
+        </NavigationExample>
         <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/MenuCardDropdown/MenuCardDropdown2.js">
-          <NavigationExample>
-            <li>Menu Item 1</li>
-            <MenuCardDropdown2 name="Dropdown item 2">
-              <div className="dropdownItem">
-                <p>Title 1</p>
-                <div className="subDropdownText">Additional text</div>
-              </div>
-              <div className="dropdownItem">
-                <p>Title 2</p>
-                <div className="subDropdownText">Additional text</div>
-              </div>
-              <div className="dropdownItem">
-                <p>Title 3</p>
-                <div className="subDropdownText">Additional text</div>
-              </div>
-            </MenuCardDropdown2>
-            <li>Menu Item 3</li>
-          </NavigationExample>
+          select
         </Margin>
+
+        <NavigationExample>
+          <li>Menu Item 1</li>
+          <MenuCardDropdown3 name="Dropdown item 2">
+            <div className="dropdownItem">
+              <Stock2SVG src={Stock2} alt="Stock2" />
+              <p>Title 1</p>
+              <div className="subDropdownText">Additional text</div>
+            </div>
+            <div className="dropdownItem">
+              <Stock3SVG src={Stock3} alt="Stock3" />
+              <p>Title 2</p>
+              <div className="subDropdownText">Additional text</div>
+            </div>
+            <div className="dropdownItem">
+              <Stock4Svg src={Stock4} alt="Stock4" />
+              <p>Title 3</p>
+              <div className="subDropdownText">Additional text</div>
+            </div>
+          </MenuCardDropdown3>
+          <li>Menu Item 3</li>
+        </NavigationExample>
         <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/MenuCardDropdown/MenuCardDropdown3.js">
-          <NavigationExample>
-            <li>Menu Item 1</li>
-            <MenuCardDropdown3 name="Dropdown item 2">
-              <div className="dropdownItem">
-                <Stock2SVG src={Stock2} alt="Stock2" />
-                <p>Title 1</p>
-                <div className="subDropdownText">Additional text</div>
-              </div>
-              <div className="dropdownItem">
-                <Stock3SVG src={Stock3} alt="Stock3" />
-                <p>Title 2</p>
-                <div className="subDropdownText">Additional text</div>
-              </div>
-              <div className="dropdownItem">
-                <Stock4Svg src={Stock4} alt="Stock4" />
-                <p>Title 3</p>
-                <div className="subDropdownText">Additional text</div>
-              </div>
-            </MenuCardDropdown3>
-            <li>Menu Item 3</li>
-          </NavigationExample>
+          select
         </Margin>
       </Elements>
     </div>

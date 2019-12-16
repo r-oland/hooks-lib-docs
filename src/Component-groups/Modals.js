@@ -31,7 +31,13 @@ export default function Modals() {
     <Wrapper>
       <h2>Modals</h2>
       <Grid>
-        <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SimpleModal/SimpleModal.js">
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            flexDirection: "column"
+          }}
+        >
           <SimpleButton onClick={handleChange}>Click me</SimpleButton>
           <SimpleModal modalIsOpen={modalIsOpen} handleChange={handleChange}>
             <p>
@@ -53,7 +59,13 @@ export default function Modals() {
               Nihil!
             </p>
           </SimpleModal>
-        </Clipboard>
+          <Clipboard
+            style={{ display: "block", margin: "0 auto" }}
+            data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SimpleModal/SimpleModal.js"
+          >
+            select
+          </Clipboard>
+        </div>
       </Grid>
     </Wrapper>
   );

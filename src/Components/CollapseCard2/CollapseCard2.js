@@ -5,7 +5,7 @@ import styled from "styled-components";
 import SwitchImp from "./Switch.inline.svg";
 // =========================
 
-const Wrapper = styled.div`
+const Wrapper = styled.button`
   cursor: pointer;
   margin: 0 auto;
   max-width: ${({ theme: { spacing } }) => spacing.s16};

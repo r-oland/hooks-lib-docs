@@ -148,19 +148,22 @@ const GlobalStyles = createGlobalStyle`
    ul,
    ol,
    dl,
-   address {
+   address,
+   button
+    {
       line-height: ${({ theme }) => theme.lineHeight.s3};
       padding: 0;
    }
 
    button {
       background: none;
-      color: inherit;
+      color: ${({ theme: { black } }) => black};
       border: none;
       padding: 0;
-      font: inherit;
+      font-family: inherit;
       cursor: pointer;
       outline: inherit
+      ${flexUnit(2.5, 16, 17, "vw", "font-size")}
    }
 
    pre {

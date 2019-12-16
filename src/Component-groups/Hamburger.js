@@ -20,7 +20,9 @@ const Elements = styled.div`
 `;
 
 const Margin = styled(Clipboard)`
-  margin-bottom: 3em;
+  padding-bottom: 3em;
+  display: block;
+  margin: 0 auto;
 `;
 
 export default function Hamburger() {
@@ -31,23 +33,28 @@ export default function Hamburger() {
     <div>
       <Title>Hamburger menu's</Title>
       <Elements>
+        <NavigationExample2>
+          <FullScreenWaterfallMenu />
+        </NavigationExample2>
         <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/FullScreenWaterfallMenu/FullScreenWaterfallMenu.js">
-          <NavigationExample2>
-            <FullScreenWaterfallMenu />
-          </NavigationExample2>
+          select
         </Margin>
+
+        <NavigationExample3>
+          <AWMHamburger menuState={menuState} setMenuState={setMenuState} />
+        </NavigationExample3>
+        <AWMMenu menuState={menuState} setMenuState={setMenuState} />
         <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/AnimatedWaterfallMenu/AWMHamburger.js">
-          <NavigationExample3>
-            <AWMHamburger menuState={menuState} setMenuState={setMenuState} />
-          </NavigationExample3>
-          <AWMMenu menuState={menuState} setMenuState={setMenuState} />
+          select
         </Margin>
-        <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/AnimatedSideMenu/ASMHamburger.js">
-          <NavigationExample2>
-            <ASMHamburger menuState={menuState2} setMenuState={setMenuState2} />
-          </NavigationExample2>
-        </Margin>
+
+        <NavigationExample2>
+          <ASMHamburger menuState={menuState2} setMenuState={setMenuState2} />
+        </NavigationExample2>
         <ASMMenu menuState={menuState2} setMenuState={setMenuState2} />
+        <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/AnimatedSideMenu/ASMHamburger.js">
+          select
+        </Margin>
       </Elements>
     </div>
   );

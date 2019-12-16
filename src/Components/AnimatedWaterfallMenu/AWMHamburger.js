@@ -63,11 +63,13 @@ export default function AWMHamburger({ menuState, setMenuState }) {
   }
 
   return (
-    <SvgWrapper onClick={changeMenu}>
-      <MenuSvgTop menustate={menuState} className="topHamburger" />
-      <MenuSvgCenter menustate={menuState} className="centerHamburger" />
-      <MenuSvgBottom menustate={menuState} className="bottomHamburger" />
-    </SvgWrapper>
+    <button onClick={changeMenu}>
+      <SvgWrapper>
+        <MenuSvgTop menustate={menuState} className="topHamburger" />
+        <MenuSvgCenter menustate={menuState} className="centerHamburger" />
+        <MenuSvgBottom menustate={menuState} className="bottomHamburger" />
+      </SvgWrapper>
+    </button>
   );
 }
 

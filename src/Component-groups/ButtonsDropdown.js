@@ -23,22 +23,34 @@ export default function ButtonsDropdown() {
     <Wrapper>
       <h2>Dropdown buttons</h2>
       <Grid>
-        <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SimpleDropdownButton/SimpleDropdownButton.js">
+        <div>
           <SimpleDropdownButton buttonText={`button text`}>
             <li>Choice one</li>
             <li>Choice two</li>
             <li>Choice three</li>
             <li>Choice four</li>
           </SimpleDropdownButton>
-        </Clipboard>
-        <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SimpleDropdownButton2/SimpleDropdownButton2.js">
+          <Clipboard
+            style={{ display: "block", margin: "0 auto" }}
+            data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SimpleDropdownButton/SimpleDropdownButton.js"
+          >
+            select
+          </Clipboard>
+        </div>
+        <div>
           <SimpleDropdownButton2 buttonText={`button text`}>
             <li>Choice one</li>
             <li>Choice two</li>
             <li>Choice three</li>
             <li>Choice four</li>
           </SimpleDropdownButton2>
-        </Clipboard>
+          <Clipboard
+            style={{ display: "block", margin: "0 auto" }}
+            data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SimpleDropdownButton2/SimpleDropdownButton2.js"
+          >
+            select
+          </Clipboard>
+        </div>
       </Grid>
     </Wrapper>
   );

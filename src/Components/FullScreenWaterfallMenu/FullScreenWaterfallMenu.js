@@ -1,4 +1,5 @@
 // Components==============
+import { Link } from "gatsby";
 import { flexUnit, L } from "mixins";
 import React, { useState } from "react";
 import styled from "styled-components";
@@ -66,25 +67,30 @@ export default function FullScreenWaterfallMenu() {
 
   return (
     <MenuWrapper>
-      <div onClick={changeMenu}>
+      <button onClick={changeMenu}>
         <MenuSvg menustate={menuState} />
-      </div>
+      </button>
       <MenuUnfolded menuState={menuState}>
         <ul>
-          <li onClick={changeMenu}>
-            <L>page 1</L>
+          <li>
+            <Link to="/" onClick={changeMenu}>
+              <L>page 1</L>
+            </Link>
           </li>
-
-          <li onClick={changeMenu}>
-            <L>page 2</L>
+          <li>
+            <Link to="/" onClick={changeMenu}>
+              <L>page 2</L>
+            </Link>
           </li>
-
-          <li onClick={changeMenu}>
-            <L>page 3</L>
+          <li>
+            <Link to="/" onClick={changeMenu}>
+              <L>page 3</L>
+            </Link>
           </li>
-
-          <li onClick={changeMenu}>
-            <L>page 4</L>
+          <li>
+            <Link to="/" onClick={changeMenu}>
+              <L>page 4</L>
+            </Link>
           </li>
         </ul>
       </MenuUnfolded>

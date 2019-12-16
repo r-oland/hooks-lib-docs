@@ -67,6 +67,8 @@ export default function QuestionAddOn({ children }) {
       onMouseOver={handleChange}
       onMouseOut={handleChange}
       onClick={handleClickChange}
+      onFocus={handleChange}
+      onBlur={handleChange}
     >
       <SymbolSvg cardisvisible={cardIsVisible} />
       <Card cardIsVisible={cardIsVisible}>{children}</Card>

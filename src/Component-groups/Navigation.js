@@ -18,7 +18,9 @@ const Elements = styled.div`
 `;
 
 const Margin = styled(Clipboard)`
-  margin-bottom: 3em;
+  padding-bottom: 3em;
+  display: block;
+  margin: 0 auto;
 `;
 
 export default function Navigation() {
@@ -26,18 +28,30 @@ export default function Navigation() {
     <div>
       <Title>Navigation bars</Title>
       <Elements>
-        <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/BasicNavigation.js">
+        <div>
           <BasicNavigation />
-        </Margin>
-        <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/BasicNavigationColor.js">
+          <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/BasicNavigation.js">
+            select
+          </Margin>
+        </div>
+        <div>
           <BasicNavigationColor />
-        </Margin>
-        <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/BasicNavigationShadow.js">
+          <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/BasicNavigationColor.js">
+            select
+          </Margin>
+        </div>
+        <div>
           <BasicNavigationShadow />
-        </Margin>
-        <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/BasicNavigationOnScroll.js">
+          <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/BasicNavigationShadow.js">
+            select
+          </Margin>
+        </div>
+        <div>
           <BasicNavigationOnScroll />
-        </Margin>
+          <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/BasicNavigationOnScroll.js">
+            select
+          </Margin>
+        </div>
       </Elements>
     </div>
   );

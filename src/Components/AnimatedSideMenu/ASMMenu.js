@@ -1,4 +1,5 @@
 // Components==============
+import { Link } from "gatsby";
 import { Container } from "mixins";
 import React from "react";
 import styled from "styled-components";
@@ -44,7 +45,7 @@ const Menu = styled.div`
   }
 `;
 
-const Blur = styled.div`
+const Blur = styled.button`
   position: fixed;
   opacity: ${({ menuState }) => (menuState === "open" ? `0.3` : `0`)};
   visibility: ${({ menuState }) =>
@@ -68,13 +69,26 @@ export default function ASMMenu({ menuState, setMenuState }) {
       <Menu menuState={menuState}>
         <Container>
           <ul>
-            <li onClick={changeMenu}>page 1</li>
-
-            <li onClick={changeMenu}>page 2</li>
-
-            <li onClick={changeMenu}>page 3</li>
-
-            <li onClick={changeMenu}>page 4</li>
+            <li>
+              <Link to="/" onClick={changeMenu}>
+                page 1
+              </Link>
+            </li>
+            <li>
+              <Link to="/" onClick={changeMenu}>
+                page 2
+              </Link>
+            </li>
+            <li>
+              <Link to="/" onClick={changeMenu}>
+                page 3
+              </Link>
+            </li>
+            <li>
+              <Link to="/" onClick={changeMenu}>
+                page 4
+              </Link>
+            </li>
           </ul>
         </Container>
       </Menu>

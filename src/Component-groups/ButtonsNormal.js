@@ -34,20 +34,45 @@ export default function ButtonsNormal() {
     <Wrapper>
       <h2>Normal buttons</h2>
       <Grid>
-        <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SimpleButton.js">
+        <div>
           <SimpleButton>Button text</SimpleButton>
-        </Clipboard>
-        <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/TransparentButton.js">
+          <Clipboard
+            style={{ display: "block", margin: "0 auto" }}
+            data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SimpleButton.js"
+          >
+            select
+          </Clipboard>
+        </div>
+        <div>
           <TransparentButton>Button text</TransparentButton>
-        </Clipboard>
-        <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SlideInButton.js">
+          <Clipboard
+            style={{ display: "block", margin: "0 auto" }}
+            data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/TransparentButton.js"
+          >
+            select
+          </Clipboard>
+        </div>
+        <div>
           <SlideInButton>Button text</SlideInButton>
-        </Clipboard>
-        <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/IconButton.js">
+          <Clipboard
+            style={{ display: "block", margin: "0 auto" }}
+            data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SlideInButton.js"
+          >
+            select
+          </Clipboard>
+        </div>
+        <div>
           <IconButton>
             <Stock1Svg />
           </IconButton>
-        </Clipboard>
+
+          <Clipboard
+            style={{ display: "block", margin: "0 auto" }}
+            data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/IconButton.js"
+          >
+            select
+          </Clipboard>
+        </div>
       </Grid>
     </Wrapper>
   );

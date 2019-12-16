@@ -57,9 +57,9 @@ export default function IEModal({ modalIsOpen, children, handleChange }) {
       <Shade modalIsOpen={modalIsOpen} />
       <Modal modalIsOpen={modalIsOpen}>
         <OverflowDiv>
-          <p className="close" onClick={handleChange}>
+          <button className="close" onClick={handleChange}>
             Negeer
-          </p>
+          </button>
           {children}
         </OverflowDiv>
       </Modal>

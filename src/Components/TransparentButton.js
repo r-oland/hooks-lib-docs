@@ -1,9 +1,8 @@
 // Components==============
-import { M } from "mixins";
 import styled from "styled-components";
 // =========================
 
-export const TransparentButton = styled(M)`
+export const TransparentButton = styled.button`
   color: ${({ theme: { white } }) => white};
   border: ${({ theme: { white } }) => white} 2px solid;
   font-weight: ${({ theme: { fontWeight } }) => fontWeight.semiBold};

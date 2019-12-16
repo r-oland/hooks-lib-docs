@@ -95,7 +95,12 @@ export default function MenuCardDropdown({ children, name }) {
   };
 
   return (
-    <Wrapper onMouseOver={handleChange} onMouseOut={handleChange}>
+    <Wrapper
+      onMouseOver={handleChange}
+      onMouseOut={handleChange}
+      onFocus={handleChange}
+      onBlur={handleChange}
+    >
       <Grid onClick={handleClickChange}>
         <Item cardIsVisible={cardIsVisible}>{name}</Item>
         <MenuDropdownArrowSvg cardisvisible={cardIsVisible} />

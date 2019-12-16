@@ -1,4 +1,5 @@
 // Components==============
+import { Link } from "gatsby";
 import React from "react";
 import styled from "styled-components";
 import { Container } from "../../style/Mixins";
@@ -54,13 +55,26 @@ export default function AWMMenu({ menuState, setMenuState, fixed }) {
     <MenuWrapper menuState={menuState} fixed={fixed}>
       <Container>
         <ul>
-          <li onClick={changeMenu}>page 1</li>
-
-          <li onClick={changeMenu}>page 2</li>
-
-          <li onClick={changeMenu}>page 3</li>
-
-          <li onClick={changeMenu}>page 4</li>
+          <li>
+            <Link to="/" onClick={changeMenu}>
+              page 1
+            </Link>
+          </li>
+          <li>
+            <Link to="/" onClick={changeMenu}>
+              page 2
+            </Link>
+          </li>
+          <li>
+            <Link to="/" onClick={changeMenu}>
+              page 3
+            </Link>
+          </li>
+          <li>
+            <Link to="/" onClick={changeMenu}>
+              page 4
+            </Link>
+          </li>
         </ul>
       </Container>
     </MenuWrapper>

@@ -62,9 +62,9 @@ export default function SimpleModal({ modalIsOpen, children, handleChange }) {
       <OutsideListener modalIsOpen={modalIsOpen} handleChange={handleChange}>
         <Modal modalIsOpen={modalIsOpen}>
           <OverflowDiv>
-            <p className="close" onClick={handleChange}>
+            <button className="close" onClick={handleChange}>
               close
-            </p>
+            </button>
             {children}
           </OverflowDiv>
         </Modal>

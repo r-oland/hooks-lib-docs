@@ -2,7 +2,6 @@
 import { graphql, useStaticQuery } from "gatsby";
 import { Container } from "mixins";
 import React from "react";
-import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
 import CTACard from "../Components/CTACard";
 import CurvedImageCard from "../Components/CurvedImageCard/CurverdImageCard";
@@ -23,6 +22,12 @@ const Grid = styled.div`
   margin: 4em 0;
 `;
 
+const Clip = styled(Container)`
+  display: block;
+  margin: 0 auto;
+  padding-top: 1em;
+`;
+
 export default function Cards() {
   const data = useStaticQuery(graphql`
     query CardImage {
@@ -40,30 +45,53 @@ export default function Cards() {
     <Wrapper>
       <h2>Cards</h2>
       <Grid>
-        <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SimpleShadowCard.js">
+        <div>
           <SimpleShadowCard></SimpleShadowCard>
-        </Clipboard>
-        <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SimpleImageCard.js">
+          <Clip data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SimpleShadowCard.js">
+            select
+          </Clip>
+        </div>
+
+        <div>
           <SimpleImageCard
             img={data.file.childImageSharp.fluid}
           ></SimpleImageCard>
-        </Clipboard>
-        <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/CurvedImageCard/CurverdImageCard.js">
+          <Clip data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SimpleImageCard.js">
+            select
+          </Clip>
+        </div>
+
+        <div>
           <CurvedImageCard
             img={data.file.childImageSharp.fluid}
           ></CurvedImageCard>
-        </Clipboard>
-        <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/WaveCard/WaveCard.js">
+          <Clip data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/CurvedImageCard/CurverdImageCard.js">
+            select
+          </Clip>
+        </div>
+
+        <div>
           <WaveCard img={data.file.childImageSharp.fluid}></WaveCard>
-        </Clipboard>
-        <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/CurvedImageCard2/CurverdImageCard2.js">
+          <Clip data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/WaveCard/WaveCard.js">
+            select
+          </Clip>
+        </div>
+
+        <div>
           <CurvedImageCard2
             img={data.file.childImageSharp.fluid}
           ></CurvedImageCard2>
-        </Clipboard>
-        <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/CTACard.js">
+          <Clip data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/CurvedImageCard2/CurverdImageCard2.js">
+            select
+          </Clip>
+        </div>
+
+        <div>
           <CTACard cta={"Call to action"}></CTACard>
-        </Clipboard>
+          <Clip data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/CTACard.js">
+            select
+          </Clip>
+        </div>
       </Grid>
     </Wrapper>
   );

@@ -41,14 +41,18 @@ const CarouselArrow = styled(SwitchImp)`
 function NextArrow(props) {
   const { className, onClick } = props;
   return (
-    <CarouselArrow className={className} id="rightArrow" onClick={onClick} />
+    <button onClick={onClick}>
+      <CarouselArrow className={className} id="rightArrow" />
+    </button>
   );
 }
 
 function PrevArrow(props) {
   const { className, onClick } = props;
   return (
-    <CarouselArrow className={className} id="leftArrow" onClick={onClick} />
+    <button onClick={onClick}>
+      <CarouselArrow className={className} id="leftArrow" />
+    </button>
   );
 }
 

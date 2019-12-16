@@ -1,12 +1,11 @@
 // Components==============
 // =========================
 // Components==============
-import { M } from "mixins";
 import React from "react";
 import styled from "styled-components";
 // =========================
 
-const ButtonWrapper = styled.div`
+const ButtonWrapper = styled.button`
   position: relative;
   background-color: ${({ theme: { white } }) => white};
   color: ${({ theme: { black } }) => black};
@@ -40,7 +39,7 @@ const Slider = styled.div`
   transition: 0.8s;
 `;
 
-const Content = styled(M)`
+const Content = styled.p`
   padding: ${({ theme: { spacing } }) =>
     `${spacing.s2} ${spacing.s7} ${spacing.s2} ${spacing.s4}`};
   font-weight: ${({ theme: { fontWeight } }) => fontWeight.semiBold};

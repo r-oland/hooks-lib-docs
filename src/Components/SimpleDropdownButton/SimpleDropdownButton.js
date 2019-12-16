@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   position: relative;
 `;
 
-const HalfRoundedButton = styled.div`
+const HalfRoundedButton = styled.button`
   background-color: ${({ theme, isExpended }) =>
     isExpended === true ? `${theme.primary.s5}` : `${theme.primary.s4}`};
   border-radius: ${({ theme: { borderRadius } }) => borderRadius};

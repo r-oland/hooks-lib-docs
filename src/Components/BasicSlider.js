@@ -120,7 +120,7 @@ export default function BasicSlider({ slideState, setSlideState }) {
         id="slideBar"
         type="range"
         min="0"
-        max="10"
+        max="100"
         value={slideState}
         onChange={handleChange}
         step="1"

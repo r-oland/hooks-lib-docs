@@ -26,7 +26,7 @@ const SelectArea = styled.div`
   }
 `;
 
-const FormOption1 = styled.div`
+const FormOption1 = styled.button`
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -64,7 +64,7 @@ const FormOption1 = styled.div`
   }
 `;
 
-const FormOption2 = styled.div`
+const FormOption2 = styled.button`
   cursor: pointer;
   display: flex;
   justify-content: center;
