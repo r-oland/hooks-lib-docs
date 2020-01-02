@@ -1,6 +1,6 @@
 // Components==============
 import Icon from "assets/Icon.svg";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
 import TransitionEffect from "../Components/TransitionEffect";
@@ -35,7 +35,7 @@ const IconSVG = styled.img`
   width: 25vw;
 `;
 
-export default function Index({ transitionStatus }) {
+export default function Index({ mount }) {
   const [isFoldedOut, setIsFoldedOut] = useState(true);
   const [category, setCategory] = useState(
     <Flex>
@@ -45,6 +45,10 @@ export default function Index({ transitionStatus }) {
     </Flex>
   );
 
+  useEffect(() => {
+    console.log(mount);
+  }, [mount]);
+
   return (
     <Layout
       category={category}
@@ -52,7 +56,7 @@ export default function Index({ transitionStatus }) {
       isFoldedOut={isFoldedOut}
       setIsFoldedOut={setIsFoldedOut}
     >
-      <TransitionEffect>
+      <TransitionEffect mount={mount}>
         <Wrapper isFoldedOut={isFoldedOut}>{category}</Wrapper>;
       </TransitionEffect>
     </Layout>

@@ -19,10 +19,10 @@ const Wrapper = styled.div`
   }
 `;
 
-export default function transition() {
+export default function transition({ mount }) {
   return (
     <Layout>
-      <TransitionEffect>
+      <TransitionEffect mount={mount}>
         <Wrapper>
           <h3>
             You have transitioned smoothly

@@ -5,7 +5,15 @@ import React from "react";
 
 export default function TLink({ to, children }) {
   return (
-    <TransitionLink to={to} entry={{ delay: 0.4 }} exit={{ length: 0.4 }}>
+    <TransitionLink
+      to={to}
+      entry={{
+        delay: 0
+      }}
+      exit={{
+        length: 0
+      }}
+    >
       {children}
     </TransitionLink>
   );
