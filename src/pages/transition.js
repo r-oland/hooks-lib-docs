@@ -1,8 +1,8 @@
 // Components==============
-import TransitionLink from "gatsby-plugin-transition-link";
 import React from "react";
 import styled from "styled-components";
-import Test from "../Components/Test";
+import TLink from "../Components/TLink";
+import TransitionEffect from "../Components/TransitionEffect";
 import Layout from "../Layout/Layout";
 // =========================
 
@@ -11,12 +11,18 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+
+  a {
+    margin-top: ${({ theme: { spacing } }) => spacing.s8};
+    font-weight: ${({ theme: { fontWeight } }) => fontWeight.bold};
+  }
 `;
 
 export default function transition() {
   return (
     <Layout>
-      <Test>
+      <TransitionEffect>
         <Wrapper>
           <h3>
             You have transitioned smoothly
@@ -24,11 +30,9 @@ export default function transition() {
               😎
             </span>
           </h3>
-          <TransitionLink to="/" exit={{ length: 0.4 }}>
-            BACK
-          </TransitionLink>
+          <TLink to="/">BACK</TLink>
         </Wrapper>
-      </Test>
+      </TransitionEffect>
     </Layout>
   );
 }

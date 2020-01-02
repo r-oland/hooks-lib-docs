@@ -3,7 +3,7 @@ import Icon from "assets/Icon.svg";
 import React, { useState } from "react";
 import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
-import Test from "../Components/Test";
+import TransitionEffect from "../Components/TransitionEffect";
 import Layout from "../Layout/Layout";
 // =========================
 
@@ -35,7 +35,7 @@ const IconSVG = styled.img`
   width: 25vw;
 `;
 
-export default function Index() {
+export default function Index({ transitionStatus }) {
   const [isFoldedOut, setIsFoldedOut] = useState(true);
   const [category, setCategory] = useState(
     <Flex>
@@ -52,9 +52,9 @@ export default function Index() {
       isFoldedOut={isFoldedOut}
       setIsFoldedOut={setIsFoldedOut}
     >
-      <Test>
+      <TransitionEffect>
         <Wrapper isFoldedOut={isFoldedOut}>{category}</Wrapper>;
-      </Test>
+      </TransitionEffect>
     </Layout>
   );
 }

@@ -4,7 +4,7 @@ import React from "react";
 import styled from "styled-components";
 // =========================
 
-const Fade = styled.div`
+const Effect = styled.div`
   opacity: ${({ transitionStatus }) => {
     if (transitionStatus === "enterering" || transitionStatus === "entered") {
       return 1;
@@ -16,7 +16,7 @@ const Fade = styled.div`
     if (transitionStatus === "enterering" || transitionStatus === "entered") {
       return `initial`;
     } else {
-      return `translateY(100vh)`;
+      return `translateX(30vh)`;
     }
   }};
 
@@ -31,11 +31,11 @@ const Fade = styled.div`
   transition: 0.4s;
 `;
 
-export default function Test({ children }) {
+export default function TransitionEffect({ children }) {
   return (
     <TransitionState>
       {({ transitionStatus }) => {
-        return <Fade transitionStatus={transitionStatus}> {children}</Fade>;
+        return <Effect transitionStatus={transitionStatus}> {children}</Effect>;
       }}
     </TransitionState>
   );
