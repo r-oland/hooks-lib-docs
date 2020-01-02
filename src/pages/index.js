@@ -35,7 +35,7 @@ const IconSVG = styled.img`
   width: 25vw;
 `;
 
-export default function Index({ mount }) {
+export default function Index() {
   const [isFoldedOut, setIsFoldedOut] = useState(true);
   const [category, setCategory] = useState(
     <Flex>

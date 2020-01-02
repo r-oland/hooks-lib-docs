@@ -24,15 +24,7 @@ export default function transition() {
               😎
             </span>
           </h3>
-          <TransitionLink
-            to="/"
-            exit={{
-              length: 1
-            }}
-            entry={{
-              delay: 0.6
-            }}
-          >
+          <TransitionLink to="/" exit={{ length: 0.4 }}>
             BACK
           </TransitionLink>
         </Wrapper>

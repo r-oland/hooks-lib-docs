@@ -20,15 +20,7 @@ export default function PageTransitions() {
     <Wrapper>
       <h2>Page transitions</h2>
       <Wrapper2>
-        <TransitionLink
-          to="/transition"
-          exit={{
-            length: 1
-          }}
-          entry={{
-            delay: 0.6
-          }}
-        >
+        <TransitionLink to="/transition" exit={{ length: 0.4 }}>
           Transition
         </TransitionLink>
       </Wrapper2>
