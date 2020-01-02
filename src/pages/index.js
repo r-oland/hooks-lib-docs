@@ -3,6 +3,7 @@ import Icon from "assets/Icon.svg";
 import React, { useState } from "react";
 import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
+import Test from "../Components/Test";
 import Layout from "../Layout/Layout";
 // =========================
 
@@ -34,7 +35,7 @@ const IconSVG = styled.img`
   width: 25vw;
 `;
 
-export default function Index() {
+export default function Index({ mount }) {
   const [isFoldedOut, setIsFoldedOut] = useState(true);
   const [category, setCategory] = useState(
     <Flex>
@@ -51,7 +52,9 @@ export default function Index() {
       isFoldedOut={isFoldedOut}
       setIsFoldedOut={setIsFoldedOut}
     >
-      <Wrapper isFoldedOut={isFoldedOut}>{category}</Wrapper>
+      <Test>
+        <Wrapper isFoldedOut={isFoldedOut}>{category}</Wrapper>;
+      </Test>
     </Layout>
   );
 }

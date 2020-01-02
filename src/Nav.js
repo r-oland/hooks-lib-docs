@@ -13,10 +13,12 @@ import Dividers from "./Component-groups/Dividers";
 import Raleway from "./Component-groups/FontsRaleway";
 import Form from "./Component-groups/Form";
 import Hamburger from "./Component-groups/Hamburger";
+import IO from "./Component-groups/IO";
 import Maps from "./Component-groups/Maps";
 import MenuDropdown from "./Component-groups/MenuDropdown";
 import Modals from "./Component-groups/Modals";
 import Navigation from "./Component-groups/Navigation";
+import PageTransitions from "./Component-groups/PageTransitions";
 import Slider from "./Component-groups/Slider";
 
 // =========================
@@ -98,7 +100,6 @@ export default function Nav({
 
   const [selected, setSelected] = useState(`none`);
   const [subSelected, setSubSelected] = useState(`none`);
-  console.log(selected);
 
   // State functions
 
@@ -343,13 +344,25 @@ export default function Nav({
           </M>
           <M
             onClick={event => {
+              changeCategory(<IO />);
               select(event.target.innerText);
               subSelect(event.target.innerText);
             }}
-            category={`Typed`}
+            category={`Intersection observer`}
             selected={selected}
           >
-            Typed
+            Intersection observer
+          </M>
+          <M
+            onClick={event => {
+              changeCategory(<PageTransitions />);
+              select(event.target.innerText);
+              subSelect(event.target.innerText);
+            }}
+            category={`Page transitions`}
+            selected={selected}
+          >
+            Page transitions
           </M>
         </TextWrapper>
       </NavWrapper>

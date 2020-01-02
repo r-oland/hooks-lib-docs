@@ -76,6 +76,7 @@ const GlobalStyles = createGlobalStyle`
    html {
       font-family: Raleway;
       background-color: ${({ theme: { gray } }) => gray.s1};
+      height: 100%;
 
       input, select, textarea, label{
          font-family: Raleway;

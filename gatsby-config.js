@@ -15,6 +15,8 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-netlify`,
+    "gatsby-plugin-transition-link",
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
