@@ -1,5 +1,6 @@
 // Components==============
 import Icon from "assets/Icon.svg";
+import { motion } from "framer-motion";
 import React, { useState } from "react";
 import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
@@ -34,13 +35,18 @@ const IconSVG = styled.img`
   width: 25vw;
 `;
 
-export default function Index({ mount }) {
+export default function Index() {
   const [isFoldedOut, setIsFoldedOut] = useState(true);
   const [category, setCategory] = useState(
     <Flex>
-      <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components">
-        <IconSVG src={Icon} alt="Icon" />
-      </Clipboard>
+      <motion.div
+        drag
+        dragConstraints={{ left: -50, right: 50, top: -50, bottom: 50 }}
+      >
+        <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components">
+          <IconSVG src={Icon} alt="Icon" />
+        </Clipboard>
+      </motion.div>
     </Flex>
   );
 
