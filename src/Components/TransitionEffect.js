@@ -1,13 +1,29 @@
 // Components==============
+import { motion } from "framer-motion";
+import { TransitionState } from "gatsby-plugin-transition-link";
 import React from "react";
-import posed from "react-pose";
 // =========================
 
-const Effect = posed.div({
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { duration: 1000 } }
-});
+const variants = {
+  visible: { opacity: 1 },
+  hidden: { opacity: 0 }
+};
 
-export default function TransitionEffect({ children, mount }) {
-  return <Effect pose={mount ? "visible" : "hidden"}>{children}</Effect>;
+export default function TransitionEffect({ children }) {
+  return (
+    <TransitionState>
+      {({ mount, entry }) => {
+        return (
+          <motion.div
+            initial={false}
+            animate={mount ? "visible" : "hidden"}
+            variants={variants}
+            transition={{ duration: entry.delay }}
+          >
+            {children}
+          </motion.div>
+        );
+      }}
+    </TransitionState>
+  );
 }

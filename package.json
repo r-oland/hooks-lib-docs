@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.6",
+    "framer-motion": "^1.7.0",
     "gatsby": "^2.18.12",
     "gatsby-image": "^2.2.36",
     "gatsby-plugin-manifest": "^2.2.33",
@@ -40,7 +41,6 @@
     "react-intersection-observer": "^8.25.2",
     "react-pose": "^4.0.10",
     "react-slick": "^0.25.2",
-    "react-spring": "^8.0.27",
     "slick-carousel": "^1.8.1",
     "styled-components": "^4.4.1"
   },

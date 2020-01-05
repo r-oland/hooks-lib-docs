@@ -1,6 +1,6 @@
 // Components==============
 import Icon from "assets/Icon.svg";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
 import TransitionEffect from "../Components/TransitionEffect";
@@ -45,10 +45,6 @@ export default function Index({ mount }) {
     </Flex>
   );
 
-  useEffect(() => {
-    console.log(mount);
-  }, [mount]);
-
   return (
     <Layout
       category={category}
@@ -56,7 +52,7 @@ export default function Index({ mount }) {
       isFoldedOut={isFoldedOut}
       setIsFoldedOut={setIsFoldedOut}
     >
-      <TransitionEffect mount={mount}>
+      <TransitionEffect>
         <Wrapper isFoldedOut={isFoldedOut}>{category}</Wrapper>;
       </TransitionEffect>
     </Layout>
