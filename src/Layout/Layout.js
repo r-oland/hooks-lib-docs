@@ -2,6 +2,7 @@
 import { OverFlowFix } from "mixins";
 import React from "react";
 import { ThemeProvider } from "styled-components";
+import TransitionEffect from "../Components/TransitionEffect";
 import Nav from "../Nav";
 import GlobalStyles from "../style/GlobalStyles";
 import { Variables } from "../style/themes";
@@ -25,7 +26,7 @@ export default function Layout({
           isFoldedOut={isFoldedOut}
           setIsFoldedOut={setIsFoldedOut}
         />
-        {children}
+        <TransitionEffect> {children}</TransitionEffect>
       </OverFlowFix>
       <GlobalStyles />
     </ThemeProvider>

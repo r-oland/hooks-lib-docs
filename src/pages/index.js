@@ -3,7 +3,6 @@ import Icon from "assets/Icon.svg";
 import React, { useState } from "react";
 import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
-import TransitionEffect from "../Components/TransitionEffect";
 import Layout from "../Layout/Layout";
 // =========================
 
@@ -52,9 +51,7 @@ export default function Index({ mount }) {
       isFoldedOut={isFoldedOut}
       setIsFoldedOut={setIsFoldedOut}
     >
-      <TransitionEffect>
-        <Wrapper isFoldedOut={isFoldedOut}>{category}</Wrapper>;
-      </TransitionEffect>
+      <Wrapper isFoldedOut={isFoldedOut}>{category}</Wrapper>;
     </Layout>
   );
 }

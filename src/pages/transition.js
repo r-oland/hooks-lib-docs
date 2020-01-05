@@ -2,7 +2,6 @@
 import React from "react";
 import styled from "styled-components";
 import TLink from "../Components/TLink";
-import TransitionEffect from "../Components/TransitionEffect";
 import Layout from "../Layout/Layout";
 // =========================
 
@@ -22,17 +21,15 @@ const Wrapper = styled.div`
 export default function transition() {
   return (
     <Layout>
-      <TransitionEffect>
-        <Wrapper>
-          <h3>
-            You have transitioned smoothly
-            <span role="img" aria-label="cool">
-              😎
-            </span>
-          </h3>
-          <TLink to="/">BACK</TLink>
-        </Wrapper>
-      </TransitionEffect>
+      <Wrapper>
+        <h3>
+          You have transitioned smoothly
+          <span role="img" aria-label="cool">
+            😎
+          </span>
+        </h3>
+        <TLink to="/">BACK</TLink>
+      </Wrapper>
     </Layout>
   );
 }
