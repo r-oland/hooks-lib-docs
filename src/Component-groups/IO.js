@@ -37,6 +37,8 @@ export default function IO() {
 
 // npm install react-intersection-observer
 
+// import { useInView } from "react-intersection-observer";
+
 // const [ref, inView] = useInView({threshold: 0, triggerOnce: false})
 
 // use ref prop

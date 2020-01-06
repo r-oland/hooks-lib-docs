@@ -19,6 +19,7 @@ import MenuDropdown from "./Component-groups/MenuDropdown";
 import Modals from "./Component-groups/Modals";
 import Navigation from "./Component-groups/Navigation";
 import PageTransitions from "./Component-groups/PageTransitions";
+import Parallax from "./Component-groups/Parallax";
 import Slider from "./Component-groups/Slider";
 
 // =========================
@@ -363,6 +364,17 @@ export default function Nav({
             selected={selected}
           >
             Page transitions
+          </M>
+          <M
+            onClick={event => {
+              changeCategory(<Parallax />);
+              select(event.target.innerText);
+              subSelect(event.target.innerText);
+            }}
+            category={`Parallax`}
+            selected={selected}
+          >
+            Parallax
           </M>
         </TextWrapper>
       </NavWrapper>
