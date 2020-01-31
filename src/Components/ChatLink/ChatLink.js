@@ -7,8 +7,8 @@ import styled from "styled-components";
 import { S } from "../../style/Mixins";
 import Arrow from "./Arrow.svg";
 import Cross from "./Cross.svg";
-import LeftSvg from "./Left.svg";
-import RightSvg from "./Right.svg";
+import LeftImp from "./Left.inline.svg";
+import RightImp from "./Right.inline.svg";
 // =========================
 
 const ChatWrapper = styled.div`
@@ -99,10 +99,9 @@ const ChatArea = styled.div`
 `;
 
 const BoxStyling = styled(motion.div)`
-  background-size: 100% 100%;
+  position: relative;
   width: 100%;
   max-width: 330px;
-  background-repeat: no-repeat;
   height: 100%;
   text-align: left;
   margin-bottom: ${({ theme: { spacing } }) => spacing.s4};
@@ -113,18 +112,53 @@ const BoxStyling = styled(motion.div)`
 `;
 
 const Left = styled(BoxStyling)`
-  background-image: url(${LeftSvg});
   padding: ${({ theme: { spacing } }) =>
     `${spacing.s1} ${spacing.s4} ${spacing.s1} ${spacing.s6}`};
+  &:hover {
+    #color {
+      fill: ${({ theme: { primary } }) => primary.s4};
+    }
+  }
+`;
+
+const LeftSvg = styled(LeftImp)`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  #color {
+    fill: ${({ theme: { primary } }) => primary.s4.replace("1)", "0.4)")};
+    transition: 0.2s;
+  }
 `;
 
 const Right = styled(BoxStyling)`
-  background-image: url(${RightSvg});
   padding: ${({ theme: { spacing } }) =>
     `${spacing.s1} ${spacing.s6} ${spacing.s1} ${spacing.s4}`};
   margin-left: auto;
   @media screen and (min-width: 950px) {
     transform: translateY(-30px);
+  }
+
+  &:hover {
+    #color {
+      fill: ${({ theme: { primary } }) => primary.s4};
+    }
+  }
+`;
+
+const RightSvg = styled(RightImp)`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  #color {
+    fill: ${({ theme: { gray } }) => gray.s1};
+    transition: 0.2s;
   }
 `;
 
@@ -132,32 +166,38 @@ const Sender = styled.p`
   padding: ${({ theme: { spacing } }) => `0 ${spacing.s3} `};
   font-weight: ${({ theme: { fontWeight } }) => fontWeight.semiBold};
   color: ${({ theme: { gray } }) => gray.s7};
+  z-index: 10;
+  position: relative;
 `;
 
 const Message = styled(S)`
   padding: ${({ theme: { spacing } }) =>
     `${spacing.s1} 0 ${spacing.s1} ${spacing.s6}`};
+  z-index: 10;
+  position: relative;
 `;
 
 function Me({ children, to }) {
   return (
-    <Link to={to}>
-      <Left>
+    <Left>
+      <Link to={to}>
+        <LeftSvg />
         <Sender>Me</Sender>
         <Message>{children}</Message>
-      </Left>
-    </Link>
+      </Link>
+    </Left>
   );
 }
 
 function Roland({ children, to }) {
   return (
-    <Link to={to}>
-      <Right>
+    <Right>
+      <Link to={to}>
+        <RightSvg />
         <Sender>Roland</Sender>
         <Message>{children}</Message>
-      </Right>
-    </Link>
+      </Link>
+    </Right>
   );
 }
 
