@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   transform: ${({ isFoldedOut }) =>
     isFoldedOut === true ? `translateX(350px)` : `translateX(0)`};
   transition: 1s;
-  min-height: 90vh;
+  min-height: 100vh;
   padding-top: 0.65em;
 
   opacity: ${({ isFoldedOut }) => (isFoldedOut === true ? `0` : `1`)};

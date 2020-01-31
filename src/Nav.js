@@ -23,6 +23,7 @@ import Navigation from "./Component-groups/Navigation";
 import PageTransitions from "./Component-groups/PageTransitions";
 import Parallax from "./Component-groups/Parallax";
 import Slider from "./Component-groups/Slider";
+import StoryForm from "./Component-groups/StoryForm";
 import TextSwitch from "./Component-groups/TextSwitch";
 
 // =========================
@@ -330,6 +331,16 @@ export default function Nav({
               selected={subSelected}
             >
               Form
+            </S>
+            <S
+              onClick={event => {
+                changeCategory(<StoryForm />);
+                subSelect(event.target.innerText);
+              }}
+              category={`Story form`}
+              selected={subSelected}
+            >
+              Story form
             </S>
           </Collap>
           <Divider />
