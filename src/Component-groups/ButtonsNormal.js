@@ -5,6 +5,7 @@ import React from "react";
 import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
 import { IconButton } from "../Components/IconButton";
+import OpacityButton from "../Components/OpacityButton";
 import { SimpleButton } from "../Components/SimpleButton";
 import SlideInButton from "../Components/SlideInButton";
 import { TransparentButton } from "../Components/TransparentButton";
@@ -69,6 +70,15 @@ export default function ButtonsNormal() {
           <Clipboard
             style={{ display: "block", margin: "0 auto" }}
             data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/IconButton.js"
+          >
+            select
+          </Clipboard>
+        </div>
+        <div>
+          <OpacityButton>Button text</OpacityButton>
+          <Clipboard
+            style={{ display: "block", margin: "0 auto" }}
+            data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/OpacityButton.js"
           >
             select
           </Clipboard>

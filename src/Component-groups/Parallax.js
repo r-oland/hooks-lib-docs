@@ -8,17 +8,16 @@ import ParallaxItem from "../Components/ParallaxItem";
 
 const Wrapper = styled.div`
   text-align: center;
-  height: 300vh;
-
-  h2 {
-    margin-bottom: 50vh;
-  }
+  height: 150vh;
 
   img {
     width: 60vw;
-    position: relative;
-    margin: 2em auto 1em;
+    margin: 0 auto;
   }
+`;
+
+const Test = styled(Clipboard)`
+  margin-top: 40px;
 `;
 
 export default function Parallax() {
@@ -28,9 +27,9 @@ export default function Parallax() {
       <ParallaxItem>
         <img src={Stock} alt="stock" />
       </ParallaxItem>
-      <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Component-groups/Parallax.js">
+      <Test data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Component-groups/Parallax.js">
         Select
-      </Clipboard>
+      </Test>
     </Wrapper>
   );
 }

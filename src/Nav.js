@@ -4,6 +4,7 @@ import { flexUnit } from "mixins";
 import React, { useState } from "react";
 import styled from "styled-components";
 import AddOns from "./Component-groups/AddOns";
+import Blob from "./Component-groups/Blob";
 import ButtonsDropdown from "./Component-groups/ButtonsDropdown";
 import ButtonsNormal from "./Component-groups/ButtonsNormal";
 import Cards from "./Component-groups/Cards";
@@ -14,6 +15,7 @@ import Raleway from "./Component-groups/FontsRaleway";
 import Form from "./Component-groups/Form";
 import Hamburger from "./Component-groups/Hamburger";
 import IO from "./Component-groups/IO";
+import Links from "./Component-groups/Links";
 import Maps from "./Component-groups/Maps";
 import MenuDropdown from "./Component-groups/MenuDropdown";
 import Modals from "./Component-groups/Modals";
@@ -21,6 +23,7 @@ import Navigation from "./Component-groups/Navigation";
 import PageTransitions from "./Component-groups/PageTransitions";
 import Parallax from "./Component-groups/Parallax";
 import Slider from "./Component-groups/Slider";
+import TextSwitch from "./Component-groups/TextSwitch";
 
 // =========================
 
@@ -238,6 +241,16 @@ export default function Nav({
           <Collap category={`Interactive`} selected={selected}>
             <S
               onClick={event => {
+                changeCategory(<Links />);
+                subSelect(event.target.innerText);
+              }}
+              category={`Links`}
+              selected={subSelected}
+            >
+              Links
+            </S>
+            <S
+              onClick={event => {
                 changeCategory(<Collapse />);
                 subSelect(event.target.innerText);
               }}
@@ -321,6 +334,37 @@ export default function Nav({
           </Collap>
           <Divider />
           <L>Libraries</L>
+          <M
+            onClick={event => {
+              select(event.target.innerText);
+            }}
+            category={`Animations`}
+            selected={selected}
+          >
+            Animations
+          </M>
+          <Collap category={`Animations`} selected={selected}>
+            <S
+              onClick={event => {
+                changeCategory(<Blob />);
+                subSelect(event.target.innerText);
+              }}
+              category={`Blob`}
+              selected={subSelected}
+            >
+              Blob
+            </S>
+            <S
+              onClick={event => {
+                changeCategory(<TextSwitch />);
+                subSelect(event.target.innerText);
+              }}
+              category={`TextSwitch`}
+              selected={subSelected}
+            >
+              TextSwitch
+            </S>
+          </Collap>
           <M
             onClick={event => {
               changeCategory(<Carousel />);

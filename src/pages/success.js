@@ -1,9 +1,8 @@
 // Components==============
 import React from "react";
 import Layout from "../Layout/Layout";
-// =========================
 
-export default function success({ data }) {
+export default function success() {
   return (
     <Layout>
       <div
