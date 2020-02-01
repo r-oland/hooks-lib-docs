@@ -11,6 +11,7 @@ import Cards from "./Component-groups/Cards";
 import Carousel from "./Component-groups/Carousel";
 import Collapse from "./Component-groups/Collapse";
 import Dividers from "./Component-groups/Dividers";
+import FAQ from "./Component-groups/FAQ";
 import Raleway from "./Component-groups/FontsRaleway";
 import Form from "./Component-groups/Form";
 import Hamburger from "./Component-groups/Hamburger";
@@ -343,6 +344,17 @@ export default function Nav({
               Story form
             </S>
           </Collap>
+          <M
+            onClick={event => {
+              changeCategory(<FAQ />);
+              select(event.target.innerText);
+              subSelect(event.target.innerText);
+            }}
+            category={`FAQ`}
+            selected={selected}
+          >
+            FAQ
+          </M>
           <Divider />
           <L>Libraries</L>
           <M

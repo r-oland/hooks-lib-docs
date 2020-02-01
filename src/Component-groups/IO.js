@@ -35,7 +35,9 @@ export default function IO() {
   );
 }
 
-// npm install react-intersection-observer
+// npm install react-intersection-observer intersection-observer
+
+// add import "intersection-observer" to gatsby-browser.js to prevent IE crash;
 
 // import { useInView } from "react-intersection-observer";
 

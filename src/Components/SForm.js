@@ -53,10 +53,6 @@ const Form = styled.form`
     border: none;
     border-bottom: ${({ theme: { gray } }) => gray.s6} solid 2px;
     ${flexUnit(2.5, 16, 17, "vw", "font-size")}
-
-    @media screen and (min-width: 500px) {
-      ${flexUnit(2.5, 17, 18, "vw", "font-size")}
-    }
   }
 
   p,
@@ -119,10 +115,15 @@ export default function SForm({ modalIsOpen, handleChange }) {
 
   return (
     <div>
-      <Shader animate={modalIsOpen ? "open" : "closed"} variants={BgVariants} />
+      <Shader
+        animate={modalIsOpen ? "open" : "closed"}
+        variants={BgVariants}
+        initial={false}
+      />
       <FormCard
         animate={modalIsOpen ? "open" : "closed"}
         variants={formVariants}
+        initial={false}
       >
         <svg
           onClick={handleChange}
