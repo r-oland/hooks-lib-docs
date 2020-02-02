@@ -22,8 +22,11 @@ export const NavContext = React.createContext();
 
 export default function Layout({ children }) {
   function usePersistedState(key, defaultValue) {
+    const windowGlobal =
+      typeof window !== "undefined" && localStorage.getItem(key);
+
     const [state, setState] = React.useState(
-      () => JSON.parse(localStorage.getItem(key)) || defaultValue
+      () => JSON.parse(windowGlobal) || defaultValue
     );
     useEffect(() => {
       localStorage.setItem(key, JSON.stringify(state));
@@ -31,8 +34,8 @@ export default function Layout({ children }) {
     return [state, setState];
   }
 
-  const [selected, setSelected] = usePersistedState("selected", null);
-  const [folded, setFolded] = usePersistedState("folded", true);
+  const [selected, setSelected] = usePersistedState(null, "selected");
+  const [folded, setFolded] = usePersistedState(true, "folded");
 
   const contextValue = {
     folded,
