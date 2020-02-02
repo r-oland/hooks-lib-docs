@@ -11,15 +11,17 @@ import { RampLarge } from "../Components/RampLarge/RampLarge";
 import { RampSmall } from "../Components/RampSmall/RampSmall";
 import { Waves } from "../Components/Waves/Waves";
 import { Waves2 } from "../Components/Waves2/Waves2";
+import Head from "../Layout/Head";
+import Layout from "../Layout/Layout";
 
 // =========================
 
 const Title = styled.h2`
   text-align: center;
+  margin: ${({ theme: { spacing } }) => `${spacing.s4} 0 ${spacing.s3}`};
 `;
 
-const Elements = styled.div`
-  margin: 4em 0;
+const Wrapper = styled.div`
   min-height: 90vh;
 `;
 
@@ -31,11 +33,12 @@ const BackgroundColor = styled.div`
   background-color: ${({ theme: { primary } }) => primary.s4};
 `;
 
-export default function Navigation() {
+export default function Dividers() {
   return (
-    <div>
+    <Layout>
+      <Head title="Dividers" />
       <Title>Dividers</Title>
-      <Elements>
+      <Wrapper>
         <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/HalfRoundedLarge/HalfRoundedLarge.js">
           <HalfRoundedLarge />
         </Margin>
@@ -67,7 +70,7 @@ export default function Navigation() {
         <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/Hill/Hill.js">
           <Hill />
         </Clipboard>
-      </Elements>
-    </div>
+      </Wrapper>
+    </Layout>
   );
 }

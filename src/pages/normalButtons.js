@@ -1,6 +1,5 @@
 // Components==============
 import Stock1Imp from "assets/Stock1.inline.svg";
-import { Container } from "mixins";
 import React from "react";
 import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
@@ -9,13 +8,17 @@ import OpacityButton from "../Components/OpacityButton";
 import { SimpleButton } from "../Components/SimpleButton";
 import SlideInButton from "../Components/SlideInButton";
 import { TransparentButton } from "../Components/TransparentButton";
+import Head from "../Layout/Head";
+import Layout from "../Layout/Layout";
 // =========================
 
-const Wrapper = styled(Container)`
+const Title = styled.h2`
   text-align: center;
+  margin: ${({ theme: { spacing } }) => `${spacing.s4} 0 ${spacing.s3}`};
 `;
 
 const Grid = styled.div`
+  text-align: center;
   display: grid;
   grid-gap: 4em 3em;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -30,10 +33,11 @@ const Stock1Svg = styled(Stock1Imp)`
   width: 50%;
 `;
 
-export default function ButtonsNormal() {
+export default function NomralButtons() {
   return (
-    <Wrapper>
-      <h2>Normal buttons</h2>
+    <Layout>
+      <Head title="Normal Buttons" />
+      <Title>Normal Buttons</Title>
       <Grid>
         <div>
           <SimpleButton>Button text</SimpleButton>
@@ -84,6 +88,6 @@ export default function ButtonsNormal() {
           </Clipboard>
         </div>
       </Grid>
-    </Wrapper>
+    </Layout>
   );
 }

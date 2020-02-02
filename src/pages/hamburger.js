@@ -9,15 +9,16 @@ import AWMMenu from "../Components/AnimatedWaterfallMenu/AWMMenu";
 import FullScreenWaterfallMenu from "../Components/FullScreenWaterfallMenu/FullScreenWaterfallMenu";
 import NavigationExample2 from "../Layout/Examples/NavigationExample2";
 import NavigationExample3 from "../Layout/Examples/NavigationExample3";
+import Head from "../Layout/Head";
+import Layout from "../Layout/Layout";
 // =========================
 
 const Title = styled.h2`
   text-align: center;
+  margin: ${({ theme: { spacing } }) => `${spacing.s4} 0 ${spacing.s3}`};
 `;
 
-const Elements = styled.div`
-  margin: 4em 0;
-`;
+const Wrapper = styled.div``;
 
 const Margin = styled(Clipboard)`
   padding-bottom: 3em;
@@ -30,9 +31,10 @@ export default function Hamburger() {
   const [menuState2, setMenuState2] = useState("closed");
 
   return (
-    <div>
-      <Title>Hamburger menu's</Title>
-      <Elements>
+    <Layout>
+      <Head title="Hamburger menu" />
+      <Title>Hamburger menu</Title>
+      <Wrapper>
         <NavigationExample2>
           <FullScreenWaterfallMenu />
         </NavigationExample2>
@@ -55,7 +57,7 @@ export default function Hamburger() {
         <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/AnimatedSideMenu/ASMHamburger.js">
           select
         </Margin>
-      </Elements>
-    </div>
+      </Wrapper>
+    </Layout>
   );
 }

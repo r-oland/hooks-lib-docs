@@ -17,6 +17,7 @@ const Card = styled.div`
 const CTA = styled.p`
   cursor: pointer;
   position: absolute;
+  text-align: center;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);

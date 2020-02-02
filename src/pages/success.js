@@ -1,10 +1,12 @@
 // Components==============
 import React from "react";
+import Head from "../Layout/Head";
 import Layout from "../Layout/Layout";
 
-export default function success() {
+export default function Success() {
   return (
     <Layout>
+      <Head title="Success" />
       <div
         style={{
           display: "flex",

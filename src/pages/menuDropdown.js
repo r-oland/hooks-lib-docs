@@ -9,15 +9,16 @@ import MenuCardDropdown from "../Components/MenuCardDropdown/MenuCardDropdown";
 import MenuCardDropdown2 from "../Components/MenuCardDropdown2/MenuCardDropdown2";
 import MenuCardDropdown3 from "../Components/MenuCardDropdown3/MenuCardDropdown3";
 import NavigationExample from "../Layout/Examples/NavigationExample";
+import Head from "../Layout/Head";
+import Layout from "../Layout/Layout";
 // =========================
 
 const Title = styled.h2`
   text-align: center;
+  margin: ${({ theme: { spacing } }) => `${spacing.s4} 0 ${spacing.s3}`};
 `;
 
-const Elements = styled.div`
-  margin: 4em 0;
-`;
+const Wrapper = styled.div``;
 
 const Margin = styled(Clipboard)`
   padding-bottom: 3em;
@@ -25,17 +26,12 @@ const Margin = styled(Clipboard)`
   margin: 0 auto;
 `;
 
-const Stock2SVG = styled.img``;
-
-const Stock3SVG = styled.img``;
-
-const Stock4Svg = styled.img``;
-
 export default function MenuDropdown() {
   return (
-    <div style={{ minHeight: `120vh` }}>
-      <Title>Menu dropdowns</Title>
-      <Elements>
+    <Layout>
+      <Head title="Dropdown menu" />
+      <Title>Dropdown menu</Title>
+      <Wrapper>
         <NavigationExample>
           <li>Menu Item 1</li>
           <MenuCardDropdown name="Dropdown item 2">
@@ -75,17 +71,17 @@ export default function MenuDropdown() {
           <li>Menu Item 1</li>
           <MenuCardDropdown3 name="Dropdown item 2">
             <div className="dropdownItem">
-              <Stock2SVG src={Stock2} alt="Stock2" />
+              <img src={Stock2} alt="Stock2" />
               <p>Title 1</p>
               <div className="subDropdownText">Additional text</div>
             </div>
             <div className="dropdownItem">
-              <Stock3SVG src={Stock3} alt="Stock3" />
+              <img src={Stock3} alt="Stock3" />
               <p>Title 2</p>
               <div className="subDropdownText">Additional text</div>
             </div>
             <div className="dropdownItem">
-              <Stock4Svg src={Stock4} alt="Stock4" />
+              <img src={Stock4} alt="Stock4" />
               <p>Title 3</p>
               <div className="subDropdownText">Additional text</div>
             </div>
@@ -95,7 +91,7 @@ export default function MenuDropdown() {
         <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/MenuCardDropdown3/MenuCardDropdown3.js">
           select
         </Margin>
-      </Elements>
-    </div>
+      </Wrapper>
+    </Layout>
   );
 }

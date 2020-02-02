@@ -6,16 +6,15 @@ import styled from "styled-components";
 import { ChildComp, ChildLib, singleComp, singleLib } from "../Data/NavData";
 // =========================
 
-const RelativeWrap = styled.div`
-  position: relative;
-`;
-
 const Wrapper = styled(motion.div)`
+  position: fixed;
   height: 100vh;
+  width: 300px;
   background: ${({ theme: { white } }) => white};
   padding: ${({ theme: { spacing } }) => `0 ${spacing.s5} 0 `};
   box-shadow: ${({ theme: { shadow } }) => shadow.small};
   overflow-y: scroll;
+  z-index: 10;
 
   h3 {
     margin: ${({ theme: { spacing } }) => `${spacing.s7} 0 ${spacing.s5}`};
@@ -60,9 +59,8 @@ const foldVariants = {
   }
 };
 
-export default function Nav2() {
+export default function Nav2({ folded, setFolded }) {
   const [selected, setSelected] = useState(null);
-  const [folded, setFolded] = useState(true);
 
   const ChildComponents = ChildComp.map((edge, index) => {
     const name = edge.cat;
@@ -121,6 +119,7 @@ export default function Nav2() {
           key={link}
           variants={foldVariants}
           animate={selected === name ? "open" : "closed"}
+          initial={false}
         >
           <Link to={`/${link}`}>{subName}</Link>
         </LWrap>
@@ -155,21 +154,25 @@ export default function Nav2() {
   });
 
   return (
-    <RelativeWrap>
+    <>
       <Wrapper
         variants={{
           open: {
-            width: 300,
-            opacity: 1,
-            visibility: "visible"
+            x: 0,
+            opacity: 1
           },
           closed: {
-            width: 0,
-            opacity: 0,
-            visibility: "hidden"
+            x: -300,
+            opacity: 0
           }
         }}
+        transition={{
+          type: "spring",
+          damping: 20,
+          stiffness: 130
+        }}
         animate={folded === true ? "open" : "closed"}
+        initial={false}
       >
         <h3>Components</h3>
         {ChildComponents}
@@ -183,23 +186,28 @@ export default function Nav2() {
         onClick={() => {
           folded === true ? setFolded(false) : setFolded(true);
         }}
+        animate={folded === true ? "open" : "closed"}
+        initial={false}
         variants={{
           open: {
-            scale: 1,
-            x: -30
+            x: 0
           },
           closed: {
-            scale: 0.8,
-            x: 20
+            x: -200
           }
         }}
-        animate={folded === true ? "open" : "closed"}
+        transition={{
+          type: "spring",
+          damping: 20,
+          stiffness: 130
+        }}
         viewBox="0 0 137.361 137.361"
       >
         <defs />
         <motion.g
           fill="#2b2b2b"
           initial={false}
+          animate={folded === true ? "open" : "closed"}
           variants={{
             open: {
               rotate: 180
@@ -213,14 +221,15 @@ export default function Nav2() {
           <path d="M0 68.681A68.681 68.681 0 1068.681 0 68.67 68.67 0 000 68.681zm10.566 0a58.091 58.091 0 0199.191-41.076 58.091 58.091 0 11-82.153 82.153 57.615 57.615 0 01-17.038-41.077z" />
         </motion.g>
       </FoldButton>
-    </RelativeWrap>
+    </>
   );
 }
 
 const FoldButton = styled(motion.svg)`
+  z-index: 11;
+  position: fixed;
+  left: 225px;
+  top: 25px;
   cursor: pointer;
-  position: absolute;
-  width: 40px;
-  top: 10px;
-  right: 0;
+  width: 35px;
 `;

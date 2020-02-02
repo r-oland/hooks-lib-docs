@@ -3,14 +3,16 @@ import React from "react";
 import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
 import TLink from "../Components/TLink";
+import Head from "../Layout/Head";
+import Layout from "../Layout/Layout";
 // =========================
 
-const Wrapper = styled.div`
+const Title = styled.h2`
   text-align: center;
+  margin: ${({ theme: { spacing } }) => `${spacing.s4} 0 ${spacing.s3}`};
 `;
 
-const Wrapper2 = styled.div`
-  height: 90vh;
+const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,14 +20,16 @@ const Wrapper2 = styled.div`
 
   a {
     font-weight: ${({ theme: { fontWeight } }) => fontWeight.bold};
+    margin-top: ${({ theme: { spacing } }) => spacing.s10};
   }
 `;
 
 export default function PageTransitions() {
   return (
-    <Wrapper>
-      <h2>Page transitions</h2>
-      <Wrapper2>
+    <Layout>
+      <Head title="Page transitions" />
+      <Title>Page transitions</Title>
+      <Wrapper>
         <TLink to="/transition">Transition</TLink>
         <Clipboard
           style={{ marginTop: `20vh` }}
@@ -33,8 +37,8 @@ export default function PageTransitions() {
         >
           Select
         </Clipboard>
-      </Wrapper2>
-    </Wrapper>
+      </Wrapper>
+    </Layout>
   );
 }
 
@@ -44,5 +48,6 @@ export default function PageTransitions() {
 
 // use TLink.js component
 
-// Wrap context in layout.js with TransitionEffect.js component for 1 global transition
-// Or wrap different transitionEffect components around the content of different page components
+// Wrap content in layout.js with TransitionEffect.js component for 1 global transition
+
+// Or wrap different transitionEffect components around the content for different page components

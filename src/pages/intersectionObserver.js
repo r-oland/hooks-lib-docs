@@ -4,10 +4,17 @@ import React from "react";
 import Clipboard from "react-clipboard.js";
 import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
-
+import Head from "../Layout/Head";
+import Layout from "../Layout/Layout";
+import { Container } from "../style/Mixins";
 // =========================
 
-const Wrapper = styled.div`
+const Title = styled.h2`
+  text-align: center;
+  margin: ${({ theme: { spacing } }) => `${spacing.s4} 0 ${spacing.s3}`};
+`;
+
+const Wrapper = styled(Container)`
   height: 200vh;
   text-align: center;
 
@@ -18,20 +25,23 @@ const Wrapper = styled.div`
   }
 `;
 
-export default function IO() {
+export default function IntersectionObserver() {
   const [ref, inView] = useInView({ threshold: 0.3, triggerOnce: false });
 
   return (
-    <Wrapper inView={inView}>
-      <h2>Intersection observer</h2>
-      <Clipboard
-        style={{ marginTop: `20vh` }}
-        data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Component-groups/IO.js"
-      >
-        Select
-      </Clipboard>
-      <img src={Stock} ref={ref} alt="stock" />
-    </Wrapper>
+    <Layout>
+      <Head title="Intersection observer" />
+      <Title>Intersection observer</Title>
+      <Wrapper inView={inView}>
+        <Clipboard
+          style={{ marginTop: `20vh` }}
+          data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Component-groups/IO.js"
+        >
+          Select
+        </Clipboard>
+        <img src={Stock} ref={ref} alt="stock" />
+      </Wrapper>
+    </Layout>
   );
 }
 

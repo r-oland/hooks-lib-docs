@@ -43,7 +43,7 @@ export const ChildComp = [
 export const singleComp = [
   { link: "cards", name: "Cards" },
   { link: "dividers", name: "Dividers" },
-  { link: "fAQ", name: "FAQ" }
+  { link: "faq", name: "FAQ" }
 ];
 
 export const ChildLib = [

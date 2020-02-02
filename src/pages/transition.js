@@ -2,6 +2,7 @@
 import React from "react";
 import styled from "styled-components";
 import TLink from "../Components/TLink";
+import Head from "../Layout/Head";
 import Layout from "../Layout/Layout";
 // =========================
 
@@ -18,9 +19,10 @@ const Wrapper = styled.div`
   }
 `;
 
-export default function transition() {
+export default function Transition() {
   return (
     <Layout>
+      <Head title="Transition" />
       <Wrapper>
         <h3>
           You have transitioned smoothly
@@ -28,7 +30,7 @@ export default function transition() {
             😎
           </span>
         </h3>
-        <TLink to="/">BACK</TLink>
+        <TLink to="/pageTransitions">BACK</TLink>
       </Wrapper>
     </Layout>
   );

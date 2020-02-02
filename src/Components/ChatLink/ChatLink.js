@@ -2,9 +2,9 @@
 import { motion } from "framer-motion";
 import { Link } from "gatsby";
 import Img from "gatsby-image";
+import { S } from "mixins";
 import React from "react";
 import styled from "styled-components";
-import { S } from "../../style/Mixins";
 import Arrow from "./Arrow.svg";
 import Cross from "./Cross.svg";
 import LeftImp from "./Left.inline.svg";
@@ -171,9 +171,9 @@ const Sender = styled.p`
 `;
 
 const Message = styled(S)`
+  z-index: 10;
   padding: ${({ theme: { spacing } }) =>
     `${spacing.s1} 0 ${spacing.s1} ${spacing.s6}`};
-  z-index: 10;
   position: relative;
 `;
 

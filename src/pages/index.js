@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
+import Head from "../Layout/Head";
 import Layout from "../Layout/Layout";
 // =========================
 
@@ -22,6 +23,7 @@ const IconSVG = styled.img`
 export default function Index() {
   return (
     <Layout>
+      <Head title="Home" />
       <Flex>
         <motion.div
           drag

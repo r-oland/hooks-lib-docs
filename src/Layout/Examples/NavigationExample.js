@@ -25,13 +25,8 @@ const FlexContainer = styled(Container)`
 `;
 
 const Logo = styled.div`
-  display: none;
   font-weight: ${({ theme: { fontWeight } }) => fontWeight.bold};
   ${flexUnit(2, 19, 20, "vw", "font-size")}
-
-  @media screen and (min-width: 900px) {
-    display: block;
-  }
 `;
 
 const MenuItems = styled.ul`
