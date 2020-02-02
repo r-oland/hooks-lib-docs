@@ -1,9 +1,10 @@
 // Components==============
 import { motion } from "framer-motion";
 import { Link } from "gatsby";
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { ChildComp, ChildLib, singleComp, singleLib } from "../Data/NavData";
+import { NavContext } from "./Layout";
 // =========================
 
 const Wrapper = styled(motion.div)`
@@ -12,10 +13,8 @@ const Wrapper = styled(motion.div)`
   width: 300px;
   background: ${({ theme: { white } }) => white};
   padding: ${({ theme: { spacing } }) => `0 ${spacing.s5} 0 `};
-  box-shadow: ${({ theme: { shadow } }) => shadow.small};
   overflow-y: scroll;
   z-index: 10;
-
   h3 {
     margin: ${({ theme: { spacing } }) => `${spacing.s7} 0 ${spacing.s5}`};
   }
@@ -59,8 +58,8 @@ const foldVariants = {
   }
 };
 
-export default function Nav2({ folded, setFolded }) {
-  const [selected, setSelected] = useState(null);
+export default function Nav2() {
+  const { folded, setFolded, selected, setSelected } = useContext(NavContext);
 
   const ChildComponents = ChildComp.map((edge, index) => {
     const name = edge.cat;
