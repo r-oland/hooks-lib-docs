@@ -163,8 +163,8 @@ const GlobalStyles = createGlobalStyle`
       padding: 0;
       font-family: inherit;
       cursor: pointer;
-      outline: inherit
-      ${flexUnit(2.5, 16, 17, "vw", "font-size")}
+      outline: inherit;
+      ${flexUnit(2.5, 16, 17, "vw", "font-size")};
    }
 
    pre {

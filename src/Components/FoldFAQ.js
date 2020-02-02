@@ -74,6 +74,10 @@ const Answer = styled(motion.div)`
     padding-left: ${({ theme: { spacing } }) => spacing.s2};
   }
 
+  li {
+    padding-bottom: ${({ theme: { spacing } }) => spacing.s2};
+  }
+
   .bold {
     font-weight: ${({ theme: { fontWeight } }) => fontWeight.bold};
     margin: ${({ theme: { spacing } }) => `${spacing.s7} 0 ${spacing.s2}`};
