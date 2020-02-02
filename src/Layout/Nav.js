@@ -154,7 +154,14 @@ export default function Nav2() {
 
     return (
       <Main key={link}>
-        <Link to={`/${link}`}>{name}</Link>
+        <Link
+          to={`/${link}`}
+          onClick={() => {
+            setSelected(null);
+          }}
+        >
+          {name}
+        </Link>
       </Main>
     );
   });

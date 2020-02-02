@@ -31,8 +31,8 @@ export default function Layout({ children }) {
     return [state, setState];
   }
 
-  const [selected, setSelected] = usePersistedState(null, "selected");
-  const [folded, setFolded] = usePersistedState(true, "folded");
+  const [selected, setSelected] = usePersistedState("selected", null);
+  const [folded, setFolded] = usePersistedState("folded", true);
 
   const contextValue = {
     folded,
