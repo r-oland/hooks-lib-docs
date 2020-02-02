@@ -33,7 +33,7 @@ export default function PageTransitions() {
         <TLink to="/transition">Transition</TLink>
         <Clipboard
           style={{ marginTop: `20vh` }}
-          data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Component-groups/PageTransitions.js"
+          data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/pages/pageTransitions.js"
         >
           Select
         </Clipboard>
