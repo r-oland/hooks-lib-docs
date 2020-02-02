@@ -102,13 +102,13 @@ export default function Nav2() {
     return (
       <Main key={link}>
         <TLink to={`/${link}`}>
-          <div
+          <button
             onClick={() => {
               setSelected(null);
             }}
           >
             {name}
-          </div>
+          </button>
         </TLink>
       </Main>
     );
@@ -156,13 +156,13 @@ export default function Nav2() {
     return (
       <Main key={link}>
         <TLink to={`/${link}`}>
-          <div
+          <button
             onClick={() => {
               setSelected(null);
             }}
           >
             {name}
-          </div>
+          </button>
         </TLink>
       </Main>
     );

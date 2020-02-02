@@ -44,10 +44,6 @@ export default function Layout({ children }) {
     setSelected
   };
 
-  useEffect(() => {
-    console.log(selected);
-  }, [selected]);
-
   return (
     <ThemeProvider theme={Variables}>
       <NavContext.Provider value={contextValue}>

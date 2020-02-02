@@ -23,8 +23,6 @@ const Clip = styled(Clipboard)`
 `;
 
 export default function Links({ data }) {
-  console.log(data);
-
   return (
     <Layout>
       <Head title="Links" />
