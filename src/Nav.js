@@ -26,7 +26,6 @@ import Parallax from "./Component-groups/Parallax";
 import Slider from "./Component-groups/Slider";
 import StoryForm from "./Component-groups/StoryForm";
 import TextSwitch from "./Component-groups/TextSwitch";
-
 // =========================
 
 const NavWrapper = styled.div`

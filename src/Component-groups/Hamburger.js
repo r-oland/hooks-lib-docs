@@ -7,8 +7,8 @@ import ASMMenu from "../Components/AnimatedSideMenu/ASMMenu";
 import AWMHamburger from "../Components/AnimatedWaterfallMenu/AWMHamburger";
 import AWMMenu from "../Components/AnimatedWaterfallMenu/AWMMenu";
 import FullScreenWaterfallMenu from "../Components/FullScreenWaterfallMenu/FullScreenWaterfallMenu";
-import NavigationExample2 from "../Layout/NavigationExample2";
-import NavigationExample3 from "../Layout/NavigationExample3";
+import NavigationExample2 from "../Layout/Examples/NavigationExample2";
+import NavigationExample3 from "../Layout/Examples/NavigationExample3";
 // =========================
 
 const Title = styled.h2`

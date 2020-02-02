@@ -1,32 +1,33 @@
 // Components==============
 import { OverFlowFix } from "mixins";
 import React from "react";
-import { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import TransitionEffect from "../Components/TransitionEffect";
-import Nav from "../Nav";
 import GlobalStyles from "../style/GlobalStyles";
 import { Variables } from "../style/themes";
 import IEWarning from "./IE/IEWarning";
+import Nav from "./Nav";
 // =========================
 
-export default function Layout({
-  children,
-  category,
-  setCategory,
-  isFoldedOut,
-  setIsFoldedOut
-}) {
+const Flex = styled.div`
+  display: flex;
+`;
+
+const Content = styled.div`
+  width: 100%;
+`;
+
+export default function Layout({ children }) {
   return (
     <ThemeProvider theme={Variables}>
       <OverFlowFix>
         <IEWarning />
-        <Nav
-          category={category}
-          setCategory={setCategory}
-          isFoldedOut={isFoldedOut}
-          setIsFoldedOut={setIsFoldedOut}
-        />
-        <TransitionEffect> {children}</TransitionEffect>
+        <Flex>
+          <Nav />
+          <Content>
+            <TransitionEffect>{children}</TransitionEffect>
+          </Content>
+        </Flex>
       </OverFlowFix>
       <GlobalStyles />
     </ThemeProvider>

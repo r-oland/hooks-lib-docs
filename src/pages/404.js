@@ -2,7 +2,6 @@
 import { flexUnit } from "mixins";
 import React from "react";
 import styled from "styled-components";
-import Head from "../Layout/Head";
 import Layout from "../Layout/Layout";
 // =========================
 
@@ -39,12 +38,7 @@ const Container = styled.div`
 
 export default function notFound() {
   return (
-    <Layout pageStyle="page">
-      <Head
-        title="404 NOT FOUND"
-        description="Could not found the page you where looking for"
-        keywords="404, unavailable, not found"
-      />
+    <Layout>
       <Container style={LayoutStyle}>
         <F0F>I could not find what you where looking for.</F0F>
         {/* eslint-disable-next-line */}

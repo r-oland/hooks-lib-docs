@@ -8,7 +8,7 @@ import styled from "styled-components";
 import MenuCardDropdown from "../Components/MenuCardDropdown/MenuCardDropdown";
 import MenuCardDropdown2 from "../Components/MenuCardDropdown2/MenuCardDropdown2";
 import MenuCardDropdown3 from "../Components/MenuCardDropdown3/MenuCardDropdown3";
-import NavigationExample from "../Layout/NavigationExample";
+import NavigationExample from "../Layout/Examples/NavigationExample";
 // =========================
 
 const Title = styled.h2`
