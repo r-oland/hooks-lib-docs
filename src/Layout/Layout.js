@@ -1,7 +1,7 @@
 // Components==============
 import { motion } from "framer-motion";
 import { OverFlowFix } from "mixins";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import TransitionEffect from "../Components/TransitionEffect";
 import GlobalStyles from "../style/GlobalStyles";
@@ -21,8 +21,18 @@ const Content = styled(motion.div)`
 export const NavContext = React.createContext();
 
 export default function Layout({ children }) {
-  const [folded, setFolded] = useState(true);
-  const [selected, setSelected] = useState(null);
+  function usePersistedState(key, defaultValue) {
+    const [state, setState] = React.useState(
+      () => JSON.parse(localStorage.getItem(key)) || defaultValue
+    );
+    useEffect(() => {
+      localStorage.setItem(key, JSON.stringify(state));
+    }, [key, state]);
+    return [state, setState];
+  }
+
+  const [selected, setSelected] = usePersistedState(null, "selected");
+  const [folded, setFolded] = usePersistedState(true, "folded");
 
   const contextValue = {
     folded,
@@ -30,17 +40,6 @@ export default function Layout({ children }) {
     selected,
     setSelected
   };
-
-  useEffect(() => {
-    const data = localStorage.getItem("selected");
-    if (data) {
-      setSelected(data);
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("selected", selected);
-  });
 
   return (
     <ThemeProvider theme={Variables}>

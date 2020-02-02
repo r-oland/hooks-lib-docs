@@ -101,7 +101,14 @@ export default function Nav2() {
     const link = edge.link;
     return (
       <Main key={link}>
-        <Link to={`/${link}`}>{name}</Link>
+        <Link
+          to={`/${link}`}
+          onClick={() => {
+            setSelected(null);
+          }}
+        >
+          {name}
+        </Link>
       </Main>
     );
   });
@@ -202,22 +209,22 @@ export default function Nav2() {
         }}
         viewBox="0 0 137.361 137.361"
       >
-        <defs />
         <motion.g
           fill="#2b2b2b"
-          initial={false}
-          animate={folded === true ? "open" : "closed"}
           variants={{
             open: {
-              rotate: 180
+              rotate: 0
             },
             closed: {
-              rotate: 0
+              rotate: 180
             }
           }}
         >
-          <path d="M53.727 32.888a6.4 6.4 0 019.014 0l31.5 31.6a6.366 6.366 0 01.2 8.783l-31.043 31.137a6.362 6.362 0 11-9.014-8.981l26.382-26.779-27.039-26.779a6.3 6.3 0 010-8.981z" />
-          <path d="M0 68.681A68.681 68.681 0 1068.681 0 68.67 68.67 0 000 68.681zm10.566 0a58.091 58.091 0 0199.191-41.076 58.091 58.091 0 11-82.153 82.153 57.615 57.615 0 01-17.038-41.077z" />
+          <path d="M83.635 104.474a6.4 6.4 0 01-9.014 0l-31.5-31.6a6.366 6.366 0 01-.2-8.783l31.043-31.137a6.362 6.362 0 119.014 8.981L56.596 68.714l27.039 26.779a6.3 6.3 0 01.072 8.91l-.072.071z" />
+          <path
+            d="M137.362 68.681a68.67 68.67 0 100 .022zm-10.566 0a58.172 58.172 0 11-17.154-41.193l.116.116a57.615 57.615 0 0117.038 41.077z"
+            data-name="Path 1267"
+          />
         </motion.g>
       </FoldButton>
     </>
