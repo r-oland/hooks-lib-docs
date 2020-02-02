@@ -8,11 +8,10 @@ export default function TLink({ to, children }) {
     <TransitionLink
       to={to}
       entry={{
-        // set delay for timing, length should be 1
         delay: 0.3
       }}
       exit={{
-        length: 1
+        length: 0.8
       }}
     >
       {children}

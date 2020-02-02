@@ -12,13 +12,12 @@ const variants = {
 export default function TransitionEffect({ children }) {
   return (
     <TransitionState>
-      {({ mount, entry }) => {
+      {({ mount }) => {
         return (
           <motion.div
             initial={false}
             animate={mount ? "visible" : "hidden"}
             variants={variants}
-            transition={{ duration: entry.delay }}
           >
             {children}
           </motion.div>

@@ -1,8 +1,8 @@
 // Components==============
 import { motion } from "framer-motion";
-import { Link } from "gatsby";
 import React, { useContext } from "react";
 import styled from "styled-components";
+import TLink from "../Components/TLink";
 import { ChildComp, ChildLib, singleComp, singleLib } from "../Data/NavData";
 import { NavContext } from "./Layout";
 // =========================
@@ -75,7 +75,7 @@ export default function Nav2() {
           animate={selected === name ? "open" : "closed"}
           initial={false}
         >
-          <Link to={`/${link}`}>{subName}</Link>
+          <TLink to={`/${link}`}>{subName}</TLink>
         </LWrap>
       );
     });
@@ -101,14 +101,15 @@ export default function Nav2() {
     const link = edge.link;
     return (
       <Main key={link}>
-        <Link
-          to={`/${link}`}
-          onClick={() => {
-            setSelected(null);
-          }}
-        >
-          {name}
-        </Link>
+        <TLink to={`/${link}`}>
+          <div
+            onClick={() => {
+              setSelected(null);
+            }}
+          >
+            {name}
+          </div>
+        </TLink>
       </Main>
     );
   });
@@ -127,7 +128,7 @@ export default function Nav2() {
           animate={selected === name ? "open" : "closed"}
           initial={false}
         >
-          <Link to={`/${link}`}>{subName}</Link>
+          <TLink to={`/${link}`}>{subName}</TLink>
         </LWrap>
       );
     });
@@ -154,14 +155,15 @@ export default function Nav2() {
 
     return (
       <Main key={link}>
-        <Link
-          to={`/${link}`}
-          onClick={() => {
-            setSelected(null);
-          }}
-        >
-          {name}
-        </Link>
+        <TLink to={`/${link}`}>
+          <div
+            onClick={() => {
+              setSelected(null);
+            }}
+          >
+            {name}
+          </div>
+        </TLink>
       </Main>
     );
   });
