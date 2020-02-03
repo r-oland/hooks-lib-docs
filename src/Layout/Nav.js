@@ -61,6 +61,16 @@ const foldVariants = {
 export default function Nav2() {
   const { folded, setFolded, selected, setSelected } = useContext(NavContext);
 
+  const mediaQ = () => {
+    const Query =
+      typeof window !== "undefined" && window.matchMedia("(min-width: 800px)");
+
+    if (Query.matches) {
+    } else {
+      setFolded(false);
+    }
+  };
+
   const ChildComponents = ChildComp.map((edge, index) => {
     const name = edge.cat;
 
@@ -74,6 +84,7 @@ export default function Nav2() {
           variants={foldVariants}
           animate={selected === name ? "open" : "closed"}
           initial={false}
+          onClick={mediaQ}
         >
           <TLink to={`/${link}`}>{subName}</TLink>
         </LWrap>
