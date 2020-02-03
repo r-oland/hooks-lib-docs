@@ -18,6 +18,14 @@ const Wrapper = styled(motion.div)`
   h3 {
     margin: ${({ theme: { spacing } }) => `${spacing.s7} 0 ${spacing.s5}`};
   }
+
+  #components {
+    margin-top: 80px;
+
+    @media screen and (min-width: 800px) {
+      margin-top: ${({ theme: { spacing } }) => spacing.s7};
+    }
+  }
 `;
 
 const LWrap = styled(motion.div)`
@@ -179,6 +187,17 @@ export default function Nav2() {
     );
   });
 
+  const buttonPosition = () => {
+    const Query =
+      typeof window !== "undefined" && window.matchMedia("(min-width: 800px)");
+
+    if (Query.matches) {
+      return -200;
+    } else {
+      return 0;
+    }
+  };
+
   return (
     <>
       <Wrapper
@@ -200,7 +219,7 @@ export default function Nav2() {
         animate={folded === true ? "open" : "closed"}
         initial={false}
       >
-        <h3>Components</h3>
+        <h3 id="components">Components</h3>
         {ChildComponents}
         {SingleComponents}
         <h3>Libraries</h3>
@@ -219,7 +238,7 @@ export default function Nav2() {
             x: 0
           },
           closed: {
-            x: -200
+            x: buttonPosition()
           }
         }}
         transition={{
@@ -254,8 +273,12 @@ export default function Nav2() {
 const FoldButton = styled(motion.svg)`
   z-index: 11;
   position: fixed;
-  left: 225px;
-  top: 25px;
   cursor: pointer;
   width: 35px;
+  left: 25px;
+  top: 25px;
+
+  @media screen and (min-width: 800px) {
+    left: 225px;
+  }
 `;
