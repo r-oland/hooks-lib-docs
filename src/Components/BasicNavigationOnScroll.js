@@ -1,7 +1,7 @@
 // Components==============
 import { Container, flexUnit } from "mixins";
 import React, { useEffect, useState } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 // =========================
 
 const NavWrapper = styled.div`
@@ -9,15 +9,6 @@ const NavWrapper = styled.div`
   transition: 0.5s;
   background-color: ${({ top, theme }) =>
     top === true ? `initial` : `${theme.primary.s4}`};
-
-  ${({ fixed }) =>
-    fixed === true &&
-    css`
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 148;
-    `}
 `;
 
 const FlexContainer = styled(Container)`
@@ -45,6 +36,7 @@ const MenuItems = styled.ul`
   }
 
   li {
+    cursor: pointer;
     padding-left: ${({ theme: { spacing } }) => spacing.s8};
     font-weight: ${({ theme: { fontWeight } }) => fontWeight.semiBold};
     transition: 0.3s;
@@ -61,7 +53,7 @@ const MenuItems = styled.ul`
   }
 `;
 
-export default function BasicNavigationOnScroll({ fixed }) {
+export default function BasicNavigationOnScroll() {
   const [top, setTop] = useState(true);
 
   useEffect(() => {
@@ -80,7 +72,7 @@ export default function BasicNavigationOnScroll({ fixed }) {
   });
 
   return (
-    <NavWrapper fixed={fixed} top={top}>
+    <NavWrapper top={top}>
       <FlexContainer>
         <Logo>Logo</Logo>
         <MenuItems top={top}>

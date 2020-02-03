@@ -27,7 +27,7 @@ export default function Slide2({ children, nav1, setNav2 }) {
     if (Query.matches) {
       return 3;
     } else {
-      return 2;
+      return 3;
     }
   };
 

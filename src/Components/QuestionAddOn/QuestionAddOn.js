@@ -18,7 +18,6 @@ const SymbolSvg = styled(SymbolImp)`
 
 const Card = styled.div`
   position: absolute;
-  /* left: 0; */
   opacity: ${({ cardIsVisible }) => (cardIsVisible === "true" ? `1` : "0")};
 
   border-radius: ${({ theme: { borderRadius } }) => borderRadius};
@@ -30,6 +29,12 @@ const Card = styled.div`
   transition: 0.2s ease-in-out;
   width: 300px;
   z-index: 100;
+
+  right: -30px;
+
+  @media screen and (min-width: 800px) {
+    left: 0;
+  }
 
   p {
     padding: ${({ theme: { spacing } }) => `${spacing.s4}`};

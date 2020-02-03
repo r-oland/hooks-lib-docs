@@ -5,7 +5,6 @@ import MenuDropdownArrowImp from "./MenuDropdownArrow.inline.svg";
 // =========================
 
 const Wrapper = styled.div`
-  margin-left: ${({ theme: { spacing } }) => spacing.s8};
   font-weight: ${({ theme: { fontWeight } }) => fontWeight.semiBold};
   position: relative;
 `;
@@ -15,6 +14,11 @@ const Grid = styled.div`
   grid-template-rows: 1;
   align-items: center;
   padding: ${({ theme: { spacing } }) => spacing.s5};
+  cursor: pointer;
+
+  @media screen and (min-width: 800px) {
+    cursor: default;
+  }
 `;
 
 const Item = styled.div`
@@ -48,16 +52,18 @@ const Card = styled.div`
   position: absolute;
   top: 60px;
   transition: 0.5s ease-in-out;
-  width: 80vw;
+  width: 125%;
+  left: -12.5%;
   z-index: 100;
   text-align: left;
 
   @media screen and (min-width: 600px) {
-    width: 175%;
-    left: -37.5%;
+    width: 150%;
+    left: -25%;
   }
 
   .dropdownItem {
+    cursor: pointer;
     display: grid;
     grid-template-columns: 0.2fr 1fr;
     grid-template-rows: 2;

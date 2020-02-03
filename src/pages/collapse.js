@@ -6,6 +6,7 @@ import CollapseCard from "../Components/CollapseCard/CollapseCard";
 import CollapseCard2 from "../Components/CollapseCard2/CollapseCard2";
 import Head from "../Layout/Head";
 import Layout from "../Layout/Layout";
+import { Container } from "../style/Mixins";
 // =========================
 
 const Title = styled.h2`
@@ -27,7 +28,7 @@ const Margin = styled(Clipboard)`
   padding-top: 1em;
 `;
 
-const Wrapper = styled.div``;
+const Wrapper = styled(Container)``;
 
 export default function Collapse() {
   return (

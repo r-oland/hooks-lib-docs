@@ -56,3 +56,5 @@ export default function ParallaxItem({ className, children }) {
     </div>
   );
 }
+
+// DEFINE A HEIGHT TO THE CHILD ELEMENT

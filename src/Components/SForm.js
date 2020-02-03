@@ -148,12 +148,12 @@ export default function SForm({ modalIsOpen, handleChange }) {
           <input type="hidden" name="form-name" value={formName} />
           {/* The `hidden` fields are required to support form submissions without JavaScript */}
           <p>Hi Roland! My name is</p>{" "}
-          <input name="Name" id="name" placeHolder="Your name" required />{" "}
+          <input name="Name" id="name" placeholder="Your name" required />{" "}
           <p>and I'm part of</p>{" "}
           <input
             name="Company name"
             id="companyName"
-            placeHolder="Company name"
+            placeholder="Company name"
           />
           <p>
             . I think what you are proposing sound promising! I'm reaching out

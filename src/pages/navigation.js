@@ -3,9 +3,7 @@ import React from "react";
 import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
 import BasicNavigation from "../Components/BasicNavigation";
-import BasicNavigationColor from "../Components/BasicNavigationColor";
 import BasicNavigationOnScroll from "../Components/BasicNavigationOnScroll";
-import BasicNavigationShadow from "../Components/BasicNavigationShadow";
 import Head from "../Layout/Head";
 import Layout from "../Layout/Layout";
 // =========================
@@ -16,7 +14,7 @@ const Title = styled.h2`
 `;
 
 const Wrapper = styled.div`
-  min-height: 90vh;
+  min-height: 110vh;
 `;
 
 const Margin = styled(Clipboard)`
@@ -33,16 +31,6 @@ export default function Navigation() {
       <Wrapper>
         <BasicNavigation />
         <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/BasicNavigation.js">
-          select
-        </Margin>
-
-        <BasicNavigationColor />
-        <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/BasicNavigationColor.js">
-          select
-        </Margin>
-
-        <BasicNavigationShadow />
-        <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/BasicNavigationShadow.js">
           select
         </Margin>
 

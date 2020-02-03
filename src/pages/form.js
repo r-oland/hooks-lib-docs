@@ -6,6 +6,7 @@ import DoubleForm from "../Components/DoubleForm.js/DoubleForm";
 import JobForm from "../Components/JobForm/JobForm";
 import Head from "../Layout/Head";
 import Layout from "../Layout/Layout";
+import { Container } from "../style/Mixins";
 // =========================
 
 const Title = styled.h2`
@@ -13,7 +14,7 @@ const Title = styled.h2`
   margin: ${({ theme: { spacing } }) => `${spacing.s4} 0 ${spacing.s3}`};
 `;
 
-const Wrapper = styled.div``;
+const Wrapper = styled(Container)``;
 
 const Clip = styled(Clipboard)`
   display: block;

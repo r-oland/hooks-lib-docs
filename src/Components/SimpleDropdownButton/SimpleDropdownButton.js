@@ -1,4 +1,5 @@
 // Components==============
+import { motion } from "framer-motion";
 import { M } from "mixins";
 import React, { useState } from "react";
 import styled from "styled-components";
@@ -42,24 +43,18 @@ const DropdownArrowSvg = styled(DropdownArrowImp)`
   transform: translateX(-9px);
 `;
 
-const Items = styled.div`
+const Items = styled(motion.div)`
   position: absolute;
-  max-height: ${({ isExpended }) => (isExpended === true ? `600%` : "0%")};
-  visibility: ${({ isExpended }) =>
-    isExpended === true ? `visible` : "hidden"};
   text-align: left;
   padding: ${({ theme: { spacing } }) => `${spacing.s2} ${spacing.s4}`};
   background-color: ${({ theme: { white } }) => white};
   border-radius: ${({ theme: { borderRadius } }) => borderRadius};
   margin-top: ${({ theme: { spacing } }) => `${spacing.s1}`};
   box-shadow: ${({ theme: { doubleShadow } }) => doubleShadow.small};
-  transition: 0.3s;
   min-width: 120%;
   z-index: 100;
 
   ul {
-    opacity: ${({ isExpended }) => (isExpended === true ? `1` : "0")};
-    transition: 0.2s ease-in;
     margin: ${({ theme: { spacing } }) => `${spacing.s2} 0`};
   }
 
@@ -68,6 +63,7 @@ const Items = styled.div`
       `${spacing.s2} ${spacing.s4} ${spacing.s2} ${spacing.s2}`};
 
     border-radius: ${({ theme: { borderRadius } }) => borderRadius};
+    cursor: pointer;
 
     &:hover {
       background-color: ${({ theme: { primary } }) => primary.s5};
@@ -91,8 +87,38 @@ export default function SimpleDropdownButton({ children, buttonText }) {
           <DropdownArrowSvg />
         </Grid>
       </HalfRoundedButton>
-      <Items isExpended={isExpended}>
-        <ul>{children}</ul>
+      <Items
+        animate={isExpended ? "open" : "closed"}
+        variants={{
+          open: {
+            height: "auto",
+            opacity: 1,
+            display: "block"
+          },
+          closed: {
+            height: 0,
+            opacity: 0,
+            transitionEnd: {
+              display: "none"
+            }
+          }
+        }}
+        initial={false}
+      >
+        <motion.ul
+          animate={isExpended ? "open" : "closed"}
+          variants={{
+            open: {
+              opacity: 1
+            },
+            closed: {
+              opacity: 0
+            }
+          }}
+          initial={false}
+        >
+          {children}
+        </motion.ul>
       </Items>
     </Wrapper>
   );

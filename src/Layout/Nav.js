@@ -119,7 +119,7 @@ export default function Nav2() {
     const name = edge.name;
     const link = edge.link;
     return (
-      <Main key={link}>
+      <Main key={link} onClick={mediaQ}>
         <TLink to={`/${link}`}>
           <button
             onClick={() => {
@@ -146,6 +146,7 @@ export default function Nav2() {
           variants={foldVariants}
           animate={selected === name ? "open" : "closed"}
           initial={false}
+          onClick={mediaQ}
         >
           <TLink to={`/${link}`}>{subName}</TLink>
         </LWrap>
@@ -173,7 +174,7 @@ export default function Nav2() {
     const link = edge.link;
 
     return (
-      <Main key={link}>
+      <Main key={link} onClick={mediaQ}>
         <TLink to={`/${link}`}>
           <button
             onClick={() => {

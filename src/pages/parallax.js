@@ -10,7 +10,7 @@ import Layout from "../Layout/Layout";
 
 const Title = styled.h2`
   text-align: center;
-  margin: ${({ theme: { spacing } }) => `${spacing.s4} 0 ${spacing.s3}`};
+  margin: ${({ theme: { spacing } }) => `${spacing.s4} 0 ${spacing.s10}`};
 `;
 
 const Wrapper = styled.div`
@@ -18,14 +18,16 @@ const Wrapper = styled.div`
   height: 150vh;
 
   img {
-    width: 60vw;
     margin: 0 auto;
+    height: 200px;
+
+    @media screen and (min-width: 800px) {
+      height: 70vh;
+    }
   }
 `;
 
-const Test = styled(Clipboard)`
-  margin-top: 40px;
-`;
+const Clip = styled(Clipboard)``;
 
 export default function Parallax() {
   return (
@@ -36,9 +38,9 @@ export default function Parallax() {
         <ParallaxItem>
           <img src={Stock} alt="stock" />
         </ParallaxItem>
-        <Test data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Component-groups/Parallax.js">
+        <Clip data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/ParallaxItem.js">
           Select
-        </Test>
+        </Clip>
       </Wrapper>
     </Layout>
   );

@@ -1,20 +1,11 @@
 // Components==============
 import { Container, flexUnit } from "mixins";
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 // =========================
 
 const NavWrapper = styled.div`
   width: 100vw;
-
-  ${({ fixed }) =>
-    fixed === true &&
-    css`
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 148;
-    `}
 `;
 
 const FlexContainer = styled(Container)`
@@ -40,6 +31,7 @@ const MenuItems = styled.ul`
   }
 
   li {
+    cursor: pointer;
     padding-left: ${({ theme: { spacing } }) => spacing.s8};
     font-weight: ${({ theme: { fontWeight } }) => fontWeight.semiBold};
     transition: 0.2s;
@@ -59,9 +51,9 @@ const MenuItems = styled.ul`
   }
 `;
 
-export default function BasicNavigation({ fixed }) {
+export default function BasicNavigation() {
   return (
-    <NavWrapper fixed={fixed}>
+    <NavWrapper>
       <FlexContainer>
         <Logo>Logo</Logo>
         <MenuItems>
