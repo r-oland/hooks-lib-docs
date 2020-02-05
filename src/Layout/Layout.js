@@ -19,6 +19,7 @@ const Content = styled(motion.div)`
 `;
 
 export const NavContext = React.createContext();
+export const HamburgerContext = React.createContext();
 
 export default function Layout({ children }) {
   function usePersistedState(key, defaultValue) {
@@ -36,6 +37,16 @@ export default function Layout({ children }) {
 
   const [selected, setSelected] = usePersistedState("selected", null);
   const [folded, setFolded] = usePersistedState("folded", false);
+  const [menuState, setMenuState] = useState("closed");
+
+  const changeMenu = () => {
+    menuState === "closed" ? setMenuState("open") : setMenuState("closed");
+  };
+
+  const contextValue2 = {
+    menuState,
+    changeMenu
+  };
 
   const contextValue = {
     folded,
@@ -47,34 +58,36 @@ export default function Layout({ children }) {
   return (
     <ThemeProvider theme={Variables}>
       <NavContext.Provider value={contextValue}>
-        <OverFlowFix>
-          <IEWarning />
-          <Flex>
-            <Nav />
-            <Content
-              variants={{
-                open: {
-                  width: "calc(100% - 300px)",
-                  x: 300
-                },
-                closed: {
-                  width: "100%",
-                  x: 0
-                }
-              }}
-              transition={{
-                type: "spring",
-                damping: 20,
-                stiffness: 130
-              }}
-              animate={folded === true ? "open" : "closed"}
-              initial={false}
-            >
-              <TransitionEffect>{children}</TransitionEffect>
-            </Content>
-          </Flex>
-        </OverFlowFix>
-        <GlobalStyles />
+        <HamburgerContext.Provider value={contextValue2}>
+          <OverFlowFix>
+            <IEWarning />
+            <Flex>
+              <Nav />
+              <Content
+                variants={{
+                  open: {
+                    width: "calc(100% - 300px)",
+                    x: 300
+                  },
+                  closed: {
+                    width: "100%",
+                    x: 0
+                  }
+                }}
+                transition={{
+                  type: "spring",
+                  damping: 20,
+                  stiffness: 130
+                }}
+                animate={folded === true ? "open" : "closed"}
+                initial={false}
+              >
+                <TransitionEffect>{children}</TransitionEffect>
+              </Content>
+            </Flex>
+          </OverFlowFix>
+          <GlobalStyles />
+        </HamburgerContext.Provider>
       </NavContext.Provider>
     </ThemeProvider>
   );

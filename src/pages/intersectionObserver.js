@@ -35,7 +35,7 @@ export default function IntersectionObserver() {
       <Wrapper inView={inView}>
         <Clipboard
           style={{ marginTop: `20vh` }}
-          data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Component-groups/IO.js"
+          data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/pages/intersectionObserver.js"
         >
           Select
         </Clipboard>

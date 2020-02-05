@@ -27,10 +27,6 @@ const SvgWrapper = styled.div`
 const MenuSvg = styled(Hamburger)`
   width: 100%;
   transition: 0.5s;
-
-  #menu {
-    fill: ${({ theme: { white } }) => white};
-  }
 `;
 
 const MenuSvgTop = styled(MenuSvg)`

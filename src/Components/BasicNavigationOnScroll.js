@@ -1,14 +1,21 @@
 // Components==============
+import { motion } from "framer-motion";
 import { Container, flexUnit } from "mixins";
-import React, { useEffect, useState } from "react";
-import styled from "styled-components";
+import React, { useContext } from "react";
+import { useInView } from "react-intersection-observer";
+import styled, { ThemeContext } from "styled-components";
 // =========================
 
-const NavWrapper = styled.div`
+const NavWrapper = styled(motion.div)`
   width: 100vw;
-  transition: 0.5s;
-  background-color: ${({ top, theme }) =>
-    top === true ? `initial` : `${theme.primary.s4}`};
+`;
+
+const TopRef = styled.div`
+  position: absolute;
+  visibility: hidden;
+  top: 101vh;
+  height: 100%;
+  width: 100%;
 `;
 
 const FlexContainer = styled(Container)`
@@ -27,9 +34,6 @@ const MenuItems = styled.ul`
   display: none;
   justify-content: flex-end;
   align-items: center;
-  transition: 0.5s;
-  color: ${({ top, theme }) =>
-    top === true ? `${theme.gray.s7}` : `${theme.white}`};
 
   @media screen and (min-width: 900px) {
     display: flex;
@@ -48,34 +52,30 @@ const MenuItems = styled.ul`
   }
 
   a {
-    color: ${({ top, theme }) =>
-      top === true ? `${theme.gray.s7}` : `${theme.white}`};
   }
 `;
 
 export default function BasicNavigationOnScroll() {
-  const [top, setTop] = useState(true);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const position = window.pageYOffset;
-      if (position === 0) {
-        setTop(true);
-      } else {
-        setTop(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  });
+  const [ref, inView] = useInView({ threshold: 0 });
+  const themeContext = useContext(ThemeContext);
 
   return (
-    <NavWrapper top={top}>
+    <NavWrapper
+      animate={inView ? "top" : "else"}
+      variants={{
+        top: {
+          backgroundColor: themeContext.primary.s4
+        },
+        else: {
+          backgroundColor: themeContext.gray.s1
+        }
+      }}
+      initial={false}
+    >
+      <TopRef ref={ref} />
       <FlexContainer>
         <Logo>Logo</Logo>
-        <MenuItems top={top}>
+        <MenuItems>
           <li>Menu item 1</li>
           <li>Menu item 2</li>
           <li>Menu item 3</li>

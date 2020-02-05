@@ -1,25 +1,25 @@
 export const Variables = {
-  white: "hsla(0, 0%, 100%, 1)",
-  black: "hsla(0, 0%, 13%, 1)",
+  white: "rgba(255, 255, 255, 1)",
+  black: "rgba(33, 33, 33, 1)",
   gray: {
-    s1: "hsla(0, 0%, 98%, 1)",
-    s2: "hsla(0, 0%, 91%, 1)",
-    s3: "hsla(0, 0%, 85%, 1)",
-    s4: "hsla(0, 0%, 76%, 1)",
-    s5: "hsla(0, 0%, 58%, 1)",
-    s6: "hsla(0, 0%, 43%, 1)",
-    s7: "hsla(0, 0%, 36%, 1)",
-    s8: "hsla(0, 0%, 28%, 1)",
-    s9: "hsla(0, 0%, 17%, 1)"
+    s1: "rgba(250, 250, 250, 1)",
+    s2: "rgba(232, 232, 232, 1)",
+    s3: "rgba(217, 217, 217, 1)",
+    s4: "rgba(194, 194, 194, 1)",
+    s5: "rgba(148, 148, 148, 1)",
+    s6: "rgba(110, 110, 110, 1)",
+    s7: "rgba(92, 92, 92, 1)",
+    s8: "rgba(71, 71, 71, 1)",
+    s9: "rgba(43, 43, 43, 1)"
   },
   primary: {
-    s1: "hsla(185, 29%, 63%, 1)",
-    s2: "hsla(185, 29%, 56%, 1)",
-    s3: "hsla(186, 30%, 49%, 1)",
-    s4: "hsla(185, 40%, 42%, 1)",
-    s5: "hsla(185, 40%, 37%, 1)",
-    s6: "hsla(185, 40%, 32%, 1)",
-    s7: "hsla(184, 39%, 27%, 1)"
+    s1: "rgba(133, 183, 188, 1)",
+    s2: "rgba(110, 170, 175, 1)",
+    s3: "rgba(87, 155, 162, 1)",
+    s4: "rgba(64, 143, 150, 1)",
+    s5: "rgba(57, 126, 132, 1)",
+    s6: "rgba(49, 109, 114, 1)",
+    s7: "rgba(42, 92, 96, 1)"
   },
   secondary: {},
   borderRadius: "5px",
@@ -41,14 +41,14 @@ export const Variables = {
     wide: "0.05em"
   },
   shadow: {
-    small: "0 1px 3px hsla(0, 0%, 0%, 0.2)",
-    medium: "0 4px 6px hsla(0, 0%, 0%, 0.1)",
-    large: "0 15px 35px hsla(0, 0%, 0%, 0.2)"
+    small: "0 1px 3px rgba(0, 0, 0, 0.2)",
+    medium: "0 4px 6px rgba(0, 0, 0, 0.1)",
+    large: "0 15px 35px rgba(0, 0, 0, 0.2)"
   },
   doubleShadow: {
-    small: "0 3px 6px hsla(0, 0%, 0%, 0.15), 0 2px 4px hsla(0, 0%, 0%, 0.12)",
-    medium: "0 10px 20px hsla(0, 0%, 0%, 0.15), 0 3px 6px hsla(0, 0%, 0%, 0.1)",
-    large: "0 15px 25px hsla(0, 0%, 0%, 0.15), 0 5px 10px hsla(0, 0%, 0%, 0.05)"
+    small: "0 3px 6px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12)",
+    medium: "0 10px 20px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.1)",
+    large: "0 15px 25px rgba(0, 0, 0, 0.15), 0 5px 10px rgba(0, 0, 0, 0.05)"
   },
   spacing: {
     s1: "0.25em",

@@ -14,7 +14,8 @@ export const ChildComp = [
     children: [
       { link: "navigation", name: "Navigation" },
       { link: "menuDropdown", name: "Dropdown menu" },
-      { link: "hamburger", name: "Hamburger menu" }
+      { link: "hamburger", name: "Hamburger menu" },
+      { link: "transitionMenu", name: "Transition menu" }
     ]
   },
   {
