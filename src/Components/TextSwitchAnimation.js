@@ -21,13 +21,18 @@ export default function TextSwitchAnimation() {
   const [Content, setContent] = useState(A);
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer1 = setTimeout(() => {
       setIsChanging(true);
     }, 4000);
-    setTimeout(() => {
+    const timer2 = setTimeout(() => {
       Content === A ? setContent(B) : setContent(A);
       setIsChanging(false);
     }, 4500);
+
+    return () => {
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+    };
   }, [Content]);
 
   return (
