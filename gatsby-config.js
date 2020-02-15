@@ -36,7 +36,7 @@ module.exports = {
       options: {
         name: `Components`,
         short_name: `Components`,
-        start_url: `https://componentsrb.netlify.com/`,
+        start_url: `/`,
         background_color: `#3D8693`,
         theme_color: `#3D8693`,
         display: `standalone`,
