@@ -37,7 +37,7 @@ export default function Collapse() {
       <Title>Collapse</Title>
       <Wrapper>
         <Elements>
-          <CollapseCard initial={"This could be a question as a example?"}>
+          <CollapseCard initial={"This could be a question"}>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore ea
             ratione libero non. Laudantium rerum numquam quo tenetur, nihil,
             sit, ullam incidunt illo repudiandae voluptates placeat earum error
@@ -48,7 +48,7 @@ export default function Collapse() {
             select
           </Margin>
 
-          <CollapseCard2 initial={"This could be a question as a example?"}>
+          <CollapseCard2 initial={"This could be a question"}>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore ea
             ratione libero non. Laudantium rerum numquam quo tenetur, nihil,
             sit, ullam incidunt illo repudiandae voluptates placeat earum error
