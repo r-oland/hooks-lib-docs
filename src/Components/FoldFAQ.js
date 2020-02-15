@@ -130,8 +130,6 @@ const answerVariants = {
 export default function FoldFAQ() {
   const [selected, setSelected] = useState(null);
 
-  const lang = "en";
-
   const test = QnA.map((edge, index) => {
     const num = index < 9 ? `0${index + 1}` : index + 1;
 
@@ -145,7 +143,7 @@ export default function FoldFAQ() {
             variants={lineVariants}
             initial={false}
           />
-          <Question>{edge[lang].Q}</Question>
+          <Question>{edge.Q}</Question>
           <Svg
             xmlns="http://www.w3.org/2000/svg"
             width="19"
@@ -174,7 +172,7 @@ export default function FoldFAQ() {
             variants={answerVariants}
             initial={false}
           >
-            {edge[lang].A}
+            {edge.A}
           </Answer>
         </Grid>
       </div>

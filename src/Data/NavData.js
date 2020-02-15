@@ -58,7 +58,6 @@ export const ChildLib = [
 ];
 
 export const singleLib = [
-  { link: "multilingual", name: "Multilingual" },
   { link: "carousel", name: "Carousel" },
   { link: "maps", name: "Maps" },
   { link: "intersectionObserver", name: "Intersection observer" },
