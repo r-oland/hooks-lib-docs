@@ -183,8 +183,8 @@ export default function SForm({ modalIsOpen, handleChange }) {
           <br />
           <p>
             Prefer to email directly? Sure!{" "}
-            <a href="mailto:roland.branten@gmail.com">
-              <StyledUnderline>roland.branten@gmail.com</StyledUnderline>
+            <a href="mailto:info@rolandbranten.nl">
+              <StyledUnderline>info@rolandbranten.nl</StyledUnderline>
             </a>
           </p>
         </Form>

@@ -24,8 +24,7 @@ export const ChildComp = [
       { link: "links", name: "Links" },
       { link: "collapse", name: "Collapse" },
       { link: "addOns", name: "Add ons" },
-      { link: "modals", name: "Modals" },
-      { link: "sliders", name: "Sliders" }
+      { link: "modals", name: "Modals" }
     ]
   },
   {
