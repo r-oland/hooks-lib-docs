@@ -40,18 +40,59 @@ export const QnA = [
   {
     Q: "Question 3",
     A: (
-      <p>
-        {" "}
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est delectus,
-        vel sunt atque ea quae doloribus praesentium aperiam? Ipsum dolore,
-        quidem incidunt nobis tenetur ab aut accusantium illo libero veniam
-        dolores natus. Veniam, a repellendus quae aliquam voluptate modi
-        accusantium nisi voluptates labore est et, quam alias eveniet vitae non.
-        Officiis eos molestiae quidem et quibusdam similique doloremque, fuga
-        dignissimos, error consectetur molestias laboriosam iusto cumque illo
-        sint facilis nulla hic deleniti tempore? Magni maxime aspernatur
-        perspiciatis repudiandae dolore similique!{" "}
-      </p>
+      <>
+        <p>
+          {" "}
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est
+          delectus, vel sunt atque ea quae doloribus praesentium aperiam? Ipsum
+          dolore, quidem incidunt nobis tenetur ab aut accusantium illo libero
+          veniam dolores natus. Veniam, a repellendus quae aliquam voluptate
+          modi accusantium nisi voluptates labore est et, quam alias eveniet
+          vitae non. Officiis eos molestiae quidem et quibusdam similique
+          doloremque, fuga dignissimos, error consectetur molestias laboriosam
+          iusto cumque illo sint facilis nulla hic deleniti tempore? Magni
+          maxime aspernatur perspiciatis repudiandae dolore similique!{" "}
+        </p>
+        <br />
+        <p>
+          {" "}
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est
+          delectus, vel sunt atque ea quae doloribus praesentium aperiam? Ipsum
+          dolore, quidem incidunt nobis tenetur ab aut accusantium illo libero
+          veniam dolores natus. Veniam, a repellendus quae aliquam voluptate
+          modi accusantium nisi voluptates labore est et, quam alias eveniet
+          vitae non. Officiis eos molestiae quidem et quibusdam similique
+          doloremque, fuga dignissimos, error consectetur molestias laboriosam
+          iusto cumque illo sint facilis nulla hic deleniti tempore? Magni
+          maxime aspernatur perspiciatis repudiandae dolore similique!{" "}
+        </p>
+        <br />
+        <p>
+          {" "}
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est
+          delectus, vel sunt atque ea quae doloribus praesentium aperiam? Ipsum
+          dolore, quidem incidunt nobis tenetur ab aut accusantium illo libero
+          veniam dolores natus. Veniam, a repellendus quae aliquam voluptate
+          modi accusantium nisi voluptates labore est et, quam alias eveniet
+          vitae non. Officiis eos molestiae quidem et quibusdam similique
+          doloremque, fuga dignissimos, error consectetur molestias laboriosam
+          iusto cumque illo sint facilis nulla hic deleniti tempore? Magni
+          maxime aspernatur perspiciatis repudiandae dolore similique!{" "}
+        </p>
+        <br />
+        <p>
+          {" "}
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est
+          delectus, vel sunt atque ea quae doloribus praesentium aperiam? Ipsum
+          dolore, quidem incidunt nobis tenetur ab aut accusantium illo libero
+          veniam dolores natus. Veniam, a repellendus quae aliquam voluptate
+          modi accusantium nisi voluptates labore est et, quam alias eveniet
+          vitae non. Officiis eos molestiae quidem et quibusdam similique
+          doloremque, fuga dignissimos, error consectetur molestias laboriosam
+          iusto cumque illo sint facilis nulla hic deleniti tempore? Magni
+          maxime aspernatur perspiciatis repudiandae dolore similique!{" "}
+        </p>
+      </>
     )
   },
   {

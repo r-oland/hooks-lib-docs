@@ -217,15 +217,18 @@ export default function ChatLink({ stock }) {
         </Flex>
       </Top>
       <ChatArea>
-        <Me to="/#">How much does a JAMstack site cost?</Me>
-        <Roland to="/#">
-          Straight to the point huh, Sure! Click me to find out.
+        <Me to="/links">This is the first question.</Me>
+        <Roland to="/links">
+          This is the answer to that question with a build-in link.
         </Roland>
-        <Me to="/#">Why should my site be bould with the JAMstack?</Me>
-        <Roland to="/#"> Well I'm glad you asked, click me to find out.</Roland>
-        <Me to="/#">Are you the right person for my site?</Me>
-        <Roland to="/#">
-          I probably am, but their are a few exceptions. click me to find out
+        <Me to="/links">This is the second question.</Me>
+        <Roland to="/links">
+          {" "}
+          This is the answer to that question with a build-in link.
+        </Roland>
+        <Me to="/links">This is the third question.</Me>
+        <Roland to="/links">
+          This is the answer to that question with a build-in link.
         </Roland>
       </ChatArea>
     </ChatWrapper>
