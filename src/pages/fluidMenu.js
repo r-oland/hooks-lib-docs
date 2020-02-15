@@ -25,11 +25,11 @@ const Message = styled.h3`
   }
 `;
 
-export default function TransitionMenu() {
+export default function FluidMenuPage() {
   return (
     <Layout>
-      <Head title="Transition menu" />
-      <Title>Transition menu</Title>
+      <Head title="Fluid menu" />
+      <Title>Fluid menu</Title>
       <Message>Reduce window size to a maximum of 800px</Message>
       <Wrapper>
         <Clipboard copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/FluidMenu/FluidHamburger.js">

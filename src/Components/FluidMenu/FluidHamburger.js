@@ -2,11 +2,11 @@
 import { motion } from "framer-motion";
 import React, { useContext } from "react";
 import styled from "styled-components";
-import { HamburgerContext } from "../../Layout/Layout";
+import { HamburgerContext } from "../Layout";
 // =========================
 
 const Wrapper = styled.div`
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 850px) {
     display: none;
   }
 `;
@@ -15,7 +15,7 @@ const Circle = styled(motion.div)`
   position: fixed;
   /* or absolute for non sticky */
   right: 20px;
-  top: 20px;
+  top: 13px;
   background: ${({ theme: { primary } }) => primary.s4};
   z-index: 151;
 `;
@@ -24,9 +24,9 @@ const Burger = styled.div`
   cursor: pointer;
   position: fixed;
   right: 20px;
-  top: 20px;
-  height: 50px;
-  width: 50px;
+  top: 13px;
+  height: 45px;
+  width: 45px;
   z-index: 153;
   display: flex;
   justify-content: center;
@@ -70,8 +70,8 @@ export default function FluidHamburger() {
           },
 
           menuOpen: {
-            width: 50,
-            height: 50,
+            width: 45,
+            height: 45,
             x: 0,
             y: 0,
             borderRadius: "100% 100% 100% 100% / 100% 100% 100% 100% "
@@ -128,21 +128,3 @@ export default function FluidHamburger() {
     </Wrapper>
   );
 }
-
-// INSERT IN LAYOUT COMPONENT
-
-// above export default: export const HamburgerContext = React.createContext();
-
-// const [menuState, setMenuState] = useState("closed");
-
-// const changeMenu = () => {
-//   menuState === "closed" ? setMenuState("open") : setMenuState("closed");
-// };
-
-// const contextValue ={
-//   menuState,
-//   changeMenu
-// }
-
-/* <HamburgerContext.Provider value={contextValue}>
-</HamburgerContext.Provider> */

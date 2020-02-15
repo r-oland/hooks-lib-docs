@@ -23,9 +23,7 @@ export default function TextSwitch() {
       <Title>Text switch</Title>
       <Wrapper>
         <Clipboard copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/TextSwitchAnimation.js">
-          <p>
-            this is text <TextSwitchAnimation />
-          </p>
+          <TextSwitchAnimation />
         </Clipboard>
       </Wrapper>
     </Layout>

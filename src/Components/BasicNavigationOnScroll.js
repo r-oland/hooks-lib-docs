@@ -59,6 +59,9 @@ export default function BasicNavigationOnScroll() {
   const [ref, inView] = useInView({ threshold: 0 });
   const themeContext = useContext(ThemeContext);
 
+  // set topRef on layout div with a absolute position, height: calc(100% - 101vh); bottom: 0;
+  // pass prop to this components
+
   return (
     <NavWrapper
       animate={inView ? "top" : "else"}

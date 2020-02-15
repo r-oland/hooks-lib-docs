@@ -23,6 +23,11 @@ const Margin = styled.div`
   margin: 0 auto;
 `;
 
+const Scroll = styled.h3`
+  margin-top: ${({ theme: { spacing } }) => spacing.s6};
+  text-align: center;
+`;
+
 export default function Navigation() {
   return (
     <Layout>
@@ -40,6 +45,7 @@ export default function Navigation() {
             <BasicNavigationOnScroll />
           </Margin>
         </Clipboard>
+        <Scroll>Scroll!</Scroll>
       </Wrapper>
     </Layout>
   );

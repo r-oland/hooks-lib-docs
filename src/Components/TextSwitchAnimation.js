@@ -2,9 +2,12 @@
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { flexUnit } from "../style/Mixins";
 // =========================
 
-const TextArea = styled(motion.span)``;
+const TextArea = styled(motion.span)`
+  ${flexUnit(2, 17, 22, "vw", "font-size")};
+`;
 
 const variants = {
   done: { opacity: 1 },
@@ -14,8 +17,8 @@ const variants = {
 export default function TextSwitchAnimation() {
   // unmount with intersection observer to prevent unnecessary reerenders
 
-  const A = "A";
-  const B = "B";
+  const A = "Wait a second...";
+  const B = "Wow cool effect!";
 
   const [IsChanging, setIsChanging] = useState(false);
   const [Content, setContent] = useState(A);
