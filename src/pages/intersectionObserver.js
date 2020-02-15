@@ -1,9 +1,9 @@
 // Components==============
 import Stock from "assets/Stock.jpeg";
 import React from "react";
-import Clipboard from "react-clipboard.js";
 import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
+import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
 import Layout from "../Layout/Layout";
 import { Container } from "../style/Mixins";
@@ -33,13 +33,10 @@ export default function IntersectionObserver() {
       <Head title="Intersection observer" />
       <Title>Intersection observer</Title>
       <Wrapper inView={inView}>
-        <Clipboard
-          style={{ marginTop: `20vh` }}
-          data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/pages/intersectionObserver.js"
-        >
-          Select
+        <h3 style={{ marginTop: `20vh` }}>Scroll down</h3>
+        <Clipboard copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/pages/intersectionObserver.js">
+          <img src={Stock} ref={ref} alt="stock" />
         </Clipboard>
-        <img src={Stock} ref={ref} alt="stock" />
       </Wrapper>
     </Layout>
   );

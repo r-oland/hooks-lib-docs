@@ -1,8 +1,8 @@
 // Components==============
 import React from "react";
-import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
 import FoldFAQ from "../Components/FoldFAQ";
+import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
 import Layout from "../Layout/Layout";
 import { Container } from "../style/Mixins";
@@ -13,11 +13,9 @@ const Title = styled.h2`
   margin: ${({ theme: { spacing } }) => `${spacing.s4} 0 ${spacing.s3}`};
 `;
 
-const Wrapper = styled(Container)``;
-
-const Clip = styled(Clipboard)`
-  margin: ${({ theme: { spacing } }) => `${spacing.s4} auto`};
-  display: block;
+const Wrapper = styled(Container)`
+  display: flex;
+  justify-content: center;
 `;
 
 export default function Faq() {
@@ -26,10 +24,12 @@ export default function Faq() {
       <Head title="FAQ" />
       <Title>FAQ</Title>
       <Wrapper>
-        <FoldFAQ />
-        <Clip data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/FoldFAQ.js">
-          Select
-        </Clip>
+        <Clipboard
+          style={{ textAlign: "left" }}
+          copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/FoldFAQ.js"
+        >
+          <FoldFAQ />
+        </Clipboard>
       </Wrapper>
     </Layout>
   );

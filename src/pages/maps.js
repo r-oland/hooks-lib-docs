@@ -1,8 +1,8 @@
 // Components==============
 import React from "react";
-import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
 import BasicMap from "../Components/BasicMap";
+import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
 import Layout from "../Layout/Layout";
 // =========================
@@ -14,21 +14,18 @@ const Title = styled.h2`
 
 const Wrapper = styled.div``;
 
-const Clip = styled(Clipboard)`
-  display: block;
-  margin: ${({ theme: { spacing } }) => `${spacing.s8}`} auto;
-`;
-
 export default function Maps() {
   return (
     <Layout>
       <Head title="Maps" />
       <Title>Maps</Title>
       <Wrapper>
-        <BasicMap />
-        <Clip data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/BasicMap.js">
-          select
-        </Clip>
+        <Clipboard
+          style={{ width: `100%` }}
+          copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/BasicMap.js"
+        >
+          <BasicMap />
+        </Clipboard>
       </Wrapper>
     </Layout>
   );

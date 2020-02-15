@@ -3,22 +3,25 @@ import Icon from "assets/Icon.svg";
 import { motion } from "framer-motion";
 import { flexUnit } from "mixins";
 import React from "react";
-import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
+import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
 import Layout from "../Layout/Layout";
+import { L } from "../style/Mixins";
 // =========================
 
 const Wrapper = styled.div`
   height: 100vh;
   display: grid;
+  grid-template-rows: fit-content(400px) 1fr;
   text-align: center;
   justify-items: center;
 `;
 
 const Text = styled.div`
   align-self: center;
-  margin: 0 ${({ theme: { spacing } }) => spacing.s3};
+  max-width: 700px;
+  margin: ${({ theme: { spacing } }) => `${spacing.s9} ${spacing.s4} 0`};
 `;
 
 const Title = styled.p`
@@ -27,12 +30,13 @@ const Title = styled.p`
   font-weight: 700;
 `;
 
-const SVGWrap = styled(motion.div)`
-  align-self: start;
+const Story = styled(L)`
+  line-height: ${({ theme: { lineHeight } }) => lineHeight.s4};
 `;
 
-const IconSVG = styled.img`
-  width: calc(75px + 20vw);
+const IconSVG = styled(motion.img)`
+  width: calc(100px + 17.5vw);
+  cursor: grab;
 `;
 
 export default function Index() {
@@ -41,17 +45,23 @@ export default function Index() {
       <Head title="Home" />
       <Wrapper>
         <Text>
-          <Title>This is my personal component library.</Title>
-          <p>Please ignore the select buttons, they are for personal usage. </p>
+          <Title>Welcome to my personal component library!</Title>
+          <Story>
+            This is a small app that serves as a storage place for some of the
+            reusable React components I build.
+          </Story>
         </Text>
-        <SVGWrap
-          drag
-          dragConstraints={{ left: -70, right: 70, top: -70, bottom: 70 }}
+        <Clipboard
+          style={{ alignSelf: "center" }}
+          copy="vscode://file/d:/Freelancing/Code/Real projects/Components"
         >
-          <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components">
-            <IconSVG src={Icon} alt="Icon" />
-          </Clipboard>
-        </SVGWrap>
+          <IconSVG
+            src={Icon}
+            alt="Icon"
+            drag
+            dragConstraints={{ left: -100, right: 100, top: -100, bottom: 100 }}
+          />
+        </Clipboard>
       </Wrapper>
     </Layout>
   );

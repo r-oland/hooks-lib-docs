@@ -1,9 +1,9 @@
 // Components==============
 import Stock from "assets/Stock.jpeg";
 import React from "react";
-import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
 import ParallaxItem from "../Components/ParallaxItem";
+import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
 import Layout from "../Layout/Layout";
 // =========================
@@ -27,20 +27,17 @@ const Wrapper = styled.div`
   }
 `;
 
-const Clip = styled(Clipboard)``;
-
 export default function Parallax() {
   return (
     <Layout>
       <Head title="Parallax" />
       <Title>Parallax</Title>
       <Wrapper>
-        <ParallaxItem>
-          <img src={Stock} alt="stock" />
-        </ParallaxItem>
-        <Clip data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/ParallaxItem.js">
-          Select
-        </Clip>
+        <Clipboard copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/ParallaxItem.js">
+          <ParallaxItem>
+            <img src={Stock} alt="stock" />
+          </ParallaxItem>
+        </Clipboard>
       </Wrapper>
     </Layout>
   );

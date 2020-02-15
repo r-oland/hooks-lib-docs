@@ -7,9 +7,9 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop -H 192.168.2.146 ",
-    "local": "gatsby develop -H 192.168.56.1 -p 8001",
-    "mobile": "gatsby develop -H 192.168.43.132 -p 8001",
+    "develop": "gatsby develop -H 192.168.2.146 --https",
+    "local": "gatsby develop -H 192.168.56.1 -p 8001 --https",
+    "mobile": "gatsby develop -H 192.168.43.132 -p 8001 --https",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""

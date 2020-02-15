@@ -1,9 +1,9 @@
 // Components==============
 import React from "react";
-import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
 import SimpleDropdownButton from "../Components/SimpleDropdownButton/SimpleDropdownButton";
 import SimpleDropdownButton2 from "../Components/SimpleDropdownButton2/SimpleDropdownButton2";
+import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
 import Layout from "../Layout/Layout";
 // =========================
@@ -26,34 +26,23 @@ export default function DropdownButtons() {
       <Head title="Dropdown button" />
       <Title>Dropdown button</Title>
       <Grid>
-        <div>
+        <Clipboard copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SimpleDropdownButton/SimpleDropdownButton.js">
           <SimpleDropdownButton buttonText={`button text`}>
             <li>Choice one</li>
             <li>Choice two</li>
             <li>Choice three</li>
             <li>Choice four</li>
           </SimpleDropdownButton>
-          <Clipboard
-            style={{ display: "block", margin: "0 auto" }}
-            data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SimpleDropdownButton/SimpleDropdownButton.js"
-          >
-            select
-          </Clipboard>
-        </div>
-        <div>
+        </Clipboard>
+
+        <Clipboard copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SimpleDropdownButton2/SimpleDropdownButton2.js">
           <SimpleDropdownButton2 buttonText={`button text`}>
             <li>Choice one</li>
             <li>Choice two</li>
             <li>Choice three</li>
             <li>Choice four</li>
           </SimpleDropdownButton2>
-          <Clipboard
-            style={{ display: "block", margin: "0 auto" }}
-            data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SimpleDropdownButton2/SimpleDropdownButton2.js"
-          >
-            select
-          </Clipboard>
-        </div>
+        </Clipboard>
       </Grid>
     </Layout>
   );

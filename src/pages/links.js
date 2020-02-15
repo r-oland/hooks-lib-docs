@@ -20,6 +20,7 @@ const Wrapper = styled(Container)`
 
 const Clip = styled(Clipboard)`
   margin: ${({ theme: { spacing } }) => `${spacing.s8}`} 0;
+  width: 100%;
 `;
 
 export default function Links({ data }) {
@@ -28,9 +29,8 @@ export default function Links({ data }) {
       <Head title="Links" />
       <Title>Links</Title>
       <Wrapper>
-        <ChatLink stock={data.file.childImageSharp.fluid} />
-        <Clip data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/ChatLink/ChatLink.js">
-          select
+        <Clip copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/ChatLink/ChatLink.js">
+          <ChatLink stock={data.file.childImageSharp.fluid} />
         </Clip>
       </Wrapper>
     </Layout>

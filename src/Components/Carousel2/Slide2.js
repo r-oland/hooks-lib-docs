@@ -7,6 +7,9 @@ import styled from "styled-components";
 // =========================
 
 const Slider2 = styled(Slider)`
+  max-width: 1000px;
+  margin: 0 auto;
+
   cursor: pointer;
   padding-top: ${({ theme: { spacing } }) => spacing.s1};
 

@@ -1,9 +1,9 @@
 // Components==============
 import React, { useState } from "react";
-import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
 import { SimpleButton } from "../Components/SimpleButton";
 import SimpleModal from "../Components/SimpleModal/SimpleModal";
+import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
 import Layout from "../Layout/Layout";
 // =========================
@@ -28,7 +28,6 @@ export default function Modals() {
       <Head title="Modals" />
       <Title>Modals</Title>
       <Wrapper>
-        <SimpleButton onClick={handleChange}>Click me</SimpleButton>
         <SimpleModal modalIsOpen={modalIsOpen} handleChange={handleChange}>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero aut
@@ -48,11 +47,8 @@ export default function Modals() {
             nostrum sint autem blanditiis officia possimus. Nihil!
           </p>
         </SimpleModal>
-        <Clipboard
-          style={{ display: "block", margin: "0 auto" }}
-          data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SimpleModal/SimpleModal.js"
-        >
-          select
+        <Clipboard copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SimpleModal/SimpleModal.js">
+          <SimpleButton onClick={handleChange}>Click me</SimpleButton>
         </Clipboard>
       </Wrapper>
     </Layout>

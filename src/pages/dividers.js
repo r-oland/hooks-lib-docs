@@ -1,6 +1,5 @@
 // Components==============
 import React from "react";
-import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
 import { Cylinder } from "../Components/Cylinder/Cylinder";
 import { HalfRoundedLarge } from "../Components/HalfRoundedLarge/HalfRoundedLarge";
@@ -11,6 +10,7 @@ import { RampLarge } from "../Components/RampLarge/RampLarge";
 import { RampSmall } from "../Components/RampSmall/RampSmall";
 import { Waves } from "../Components/Waves/Waves";
 import { Waves2 } from "../Components/Waves2/Waves2";
+import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
 import Layout from "../Layout/Layout";
 
@@ -25,10 +25,6 @@ const Wrapper = styled.div`
   min-height: 90vh;
 `;
 
-const Margin = styled(Clipboard)`
-  margin-bottom: 3em;
-`;
-
 const BackgroundColor = styled.div`
   background-color: ${({ theme: { primary } }) => primary.s4};
 `;
@@ -39,35 +35,62 @@ export default function Dividers() {
       <Head title="Dividers" />
       <Title>Dividers</Title>
       <Wrapper>
-        <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/HalfRoundedLarge/HalfRoundedLarge.js">
+        <Clipboard
+          style={{ marginBottom: "3em" }}
+          copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/HalfRoundedLarge/HalfRoundedLarge.js"
+        >
           <HalfRoundedLarge />
-        </Margin>
-        <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/HalfRoundedSmall/HalfRoundedSmall.js">
+        </Clipboard>
+        <Clipboard
+          style={{ marginBottom: "3em" }}
+          copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/HalfRoundedSmall/HalfRoundedSmall.js"
+        >
           <HalfRoundedSmall />
-        </Margin>
-        <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/Ramp2/Ramp2.js">
+        </Clipboard>
+        <Clipboard
+          style={{ marginBottom: "3em" }}
+          copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/Ramp2/Ramp2.js"
+        >
           <Ramp2 />
-        </Margin>
-        <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/RampSmall/RampSmall.js">
+        </Clipboard>
+        <Clipboard
+          style={{ marginBottom: "3em" }}
+          copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/RampSmall/RampSmall.js"
+        >
           <RampSmall />
-        </Margin>
-        <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/HalfRoundedLarge/HalfRoundedLarge.js">
+        </Clipboard>
+        <Clipboard
+          style={{ marginBottom: "3em" }}
+          copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/HalfRoundedLarge/HalfRoundedLarge.js"
+        >
           <RampLarge />
-        </Margin>
+        </Clipboard>
         <BackgroundColor>
-          <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/Waves/Waves.js">
+          <Clipboard
+            style={{ marginBottom: "3em" }}
+            copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/Waves/Waves.js"
+          >
             <Waves />
-          </Margin>
+          </Clipboard>
         </BackgroundColor>
         <BackgroundColor>
-          <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/Waves2/Waves2.js">
+          <Clipboard
+            style={{ marginBottom: "3em" }}
+            copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/Waves2/Waves2.js"
+          >
             <Waves2 />
           </Clipboard>
         </BackgroundColor>
-        <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/Cylinder/Cylinder.js">
+        <Clipboard
+          style={{ marginBottom: "3em" }}
+          copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/Cylinder/Cylinder.js"
+        >
           <Cylinder />
         </Clipboard>
-        <Clipboard data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/Hill/Hill.js">
+        <Clipboard
+          style={{ marginBottom: "3em" }}
+          copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/Hill/Hill.js"
+        >
           <Hill />
         </Clipboard>
       </Wrapper>

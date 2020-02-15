@@ -3,11 +3,11 @@ import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import { Container } from "mixins";
 import React, { useState } from "react";
-import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
 import Carousel1 from "../Components/Carousel1/Carousel1";
 import Slide1 from "../Components/Carousel2/Slide1";
 import Slide2 from "../Components/Carousel2/Slide2";
+import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
 import Layout from "../Layout/Layout";
 // =========================
@@ -19,10 +19,6 @@ const Title = styled.h2`
 
 const Wrapper = styled(Container)`
   text-align: center;
-`;
-
-const Clip = styled(Clipboard)`
-  padding: 2em 0;
 `;
 
 const SlideImage = styled(Img)`
@@ -70,33 +66,35 @@ export default function Carousel({ data }) {
       <Head title="Carousel" />
       <Title>Carousel</Title>
       <Wrapper>
-        <Carousel1>
-          <SlideImage fluid={Image1} alt="dog1" />
-          <SlideImage fluid={Image2} alt="dog2" />
-          <SlideImage fluid={Image3} alt="dog3" />
-          <SlideImage fluid={Image4} alt="dog4" />
-        </Carousel1>
+        <Clipboard
+          style={{ width: `100%`, padding: `2em 0` }}
+          copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/Carousel1/Carousel1.js"
+        >
+          <Carousel1>
+            <SlideImage fluid={Image1} alt="dog1" />
+            <SlideImage fluid={Image2} alt="dog2" />
+            <SlideImage fluid={Image3} alt="dog3" />
+            <SlideImage fluid={Image4} alt="dog4" />
+          </Carousel1>
+        </Clipboard>
 
-        <Clip data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/Carousel1/Carousel1.js">
-          select
-        </Clip>
-
-        <Slide1 setNav1={setNav1} nav2={nav2}>
-          <SlideImage2 fluid={Image1} alt="dog1" />
-          <SlideImage2 fluid={Image2} alt="dog2" />
-          <SlideImage2 fluid={Image3} alt="dog3" />
-          <SlideImage2 fluid={Image4} alt="dog4" />
-        </Slide1>
-        <Slide2 setNav2={setNav2} nav1={nav1}>
-          <SlideImage3 fluid={Image1} alt="dog1" />
-          <SlideImage3 fluid={Image2} alt="dog2" />
-          <SlideImage3 fluid={Image3} alt="dog3" />
-          <SlideImage3 fluid={Image4} alt="dog4" />
-        </Slide2>
-
-        <Clip data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/Carousel2/Slide1.js">
-          select
-        </Clip>
+        <Clipboard
+          style={{ width: `100%`, padding: `2em 0` }}
+          copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/Carousel2/Slide1.js"
+        >
+          <Slide1 setNav1={setNav1} nav2={nav2}>
+            <SlideImage2 fluid={Image1} alt="dog1" />
+            <SlideImage2 fluid={Image2} alt="dog2" />
+            <SlideImage2 fluid={Image3} alt="dog3" />
+            <SlideImage2 fluid={Image4} alt="dog4" />
+          </Slide1>
+          <Slide2 setNav2={setNav2} nav1={nav1}>
+            <SlideImage3 fluid={Image1} alt="dog1" />
+            <SlideImage3 fluid={Image2} alt="dog2" />
+            <SlideImage3 fluid={Image3} alt="dog3" />
+            <SlideImage3 fluid={Image4} alt="dog4" />
+          </Slide2>
+        </Clipboard>
       </Wrapper>
     </Layout>
   );

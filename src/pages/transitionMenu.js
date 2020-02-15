@@ -1,9 +1,9 @@
 // Components==============
 import React from "react";
-import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
 import FluidHamburger from "../Components/FluidMenu/FluidHamburger";
 import FluidMenu from "../Components/FluidMenu/FluidMenu";
+import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
 import Layout from "../Layout/Layout";
 // =========================
@@ -30,15 +30,11 @@ export default function TransitionMenu() {
     <Layout>
       <Head title="Transition menu" />
       <Title>Transition menu</Title>
+      <Message>Reduce window size to a maximum of 800px</Message>
       <Wrapper>
-        <Message>Reduce window size to a maximum of 800px</Message>
-        <FluidHamburger />
-        <FluidMenu to="/transition2" />
-        <Clipboard
-          style={{ display: "block", margin: "0 auto" }}
-          data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/FluidMenu/FluidHamburger.js"
-        >
-          select
+        <Clipboard copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/FluidMenu/FluidHamburger.js">
+          <FluidHamburger />
+          <FluidMenu to="/transition2" />
         </Clipboard>
       </Wrapper>
     </Layout>

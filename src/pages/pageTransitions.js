@@ -1,8 +1,8 @@
 // Components==============
 import React from "react";
-import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
 import TLink from "../Components/TLink";
+import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
 import Layout from "../Layout/Layout";
 // =========================
@@ -30,12 +30,11 @@ export default function PageTransitions() {
       <Head title="Page transitions" />
       <Title>Page transitions</Title>
       <Wrapper>
-        <TLink to="/transition">Transition</TLink>
         <Clipboard
           style={{ marginTop: `20vh` }}
-          data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/pages/pageTransitions.js"
+          copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/pages/pageTransitions.js"
         >
-          Select
+          <TLink to="/transition">Transition</TLink>
         </Clipboard>
       </Wrapper>
     </Layout>

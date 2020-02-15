@@ -1,10 +1,10 @@
 // Components==============
 import React, { useState } from "react";
-import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
 import ASMHamburger from "../Components/AnimatedSideMenu/ASMHamburger";
 import ASMMenu from "../Components/AnimatedSideMenu/ASMMenu";
 import FullScreenWaterfallMenu from "../Components/FullScreenWaterfallMenu/FullScreenWaterfallMenu";
+import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
 import Layout from "../Layout/Layout";
 // =========================
@@ -33,7 +33,7 @@ const Padding = styled.div`
   }
 `;
 
-const Margin = styled(Clipboard)`
+const Margin = styled.div`
   padding-bottom: 5em;
   display: block;
   margin: ${({ theme: { spacing } }) => `${spacing.s4} 0 ${spacing.s4}`};
@@ -48,16 +48,18 @@ export default function Hamburger() {
       <Title>Hamburger menu</Title>
       <Padding>
         <Wrapper>
-          <FullScreenWaterfallMenu />
-          <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/FullScreenWaterfallMenu/FullScreenWaterfallMenu.js">
-            select
-          </Margin>
+          <Clipboard copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/FullScreenWaterfallMenu/FullScreenWaterfallMenu.js">
+            <Margin>
+              <FullScreenWaterfallMenu />
+            </Margin>
+          </Clipboard>
 
-          <ASMHamburger menuState={menuState} setMenuState={setMenuState} />
-          <ASMMenu menuState={menuState} setMenuState={setMenuState} />
-          <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/AnimatedSideMenu/ASMHamburger.js">
-            select
-          </Margin>
+          <Clipboard copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/AnimatedSideMenu/ASMHamburger.js">
+            <Margin>
+              <ASMHamburger menuState={menuState} setMenuState={setMenuState} />
+              <ASMMenu menuState={menuState} setMenuState={setMenuState} />
+            </Margin>
+          </Clipboard>
         </Wrapper>
       </Padding>
     </Layout>

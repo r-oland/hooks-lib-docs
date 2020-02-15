@@ -3,11 +3,11 @@ import Stock2 from "assets/Stock2.svg";
 import Stock3 from "assets/Stock3.svg";
 import Stock4 from "assets/Stock4.svg";
 import React from "react";
-import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
 import MenuCardDropdown from "../Components/MenuCardDropdown/MenuCardDropdown";
 import MenuCardDropdown2 from "../Components/MenuCardDropdown2/MenuCardDropdown2";
 import MenuCardDropdown3 from "../Components/MenuCardDropdown3/MenuCardDropdown3";
+import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
 import Layout from "../Layout/Layout";
 
@@ -22,7 +22,7 @@ const Wrapper = styled.div`
   align-items: center;
 `;
 
-const Margin = styled(Clipboard)`
+const Margin = styled.div`
   padding-bottom: 3em;
   display: block;
   margin: 0 auto;
@@ -34,54 +34,56 @@ export default function MenuDropdown() {
       <Head title="Dropdown menu" />
       <Title>Dropdown menu</Title>
       <Wrapper>
-        <MenuCardDropdown name="Dropdown item">
-          <p>Title 1</p>
-          <p>Title 2 </p>
-          <p>Title 3</p>
-        </MenuCardDropdown>
+        <Clipboard copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/MenuCardDropdown/MenuCardDropdown.js">
+          <Margin>
+            <MenuCardDropdown name="Dropdown item">
+              <p>Title 1</p>
+              <p>Title 2 </p>
+              <p>Title 3</p>
+            </MenuCardDropdown>
+          </Margin>
+        </Clipboard>
 
-        <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/MenuCardDropdown/MenuCardDropdown.js">
-          select
-        </Margin>
-        <MenuCardDropdown2 name="Dropdown item">
-          <div className="dropdownItem">
-            <p>Title 1</p>
-            <div className="subDropdownText">Additional text</div>
-          </div>
-          <div className="dropdownItem">
-            <p>Title 2</p>
-            <div className="subDropdownText">Additional text</div>
-          </div>
-          <div className="dropdownItem">
-            <p>Title 3</p>
-            <div className="subDropdownText">Additional text</div>
-          </div>
-        </MenuCardDropdown2>
+        <Clipboard copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/MenuCardDropdown2/MenuCardDropdown2.js">
+          <Margin>
+            <MenuCardDropdown2 name="Dropdown item">
+              <div className="dropdownItem">
+                <p>Title 1</p>
+                <div className="subDropdownText">Additional text</div>
+              </div>
+              <div className="dropdownItem">
+                <p>Title 2</p>
+                <div className="subDropdownText">Additional text</div>
+              </div>
+              <div className="dropdownItem">
+                <p>Title 3</p>
+                <div className="subDropdownText">Additional text</div>
+              </div>
+            </MenuCardDropdown2>
+          </Margin>
+        </Clipboard>
 
-        <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/MenuCardDropdown2/MenuCardDropdown2.js">
-          select
-        </Margin>
-        <MenuCardDropdown3 name="Dropdown item">
-          <div className="dropdownItem">
-            <img src={Stock2} alt="Stock2" />
-            <p>Title 1</p>
-            <div className="subDropdownText">Additional text</div>
-          </div>
-          <div className="dropdownItem">
-            <img src={Stock3} alt="Stock3" />
-            <p>Title 2</p>
-            <div className="subDropdownText">Additional text</div>
-          </div>
-          <div className="dropdownItem">
-            <img src={Stock4} alt="Stock4" />
-            <p>Title 3</p>
-            <div className="subDropdownText">Additional text</div>
-          </div>
-        </MenuCardDropdown3>
-
-        <Margin data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/MenuCardDropdown3/MenuCardDropdown3.js">
-          select
-        </Margin>
+        <Clipboard copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/MenuCardDropdown3/MenuCardDropdown3.js">
+          <Margin>
+            <MenuCardDropdown3 name="Dropdown item">
+              <div className="dropdownItem">
+                <img src={Stock2} alt="Stock2" />
+                <p>Title 1</p>
+                <div className="subDropdownText">Additional text</div>
+              </div>
+              <div className="dropdownItem">
+                <img src={Stock3} alt="Stock3" />
+                <p>Title 2</p>
+                <div className="subDropdownText">Additional text</div>
+              </div>
+              <div className="dropdownItem">
+                <img src={Stock4} alt="Stock4" />
+                <p>Title 3</p>
+                <div className="subDropdownText">Additional text</div>
+              </div>
+            </MenuCardDropdown3>
+          </Margin>
+        </Clipboard>
       </Wrapper>
     </Layout>
   );

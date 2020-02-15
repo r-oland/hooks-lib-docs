@@ -1,13 +1,13 @@
 // Components==============
 import Stock1Imp from "assets/Stock1.inline.svg";
 import React from "react";
-import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
 import { IconButton } from "../Components/IconButton";
 import OpacityButton from "../Components/OpacityButton";
 import { SimpleButton } from "../Components/SimpleButton";
 import SlideInButton from "../Components/SlideInButton";
 import { TransparentButton } from "../Components/TransparentButton";
+import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
 import Layout from "../Layout/Layout";
 // =========================
@@ -39,54 +39,27 @@ export default function NomralButtons() {
       <Head title="Normal Buttons" />
       <Title>Normal Buttons</Title>
       <Grid>
-        <div>
+        <Clipboard copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SimpleButton.js">
           <SimpleButton>Button text</SimpleButton>
-          <Clipboard
-            style={{ display: "block", margin: "0 auto" }}
-            data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SimpleButton.js"
-          >
-            select
-          </Clipboard>
-        </div>
-        <div>
+        </Clipboard>
+
+        <Clipboard copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/TransparentButton.js">
           <TransparentButton>Button text</TransparentButton>
-          <Clipboard
-            style={{ display: "block", margin: "0 auto" }}
-            data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/TransparentButton.js"
-          >
-            select
-          </Clipboard>
-        </div>
-        <div>
+        </Clipboard>
+
+        <Clipboard copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SlideInButton.js">
           <SlideInButton>Button text</SlideInButton>
-          <Clipboard
-            style={{ display: "block", margin: "0 auto" }}
-            data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SlideInButton.js"
-          >
-            select
-          </Clipboard>
-        </div>
-        <div>
+        </Clipboard>
+
+        <Clipboard copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/IconButton.js">
           <IconButton>
             <Stock1Svg />
           </IconButton>
+        </Clipboard>
 
-          <Clipboard
-            style={{ display: "block", margin: "0 auto" }}
-            data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/IconButton.js"
-          >
-            select
-          </Clipboard>
-        </div>
-        <div>
+        <Clipboard copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/OpacityButton.js">
           <OpacityButton>Button text</OpacityButton>
-          <Clipboard
-            style={{ display: "block", margin: "0 auto" }}
-            data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/OpacityButton.js"
-          >
-            select
-          </Clipboard>
-        </div>
+        </Clipboard>
       </Grid>
     </Layout>
   );

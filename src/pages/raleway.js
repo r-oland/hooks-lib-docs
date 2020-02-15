@@ -1,8 +1,8 @@
 // Components==============
 import { Container, L, S, Xs } from "mixins";
 import React from "react";
-import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
+import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
 import Layout from "../Layout/Layout";
 // =========================
@@ -14,10 +14,6 @@ const Title = styled.h2`
 
 const Wrapper = styled.div``;
 
-const Example = styled(Clipboard)`
-  text-align: left;
-`;
-
 const Margin = styled.div`
   margin: 0.8rem 0;
 `;
@@ -28,7 +24,10 @@ export default function Raleway() {
       <Head title="Raleway" />
       <Title>Raleway</Title>
       <Wrapper>
-        <Example data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/Raleway/Font-face.txt">
+        <Clipboard
+          style={{ textAlign: "left" }}
+          copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/Raleway/Font-face.txt"
+        >
           <Container>
             <h1>This is a H1 header </h1>
             <Margin />
@@ -80,7 +79,7 @@ export default function Raleway() {
               blanditiis harum earum sequi eveniet culpa?
             </Xs>
           </Container>
-        </Example>
+        </Clipboard>
       </Wrapper>
     </Layout>
   );

@@ -1,7 +1,6 @@
 // Components==============
 import { graphql } from "gatsby";
 import React from "react";
-import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
 import CTACard from "../Components/CTACard";
 import CurvedImageCard from "../Components/CurvedImageCard/CurverdImageCard";
@@ -9,6 +8,7 @@ import CurvedImageCard2 from "../Components/CurvedImageCard2/CurverdImageCard2";
 import SimpleImageCard from "../Components/SimpleImageCard";
 import { SimpleShadowCard } from "../Components/SimpleShadowCard";
 import WaveCard from "../Components/WaveCard/WaveCard";
+import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
 import Layout from "../Layout/Layout";
 import { Container } from "../style/Mixins";
@@ -29,12 +29,6 @@ const Grid = styled.div`
   margin: 4em 0;
 `;
 
-const Clip = styled(Clipboard)`
-  display: block;
-  margin: 0 auto;
-  padding-top: 1em;
-`;
-
 export default function Cards({ data }) {
   return (
     <Layout>
@@ -42,53 +36,29 @@ export default function Cards({ data }) {
       <Title>Cards</Title>
       <Wrapper>
         <Grid>
-          <div>
-            <SimpleShadowCard></SimpleShadowCard>
-            <Clip data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SimpleShadowCard.js">
-              select
-            </Clip>
-          </div>
+          <Clipboard copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SimpleShadowCard.js">
+            <SimpleShadowCard />
+          </Clipboard>
 
-          <div>
-            <SimpleImageCard
-              img={data.file.childImageSharp.fluid}
-            ></SimpleImageCard>
-            <Clip data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SimpleImageCard.js">
-              select
-            </Clip>
-          </div>
+          <Clipboard copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SimpleImageCard.js">
+            <SimpleImageCard img={data.file.childImageSharp.fluid} />
+          </Clipboard>
 
-          <div>
-            <CurvedImageCard
-              img={data.file.childImageSharp.fluid}
-            ></CurvedImageCard>
-            <Clip data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/CurvedImageCard/CurverdImageCard.js">
-              select
-            </Clip>
-          </div>
+          <Clipboard copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/CurvedImageCard/CurverdImageCard.js">
+            <CurvedImageCard img={data.file.childImageSharp.fluid} />
+          </Clipboard>
 
-          <div>
-            <WaveCard img={data.file.childImageSharp.fluid}></WaveCard>
-            <Clip data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/WaveCard/WaveCard.js">
-              select
-            </Clip>
-          </div>
+          <Clipboard copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/WaveCard/WaveCard.js">
+            <WaveCard img={data.file.childImageSharp.fluid} />
+          </Clipboard>
 
-          <div>
-            <CurvedImageCard2
-              img={data.file.childImageSharp.fluid}
-            ></CurvedImageCard2>
-            <Clip data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/CurvedImageCard2/CurverdImageCard2.js">
-              select
-            </Clip>
-          </div>
+          <Clipboard copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/CurvedImageCard2/CurverdImageCard2.js">
+            <CurvedImageCard2 img={data.file.childImageSharp.fluid} />
+          </Clipboard>
 
-          <div>
-            <CTACard cta={"Call to action"}></CTACard>
-            <Clip data-clipboard-text="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/CTACard.js">
-              select
-            </Clip>
-          </div>
+          <Clipboard copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/CTACard.js">
+            <CTACard cta={"Call to action"} />
+          </Clipboard>
         </Grid>
       </Wrapper>
     </Layout>
