@@ -1,6 +1,5 @@
 // Components==============
 import { motion } from "framer-motion";
-import { useLog } from "hooks-lib";
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { NavContext } from "../Layout";
@@ -21,7 +20,8 @@ const Button = styled(motion.svg)`
 
 export default function FoldButton() {
   const { folded, setFolded, query } = useContext(NavContext);
-  useLog(query);
+
+  const buttonCondition = folded && query ? "open" : !query ? "open" : "closed";
 
   return (
     <Button
@@ -29,14 +29,14 @@ export default function FoldButton() {
       onClick={() => {
         folded === true ? setFolded(false) : setFolded(true);
       }}
-      animate={folded === true ? "open" : "closed"}
+      animate={buttonCondition}
       initial={false}
       variants={{
         open: {
           x: 0,
         },
         closed: {
-          x: !query ? 0 : -200,
+          x: -200,
         },
       }}
       transition={{
@@ -48,6 +48,7 @@ export default function FoldButton() {
     >
       <motion.g
         fill="#2b2b2b"
+        animate={folded ? "open" : "closed"}
         variants={{
           open: {
             rotate: 0,

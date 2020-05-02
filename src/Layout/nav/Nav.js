@@ -49,7 +49,7 @@ export default function MainNav() {
           damping: 20,
           stiffness: 130,
         }}
-        animate={folded === true ? "open" : "closed"}
+        animate={folded ? "open" : "closed"}
         initial={false}
       >
         <h3 id="components">Components</h3>
