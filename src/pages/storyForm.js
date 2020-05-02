@@ -4,7 +4,6 @@ import styled from "styled-components";
 import SForm from "../Components/SForm";
 import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
-import Layout from "../Layout/Layout";
 import { Button, Container } from "../style/Mixins";
 // =========================
 
@@ -25,7 +24,7 @@ export default function StoryForm() {
   };
 
   return (
-    <Layout>
+    <>
       <Head title="Story form" />
       <Title>Story form</Title>
       <Wrapper>
@@ -40,6 +39,6 @@ export default function StoryForm() {
           </Button>
         </Clipboard>
       </Wrapper>
-    </Layout>
+    </>
   );
 }

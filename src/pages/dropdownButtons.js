@@ -5,7 +5,6 @@ import SimpleDropdownButton from "../Components/SimpleDropdownButton/SimpleDropd
 import SimpleDropdownButton2 from "../Components/SimpleDropdownButton2/SimpleDropdownButton2";
 import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
-import Layout from "../Layout/Layout";
 // =========================
 
 const Title = styled.h2`
@@ -22,7 +21,7 @@ const Grid = styled.div`
 
 export default function DropdownButtons() {
   return (
-    <Layout>
+    <>
       <Head title="Dropdown button" />
       <Title>Dropdown button</Title>
       <Grid>
@@ -44,6 +43,6 @@ export default function DropdownButtons() {
           </SimpleDropdownButton2>
         </Clipboard>
       </Grid>
-    </Layout>
+    </>
   );
 }

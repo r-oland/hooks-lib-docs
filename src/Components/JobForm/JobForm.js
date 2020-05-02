@@ -105,7 +105,7 @@ const CV = styled.div`
     display: block;
     display: flex;
     align-items: center;
-    border: ${props => {
+    border: ${(props) => {
       const fileField = props.children[2].props.filefield;
       const tobigmessage = props.children[2].props.tobigmessage;
       const nofilemessage = props.children[2].props.nofilemessage;
@@ -124,7 +124,7 @@ const BijlagenSvg = styled(BijlagenImp)`
   margin-right: ${({ theme: { spacing } }) => spacing.s4};
 
   #changeColor {
-    fill: ${props => {
+    fill: ${(props) => {
       const fileField = props.filefield;
       const tobigmessage = props.tobigmessage;
       const nofilemessage = props.nofilemessage;
@@ -177,10 +177,10 @@ export default function JobForm() {
     }
   }
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (fileField !== toBigMessage) {
-      document.querySelector(`#${formName}`).submit();
+      document.tor(`#${formName}`).submit();
     }
   };
 
@@ -237,7 +237,7 @@ export default function JobForm() {
             type="file"
             name="CV"
             id="file"
-            onChange={e => {
+            onChange={(e) => {
               addFile(e);
             }}
             required

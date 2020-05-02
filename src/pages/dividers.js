@@ -12,7 +12,6 @@ import { Waves } from "../Components/Waves/Waves";
 import { Waves2 } from "../Components/Waves2/Waves2";
 import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
-import Layout from "../Layout/Layout";
 
 // =========================
 
@@ -31,7 +30,7 @@ const BackgroundColor = styled.div`
 
 export default function Dividers() {
   return (
-    <Layout>
+    <>
       <Head title="Dividers" />
       <Title>Dividers</Title>
       <Wrapper>
@@ -94,6 +93,6 @@ export default function Dividers() {
           <Hill />
         </Clipboard>
       </Wrapper>
-    </Layout>
+    </>
   );
 }

@@ -5,7 +5,6 @@ import BasicNavigation from "../Components/BasicNavigation";
 import BasicNavigationOnScroll from "../Components/BasicNavigationOnScroll";
 import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
-import Layout from "../Layout/Layout";
 // =========================
 
 const Title = styled.h2`
@@ -15,6 +14,7 @@ const Title = styled.h2`
 
 const Wrapper = styled.div`
   min-height: 110vh;
+  overflow: hidden;
 `;
 
 const Margin = styled.div`
@@ -30,7 +30,7 @@ const Scroll = styled.h3`
 
 export default function Navigation() {
   return (
-    <Layout>
+    <>
       <Head title="Navigation" />
       <Title>Navigation</Title>
       <Wrapper>
@@ -47,6 +47,6 @@ export default function Navigation() {
         </Clipboard>
         <Scroll>Scroll!</Scroll>
       </Wrapper>
-    </Layout>
+    </>
   );
 }

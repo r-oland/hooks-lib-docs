@@ -4,7 +4,6 @@ import styled from "styled-components";
 import TextSwitchAnimation from "../Components/TextSwitchAnimation";
 import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
-import Layout from "../Layout/Layout";
 // =========================
 
 const Title = styled.h2`
@@ -18,7 +17,7 @@ const Wrapper = styled.div`
 
 export default function TextSwitch() {
   return (
-    <Layout>
+    <>
       <Head title="Text switch" />
       <Title>Text switch</Title>
       <Wrapper>
@@ -26,6 +25,6 @@ export default function TextSwitch() {
           <TextSwitchAnimation />
         </Clipboard>
       </Wrapper>
-    </Layout>
+    </>
   );
 }

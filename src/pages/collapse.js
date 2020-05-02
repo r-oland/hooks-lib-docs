@@ -5,7 +5,6 @@ import CollapseCard from "../Components/CollapseCard/CollapseCard";
 import CollapseCard2 from "../Components/CollapseCard2/CollapseCard2";
 import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
-import Layout from "../Layout/Layout";
 import { Container } from "../style/Mixins";
 // =========================
 
@@ -32,7 +31,7 @@ const Wrapper = styled(Container)``;
 
 export default function Collapse() {
   return (
-    <Layout>
+    <>
       <Head title="Collapse" />
       <Title>Collapse</Title>
       <Wrapper>
@@ -62,6 +61,6 @@ export default function Collapse() {
           </Clipboard>
         </Elements>
       </Wrapper>
-    </Layout>
+    </>
   );
 }

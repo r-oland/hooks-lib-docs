@@ -9,7 +9,6 @@ import MenuCardDropdown2 from "../Components/MenuCardDropdown2/MenuCardDropdown2
 import MenuCardDropdown3 from "../Components/MenuCardDropdown3/MenuCardDropdown3";
 import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
-import Layout from "../Layout/Layout";
 
 const Title = styled.h2`
   text-align: center;
@@ -30,7 +29,7 @@ const Margin = styled.div`
 
 export default function MenuDropdown() {
   return (
-    <Layout>
+    <>
       <Head title="Dropdown menu" />
       <Title>Dropdown menu</Title>
       <Wrapper>
@@ -85,6 +84,6 @@ export default function MenuDropdown() {
           </Margin>
         </Clipboard>
       </Wrapper>
-    </Layout>
+    </>
   );
 }

@@ -4,7 +4,6 @@ import styled from "styled-components";
 import BlobAnimation from "../Components/BlobAnimation";
 import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
-import Layout from "../Layout/Layout";
 // =========================
 const Title = styled.h2`
   margin: ${({ theme: { spacing } }) => `${spacing.s8} 0 ${spacing.s3} `};
@@ -18,7 +17,7 @@ const Wrapper = styled.div`
 
 export default function Blob() {
   return (
-    <Layout>
+    <>
       <Head title="Blob animation" />
 
       <Wrapper>
@@ -27,6 +26,6 @@ export default function Blob() {
           <BlobAnimation />
         </Clipboard>
       </Wrapper>
-    </Layout>
+    </>
   );
 }

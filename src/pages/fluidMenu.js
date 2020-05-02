@@ -5,7 +5,6 @@ import FluidHamburger from "../Components/FluidMenu/FluidHamburger";
 import FluidMenu from "../Components/FluidMenu/FluidMenu";
 import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
-import Layout from "../Layout/Layout";
 // =========================
 
 const Title = styled.h2`
@@ -27,7 +26,7 @@ const Message = styled.h3`
 
 export default function FluidMenuPage() {
   return (
-    <Layout>
+    <>
       <Head title="Fluid menu" />
       <Title>Fluid menu</Title>
       <Message>Reduce window size to a maximum of 800px</Message>
@@ -37,6 +36,6 @@ export default function FluidMenuPage() {
           <FluidMenu to="/transition2" />
         </Clipboard>
       </Wrapper>
-    </Layout>
+    </>
   );
 }

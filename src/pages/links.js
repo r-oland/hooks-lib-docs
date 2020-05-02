@@ -1,11 +1,10 @@
 // Components==============
 import { graphql } from "gatsby";
 import React from "react";
-import Clipboard from "react-clipboard.js";
 import styled from "styled-components";
 import ChatLink from "../Components/ChatLink/ChatLink";
+import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
-import Layout from "../Layout/Layout";
 import { Container } from "../style/Mixins";
 // =========================
 
@@ -18,22 +17,17 @@ const Wrapper = styled(Container)`
   text-align: center;
 `;
 
-const Clip = styled(Clipboard)`
-  margin: ${({ theme: { spacing } }) => `${spacing.s8}`} 0;
-  width: 100%;
-`;
-
 export default function Links({ data }) {
   return (
-    <Layout>
+    <>
       <Head title="Links" />
       <Title>Links</Title>
       <Wrapper>
-        <Clip copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/ChatLink/ChatLink.js">
+        <Clipboard copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/ChatLink/ChatLink.js">
           <ChatLink stock={data.file.childImageSharp.fluid} />
-        </Clip>
+        </Clipboard>
       </Wrapper>
-    </Layout>
+    </>
   );
 }
 

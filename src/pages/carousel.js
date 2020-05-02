@@ -9,7 +9,6 @@ import Slide1 from "../Components/Carousel2/Slide1";
 import Slide2 from "../Components/Carousel2/Slide2";
 import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
-import Layout from "../Layout/Layout";
 // =========================
 
 const Title = styled.h2`
@@ -62,7 +61,7 @@ export default function Carousel({ data }) {
   const [nav2, setNav2] = useState(null);
 
   return (
-    <Layout>
+    <>
       <Head title="Carousel" />
       <Title>Carousel</Title>
       <Wrapper>
@@ -96,7 +95,7 @@ export default function Carousel({ data }) {
           </Slide2>
         </Clipboard>
       </Wrapper>
-    </Layout>
+    </>
   );
 }
 

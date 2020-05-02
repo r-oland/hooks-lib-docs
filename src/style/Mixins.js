@@ -26,13 +26,6 @@ export function flexUnit(amount, min, max, unit = "vw", prop = "font-size") {
    `;
 }
 
-// overflow fix
-
-export const OverFlowFix = styled.div`
-  overflow: hidden;
-  position: relative;
-`;
-
 // Container
 
 export const Container = styled.div`
@@ -85,8 +78,7 @@ export const StyledUnderline = styled.span`
   }
 `;
 
-// Button
-
+// button
 export const Button = styled.button`
   background-color: ${({ theme: { primary } }) => primary.s4};
   color: ${({ theme: { white } }) => white};

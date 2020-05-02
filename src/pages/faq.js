@@ -4,7 +4,6 @@ import styled from "styled-components";
 import FoldFAQ from "../Components/FoldFAQ";
 import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
-import Layout from "../Layout/Layout";
 import { Container } from "../style/Mixins";
 // =========================
 
@@ -20,7 +19,7 @@ const Wrapper = styled(Container)`
 
 export default function Faq() {
   return (
-    <Layout>
+    <>
       <Head title="FAQ" />
       <Title>FAQ</Title>
       <Wrapper>
@@ -31,6 +30,6 @@ export default function Faq() {
           <FoldFAQ />
         </Clipboard>
       </Wrapper>
-    </Layout>
+    </>
   );
 }

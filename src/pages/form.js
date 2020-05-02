@@ -5,7 +5,6 @@ import DoubleForm from "../Components/DoubleForm.js/DoubleForm";
 import JobForm from "../Components/JobForm/JobForm";
 import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
-import Layout from "../Layout/Layout";
 import { Container } from "../style/Mixins";
 // =========================
 
@@ -18,7 +17,7 @@ const Wrapper = styled(Container)``;
 
 export default function Form() {
   return (
-    <Layout>
+    <>
       <Head title="Standard form" />
       <Title>Standard form</Title>
       <Wrapper>
@@ -36,6 +35,6 @@ export default function Form() {
           <DoubleForm />
         </Clipboard>
       </Wrapper>
-    </Layout>
+    </>
   );
 }

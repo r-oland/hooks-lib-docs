@@ -1,7 +1,5 @@
 // Components==============
 import { createGlobalStyle } from "styled-components";
-import woff300 from "../assets/fonts/raleway-v14-latin-300.woff";
-import woff2_300 from "../assets/fonts/raleway-v14-latin-300.woff2";
 import woff500 from "../assets/fonts/raleway-v14-latin-500.woff";
 import woff2_500 from "../assets/fonts/raleway-v14-latin-500.woff2";
 import woff600 from "../assets/fonts/raleway-v14-latin-600.woff";
@@ -18,24 +16,35 @@ const GlobalStyles = createGlobalStyle`
    /* =========================================*/
    /* Global style ============================*/
    /* =========================================*/
+   
+   html {
+      font-family: Raleway;
+      background-color: ${({ theme: { gray } }) => gray.s1};
+
+      input, select, textarea, label{
+         font-family: Raleway;
+         font-size: 14px;
+      }
+   }
+
 
    body {
       color: ${({ theme: { black } }) => black};
+
+   }
+
+   #gatsby-focus-wrapper{
+      position: relative;
+   }
+
+   svg{
+      display: block;
    }
 
    /* =========================================*/
    /* Font ====================================*/
    /* =========================================*/
 
-    /* raleway-300 - latin */
-    @font-face {
-   font-family: 'Raleway';
-   font-style: normal;
-   font-weight: 300;
-   src: local('Raleway Light'), local('Raleway-Light'),
-   url('${woff2_300}') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-   url('${woff300}') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-   }
    /* raleway-regular - latin */
    @font-face {
    font-family: 'Raleway';
@@ -73,19 +82,8 @@ const GlobalStyles = createGlobalStyle`
          url('${woff700}') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
    }
 
-   html {
-      font-family: Raleway;
-      background-color: ${({ theme: { gray } }) => gray.s1};
-      height: 100%;
-
-      input, select, textarea, label{
-         font-family: Raleway;
-         font-size: 14px;
-      }
-   }
-
    h1 {
-      ${flexUnit(4, 32, 55, "vw", "font-size")};
+      ${flexUnit(4, 25, 45, "vw", "font-size")};
    }
 
    h2 {
@@ -93,7 +91,7 @@ const GlobalStyles = createGlobalStyle`
    }
 
    h3 {
-      ${flexUnit(2, 17, 22, "vw", "font-size")};
+      ${flexUnit(2, 20, 25, "vw", "font-size")};
    }
 
    h4 {
@@ -161,8 +159,8 @@ const GlobalStyles = createGlobalStyle`
       color: ${({ theme: { black } }) => black};
       border: none;
       padding: 0;
-      font-family: inherit;
       cursor: pointer;
+      font-family: inherit;
       outline: inherit;
       ${flexUnit(2.5, 16, 17, "vw", "font-size")};
    }
@@ -217,7 +215,6 @@ const GlobalStyles = createGlobalStyle`
    img {
       border-style: none;
    }
-
    `;
 
 export default GlobalStyles;

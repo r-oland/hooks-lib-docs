@@ -3,7 +3,6 @@ import { flexUnit } from "mixins";
 import React from "react";
 import styled from "styled-components";
 import Head from "../Layout/Head";
-import Layout from "../Layout/Layout";
 // =========================
 
 const F0F = styled.h1`
@@ -19,7 +18,7 @@ const LayoutStyle = {
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
-  height: "40vh"
+  height: "40vh",
 };
 
 const Container = styled.div`
@@ -39,13 +38,13 @@ const Container = styled.div`
 
 export default function notFound() {
   return (
-    <Layout>
+    <>
       <Head title="404" />
       <Container style={LayoutStyle}>
         <F0F>I could not find what you where looking for.</F0F>
         {/* eslint-disable-next-line */}
         <Smiley>😟</Smiley>
       </Container>
-    </Layout>
+    </>
   );
 }

@@ -5,7 +5,6 @@ import { SimpleButton } from "../Components/SimpleButton";
 import SimpleModal from "../Components/SimpleModal/SimpleModal";
 import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
-import Layout from "../Layout/Layout";
 // =========================
 
 const Title = styled.h2`
@@ -24,7 +23,7 @@ export default function Modals() {
     modalIsOpen === false ? setModalIsOpen(true) : setModalIsOpen(false);
   };
   return (
-    <Layout>
+    <>
       <Head title="Modals" />
       <Title>Modals</Title>
       <Wrapper>
@@ -51,6 +50,6 @@ export default function Modals() {
           <SimpleButton onClick={handleChange}>Click me</SimpleButton>
         </Clipboard>
       </Wrapper>
-    </Layout>
+    </>
   );
 }

@@ -4,7 +4,6 @@ import styled from "styled-components";
 import BasicMap from "../Components/BasicMap";
 import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
-import Layout from "../Layout/Layout";
 // =========================
 
 const Title = styled.h2`
@@ -16,7 +15,7 @@ const Wrapper = styled.div``;
 
 export default function Maps() {
   return (
-    <Layout>
+    <>
       <Head title="Maps" />
       <Title>Maps</Title>
       <Wrapper>
@@ -27,6 +26,6 @@ export default function Maps() {
           <BasicMap />
         </Clipboard>
       </Wrapper>
-    </Layout>
+    </>
   );
 }

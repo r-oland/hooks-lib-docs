@@ -5,7 +5,6 @@ import ASMHamburger from "../Components/AnimatedSideMenu/ASMHamburger";
 import ASMMenu from "../Components/AnimatedSideMenu/ASMMenu";
 import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
-import Layout from "../Layout/Layout";
 // =========================
 
 const Title = styled.h2`
@@ -23,7 +22,7 @@ export default function SideMenu() {
   const [menuState, setMenuState] = useState("closed");
 
   return (
-    <Layout>
+    <>
       <Head title="Side menu" />
       <Title>Side menu</Title>
 
@@ -33,6 +32,6 @@ export default function SideMenu() {
           <ASMMenu menuState={menuState} setMenuState={setMenuState} />
         </Clipboard>
       </Absolute>
-    </Layout>
+    </>
   );
 }

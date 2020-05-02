@@ -4,7 +4,6 @@ import styled from "styled-components";
 import FullScreenWaterfallMenu from "../Components/FullScreenWaterfallMenu/FullScreenWaterfallMenu";
 import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
-import Layout from "../Layout/Layout";
 // =========================
 
 const Title = styled.h2`
@@ -20,7 +19,7 @@ const Absolute = styled.div`
 
 export default function WaterfallMenu() {
   return (
-    <Layout>
+    <>
       <Head title="Waterfall menu" />
       <Title>Waterfall menu</Title>
 
@@ -29,6 +28,6 @@ export default function WaterfallMenu() {
           <FullScreenWaterfallMenu />
         </Clipboard>
       </Absolute>
-    </Layout>
+    </>
   );
 }

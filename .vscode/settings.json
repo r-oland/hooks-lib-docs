@@ -4,15 +4,18 @@
     "icon": true,
     "node_modules": true,
     "public": true,
-    // ".env": true,
+    ".env": true,
     ".gitignore": true,
     "desktop.ini": true,
     "gatsby-browser.js": true,
+    "gatsby-ssr.js": true,
+    "gatsby-config.js": true,
     "gatsby-node.js": true,
-    // "gatsby-config.js": true,
     "package-lock.json": true,
-    // "package.json": true,
-    "jsconfig.json": true
+    "package.json": true,
+    "jsconfig.json": true,
+    "src/root.js": true,
+    "src/page.js": true
   },
 
   "files.associations": {

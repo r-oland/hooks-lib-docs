@@ -10,7 +10,6 @@ import { SimpleShadowCard } from "../Components/SimpleShadowCard";
 import WaveCard from "../Components/WaveCard/WaveCard";
 import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
-import Layout from "../Layout/Layout";
 import { Container } from "../style/Mixins";
 
 // =========================
@@ -31,7 +30,7 @@ const Grid = styled.div`
 
 export default function Cards({ data }) {
   return (
-    <Layout>
+    <>
       <Head title="Cards" />
       <Title>Cards</Title>
       <Wrapper>
@@ -61,7 +60,7 @@ export default function Cards({ data }) {
           </Clipboard>
         </Grid>
       </Wrapper>
-    </Layout>
+    </>
   );
 }
 

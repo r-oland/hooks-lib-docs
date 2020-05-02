@@ -5,7 +5,6 @@ import styled from "styled-components";
 import ParallaxItem from "../Components/ParallaxItem";
 import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
-import Layout from "../Layout/Layout";
 // =========================
 
 const Title = styled.h2`
@@ -29,7 +28,7 @@ const Wrapper = styled.div`
 
 export default function Parallax() {
   return (
-    <Layout>
+    <>
       <Head title="Parallax" />
       <Title>Parallax</Title>
       <Wrapper>
@@ -39,6 +38,6 @@ export default function Parallax() {
           </ParallaxItem>
         </Clipboard>
       </Wrapper>
-    </Layout>
+    </>
   );
 }

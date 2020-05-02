@@ -4,7 +4,6 @@ import React from "react";
 import styled from "styled-components";
 import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
-import Layout from "../Layout/Layout";
 // =========================
 
 const Title = styled.h2`
@@ -20,7 +19,7 @@ const Margin = styled.div`
 
 export default function Raleway() {
   return (
-    <Layout>
+    <>
       <Head title="Raleway" />
       <Title>Raleway</Title>
       <Wrapper>
@@ -81,6 +80,6 @@ export default function Raleway() {
           </Container>
         </Clipboard>
       </Wrapper>
-    </Layout>
+    </>
   );
 }

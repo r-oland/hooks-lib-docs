@@ -4,7 +4,6 @@ import styled from "styled-components";
 import QuestionAddOn from "../Components/QuestionAddOn/QuestionAddOn";
 import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
-import Layout from "../Layout/Layout";
 // =========================
 
 const Wrapper = styled.div`
@@ -19,7 +18,7 @@ const Title = styled.h2`
 
 export default function AddOns() {
   return (
-    <Layout>
+    <>
       <Head title="Add ons" />
       <Title>Add ons</Title>
       <Wrapper>
@@ -36,6 +35,6 @@ export default function AddOns() {
           </QuestionAddOn>
         </Clipboard>
       </Wrapper>
-    </Layout>
+    </>
   );
 }

@@ -10,7 +10,7 @@ export const Variables = {
     s6: "rgba(110, 110, 110, 1)",
     s7: "rgba(92, 92, 92, 1)",
     s8: "rgba(71, 71, 71, 1)",
-    s9: "rgba(43, 43, 43, 1)"
+    s9: "rgba(43, 43, 43, 1)",
   },
   primary: {
     s1: "rgba(133, 183, 188, 1)",
@@ -19,7 +19,7 @@ export const Variables = {
     s4: "rgba(64, 143, 150, 1)",
     s5: "rgba(57, 126, 132, 1)",
     s6: "rgba(49, 109, 114, 1)",
-    s7: "rgba(42, 92, 96, 1)"
+    s7: "rgba(42, 92, 96, 1)",
   },
   secondary: {},
   borderRadius: "5px",
@@ -27,28 +27,28 @@ export const Variables = {
   fontWeight: {
     normal: "400",
     semiBold: "500",
-    bold: "600"
+    bold: "600",
   },
   lineHeight: {
     s1: "1",
     s2: "1.2",
     s3: "1.4",
     s4: "1.6",
-    s5: "1.8"
+    s5: "1.8",
   },
   letterSpacing: {
     tight: "-0.05em",
-    wide: "0.05em"
+    wide: "0.05em",
   },
   shadow: {
     small: "0 1px 3px rgba(0, 0, 0, 0.2)",
     medium: "0 4px 6px rgba(0, 0, 0, 0.1)",
-    large: "0 15px 35px rgba(0, 0, 0, 0.2)"
+    large: "0 15px 35px rgba(0, 0, 0, 0.2)",
   },
   doubleShadow: {
     small: "0 3px 6px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12)",
     medium: "0 10px 20px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.1)",
-    large: "0 15px 25px rgba(0, 0, 0, 0.15), 0 5px 10px rgba(0, 0, 0, 0.05)"
+    large: "0 15px 25px rgba(0, 0, 0, 0.15), 0 5px 10px rgba(0, 0, 0, 0.05)",
   },
   spacing: {
     s1: "0.25em",
@@ -66,7 +66,7 @@ export const Variables = {
     s13: "16em",
     s14: "24em",
     s15: "30em",
-    s16: "48em"
+    s16: "48em",
   },
   rSpacing: {
     s1: "0.25rem",
@@ -84,6 +84,6 @@ export const Variables = {
     s13: "16rem",
     s14: "24rem",
     s15: "30rem",
-    s16: "48rem"
-  }
+    s16: "48rem",
+  },
 };

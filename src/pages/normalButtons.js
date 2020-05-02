@@ -9,7 +9,6 @@ import SlideInButton from "../Components/SlideInButton";
 import { TransparentButton } from "../Components/TransparentButton";
 import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
-import Layout from "../Layout/Layout";
 // =========================
 
 const Title = styled.h2`
@@ -35,7 +34,7 @@ const Stock1Svg = styled(Stock1Imp)`
 
 export default function NomralButtons() {
   return (
-    <Layout>
+    <>
       <Head title="Normal Buttons" />
       <Title>Normal Buttons</Title>
       <Grid>
@@ -61,6 +60,6 @@ export default function NomralButtons() {
           <OpacityButton>Button text</OpacityButton>
         </Clipboard>
       </Grid>
-    </Layout>
+    </>
   );
 }

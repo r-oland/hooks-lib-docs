@@ -1,9 +1,9 @@
 // Components==============
 import { motion } from "framer-motion";
+import { Link } from "gatsby";
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { HamburgerContext } from "../../Layout/Layout";
-import TLink from "../TLink";
 // =========================
 
 const Hide = styled.div`
@@ -56,31 +56,31 @@ export default function FluidMenu({ to }) {
         animate={menuState === "open" ? `visible` : `hidden`}
         variants={{
           visible: {
-            display: "flex"
+            display: "flex",
           },
 
           hidden: {
             transitionEnd: {
-              display: "none"
-            }
-          }
+              display: "none",
+            },
+          },
         }}
         initial={false}
       >
         <button onClick={changeMenu}>
-          <TLink to={to}>page 1</TLink>
+          <Link to={to}>page 1</Link>
         </button>
         <button onClick={changeMenu}>
-          <TLink to={to}>page 2</TLink>
+          <Link to={to}>page 2</Link>
         </button>
         <button onClick={changeMenu}>
-          <TLink to={to}>page 3</TLink>
+          <Link to={to}>page 3</Link>
         </button>
         <button onClick={changeMenu}>
-          <TLink to={to}>page 4</TLink>
+          <Link to={to}>page 4</Link>
         </button>
         <button onClick={changeMenu}>
-          <TLink to={to}>page 5</TLink>
+          <Link to={to}>page 5</Link>
         </button>
       </Menu>
       <Blur
@@ -89,15 +89,15 @@ export default function FluidMenu({ to }) {
         variants={{
           visible: {
             opacity: 0.7,
-            display: "block"
+            display: "block",
           },
 
           hidden: {
             opacity: 0,
             transitionEnd: {
-              display: "none"
-            }
-          }
+              display: "none",
+            },
+          },
         }}
         initial={false}
       />

@@ -5,7 +5,6 @@ import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
 import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
-import Layout from "../Layout/Layout";
 import { Container } from "../style/Mixins";
 // =========================
 
@@ -29,7 +28,7 @@ export default function IntersectionObserver() {
   const [ref, inView] = useInView({ threshold: 0.3, triggerOnce: false });
 
   return (
-    <Layout>
+    <>
       <Head title="Intersection observer" />
       <Title>Intersection observer</Title>
       <Wrapper inView={inView}>
@@ -38,7 +37,7 @@ export default function IntersectionObserver() {
           <img src={Stock} ref={ref} alt="stock" />
         </Clipboard>
       </Wrapper>
-    </Layout>
+    </>
   );
 }
 

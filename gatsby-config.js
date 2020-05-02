@@ -6,7 +6,7 @@ module.exports = {
     title: `Components`,
     description: `Collection of components`,
     author: `Roland Branten`,
-    siteUrl: `https://componentsrb.netlify.com/`
+    siteUrl: `https://componentsrb.netlify.com/`,
   },
   plugins: [
     `gatsby-plugin-sitemap`,
@@ -15,21 +15,20 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-netlify`,
-    "gatsby-plugin-transition-link",
 
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `assets`,
-        path: `${__dirname}/src/assets`
-      }
+        path: `${__dirname}/src/assets`,
+      },
     },
     {
       resolve: "gatsby-plugin-root-import",
       options: {
         assets: path.join(__dirname, "src/assets"),
-        mixins: path.join(__dirname, "src/style/Mixins")
-      }
+        mixins: path.join(__dirname, "src/style/Mixins"),
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -40,17 +39,17 @@ module.exports = {
         background_color: `#3D8693`,
         theme_color: `#3D8693`,
         display: `standalone`,
-        icon: `icon/icon.png`
-      }
+        icon: `icon/icon.png`,
+      },
     },
     `gatsby-plugin-offline`,
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /\.inline\.svg$/
-        }
-      }
-    }
-  ]
+          include: /\.inline\.svg$/,
+        },
+      },
+    },
+  ],
 };

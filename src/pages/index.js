@@ -6,7 +6,6 @@ import React from "react";
 import styled from "styled-components";
 import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
-import Layout from "../Layout/Layout";
 import { L } from "../style/Mixins";
 // =========================
 
@@ -41,7 +40,7 @@ const IconSVG = styled(motion.img)`
 
 export default function Index() {
   return (
-    <Layout>
+    <>
       <Head title="Home" />
       <Wrapper>
         <Text>
@@ -55,14 +54,21 @@ export default function Index() {
           style={{ alignSelf: "center" }}
           copy="vscode://file/d:/Freelancing/Code/Real projects/Components"
         >
-          <IconSVG
-            src={Icon}
-            alt="Icon"
-            drag
-            dragConstraints={{ left: -100, right: 100, top: -100, bottom: 100 }}
-          />
+          <button>
+            <IconSVG
+              src={Icon}
+              alt="Icon"
+              drag
+              dragConstraints={{
+                left: -100,
+                right: 100,
+                top: -100,
+                bottom: 100,
+              }}
+            />
+          </button>
         </Clipboard>
       </Wrapper>
-    </Layout>
+    </>
   );
 }
