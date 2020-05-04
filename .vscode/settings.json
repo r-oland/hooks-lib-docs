@@ -12,8 +12,8 @@
     "gatsby-config.js": true,
     "gatsby-node.js": true,
     "package-lock.json": true,
-    "package.json": true,
-    "jsconfig.json": true,
+    // "package.json": true,
+    // "jsconfig.json": true,
     "src/root.js": true,
     "src/page.js": true
   },

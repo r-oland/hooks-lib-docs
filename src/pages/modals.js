@@ -1,8 +1,9 @@
 // Components==============
+import { AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
 import styled from "styled-components";
+import Modal from "../Components/Modal";
 import { SimpleButton } from "../Components/SimpleButton";
-import SimpleModal from "../Components/SimpleModal/SimpleModal";
 import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
 // =========================
@@ -22,30 +23,36 @@ export default function Modals() {
   const handleChange = () => {
     modalIsOpen === false ? setModalIsOpen(true) : setModalIsOpen(false);
   };
+
   return (
     <>
       <Head title="Modals" />
       <Title>Modals</Title>
       <Wrapper>
-        <SimpleModal modalIsOpen={modalIsOpen} handleChange={handleChange}>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero aut
-            nesciunt temporibus necessitatibus laudantium sequi quisquam saepe.
-            Labore temporibus aut architecto illum iusto. Quas dolor sit neque
-            deserunt repellat, fugit itaque quis amet non minima eos beatae
-            veritatis illum esse sequi officia eius quidem voluptatum laudantium
-            expedita harum enim velit.
-            <br />
-            <br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-            doloribus architecto numquam corrupti dolorum! Ipsa maiores neque
-            minus, corporis adipisci deserunt! Nulla molestias vel, numquam
-            nesciunt commodi molestiae voluptatem velit cum voluptatum pariatur
-            nisi mollitia magni harum maiores quibusdam quos magnam aperiam
-            dolorem neque eos, aliquam recusandae id. Ex enim at impedit ipsum
-            nostrum sint autem blanditiis officia possimus. Nihil!
-          </p>
-        </SimpleModal>
+        <AnimatePresence>
+          {modalIsOpen && (
+            <Modal handleChange={handleChange}>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
+                aut nesciunt temporibus necessitatibus laudantium sequi quisquam
+                saepe. Labore temporibus aut architecto illum iusto. Quas dolor
+                sit neque deserunt repellat, fugit itaque quis amet non minima
+                eos beatae veritatis illum esse sequi officia eius quidem
+                voluptatum laudantium expedita harum enim velit.
+                <br />
+                <br />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+                doloribus architecto numquam corrupti dolorum! Ipsa maiores
+                neque minus, corporis adipisci deserunt! Nulla molestias vel,
+                numquam nesciunt commodi molestiae voluptatem velit cum
+                voluptatum pariatur nisi mollitia magni harum maiores quibusdam
+                quos magnam aperiam dolorem neque eos, aliquam recusandae id. Ex
+                enim at impedit ipsum nostrum sint autem blanditiis officia
+                possimus. Nihil!
+              </p>
+            </Modal>
+          )}
+        </AnimatePresence>
         <Clipboard copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SimpleModal/SimpleModal.js">
           <SimpleButton onClick={handleChange}>Click me</SimpleButton>
         </Clipboard>

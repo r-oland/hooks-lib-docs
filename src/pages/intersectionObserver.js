@@ -18,7 +18,8 @@ const Wrapper = styled(Container)`
   text-align: center;
 
   img {
-    margin-top: 80vh;
+    margin: 80vh auto 0;
+    max-width: 500px;
     opacity: ${({ inView }) => (inView === true ? 1 : 0)};
     transition: 0.6s;
   }

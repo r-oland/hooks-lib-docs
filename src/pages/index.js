@@ -1,5 +1,6 @@
 // Components==============
 import Icon from "assets/Icon.svg";
+import { ExampleComponent } from "components-react-lib";
 import { motion } from "framer-motion";
 import { flexUnit } from "mixins";
 import React from "react";
@@ -7,7 +8,7 @@ import styled from "styled-components";
 import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
 import { L } from "../style/Mixins";
-// =========================
+//=========================
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -45,7 +46,7 @@ export default function Index() {
       <Wrapper>
         <Text>
           <Title>Welcome to my personal component library!</Title>
-          <Story>
+          <Story color="navy">
             This is a small app that serves as a storage place for some of the
             reusable React components I build.
           </Story>
@@ -67,6 +68,7 @@ export default function Index() {
               }}
             />
           </button>
+          <ExampleComponent />
         </Clipboard>
       </Wrapper>
     </>

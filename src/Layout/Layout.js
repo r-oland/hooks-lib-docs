@@ -2,11 +2,17 @@
 import { motion } from "framer-motion";
 import { useMediaQ } from "hooks-lib";
 import React, { useState } from "react";
+import { setConfig } from "react-hot-loader";
+import { hot } from "react-hot-loader/root";
 import styled, { ThemeProvider } from "styled-components";
 import GlobalStyles from "../style/GlobalStyles";
 import { Variables } from "../style/themes";
 import IEWarning from "./IE/IEWarning";
 import Nav from "./nav/Nav";
+
+setConfig({
+  showReactDomPatchNotification: false,
+});
 // =========================
 
 const Flex = styled.div`
@@ -20,7 +26,7 @@ const Content = styled(motion.div)`
 export const NavContext = React.createContext();
 export const HamburgerContext = React.createContext();
 
-export default function Layout({ children }) {
+function Layout({ children }) {
   const [folded, setFolded] = useState(false);
   const [selected, setSelected] = useState(null);
   const [menuState, setMenuState] = useState("closed");
@@ -66,7 +72,7 @@ export default function Layout({ children }) {
                 damping: 20,
                 stiffness: 130,
               }}
-              animate={folded === true ? "open" : "closed"}
+              animate={folded ? "open" : "closed"}
               initial={false}
             >
               {children}
@@ -78,3 +84,5 @@ export default function Layout({ children }) {
     </ThemeProvider>
   );
 }
+
+export default hot(Layout);

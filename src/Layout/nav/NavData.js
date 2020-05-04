@@ -29,10 +29,6 @@ export const ChildComp = [
     ],
   },
   {
-    cat: "Typography",
-    children: [{ link: "raleway", name: "Raleway" }],
-  },
-  {
     cat: "Forms",
     children: [
       { link: "form", name: "Standard form" },
