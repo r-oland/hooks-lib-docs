@@ -9,6 +9,7 @@ import SlideInButton from "../Components/SlideInButton";
 import { TransparentButton } from "../Components/TransparentButton";
 import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
+import useDynamicComponent from "../useDynamicComponent";
 // =========================
 
 const Title = styled.h2`
@@ -33,11 +34,14 @@ const Stock1Svg = styled(Stock1Imp)`
 `;
 
 export default function NomralButtons() {
+  const dynamicComponent = useDynamicComponent("Test");
+
   return (
     <>
       <Head title="Normal Buttons" />
       <Title>Normal Buttons</Title>
       <Grid>
+        {dynamicComponent}
         <Clipboard copy="vscode://file/d:/Freelancing/Code/Real projects/Components/src/Components/SimpleButton.js">
           <SimpleButton>Button text</SimpleButton>
         </Clipboard>
