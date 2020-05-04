@@ -1,6 +1,5 @@
 // Components==============
 import Icon from "assets/Icon.svg";
-import { ExampleComponent } from "components-react-lib";
 import { motion } from "framer-motion";
 import { flexUnit } from "mixins";
 import React from "react";
@@ -68,7 +67,6 @@ export default function Index() {
               }}
             />
           </button>
-          <ExampleComponent />
         </Clipboard>
       </Wrapper>
     </>
