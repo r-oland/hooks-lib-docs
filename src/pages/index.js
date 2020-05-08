@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 import { flexUnit } from "mixins";
 import React from "react";
 import styled from "styled-components";
-import Clipboard from "../Layout/Clipboard";
+import Clipboard from "../components/Clipboard";
 import Head from "../Layout/Head";
 import { L } from "../style/Mixins";
 //=========================
 
 const Wrapper = styled.div`
-  height: 100vh;
+  min-height: 80vh;
   display: grid;
   grid-template-rows: fit-content(400px) 1fr;
   text-align: center;

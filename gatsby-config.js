@@ -15,7 +15,17 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-netlify`,
-
+    {
+      resolve: "gatsby-source-sanity",
+      options: {
+        projectId: "bs0t3ajp",
+        dataset: "production",
+        token: process.env.SANITY_TOKEN,
+        graphqlTag: "default",
+        watchMode: true,
+        overlayDrafts: true,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

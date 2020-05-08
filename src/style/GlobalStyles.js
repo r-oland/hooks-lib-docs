@@ -91,11 +91,11 @@ const GlobalStyles = createGlobalStyle`
    }
 
    h3 {
-      ${flexUnit(2, 20, 25, "vw", "font-size")};
+      ${flexUnit(2, 22, 27.5, "vw", "font-size")};
    }
 
    h4 {
-      ${flexUnit(2, 20, 25, "vw", "font-size")};
+      ${flexUnit(2, 18, 23, "vw", "font-size")};
    }
 
    h5 {

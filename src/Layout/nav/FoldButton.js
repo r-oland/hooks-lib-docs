@@ -13,7 +13,7 @@ const Button = styled(motion.svg)`
   left: 25px;
   top: 25px;
 
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 1000px) {
     left: 225px;
   }
 `;
