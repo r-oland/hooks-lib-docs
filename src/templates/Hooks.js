@@ -19,6 +19,7 @@ export const query = graphql`
       arguments {
         argument
         description
+        defaultValue
       }
       example {
         code

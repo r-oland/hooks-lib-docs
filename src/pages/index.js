@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { flexUnit } from "mixins";
 import React from "react";
 import styled from "styled-components";
-import Clipboard from "../components/Clipboard";
 import Head from "../Layout/Head";
 import { L } from "../style/Mixins";
 //=========================
@@ -50,24 +49,19 @@ export default function Index() {
             reusable React components I build.
           </Story>
         </Text>
-        <Clipboard
-          style={{ alignSelf: "center" }}
-          copy="vscode://file/d:/Freelancing/Code/Real projects/Components"
-        >
-          <button>
-            <IconSVG
-              src={Icon}
-              alt="Icon"
-              drag
-              dragConstraints={{
-                left: -100,
-                right: 100,
-                top: -100,
-                bottom: 100,
-              }}
-            />
-          </button>
-        </Clipboard>
+        <button>
+          <IconSVG
+            src={Icon}
+            alt="Icon"
+            drag
+            dragConstraints={{
+              left: -100,
+              right: 100,
+              top: -100,
+              bottom: 100,
+            }}
+          />
+        </button>
       </Wrapper>
     </>
   );

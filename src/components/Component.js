@@ -1,9 +1,9 @@
 // Components==============
+import * as comp from "components-react-lib";
 import React from "react";
 import styled from "styled-components";
 import Example from "./Example";
 import PropArgs from "./PropArgs";
-import useDynamicComponent from "./useDynamicComponent";
 // =========================
 
 const Wrapper = styled.div`
@@ -14,12 +14,12 @@ const Wrapper = styled.div`
 `;
 
 export default function Component({ name, props, example, index }) {
-  const dynamicComponent = useDynamicComponent(name);
+  const Comp = comp[name];
 
   return (
     <Wrapper index={index}>
       <h3>{name}</h3>
-      {dynamicComponent}
+      <Comp />
       <PropArgs propArg={props} title="Props" />
       <Example example={example} />
     </Wrapper>

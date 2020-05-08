@@ -71,8 +71,12 @@ export default function PropArgs({ propArg, title }) {
 
   return (
     <Wrapper>
-      <Title>{title}</Title>
-      {propArgs}
+      {propArg.length !== 0 && (
+        <>
+          <Title>{title}</Title>
+          {propArgs}
+        </>
+      )}
     </Wrapper>
   );
 }
