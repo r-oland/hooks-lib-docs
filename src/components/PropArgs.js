@@ -1,7 +1,6 @@
 // Components==============
 import React from "react";
 import styled from "styled-components";
-import { L } from "../style/Mixins";
 // =========================
 
 const Wrapper = styled.div`
@@ -17,14 +16,14 @@ const Prop = styled.p`
 `;
 
 const Description = styled.p`
-  margin-left: ${({ theme: { spacing } }) => spacing.s2};
+  margin-left: ${({ theme: { spacing } }) => spacing[1]};
 `;
 
 const DValue = styled.div`
-  color: ${({ theme: { primary } }) => primary.s4};
+  color: ${({ theme: { primary } }) => primary[3]};
   font-size: 15px;
   font-style: italic;
-  margin-bottom: ${({ theme: { spacing } }) => spacing.s1};
+  margin-bottom: ${({ theme: { spacing } }) => spacing[0]};
 
   span {
     font-weight: ${({ theme: { fontWeight } }) => fontWeight.semiBold};
@@ -32,8 +31,9 @@ const DValue = styled.div`
   }
 `;
 
-const Title = styled(L)`
-  margin: ${({ theme: { spacing } }) => `${spacing.s4} 0 ${spacing.s1} `};
+const Title = styled.p`
+  font-size: 17px;
+  margin: ${({ theme: { spacing } }) => `${spacing[3]} 0 ${spacing[0]} `};
   font-weight: ${({ theme: { fontWeight } }) => fontWeight.bold};
 `;
 

@@ -7,7 +7,7 @@ import { NavContext } from "../Layout";
 
 const Main = styled.div`
   line-height: 1.4;
-  margin-bottom: ${({ theme: { spacing } }) => spacing.s3};
+  margin-bottom: ${({ theme: { spacing } }) => spacing[2]};
 `;
 
 export default function NavItem({ data }) {

@@ -23,10 +23,10 @@ const Flex = styled.div`
 const Content = styled(motion.div)`
   min-height: 100vh;
 
-  padding: ${({ theme: { spacing } }) => `${spacing.s10} 0`};
+  padding: ${({ theme: { spacing } }) => `${spacing[11]} 0`};
 
   @media screen and (min-width: 1000px) {
-    padding: ${({ theme: { spacing } }) => `${spacing.s8} 0`};
+    padding: ${({ theme: { spacing } }) => `${spacing[7]} 0`};
   }
 `;
 

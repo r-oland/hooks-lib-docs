@@ -7,7 +7,7 @@ import PropArgs from "./PropArgs";
 
 const Wrapper = styled.div`
   h3 {
-    margin: ${({ theme: { spacing } }) => ` 0 0 ${spacing.s2} `};
+    margin: ${({ theme: { spacing } }) => ` 0 0 ${spacing[1]} `};
   }
 `;
 

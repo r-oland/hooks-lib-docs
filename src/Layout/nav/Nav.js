@@ -13,17 +13,17 @@ const Wrapper = styled(motion.div)`
   position: fixed;
   height: 100vh;
   width: 300px;
-  background: ${({ theme: { white } }) => white};
-  padding: ${({ theme: { spacing } }) => `0 ${spacing.s5} 0 `};
+  background: ${({ theme: { gray } }) => gray[0]};
+  padding: ${({ theme: { spacing } }) => `0 ${spacing[4]} 0 `};
   overflow-y: scroll;
   z-index: 10;
   h3 {
-    margin: ${({ theme: { spacing } }) => `${spacing.s7} 0 ${spacing.s3}`};
+    margin: ${({ theme: { spacing } }) => `${spacing[6]} 0 ${spacing[2]}`};
   }
 
   #components {
     @media screen and (min-width: 1000px) {
-      margin-top: ${({ theme: { spacing } }) => spacing.s6};
+      margin-top: ${({ theme: { spacing } }) => spacing[5]};
     }
   }
 `;

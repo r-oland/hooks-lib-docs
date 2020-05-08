@@ -8,11 +8,11 @@ import styled from "styled-components";
 const Flex = styled(Link)`
   display: flex;
   align-items: center;
-  margin-top: ${({ theme: { spacing } }) => spacing.s5};
+  margin-top: ${({ theme: { spacing } }) => spacing[4]};
   width: 185px;
 
   div {
-    padding-left: ${({ theme: { spacing } }) => spacing.s2};
+    padding-left: ${({ theme: { spacing } }) => spacing[1]};
   }
 
   p {

@@ -9,7 +9,7 @@ import PropArgs from "./PropArgs";
 const Wrapper = styled.div`
   h3 {
     margin: ${({ theme: { spacing }, index }) =>
-      index === 0 ? `0 0 ${spacing.s2} ` : `${spacing.s5} 0 ${spacing.s2} `};
+      index === 0 ? `0 0 ${spacing[1]} ` : `${spacing[4]} 0 ${spacing[1]} `};
   }
 `;
 

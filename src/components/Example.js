@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   max-width: 750px;
-  margin-top: ${({ theme: { spacing } }) => spacing.s4};
+  margin-top: ${({ theme: { spacing } }) => spacing[3]};
 `;
 
 export default function Example({ example }) {
