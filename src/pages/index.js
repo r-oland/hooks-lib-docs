@@ -1,41 +1,33 @@
 // Components==============
-import Icon from "assets/Icon.svg";
-import { motion } from "framer-motion";
-import { flexUnit } from "mixins";
+import { UnderlineButton } from "components-react-lib";
 import React from "react";
 import styled from "styled-components";
-import Clipboard from "../Layout/Clipboard";
 import Head from "../Layout/Head";
-import { L } from "../style/Mixins";
 //=========================
 
 const Wrapper = styled.div`
-  height: 100vh;
-  display: grid;
-  grid-template-rows: fit-content(400px) 1fr;
-  text-align: center;
-  justify-items: center;
-`;
+  max-width: 800px; 
 
-const Text = styled.div`
-  align-self: center;
-  max-width: 700px;
-  margin: ${({ theme: { spacing } }) => `${spacing.s9} ${spacing.s4} 0`};
-`;
+  h1{
+    margin-bottom: ${({ theme: { spacing } }) => spacing[2]};
+  }
 
-const Title = styled.p`
-  ${flexUnit(2, 20, 30, "vw", "font-size")};
-  margin-bottom: ${({ theme: { spacing } }) => spacing.s2};
-  font-weight: 700;
-`;
+  
+  p {
+    ${({ theme: { fontSize } }) => fontSize.l}
+    margin-bottom: ${({ theme: { spacing } }) => spacing[4]};
 
-const Story = styled(L)`
-  line-height: ${({ theme: { lineHeight } }) => lineHeight.s4};
-`;
+    span{
+    ${({ theme: { fontSize } }) => fontSize.l}
+      font-weight: ${({ theme: { fontWeight } }) => fontWeight.bold};
+    }
+  }
 
-const IconSVG = styled(motion.img)`
-  width: calc(100px + 17.5vw);
-  cursor: grab;
+  button{
+   ${({ theme: { fontSize } }) => fontSize.l} 
+   font-weight: ${({ theme: { fontWeight } }) => fontWeight.semiBold};
+  }
+ 
 `;
 
 export default function Index() {
@@ -43,31 +35,34 @@ export default function Index() {
     <>
       <Head title="Home" />
       <Wrapper>
-        <Text>
-          <Title>Welcome to my personal component library!</Title>
-          <Story color="navy">
-            This is a small app that serves as a storage place for some of the
-            reusable React components I build.
-          </Story>
-        </Text>
-        <Clipboard
-          style={{ alignSelf: "center" }}
-          copy="vscode://file/d:/Freelancing/Code/Real projects/Components"
-        >
-          <button>
-            <IconSVG
-              src={Icon}
-              alt="Icon"
-              drag
-              dragConstraints={{
-                left: -100,
-                right: 100,
-                top: -100,
-                bottom: 100,
-              }}
-            />
-          </button>
-        </Clipboard>
+        <h1>Welcome! </h1>
+        <p>
+          This is my personal react library. At the moment,
+          <span>
+            {" "}
+            the component library is not intended for public usage.
+          </span>{" "}
+          If you want to use any of the components, I recommend digging in to
+          the source code and adjusting the code to fit your project:{" "}
+          <a
+            href={"https://github.com/r-oland/components-react-lib"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <UnderlineButton>Github repo</UnderlineButton>
+          </a>
+        </p>
+        <p>
+          <span>The hooks are all publicly available</span> by installing the
+          following package:{" "}
+          <a
+            href={"https://www.npmjs.com/package/hooks-lib"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <UnderlineButton> hooks-lib</UnderlineButton>
+          </a>
+        </p>
       </Wrapper>
     </>
   );

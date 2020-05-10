@@ -13,9 +13,10 @@
     "gatsby-node.js": true,
     "package-lock.json": true,
     // "package.json": true,
-    // "jsconfig.json": true,
+    "jsconfig.json": true,
     "src/root.js": true,
-    "src/page.js": true
+    "src/page.js": true,
+    ".babelrc": true
   },
 
   "files.associations": {

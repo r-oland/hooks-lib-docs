@@ -1,13 +1,12 @@
 // Components==============
-import { flexUnit } from "mixins";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import IEModal from "./IEModal";
 // =========================
 
 const Text = styled.p`
- ${flexUnit(2, 20, 22, "vw", "font-size")}
-  line-height: ${({ theme: { lineHeight } }) => lineHeight.s4};
+  font-size: 21px;
+  line-height: 1.4;
   font-weight: ${({ theme: { fontWeight } }) => fontWeight.bold};
 `;
 

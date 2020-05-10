@@ -6,6 +6,7 @@ import { setConfig } from "react-hot-loader";
 import { hot } from "react-hot-loader/root";
 import styled, { ThemeProvider } from "styled-components";
 import GlobalStyles from "../style/GlobalStyles";
+import { Container } from "../style/Mixins";
 import { Variables } from "../style/themes";
 import IEWarning from "./IE/IEWarning";
 import Nav from "./nav/Nav";
@@ -21,16 +22,18 @@ const Flex = styled.div`
 
 const Content = styled(motion.div)`
   min-height: 100vh;
+
+  padding: ${({ theme: { spacing } }) => `${spacing[11]} 0`};
 `;
 
 export const NavContext = React.createContext();
 export const HamburgerContext = React.createContext();
 
 function Layout({ children }) {
-  const [folded, setFolded] = useState(false);
+  const [folded, setFolded] = useState(true);
   const [selected, setSelected] = useState(null);
   const [menuState, setMenuState] = useState("closed");
-  const query = useMediaQ("min", 800);
+  const query = useMediaQ("min", 1000);
 
   const changeMenu = () => {
     menuState === "closed" ? setMenuState("open") : setMenuState("closed");
@@ -75,7 +78,7 @@ function Layout({ children }) {
               animate={folded ? "open" : "closed"}
               initial={false}
             >
-              {children}
+              <Container>{children}</Container>
             </Content>
           </Flex>
           <GlobalStyles />

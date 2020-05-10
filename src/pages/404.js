@@ -1,16 +1,15 @@
 // Components==============
-import { flexUnit } from "mixins";
 import React from "react";
 import styled from "styled-components";
 import Head from "../Layout/Head";
 // =========================
 
 const F0F = styled.h1`
-  ${flexUnit(2.4, 30, 40, "vw", "font-size")}
+  font-size: 35px;
 `;
 
 const Smiley = styled.p`
-  ${flexUnit(2.4, 40, 50, "vw", "font-size")}
+  font-size: 45px;
 `;
 
 const LayoutStyle = {

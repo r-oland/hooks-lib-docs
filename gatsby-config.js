@@ -15,7 +15,17 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-netlify`,
-
+    {
+      resolve: "gatsby-source-sanity",
+      options: {
+        projectId: "bs0t3ajp",
+        dataset: "production",
+        token: process.env.SANITY_TOKEN,
+        graphqlTag: "default",
+        watchMode: true,
+        overlayDrafts: true,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -36,8 +46,8 @@ module.exports = {
         name: `Components`,
         short_name: `Components`,
         start_url: `/`,
-        background_color: `#3D8693`,
-        theme_color: `#3D8693`,
+        background_color: `#ffae20`,
+        theme_color: `#ffae20`,
         display: `standalone`,
         icon: `icon/icon.png`,
       },
