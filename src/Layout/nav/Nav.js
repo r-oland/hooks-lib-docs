@@ -58,9 +58,8 @@ export default function MainNav() {
   `);
 
   return (
-    <>
+    <div ref={ref}>
       <Wrapper
-        ref={ref}
         variants={{
           open: {
             x: 0,
@@ -86,6 +85,6 @@ export default function MainNav() {
         <NavItem data={data.allSanityHooks.nodes} />
       </Wrapper>
       <FoldButton />
-    </>
+    </div>
   );
 }
