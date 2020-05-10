@@ -6,7 +6,7 @@
   "author": "roland.branten@gmail.com",
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build ",
     "develop": "gatsby develop -H 0.0.0.0 ",
     "local": "gatsby develop -H 192.168.56.1 -p 8001 ",
     "mobile": "gatsby develop -H 192.168.43.132 -p 8001 ",
