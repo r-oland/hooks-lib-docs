@@ -1,7 +1,8 @@
 // Components==============
 import { motion } from "framer-motion";
 import { graphql, useStaticQuery } from "gatsby";
-import React, { useContext } from "react";
+import { useMediaQ, useOnClickOutside } from "hooks-lib";
+import React, { useContext, useRef } from "react";
 import styled from "styled-components";
 import { NavContext } from "../Layout";
 import FoldButton from "./FoldButton";
@@ -29,7 +30,17 @@ const Wrapper = styled(motion.div)`
 `;
 
 export default function MainNav() {
-  const { folded } = useContext(NavContext);
+  const { folded, setFolded } = useContext(NavContext);
+  const smallScreen = useMediaQ("max", 600);
+
+  const ref = useRef();
+  useOnClickOutside(
+    ref,
+    () => {
+      setFolded(false);
+    },
+    folded && smallScreen
+  );
 
   const data = useStaticQuery(graphql`
     query navQuery {
@@ -49,6 +60,7 @@ export default function MainNav() {
   return (
     <>
       <Wrapper
+        ref={ref}
         variants={{
           open: {
             x: 0,

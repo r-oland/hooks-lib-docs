@@ -17,6 +17,15 @@ const Wrapper = styled.div`
 
 const CompWrapper = styled.div`
   margin-bottom: ${({ theme: { spacing } }) => spacing[8]};
+  background: ${({ theme: { gray } }) => gray[0]};
+  padding: ${({ theme: { spacing } }) => `${spacing[6]} ${spacing[6]}`};
+  box-shadow: ${({ theme: { shadow } }) => shadow.xs};
+  border-radius: ${({ theme: { borderRadius } }) => borderRadius};
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 750px;
 `;
 
 export default function Component({ name, props, example, index }) {

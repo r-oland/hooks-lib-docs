@@ -13,6 +13,8 @@ const Wrapper = styled.div`
   .title,
   .description {
     font-weight: ${({ theme: { fontWeight } }) => fontWeight.bold};
+    border-bottom: solid 2px ${({ theme: { gray } }) => gray[5]};
+    padding-bottom: ${({ theme: { spacing } }) => spacing[1]};
   }
 
   .title {

@@ -10,7 +10,8 @@
     "develop": "gatsby develop -H 0.0.0.0 ",
     "local": "gatsby develop -H 192.168.56.1 -p 8001 ",
     "mobile": "gatsby develop -H 192.168.43.132 -p 8001 ",
-    "start": "npm link components-react-lib && npm run develop",
+    "link": "npm link components-react-lib && npm link hooks-lib",
+    "start": "npm run link && npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
   },
@@ -36,7 +37,7 @@
     "gatsby-transformer-sharp": "^2.5.2",
     "google-map-react": "^1.1.7",
     "google-maps-react": "^2.0.6",
-    "hooks-lib": "^1.0.1",
+    "hooks-lib": "^1.0.5",
     "intersection-observer": "^0.10.0",
     "prismjs": "^1.20.0",
     "react": "^16.13.1",
@@ -47,7 +48,7 @@
     "react-intersection-observer": "^8.26.2",
     "react-jsx-parser": "^1.23.0",
     "react-pose": "^4.0.10",
-    "react-slick": "^0.25.2",
+    "react-slick": "^0.26.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.1.0"
   },

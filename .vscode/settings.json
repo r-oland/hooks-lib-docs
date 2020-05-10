@@ -16,7 +16,8 @@
     "jsconfig.json": true,
     "src/root.js": true,
     "src/page.js": true,
-    ".babelrc": true
+    ".babelrc": true,
+    "netlify.toml": true
   },
 
   "files.associations": {
