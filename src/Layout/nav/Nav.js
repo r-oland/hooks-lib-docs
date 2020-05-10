@@ -18,7 +18,7 @@ const Wrapper = styled(motion.div)`
   overflow-y: scroll;
   z-index: 10;
   h3 {
-    margin: ${({ theme: { spacing } }) => `${spacing[6]} 0 ${spacing[2]}`};
+    margin: ${({ theme: { spacing } }) => `${spacing[6]} 0 ${spacing[1]}`};
   }
 
   #components {

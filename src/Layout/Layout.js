@@ -24,17 +24,13 @@ const Content = styled(motion.div)`
   min-height: 100vh;
 
   padding: ${({ theme: { spacing } }) => `${spacing[11]} 0`};
-
-  @media screen and (min-width: 1000px) {
-    padding: ${({ theme: { spacing } }) => `${spacing[7]} 0`};
-  }
 `;
 
 export const NavContext = React.createContext();
 export const HamburgerContext = React.createContext();
 
 function Layout({ children }) {
-  const [folded, setFolded] = useState(false);
+  const [folded, setFolded] = useState(true);
   const [selected, setSelected] = useState(null);
   const [menuState, setMenuState] = useState("closed");
   const query = useMediaQ("min", 1000);

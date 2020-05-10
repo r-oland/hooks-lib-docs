@@ -1,8 +1,9 @@
 // Components==============
-import logo from "assets/Icon.svg";
 import { Link } from "gatsby";
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import Log from "../../components/Logo";
+import { NavContext } from "../Layout";
 // =========================
 
 const Flex = styled(Link)`
@@ -11,18 +12,17 @@ const Flex = styled(Link)`
   margin-top: ${({ theme: { spacing } }) => spacing[4]};
   width: 185px;
 
-  div {
-    padding-left: ${({ theme: { spacing } }) => spacing[1]};
-  }
-
   p {
     line-height: 1;
     font-size: 15px;
   }
 `;
 
-const Svg = styled.img`
-  width: 40px;
+const Wrapper = styled.div`
+  padding-left: ${({ theme: { spacing } }) => spacing[1]};
+`;
+
+const Svg = styled.div`
   opacity: 0;
 
   @media screen and (min-width: 1000px) {
@@ -31,13 +31,22 @@ const Svg = styled.img`
 `;
 
 export default function Logo() {
+  const { setFolded, query } = useContext(NavContext);
+
   return (
-    <Flex to="/">
-      <Svg src={logo} alt="logo" />
-      <div>
+    <Flex
+      to="/"
+      onClick={() => {
+        !query && setFolded(false);
+      }}
+    >
+      <Svg>
+        <Log width="40px" />
+      </Svg>
+      <Wrapper>
         <h4>Library</h4>
         <p>Roland Branten</p>
-      </div>
+      </Wrapper>
     </Flex>
   );
 }

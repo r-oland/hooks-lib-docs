@@ -1,6 +1,7 @@
 // Components==============
 import * as comp from "components-react-lib";
-import React from "react";
+import React, { useState } from "react";
+import JsxParser from "react-jsx-parser";
 import styled from "styled-components";
 import Example from "./Example";
 import PropArgs from "./PropArgs";
@@ -8,20 +9,27 @@ import PropArgs from "./PropArgs";
 
 const Wrapper = styled.div`
   h3 {
-    margin: ${({ theme: { spacing }, index }) =>
-      index === 0 ? `0 0 ${spacing[1]} ` : `${spacing[4]} 0 ${spacing[1]} `};
+    margin-bottom: ${({ theme: { spacing } }) => spacing[2]};
+    margin-top: ${({ theme: { spacing }, index }) =>
+      index !== 0 ? spacing[8] : "0"};
   }
 `;
 
+const CompWrapper = styled.div`
+  margin-bottom: ${({ theme: { spacing } }) => spacing[8]};
+`;
+
 export default function Component({ name, props, example, index }) {
-  const Comp = comp[name];
+  const [exampleCode, setExampleCode] = useState(example);
 
   return (
     <Wrapper index={index}>
       <h3>{name}</h3>
-      <Comp />
+      <CompWrapper>
+        <JsxParser components={comp} jsx={exampleCode} />
+      </CompWrapper>
+      <Example example={exampleCode} setExampleCode={setExampleCode} />
       <PropArgs propArg={props} title="Props" />
-      <Example example={example} />
     </Wrapper>
   );
 }

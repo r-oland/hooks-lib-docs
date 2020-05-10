@@ -5,36 +5,66 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   max-width: 750px;
-`;
+  background: ${({ theme: { gray } }) => gray[0]};
+  padding: ${({ theme: { spacing } }) => `${spacing[4]} ${spacing[4]}`};
+  border-radius: ${({ theme: { borderRadius } }) => borderRadius};
+  box-shadow: ${({ theme: { shadow } }) => shadow.xs};
 
-const Flex = styled.div`
-  display: flex;
-`;
+  .title,
+  .description {
+    font-weight: ${({ theme: { fontWeight } }) => fontWeight.bold};
+  }
 
-const Prop = styled.p`
-  font-weight: ${({ theme: { fontWeight } }) => fontWeight.bold};
-`;
+  .title {
+    grid-column: 1;
+  }
 
-const Description = styled.p`
-  margin-left: ${({ theme: { spacing } }) => spacing[1]};
-`;
-
-const DValue = styled.div`
-  color: ${({ theme: { primary } }) => primary[3]};
-  font-size: 15px;
-  font-style: italic;
-  margin-bottom: ${({ theme: { spacing } }) => spacing[0]};
-
-  span {
-    font-weight: ${({ theme: { fontWeight } }) => fontWeight.semiBold};
-    font-size: 15px;
+  .description {
+    grid-column: 2;
   }
 `;
 
-const Title = styled.p`
-  font-size: 17px;
-  margin: ${({ theme: { spacing } }) => `${spacing[3]} 0 ${spacing[0]} `};
-  font-weight: ${({ theme: { fontWeight } }) => fontWeight.bold};
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: 0.6fr 1fr;
+
+  @media screen and (min-width: 450px) {
+    grid-template-columns: 0.3fr 1fr;
+  }
+`;
+
+const Item = styled(Grid)`
+  margin-bottom: ${({ theme: { spacing } }) => spacing[2]};
+  border-bottom: solid 1px ${({ theme: { gray } }) => gray[2]};
+  padding-bottom: ${({ theme: { spacing } }) => spacing[1]};
+`;
+
+const Prop = styled.p`
+  grid-column: 1;
+  align-self: center;
+
+  ${({ theme: { fontSize } }) => fontSize.s}
+    font-weight: ${({ theme: { fontWeight } }) => fontWeight.semiBold};
+`;
+
+const Description = styled.div`
+  grid-column: 2;
+
+  p {
+    ${({ theme: { fontSize } }) => fontSize.s}
+  }
+`;
+
+const DValue = styled.div`
+  color: ${({ theme: { primary } }) => primary[6]};
+  ${({ theme: { fontSize } }) => fontSize.xs}
+  font-style: italic;
+  grid-column: 2;
+
+  span {
+    font-weight: ${({ theme: { fontWeight } }) => fontWeight.semiBold};
+    ${({ theme: { fontSize } }) => fontSize.xs}
+  }
 `;
 
 export default function PropArgs({ propArg, title }) {
@@ -45,38 +75,33 @@ export default function PropArgs({ propArg, title }) {
     const defaultValue = e.defaultValue;
 
     return (
-      <div key={index}>
-        <Flex>
-          {prop && (
-            <>
-              <Prop>{prop}</Prop>:
-            </>
+      <Item key={index}>
+        {prop && <Prop>{prop}</Prop>}
+        {arg && <Prop>{arg}</Prop>}
+        <Description>
+          {defaultValue && (
+            <DValue>
+              <span>Default value: </span>
+              {defaultValue}
+            </DValue>
           )}
-          {arg && (
-            <>
-              <Prop>{arg}</Prop>:
-            </>
-          )}
-          <Description>{description}</Description>
-        </Flex>
-        {defaultValue && (
-          <DValue>
-            <span>Default value: </span>
-            {defaultValue}
-          </DValue>
-        )}
-      </div>
+          <p>{description}</p>
+        </Description>
+      </Item>
     );
   });
 
   return (
-    <Wrapper>
+    <>
       {propArg.length !== 0 && (
-        <>
-          <Title>{title}</Title>
+        <Wrapper>
+          <Grid style={{ marginBottom: "1em" }}>
+            <div className="title">{title}</div>
+            <div className="description">Description</div>
+          </Grid>
           {propArgs}
-        </>
+        </Wrapper>
       )}
-    </Wrapper>
+    </>
   );
 }

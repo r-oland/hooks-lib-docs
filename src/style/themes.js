@@ -17,13 +17,13 @@ export const Variables = {
     "rgba(33, 33, 33, 1)",
   ],
   primary: [
-    "rgba(133, 183, 188, 1)",
-    "rgba(110, 170, 175, 1)",
-    "rgba(87, 155, 162, 1)",
-    "rgba(64, 143, 150, 1)",
-    "rgba(57, 126, 132, 1)",
-    "rgba(49, 109, 114, 1)",
-    "rgba(42, 92, 96, 1)",
+    " rgba(255, 207, 63, 1)",
+    "rgba(255, 196, 53, 1)",
+    "rgba(255, 185, 42, 1)",
+    "rgba(255, 174, 32, 1)",
+    "rgba(255, 162, 21, 1)",
+    "rgba(255, 151, 11, 1)",
+    "rgba(255, 140, 0, 1)",
   ],
   shadow: {
     xs: "0 1px 3px rgba(0, 0, 0, 0.1)",
@@ -88,17 +88,17 @@ export const Variables = {
     }
     `,
     l: `
-    font-size: 18px;
+    font-size: 17px;
     
     @media screen and (min-width: 768px) {
-     font-size: 20px; 
+     font-size: 18px; 
     }
     `,
     xl: `
-    font-size: 20px;
+    font-size: 19px;
     
     @media screen and (min-width: 768px) {
-     font-size: 23.5px; 
+     font-size: 22px; 
     }
     `,
     h4: `
