@@ -11,6 +11,7 @@ export default function Components({ data }) {
     const name = e.name;
     const props = e.props;
     const example = e.example;
+    const fullWidth = e.fullWidth;
 
     return (
       <Component
@@ -19,6 +20,7 @@ export default function Components({ data }) {
         props={props}
         example={example.code}
         index={index}
+        fullWidth={fullWidth}
       />
     );
   });
@@ -39,6 +41,7 @@ export const query = graphql`
         example {
           code
         }
+        fullWidth
       }
     }
   }

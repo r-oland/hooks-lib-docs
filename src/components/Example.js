@@ -5,7 +5,8 @@ import styled from "styled-components";
 // =========================
 
 const Wrapper = styled.div`
-  max-width: 750px;
+  max-width: ${({ fullWidth }) => (fullWidth ? "initial" : "750px")};
+
   margin-bottom: ${({ theme: { spacing } }) => spacing[1]};
 
   span {
@@ -45,7 +46,7 @@ const Textarea = styled.textarea`
   overflow: hidden;
 `;
 
-export default function Example({ example, setExampleCode }) {
+export default function Example({ example, setExampleCode, fullWidth }) {
   useEffect(() => {
     Prism.highlightAll();
   }, [example]);
@@ -57,7 +58,7 @@ export default function Example({ example, setExampleCode }) {
   };
 
   return (
-    <Wrapper>
+    <Wrapper fullWidth={fullWidth}>
       <pre id="pre" style={{ whiteSpace: "pre-wrap" }}>
         {setExampleCode && (
           <Textarea
