@@ -6,7 +6,7 @@ import { NavContext } from "../Layout";
 // =========================
 
 const Button = styled(motion.svg)`
-  z-index: 11;
+  z-index: 1000;
   position: fixed;
   cursor: pointer;
   width: 35px;

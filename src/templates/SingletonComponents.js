@@ -4,8 +4,10 @@ import React from "react";
 import Component from "../components/Component";
 // =========================
 
-export default function Components({ data }) {
-  const comps = data.sanityComponents.componentCollection;
+export default function SingletonComponents({ data, pageContext }) {
+  const comps = data.sanityComponents.componentCollection.filter(
+    (e) => e.name === pageContext.comp && e
+  );
 
   const components = comps.map((e, index) => {
     const name = e.name;
@@ -33,8 +35,8 @@ export default function Components({ data }) {
 }
 
 export const query = graphql`
-  query compQuery($comp: String!) {
-    sanityComponents(name: { eq: $comp }) {
+  query singleCompQuery($group: String!) {
+    sanityComponents(name: { eq: $group }) {
       componentCollection {
         name
         props {

@@ -4,7 +4,7 @@ import styled from "styled-components";
 // =========================
 
 const Wrapper = styled.div`
-  max-width: ${({ fullWidth }) => (fullWidth ? "initial" : "750px")};
+  max-width: 750px;
   background: ${({ theme: { gray } }) => gray[0]};
   padding: ${({ theme: { spacing } }) => `${spacing[4]} ${spacing[4]}`};
   border-radius: ${({ theme: { borderRadius } }) => borderRadius};
@@ -69,7 +69,7 @@ const DValue = styled.div`
   }
 `;
 
-export default function PropArgs({ propArg, title, fullWidth }) {
+export default function PropArgs({ propArg, title }) {
   const propArgs = propArg.map((e, index) => {
     const prop = e.prop;
     const arg = e.argument;
@@ -96,7 +96,7 @@ export default function PropArgs({ propArg, title, fullWidth }) {
   return (
     <>
       {propArg.length !== 0 && (
-        <Wrapper fullWidth={fullWidth}>
+        <Wrapper>
           <Grid style={{ marginBottom: "1em" }}>
             <div className="title">{title}</div>
             <div className="description">Description</div>

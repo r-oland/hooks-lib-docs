@@ -20,6 +20,10 @@ exports.createPages = async ({ graphql, actions }) => {
       allSanityComponents {
         nodes {
           name
+          subMenu
+          componentCollection {
+            name
+          }
         }
       }
       allSanityHooks {
@@ -40,12 +44,27 @@ exports.createPages = async ({ graphql, actions }) => {
   components.forEach((edge) => {
     const slug = edge.name.toLowerCase();
     const path = `/${slug}`;
+    const subMenu = edge.subMenu;
 
-    createPage({
-      path,
-      component: require.resolve("./src/templates/Components.js"),
-      context: { slug: slug, comp: edge.name },
-    });
+    if (!subMenu) {
+      createPage({
+        path,
+        component: require.resolve("./src/templates/Components.js"),
+        context: { slug: slug, comp: edge.name },
+      });
+    } else {
+      const singletonComponents = edge.componentCollection || [];
+      singletonComponents.forEach((e) => {
+        const slug = e.name.toLowerCase();
+        const path = `/${slug}`;
+
+        createPage({
+          path,
+          component: require.resolve("./src/templates/SingletonComponents.js"),
+          context: { slug: slug, comp: e.name, group: edge.name },
+        });
+      });
+    }
   });
 
   hooks.forEach((edge) => {

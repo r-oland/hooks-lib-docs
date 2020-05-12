@@ -15,8 +15,13 @@ const navItems = [
     link: "navigation",
   },
   {
+    content: "useMediaQ",
+    link: "useMediaQ",
+  },
+  {
     content: <UnderlineButton>useLog</UnderlineButton>,
-    link: "useLog",
+    hamburgerContent: "useLog",
+    link: "uselog",
   },
 ];
 

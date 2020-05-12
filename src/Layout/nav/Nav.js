@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { graphql, useStaticQuery } from "gatsby";
 import { useMediaQ, useOnClickOutside } from "hooks-lib";
-import React, { useContext, useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { NavContext } from "../Layout";
 import FoldButton from "./FoldButton";
@@ -29,8 +29,8 @@ const Wrapper = styled(motion.div)`
   }
 `;
 
-export default function MainNav() {
-  const { folded, setFolded } = useContext(NavContext);
+export default function MainNav({ path }) {
+  const { setSelected, folded, setFolded } = useContext(NavContext);
   const smallScreen = useMediaQ("max", 600);
 
   const ref = useRef();
@@ -52,10 +52,31 @@ export default function MainNav() {
       allSanityComponents {
         nodes {
           name
+          subMenu
+          componentCollection {
+            name
+          }
         }
       }
     }
   `);
+
+  const compPath = data.allSanityComponents.nodes || [];
+  const hookPath = data.allSanityHooks.nodes || [];
+
+  useEffect(() => {
+    hookPath.forEach((e) => {
+      path.hook === e.name && setSelected(path.hook);
+    });
+
+    compPath.forEach((e) => {
+      path.comp === e.name && setSelected(path.comp);
+
+      e.componentCollection.forEach((e) => {
+        path.comp === e.name && setSelected(path.comp);
+      });
+    });
+  }, [compPath, hookPath, path, setSelected]);
 
   return (
     <div ref={ref}>

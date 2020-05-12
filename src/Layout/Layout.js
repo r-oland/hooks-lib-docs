@@ -29,7 +29,7 @@ const Content = styled(motion.div)`
 export const NavContext = React.createContext();
 export const HamburgerContext = React.createContext();
 
-function Layout({ children }) {
+function Layout({ pageContext, children }) {
   const [folded, setFolded] = useState(true);
   const [selected, setSelected] = useState(null);
   const [menuState, setMenuState] = useState("closed");
@@ -58,7 +58,7 @@ function Layout({ children }) {
         <HamburgerContext.Provider value={contextValue2}>
           <IEWarning />
           <Flex>
-            <Nav />
+            <Nav path={pageContext} />
             <Content
               variants={{
                 open: {
