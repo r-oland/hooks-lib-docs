@@ -1,5 +1,5 @@
 // Components==============
-import React from "react";
+import React, { CSSProperties } from "react";
 import styled from "styled-components";
 import Head from "../Layout/Head";
 // =========================
@@ -12,7 +12,7 @@ const Smiley = styled.p`
   font-size: 45px;
 `;
 
-const LayoutStyle = {
+const LayoutStyle: CSSProperties = {
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",

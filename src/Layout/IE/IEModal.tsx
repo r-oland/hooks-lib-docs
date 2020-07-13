@@ -3,7 +3,11 @@ import React from "react";
 import styled from "styled-components";
 // =========================
 
-const Shade = styled.div`
+type modal = {
+  modalIsOpen: boolean;
+};
+
+const Shade = styled.div<modal>`
   position: fixed;
   visibility: ${({ modalIsOpen }) =>
     modalIsOpen === true ? `visible` : `hidden`};
@@ -11,17 +15,18 @@ const Shade = styled.div`
   height: 100vh;
   width: 100vw;
   z-index: 300;
-  background-color: ${({ theme: { gray } }) => gray[14].replace("1)", "0.8)")};
+  background-color: ${({ theme: { color } }) => color.black};
+  opacity: 0.8;
   top: 0;
   left: 0;
   transition: 0.5s;
 `;
 
-const Modal = styled.div`
+const Modal = styled.div<modal>`
   visibility: ${({ modalIsOpen }) =>
     modalIsOpen === true ? `visible` : `hidden`};
   opacity: ${({ modalIsOpen }) => (modalIsOpen === true ? "1" : "0")};
-  background-color: ${({ theme: { gray } }) => gray[0]};
+  background-color: ${({ theme: { color } }) => color.white};
   border-radius: ${({ theme: { borderRadius } }) => borderRadius};
   box-shadow: ${({ theme: { shadow } }) => shadow.m};
   position: fixed;
@@ -39,7 +44,7 @@ const Modal = styled.div`
     position: fixed;
     right: ${({ theme: { spacing } }) => spacing[4]};
     top: ${({ theme: { spacing } }) => spacing[2]};
-    color: ${({ theme: { gray } }) => gray[0]};
+    color: ${({ theme: { color } }) => color.white};
     font-weight: ${({ theme: { fontWeight } }) => fontWeight.bold};
     z-index: 302;
   }
@@ -51,7 +56,17 @@ const OverflowDiv = styled.div`
   padding: ${({ theme: { spacing } }) => `${spacing[7]} ${spacing[4]}`};
 `;
 
-export default function IEModal({ modalIsOpen, children, handleChange }) {
+type props = {
+  modalIsOpen: boolean;
+  children: React.ReactNode;
+  handleChange: () => void;
+};
+
+export default function IEModal({
+  modalIsOpen,
+  children,
+  handleChange,
+}: props) {
   return (
     <div>
       <Shade modalIsOpen={modalIsOpen} />

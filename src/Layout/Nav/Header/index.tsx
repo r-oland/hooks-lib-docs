@@ -2,8 +2,8 @@
 import { Link } from "gatsby";
 import React, { useContext } from "react";
 import styled from "styled-components";
-import Log from "../../components/Logo";
-import { NavContext } from "../Layout";
+import { NavContext } from "../../Layout";
+import Logo from "./Logo";
 // =========================
 
 const Flex = styled(Link)`
@@ -22,15 +22,7 @@ const Wrapper = styled.div`
   padding-left: ${({ theme: { spacing } }) => spacing[1]};
 `;
 
-const Svg = styled.div`
-  opacity: 0;
-
-  @media screen and (min-width: 1000px) {
-    opacity: 1;
-  }
-`;
-
-export default function Logo() {
+export default function Header() {
   const { setFolded, query } = useContext(NavContext);
 
   return (
@@ -40,9 +32,7 @@ export default function Logo() {
         !query && setFolded(false);
       }}
     >
-      <Svg>
-        <Log width="40px" />
-      </Svg>
+      <Logo />
       <Wrapper>
         <h4>Library</h4>
         <p>Roland Branten</p>

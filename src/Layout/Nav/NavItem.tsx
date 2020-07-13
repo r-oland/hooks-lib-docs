@@ -6,7 +6,11 @@ import { NavContext } from "../Layout";
 import SubItems from "./SubItems";
 // =========================
 
-const Main = styled.div`
+type Main = {
+  current: boolean;
+};
+
+const Main = styled.div<Main>`
   line-height: 1.4;
   margin-bottom: ${({ theme: { spacing } }) => spacing[2]};
 
@@ -16,19 +20,24 @@ const Main = styled.div`
   }
 `;
 
-const SubLink = styled(Link)`
+type SubLink = {
+  name: string;
+  selected: string;
+};
+
+const SubLink = styled(Link)<SubLink>`
   
     ${({ theme: { fontSize } }) => fontSize.s}
-    color: ${({ theme: { gray } }) => gray[12]};
+    color: ${({ theme: { color } }) => color.black};
 
     font-weight: ${({ theme: { fontWeight }, name, selected }) =>
       name === selected && fontWeight.bold};
 `;
 
-export default function NavItem({ data }) {
+export default function NavItem({ data }: { data: any }) {
   const { selected, setFolded, query } = useContext(NavContext);
 
-  const components = data.map((e, index) => {
+  const components = data.map((e: any, index: number) => {
     const name = e.name;
     const link = name.toLowerCase();
     const subMenu = e.subMenu;
@@ -36,7 +45,7 @@ export default function NavItem({ data }) {
 
     const componentGroup =
       subMenu &&
-      e.componentCollection.map((edge) => {
+      e.componentCollection.map((edge: any) => {
         const name = edge.name;
         const link = name.toLowerCase();
 

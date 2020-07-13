@@ -7,8 +7,8 @@ const Overflow = styled.div`
   overflow: hidden;
 `;
 
-const root = ({ element, props }) => {
-  return <Overflow {...props}>{element}</Overflow>;
+const root = ({ element }: { element: React.ReactNode }) => {
+  return <Overflow>{element}</Overflow>;
 };
 
 export default root;

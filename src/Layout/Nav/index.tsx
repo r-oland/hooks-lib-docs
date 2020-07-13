@@ -6,7 +6,7 @@ import React, { useContext, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { NavContext } from "../Layout";
 import FoldButton from "./FoldButton";
-import Logo from "./Logo";
+import Header from "./Header";
 import NavItem from "./NavItem";
 // =========================
 
@@ -14,7 +14,7 @@ const Wrapper = styled(motion.div)`
   position: fixed;
   height: 100vh;
   width: 300px;
-  background: ${({ theme: { gray } }) => gray[0]};
+  background: ${({ theme: { color } }) => color.white};
   padding: ${({ theme: { spacing } }) => `0 ${spacing[4]} 0 `};
   overflow-y: scroll;
   z-index: 10;
@@ -29,11 +29,11 @@ const Wrapper = styled(motion.div)`
   }
 `;
 
-export default function MainNav({ path }) {
+export default function MainNav({ path }: { path: any }) {
   const { setSelected, folded, setFolded } = useContext(NavContext);
   const smallScreen = useMediaQ("max", 600);
 
-  const ref = useRef();
+  const ref = useRef(null!);
   useOnClickOutside(
     ref,
     () => {
@@ -49,34 +49,16 @@ export default function MainNav({ path }) {
           name
         }
       }
-      allSanityComponents {
-        nodes {
-          name
-          subMenu
-          componentCollection {
-            name
-          }
-        }
-      }
     }
   `);
 
-  const compPath = data.allSanityComponents.nodes || [];
   const hookPath = data.allSanityHooks.nodes || [];
 
   useEffect(() => {
-    hookPath.forEach((e) => {
+    hookPath.forEach((e: any) => {
       path.hook === e.name && setSelected(path.hook);
     });
-
-    compPath.forEach((e) => {
-      path.comp === e.name && setSelected(path.comp);
-
-      e.componentCollection.forEach((e) => {
-        path.comp === e.name && setSelected(path.comp);
-      });
-    });
-  }, [compPath, hookPath, path, setSelected]);
+  }, [hookPath, path, setSelected]);
 
   return (
     <div ref={ref}>
@@ -99,9 +81,7 @@ export default function MainNav({ path }) {
         animate={folded ? "open" : "closed"}
         initial={false}
       >
-        <Logo />
-        <h3 id="components">Components</h3>
-        <NavItem data={data.allSanityComponents.nodes} />
+        <Header />
         <h3>Hooks</h3>
         <NavItem data={data.allSanityHooks.nodes} />
       </Wrapper>

@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   max-width: 750px;
-  background: ${({ theme: { gray } }) => gray[0]};
+  background: ${({ theme: { color } }) => color.white};
   padding: ${({ theme: { spacing } }) => `${spacing[4]} ${spacing[4]}`};
   border-radius: ${({ theme: { borderRadius } }) => borderRadius};
   box-shadow: ${({ theme: { shadow } }) => shadow.xs};
@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   .title,
   .description {
     font-weight: ${({ theme: { fontWeight } }) => fontWeight.bold};
-    border-bottom: solid 2px ${({ theme: { gray } }) => gray[5]};
+    border-bottom: solid 2px ${({ theme: { color } }) => color.gray};
     padding-bottom: ${({ theme: { spacing } }) => spacing[1]};
   }
 
@@ -37,7 +37,7 @@ const Grid = styled.div`
 
 const Item = styled(Grid)`
   margin-bottom: ${({ theme: { spacing } }) => spacing[2]};
-  border-bottom: solid 1px ${({ theme: { gray } }) => gray[2]};
+  border-bottom: solid 1px ${({ theme: { color } }) => color.gray};
   padding-bottom: ${({ theme: { spacing } }) => spacing[1]};
 `;
 
@@ -58,7 +58,7 @@ const Description = styled.div`
 `;
 
 const DValue = styled.div`
-  color: ${({ theme: { primary } }) => primary[6]};
+  color: ${({ theme: { color } }) => color.primary};
   ${({ theme: { fontSize } }) => fontSize.xs}
   font-style: italic;
   grid-column: 2;
@@ -69,8 +69,14 @@ const DValue = styled.div`
   }
 `;
 
-export default function PropArgs({ propArg, title }) {
-  const propArgs = propArg.map((e, index) => {
+export default function PropArgs({
+  propArg,
+  title,
+}: {
+  propArg: [];
+  title: string;
+}) {
+  const propArgs = propArg.map((e: any, index: number) => {
     const prop = e.prop;
     const arg = e.argument;
     const description = e.description;

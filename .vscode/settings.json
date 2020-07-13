@@ -13,17 +13,12 @@
     "gatsby-node.js": true,
     "package-lock.json": true,
     "package.json": true,
-    "jsconfig.json": true,
+    "tsconfig.json": true,
     "src/root.js": true,
     "src/page.js": true,
     ".babelrc": true,
     "netlify.toml": true
   },
-
-  "files.associations": {
-    "*.js": "javascriptreact"
-  },
-
   "vsicons.associations.folders": [
     {
       "icon": "config",

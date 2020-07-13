@@ -18,7 +18,7 @@ const GlobalStyles = createGlobalStyle`
       
       html {
          font-family: Raleway;
-         background-color: ${({ theme: { gray } }) => gray[1]};
+         background-color: ${({ theme: { color } }) => color.offWhite};
 
          input, select, textarea, label{
             font-family: Raleway;
@@ -28,7 +28,7 @@ const GlobalStyles = createGlobalStyle`
 
 
       body {
-         color: ${({ theme: { gray } }) => gray[14]};
+         color: ${({ theme: { color } }) => color.black};
 
       }
 
@@ -155,7 +155,7 @@ const GlobalStyles = createGlobalStyle`
 
       button {
          background: none;
-         color: ${({ theme: { gray } }) => gray[14]};
+         color: ${({ theme: { color } }) => color.gray};
          border: none;
          padding: 0;
          cursor: pointer;
@@ -181,7 +181,7 @@ const GlobalStyles = createGlobalStyle`
       }
 
       a {
-         color: ${({ theme: { gray } }) => gray[14]};
+         color: ${({ theme: { color } }) => color.gray};
          text-decoration: none;
       }
 

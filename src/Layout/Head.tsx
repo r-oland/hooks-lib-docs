@@ -4,7 +4,13 @@ import React from "react";
 import { Helmet } from "react-helmet";
 // =========================
 
-export default function Head({ title, description, keywords }) {
+type props = {
+  title?: string;
+  description?: string;
+  keywords?: string;
+};
+
+export default function Head({ title, description, keywords }: props) {
   const data = useStaticQuery(graphql`
     query MyQuery {
       site {

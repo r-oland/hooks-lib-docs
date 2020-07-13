@@ -10,6 +10,12 @@ const Text = styled.p`
   font-weight: ${({ theme: { fontWeight } }) => fontWeight.bold};
 `;
 
+declare global {
+  interface Document {
+    documentMode?: any;
+  }
+}
+
 export default function IEWarning() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
@@ -23,13 +29,15 @@ export default function IEWarning() {
   };
 
   return (
-    <div>
-      <IEModal modalIsOpen={modalIsOpen} handleChange={handleChange}>
-        <Text>
-          Internet Explorer word sinds april 2017 niet meer ondersteund. Gebruik
-          a.u.b. een moderne browser om deze site te bezoeken.
-        </Text>
-      </IEModal>
-    </div>
+    <>
+      {modalIsOpen && (
+        <IEModal modalIsOpen={modalIsOpen} handleChange={handleChange}>
+          <Text>
+            Internet Explorer word sinds april 2017 niet meer ondersteund.
+            Gebruik a.u.b. een moderne browser om deze site te bezoeken.
+          </Text>
+        </IEModal>
+      )}
+    </>
   );
 }

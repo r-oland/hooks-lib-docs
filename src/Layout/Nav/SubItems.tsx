@@ -12,7 +12,12 @@ const Sub = styled.ul`
   }
 `;
 
-export default function SubItems({ componentGroup, name }) {
+type props = {
+  componentGroup: any;
+  name: string;
+};
+
+export default function SubItems({ componentGroup, name }: props) {
   const [isToggled, , toggle] = useToggle(false);
 
   return (

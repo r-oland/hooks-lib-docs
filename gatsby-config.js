@@ -3,10 +3,10 @@ const path = require("path");
 
 module.exports = {
   siteMetadata: {
-    title: `Components`,
-    description: `Collection of components`,
+    title: `Hooks-lib-docs`,
+    description: `Documentation of hooks-lib library`,
     author: `Roland Branten`,
-    siteUrl: `https://componentsrb.netlify.com/`,
+    siteUrl: `https://hookslib.netlify.app/`,
   },
   plugins: [
     `gatsby-plugin-sitemap`,
@@ -43,22 +43,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Components`,
-        short_name: `Components`,
+        name: `hooks-lib`,
+        short_name: `hooks-lib`,
         start_url: `/`,
         background_color: `#ffae20`,
         theme_color: `#ffae20`,
         display: `standalone`,
         icon: `icon/icon.png`,
-      },
-    },
-    `gatsby-plugin-offline`,
-    {
-      resolve: "gatsby-plugin-react-svg",
-      options: {
-        rule: {
-          include: /\.inline\.svg$/,
-        },
       },
     },
   ],

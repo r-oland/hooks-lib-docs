@@ -1,4 +1,3 @@
-import "intersection-observer";
 import page from "./src/page";
 import root from "./src/root";
 
