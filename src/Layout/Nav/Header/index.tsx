@@ -26,17 +26,19 @@ export default function Header() {
   const { setFolded, query } = useContext(NavContext);
 
   return (
-    <Flex
-      to="/"
-      onClick={() => {
-        !query && setFolded(false);
-      }}
-    >
-      <Logo />
-      <Wrapper>
-        <h4>Library</h4>
-        <p>Roland Branten</p>
-      </Wrapper>
-    </Flex>
+    <>
+      <Flex
+        to="/"
+        onClick={() => {
+          !query && setFolded(false);
+        }}
+      >
+        <Logo />
+        <Wrapper>
+          <h4>Library</h4>
+          <p>Roland Branten</p>
+        </Wrapper>
+      </Flex>
+    </>
   );
 }

@@ -20,18 +20,24 @@ const Bar = styled(motion.div)`
   bottom: 0;
   background: ${({ theme: { color } }) => color.primary};
   opacity: 0.2;
+  z-index: -2;
 `;
+
+type props = {
+  children: React.ReactNode | string;
+  className?: string;
+  barPosition?: string;
+};
 
 export function UnderlineButton({
   children,
   className,
-  onClick,
   barPosition = "70%",
-}) {
+}: props) {
   const [hover, watch] = useHover();
 
   return (
-    <Btn className={className} onClick={onClick} {...watch}>
+    <Btn className={className} {...watch}>
       {children}
       <Bar
         initial={{

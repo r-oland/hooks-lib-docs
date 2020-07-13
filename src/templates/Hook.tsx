@@ -2,6 +2,7 @@
 import { graphql } from "gatsby";
 import React from "react";
 import styled from "styled-components";
+import Playground from "../components/Playground";
 import PropArgs from "../components/PropArgs";
 // =========================
 
@@ -18,6 +19,7 @@ export default function Hook({ data }: { data: any }) {
   return (
     <Wrapper>
       <h3>{name}</h3>
+      <Playground />
       <PropArgs propArg={args} title="Arguments" />
     </Wrapper>
   );

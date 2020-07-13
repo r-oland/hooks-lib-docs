@@ -29,7 +29,7 @@ const Wrapper = styled(motion.div)`
   }
 `;
 
-export default function MainNav({ path }: { path: any }) {
+export default function Nav({ path }: { path: any }) {
   const { setSelected, folded, setFolded } = useContext(NavContext);
   const smallScreen = useMediaQ("max", 600);
 

@@ -3,7 +3,6 @@ import { Link } from "gatsby";
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { NavContext } from "../Layout";
-import SubItems from "./SubItems";
 // =========================
 
 type Main = {
@@ -40,34 +39,17 @@ export default function NavItem({ data }: { data: any }) {
   const components = data.map((e: any, index: number) => {
     const name = e.name;
     const link = name.toLowerCase();
-    const subMenu = e.subMenu;
     const current = selected === name;
-
-    const componentGroup =
-      subMenu &&
-      e.componentCollection.map((edge: any) => {
-        const name = edge.name;
-        const link = name.toLowerCase();
-
-        return (
-          <li key={name}>
-            <SubLink to={`/${link}`} name={name} selected={selected}>
-              {name}
-            </SubLink>
-          </li>
-        );
-      });
 
     return (
       <Main
         key={index}
         onClick={() => {
-          !query && !subMenu && setFolded(false);
+          !query && setFolded(false);
         }}
         current={current}
       >
-        {!subMenu && <Link to={`/${link}`}>{name}</Link>}
-        {subMenu && <SubItems componentGroup={componentGroup} name={name} />}
+        <Link to={`/${link}`}>{name}</Link>
       </Main>
     );
   });
