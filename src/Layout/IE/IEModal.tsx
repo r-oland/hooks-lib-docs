@@ -68,7 +68,7 @@ export default function IEModal({
   handleChange,
 }: props) {
   return (
-    <div>
+    <>
       <Shade modalIsOpen={modalIsOpen} />
       <Modal modalIsOpen={modalIsOpen}>
         <OverflowDiv>
@@ -78,6 +78,6 @@ export default function IEModal({
           {children}
         </OverflowDiv>
       </Modal>
-    </div>
+    </>
   );
 }

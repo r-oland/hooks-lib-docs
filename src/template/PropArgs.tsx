@@ -4,7 +4,6 @@ import styled from "styled-components";
 // =========================
 
 const Wrapper = styled.div`
-  max-width: 750px;
   background: ${({ theme: { color } }) => color.white};
   padding: ${({ theme: { spacing } }) => `${spacing[4]} ${spacing[4]}`};
   border-radius: ${({ theme: { borderRadius } }) => borderRadius};

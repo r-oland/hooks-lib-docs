@@ -29,7 +29,7 @@ const GlobalStyles = createGlobalStyle`
 
       body {
          color: ${({ theme: { color } }) => color.black};
-
+         overflow: hidden;
       }
 
       #gatsby-focus-wrapper{

@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import React, { useContext } from "react";
 import styled from "styled-components";
-import { NavContext } from "../Layout";
+import { AppContext } from "../Layout";
 // =========================
 
 const Button = styled(motion.svg)`
@@ -10,21 +10,22 @@ const Button = styled(motion.svg)`
   position: fixed;
   cursor: pointer;
   width: 35px;
-  left: 25px;
-  top: 25px;
+  left: 10px;
+  top: 22.5px;
 
-  @media screen and (min-width: 1000px) {
-    left: 225px;
+  ${({ theme: { mediaQ } }) => mediaQ.desktopS} {
+    left: 155px;
   }
 `;
 
 export default function FoldButton() {
-  const { folded, setFolded, query } = useContext(NavContext);
+  const { folded, setFolded, query } = useContext(AppContext);
 
   const buttonCondition = folded && query ? "open" : !query ? "open" : "closed";
 
   return (
     <Button
+      viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
       onClick={() => {
         folded === true ? setFolded(false) : setFolded(true);
@@ -36,7 +37,7 @@ export default function FoldButton() {
           x: 0,
         },
         closed: {
-          x: -200,
+          x: -150,
         },
       }}
       transition={{
@@ -44,10 +45,8 @@ export default function FoldButton() {
         damping: 20,
         stiffness: 130,
       }}
-      viewBox="0 0 137.361 137.361"
     >
-      <motion.g
-        fill="#2b2b2b"
+      <motion.path
         animate={folded ? "open" : "closed"}
         variants={{
           open: {
@@ -57,13 +56,9 @@ export default function FoldButton() {
             rotate: 180,
           },
         }}
-      >
-        <path d="M83.635 104.474a6.4 6.4 0 01-9.014 0l-31.5-31.6a6.366 6.366 0 01-.2-8.783l31.043-31.137a6.362 6.362 0 119.014 8.981L56.596 68.714l27.039 26.779a6.3 6.3 0 01.072 8.91l-.072.071z" />
-        <path
-          d="M137.362 68.681a68.67 68.67 0 100 .022zm-10.566 0a58.172 58.172 0 11-17.154-41.193l.116.116a57.615 57.615 0 0117.038 41.077z"
-          data-name="Path 1267"
-        />
-      </motion.g>
+        d="M13.83 19C13.6806 19.0005 13.533 18.9676 13.398 18.9035C13.263 18.8395 13.1441 18.7461 13.05 18.63L8.21998 12.63C8.0729 12.4511 7.99249 12.2267 7.99249 11.995C7.99249 11.7634 8.0729 11.539 8.21998 11.36L13.22 5.36003C13.3897 5.15581 13.6336 5.02739 13.8981 5.00301C14.1625 4.97863 14.4258 5.06029 14.63 5.23003C14.8342 5.39977 14.9626 5.64368 14.987 5.90811C15.0114 6.17253 14.9297 6.43581 14.76 6.64003L10.29 12L14.61 17.36C14.7323 17.5068 14.8099 17.6856 14.8338 17.8751C14.8577 18.0647 14.8268 18.2571 14.7447 18.4296C14.6627 18.6021 14.5329 18.7475 14.3708 18.8486C14.2087 18.9497 14.021 19.0023 13.83 19Z"
+        fill="#2B2B2B"
+      />
     </Button>
   );
 }

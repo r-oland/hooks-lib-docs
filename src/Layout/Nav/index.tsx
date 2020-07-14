@@ -2,35 +2,33 @@
 import { motion } from "framer-motion";
 import { graphql, useStaticQuery } from "gatsby";
 import { useMediaQ, useOnClickOutside } from "hooks-lib";
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext, useRef } from "react";
 import styled from "styled-components";
-import { NavContext } from "../Layout";
+import { AppContext } from "../Layout";
 import FoldButton from "./FoldButton";
 import Header from "./Header";
 import NavItem from "./NavItem";
 // =========================
 
-const Wrapper = styled(motion.div)`
-  position: fixed;
-  height: 100vh;
-  width: 300px;
+type Wrapper = {
+  folded: boolean;
+};
+
+const Wrapper = styled(motion.div)<Wrapper>`
+  height: 100%;
   background: ${({ theme: { color } }) => color.white};
-  padding: ${({ theme: { spacing } }) => `0 ${spacing[4]} 0 `};
+  padding: ${({ theme: { spacing }, folded }) =>
+    folded ? `0 ${spacing[4]} 0 ` : 0};
   overflow-y: scroll;
   z-index: 10;
-  h3 {
-    margin: ${({ theme: { spacing } }) => `${spacing[6]} 0 ${spacing[1]}`};
-  }
-
-  #components {
-    @media screen and (min-width: 1000px) {
-      margin-top: ${({ theme: { spacing } }) => spacing[5]};
-    }
-  }
 `;
 
-export default function Nav({ path }: { path: any }) {
-  const { setSelected, folded, setFolded } = useContext(NavContext);
+const Title = styled.h4`
+  margin: ${({ theme: { spacing } }) => `${spacing[6]} 0 ${spacing[1]}`};
+`;
+
+export default function Nav() {
+  const { folded, setFolded } = useContext(AppContext);
   const smallScreen = useMediaQ("max", 600);
 
   const ref = useRef(null!);
@@ -44,21 +42,13 @@ export default function Nav({ path }: { path: any }) {
 
   const data = useStaticQuery(graphql`
     query navQuery {
-      allSanityHooks {
+      allSanityHooks(sort: { fields: name, order: ASC }) {
         nodes {
           name
         }
       }
     }
   `);
-
-  const hookPath = data.allSanityHooks.nodes || [];
-
-  useEffect(() => {
-    hookPath.forEach((e: any) => {
-      path.hook === e.name && setSelected(path.hook);
-    });
-  }, [hookPath, path, setSelected]);
 
   return (
     <div ref={ref}>
@@ -67,10 +57,12 @@ export default function Nav({ path }: { path: any }) {
           open: {
             x: 0,
             opacity: 1,
+            width: 225,
           },
           closed: {
-            x: -300,
+            x: -225,
             opacity: 0,
+            width: 0,
           },
         }}
         transition={{
@@ -79,10 +71,11 @@ export default function Nav({ path }: { path: any }) {
           stiffness: 130,
         }}
         animate={folded ? "open" : "closed"}
-        initial={false}
+        initial="open"
+        folded={folded}
       >
         <Header />
-        <h3>Hooks</h3>
+        <Title>Hooks</Title>
         <NavItem data={data.allSanityHooks.nodes} />
       </Wrapper>
       <FoldButton />

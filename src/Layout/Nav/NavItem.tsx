@@ -2,7 +2,7 @@
 import { Link } from "gatsby";
 import React, { useContext } from "react";
 import styled from "styled-components";
-import { NavContext } from "../Layout";
+import { AppContext } from "../Layout";
 // =========================
 
 type Main = {
@@ -14,32 +14,18 @@ const Main = styled.div<Main>`
   margin-bottom: ${({ theme: { spacing } }) => spacing[2]};
 
   a {
+    ${({ theme: { fontSize } }) => fontSize.s}
     font-weight: ${({ theme: { fontWeight }, current }) =>
       current && fontWeight.bold};
   }
 `;
 
-type SubLink = {
-  name: string;
-  selected: string;
-};
-
-const SubLink = styled(Link)<SubLink>`
-  
-    ${({ theme: { fontSize } }) => fontSize.s}
-    color: ${({ theme: { color } }) => color.black};
-
-    font-weight: ${({ theme: { fontWeight }, name, selected }) =>
-      name === selected && fontWeight.bold};
-`;
-
 export default function NavItem({ data }: { data: any }) {
-  const { selected, setFolded, query } = useContext(NavContext);
+  const { setFolded, query, slug, hook } = useContext(AppContext);
 
   const components = data.map((e: any, index: number) => {
     const name = e.name;
-    const link = name.toLowerCase();
-    const current = selected === name;
+    const current = hook === name;
 
     return (
       <Main
@@ -49,7 +35,7 @@ export default function NavItem({ data }: { data: any }) {
         }}
         current={current}
       >
-        <Link to={`/${link}`}>{name}</Link>
+        <Link to={`/${name.toLowerCase()}`}>{name}</Link>
       </Main>
     );
   });

@@ -9,15 +9,11 @@ export const Container = styled.div`
   margin: 0 auto;
 
   @media screen and (min-width: 768px) {
-    padding: 0 6.5%;
-  }
-
-  @media screen and (min-width: 1200px) {
-    padding: 0 12.5%;
+    padding: 0 4%;
   }
 
   @media screen and (min-width: 1600px) {
-    padding: 0 15%;
+    padding: 0 10%;
     max-width: 130rem;
   }
 `;

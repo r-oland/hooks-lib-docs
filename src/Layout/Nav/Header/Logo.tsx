@@ -4,12 +4,7 @@ import styled, { ThemeContext } from "styled-components";
 // =========================
 
 const Svg = styled.svg`
-  width: 40px;
-  opacity: 0;
-
-  @media screen and (min-width: 1000px) {
-    opacity: 1;
-  }
+  width: 35px;
 `;
 
 export default function Logo() {

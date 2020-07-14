@@ -1,17 +1,3 @@
-exports.onCreatePage = ({ page, actions }) => {
-  const { createPage, deletePage } = actions;
-
-  deletePage(page);
-
-  return createPage({
-    ...page,
-
-    context: {
-      ...page.context,
-    },
-  });
-};
-
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
@@ -37,7 +23,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     createPage({
       path,
-      component: require.resolve("./src/templates/Hook.tsx"),
+      component: require.resolve("./src/template/index.tsx"),
       context: { slug: slug, hook: edge.name },
     });
   });

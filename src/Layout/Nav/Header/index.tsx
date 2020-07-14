@@ -2,7 +2,7 @@
 import { Link } from "gatsby";
 import React, { useContext } from "react";
 import styled from "styled-components";
-import { NavContext } from "../../Layout";
+import { AppContext } from "../../Layout";
 import Logo from "./Logo";
 // =========================
 
@@ -10,20 +10,37 @@ const Flex = styled(Link)`
   display: flex;
   align-items: center;
   margin-top: ${({ theme: { spacing } }) => spacing[4]};
-  width: 185px;
+  margin-left: 30px;
 
-  p {
-    line-height: 1;
-    font-size: 15px;
+  ${({ theme: { mediaQ } }) => mediaQ.desktopS} {
+    margin-left: 0;
   }
 `;
 
 const Wrapper = styled.div`
-  padding-left: ${({ theme: { spacing } }) => spacing[1]};
+  margin-left: ${({ theme: { spacing } }) => spacing[1]};
+  h4 {
+    font-size: 19px;
+    line-height: 1;
+  }
+
+  p {
+    line-height: 1;
+    ${({ theme: { fontSize } }) => fontSize.xs}
+  }
+`;
+
+const Bar = styled.div`
+  width: 90%;
+  height: 1.5px;
+  background: ${({ theme: { color } }) => color.black};
+  margin: 0 auto;
+  margin-top: ${({ theme: { spacing } }) => spacing[2]};
+  opacity: 0.1;
 `;
 
 export default function Header() {
-  const { setFolded, query } = useContext(NavContext);
+  const { setFolded, query } = useContext(AppContext);
 
   return (
     <>
@@ -35,10 +52,11 @@ export default function Header() {
       >
         <Logo />
         <Wrapper>
-          <h4>Library</h4>
-          <p>Roland Branten</p>
+          <h4>hooks-lib</h4>
+          <p>React hooks</p>
         </Wrapper>
       </Flex>
+      <Bar />
     </>
   );
 }
