@@ -9,7 +9,7 @@ const Btn = styled.button`
   position: relative;
   display: inline-block;
   overflow: hidden;
-  font-weight: ${({ theme: { fontWeight } }) => fontWeight.semiBold};
+  font-weight: ${({ theme: { fontWeight } }) => fontWeight.heavy};
 `;
 
 const Bar = styled(motion.div)`
@@ -27,17 +27,19 @@ type props = {
   children: React.ReactNode | string;
   className?: string;
   barPosition?: string;
+  as: any;
 };
 
 export function UnderlineButton({
   children,
   className,
   barPosition = "70%",
+  as = "button",
 }: props) {
   const [hover, watch] = useHover();
 
   return (
-    <Btn className={className} {...watch}>
+    <Btn className={className} {...watch} as={as}>
       {children}
       <Bar
         initial={{

@@ -21,7 +21,7 @@ const Main = styled.div<Main>`
 `;
 
 export default function NavItem({ data }: { data: any }) {
-  const { setFolded, query, slug, hook } = useContext(AppContext);
+  const { setFolded, query, hook } = useContext(AppContext);
 
   const components = data.map((e: any, index: number) => {
     const name = e.name;

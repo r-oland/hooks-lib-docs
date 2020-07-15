@@ -1,5 +1,4 @@
 // Components==============
-import { motion } from "framer-motion";
 import { graphql, useStaticQuery } from "gatsby";
 import { useMediaQ, useOnClickOutside } from "hooks-lib";
 import React, { useContext, useRef } from "react";
@@ -14,11 +13,12 @@ type Wrapper = {
   folded: boolean;
 };
 
-const Wrapper = styled(motion.div)<Wrapper>`
+const Wrapper = styled.div<Wrapper>`
   height: 100%;
   background: ${({ theme: { color } }) => color.white};
-  padding: ${({ theme: { spacing }, folded }) =>
-    folded ? `0 ${spacing[4]} 0 ` : 0};
+  padding: ${({ theme: { spacing } }) => `0 ${spacing[4]} 0 `};
+  display: ${({ folded }) => (folded ? `block` : "none")};
+  width: 225px;
   overflow-y: scroll;
   z-index: 10;
 `;
@@ -52,28 +52,7 @@ export default function Nav() {
 
   return (
     <div ref={ref}>
-      <Wrapper
-        variants={{
-          open: {
-            x: 0,
-            opacity: 1,
-            width: 225,
-          },
-          closed: {
-            x: -225,
-            opacity: 0,
-            width: 0,
-          },
-        }}
-        transition={{
-          type: "spring",
-          damping: 20,
-          stiffness: 130,
-        }}
-        animate={folded ? "open" : "closed"}
-        initial="open"
-        folded={folded}
-      >
+      <Wrapper folded={folded}>
         <Header />
         <Title>Hooks</Title>
         <NavItem data={data.allSanityHooks.nodes} />

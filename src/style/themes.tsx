@@ -63,9 +63,9 @@ export const theme: DefaultTheme = {
     desktopL: mediaQuery(1600),
   },
   fontSize: {
-    xs: fontSize(14, 14),
-    s: fontSize(15, 16),
-    m: fontSize(16, 16),
+    xs: fontSize(15, 15),
+    s: fontSize(16, 16),
+    m: fontSize(17, 17),
     l: fontSize(18, 18),
     xl: fontSize(20, 22),
     h4: fontSize(23, 25),
