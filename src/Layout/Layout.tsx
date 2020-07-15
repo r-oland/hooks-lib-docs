@@ -16,7 +16,6 @@ setConfig({
 
 const Flex = styled.div`
   display: flex;
-  height: 100vh;
 `;
 
 type context = {

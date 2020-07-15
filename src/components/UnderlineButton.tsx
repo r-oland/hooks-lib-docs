@@ -10,6 +10,7 @@ const Btn = styled.button`
   display: inline-block;
   overflow: hidden;
   font-weight: ${({ theme: { fontWeight } }) => fontWeight.heavy};
+  z-index: 2;
 `;
 
 const Bar = styled(motion.div)`
@@ -27,7 +28,7 @@ type props = {
   children: React.ReactNode | string;
   className?: string;
   barPosition?: string;
-  as: any;
+  as?: any;
 };
 
 export function UnderlineButton({

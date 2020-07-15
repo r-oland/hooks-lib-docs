@@ -18,6 +18,7 @@ const LayoutStyle: CSSProperties = {
   justifyContent: "center",
   alignItems: "center",
   height: "40vh",
+  textAlign: "center",
 };
 
 const Container = styled.div`

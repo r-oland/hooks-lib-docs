@@ -14,8 +14,8 @@
     "package-lock.json": true,
     "package.json": true,
     "tsconfig.json": true,
-    "src/root.tsx": true,
-    "src/page.tsx": true,
+    // "src/root.tsx": true,
+    // "src/page.tsx": true,
     ".babelrc": true,
     "netlify.toml": true
   },

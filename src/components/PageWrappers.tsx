@@ -1,29 +1,36 @@
 // Components==============
 import { AnimatePresence, motion } from "framer-motion";
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { AppContext } from "../Layout/Layout";
 import { pageProps } from "../page";
 import Playground from "./Playground";
 // =========================
 
-const ContentWrap = styled.div`
+type ContentWrap = {
+  isHookPage: boolean;
+};
+
+const ContentWrap = styled.div<ContentWrap>`
   width: 100%;
   height: 100%;
 
   ${({ theme: { mediaQ } }) => mediaQ.desktopS} {
-    max-width: 30vw;
+    max-width: ${({ isHookPage }) => isHookPage && "30vw"};
   }
 `;
 
 export function ContentWrapper({ element, props }: pageProps) {
   const duration = 0.5;
+  const { slug } = useContext(AppContext);
+  const isHookPage = typeof slug !== "undefined";
 
   return (
-    <ContentWrap>
+    <ContentWrap isHookPage={isHookPage}>
       <AnimatePresence>
         <motion.div
-          style={{ height: "100%" }}
           key={props.path}
+          style={{ height: "100%" }}
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
@@ -45,7 +52,7 @@ export function ContentWrapper({ element, props }: pageProps) {
 
 const PlaygroundWrap = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
 `;
 
 export function PlayGroundWrapper({ props }: pageProps) {

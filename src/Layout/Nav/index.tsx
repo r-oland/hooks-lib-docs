@@ -14,7 +14,7 @@ type Wrapper = {
 };
 
 const Wrapper = styled.div<Wrapper>`
-  height: 100%;
+  height: 100vh;
   background: ${({ theme: { color } }) => color.white};
   padding: ${({ theme: { spacing } }) => `0 ${spacing[4]} 0 `};
   display: ${({ folded }) => (folded ? `block` : "none")};

@@ -48,7 +48,7 @@ export default function Playground({ sandbox }: { sandbox: string }) {
 }
 
 const parent = {
-  mount: { transition: { delayChildren: 1.2 } },
+  mount: { transition: { delayChildren: 1.5 } },
 };
 
 const overlay = {
