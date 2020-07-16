@@ -36,7 +36,7 @@ export default function Playground({ sandbox }: { sandbox: string }) {
       <LoadText variants={overlay}>Loading playground...</LoadText>
 
       <iframe
-        src={sandbox}
+        src={`${sandbox}&codemirror=1&editorsize=60`}
         style={{
           width: "100%",
           height: "100%",
@@ -48,7 +48,7 @@ export default function Playground({ sandbox }: { sandbox: string }) {
 }
 
 const parent = {
-  mount: { transition: { delayChildren: 1.5 } },
+  mount: { transition: { delayChildren: 1.2 } },
 };
 
 const overlay = {
