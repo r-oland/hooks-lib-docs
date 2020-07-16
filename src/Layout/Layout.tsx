@@ -1,6 +1,6 @@
 // Components==============
 import { useMediaQ } from "hooks-lib";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { setConfig } from "react-hot-loader";
 import { hot } from "react-hot-loader/root";
 import styled, { ThemeProvider } from "styled-components";
@@ -40,9 +40,14 @@ type props = {
   path: string;
 };
 
-function Layout({ pageContext, children, path }: props) {
+function Layout({ pageContext, children }: props) {
   const query = useMediaQ("min", 1000);
-  const [folded, setFolded] = useState(path === "/" && !query ? false : true);
+  const [folded, setFolded] = useState(false);
+
+  useEffect(() => {
+    if (!query) setFolded(false);
+    else setFolded(true);
+  }, []);
 
   const contextValue = {
     folded,
