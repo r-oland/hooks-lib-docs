@@ -10,8 +10,8 @@ const Wrapper = styled.div`
   margin-top: ${({ theme: { spacing } }) => spacing[10]};
 
   h4 {
-    margin-bottom: ${({ theme: { spacing } }) => spacing[2]};
-    ${({ theme: { fontSize } }) => fontSize.l}
+    margin-bottom: ${({ theme: { spacing } }) => spacing[3]};
+    ${({ theme: { fontSize } }) => fontSize.m}
     font-weight: ${({ theme: { fontWeight } }) => fontWeight.bold};
   }
 `;
@@ -21,7 +21,7 @@ const Bar = styled.div`
   width: 200px;
   background: black;
   opacity: 0.1;
-  margin: 0 auto ${({ theme: { spacing } }) => spacing[4]};
+  margin: 0 auto ${({ theme: { spacing } }) => spacing[2]};
 `;
 
 const Circle = styled.div`
@@ -42,8 +42,8 @@ const Flex = styled.div`
 export default function Image() {
   return (
     <Wrapper>
-      <h4>This package is written by</h4>
       <Bar />
+      <h4>This package is written by</h4>
       <Circle>
         <img src={headshot} alt="Roland Branten" />
       </Circle>

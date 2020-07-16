@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { ContentWrapper, PlayGroundWrapper } from "./components/PageWrappers";
+import Shade from "./components/Shade";
 import Layout from "./Layout/Layout";
 
 const Wrapper = styled.div`
+  position: relative;
   height: 100vh;
   width: 100%;
   overflow-y: auto;
@@ -11,6 +13,8 @@ const Wrapper = styled.div`
 
   ${({ theme: { mediaQ } }) => mediaQ.desktopS} {
     display: flex;
+    height: initial;
+    overflow: initial;
   }
 `;
 
@@ -22,6 +26,7 @@ const page = ({ element, props }: pageProps) => {
   return (
     <Layout {...props}>
       <Wrapper>
+        <Shade />
         <ContentWrapper element={element} props={props} />
         {props.path.includes("use") && <PlayGroundWrapper props={props} />}
       </Wrapper>

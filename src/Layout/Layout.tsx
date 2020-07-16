@@ -37,11 +37,12 @@ export const AppContext = React.createContext<context>({
 type props = {
   pageContext: { slug: string; hook: string };
   children: React.ReactNode;
+  path: string;
 };
 
-function Layout({ pageContext, children }: props) {
-  const [folded, setFolded] = useState(true);
+function Layout({ pageContext, children, path }: props) {
   const query = useMediaQ("min", 1000);
+  const [folded, setFolded] = useState(path === "/" && !query ? false : true);
 
   const contextValue = {
     folded,

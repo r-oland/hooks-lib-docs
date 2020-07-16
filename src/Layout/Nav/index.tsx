@@ -14,6 +14,11 @@ type Wrapper = {
 };
 
 const Wrapper = styled.div<Wrapper>`
+  position: fixed;
+
+  ${({ theme: { mediaQ } }) => mediaQ.mobile} {
+    position: initial;
+  }
   height: 100vh;
   background: ${({ theme: { color } }) => color.white};
   padding: ${({ theme: { spacing } }) => `0 ${spacing[4]} 0 `};
