@@ -44,10 +44,9 @@ export default function NextHook({ allHooks, currentName }: props) {
     .filter((_: any, index: number) => {
       if (index !== allHooks.length - 1) {
         return index === currentIndex + 1;
-      } else {
-        return allHooks[0];
       }
     })
+    .concat(allHooks[0])
     .map((e: any, index: number) => {
       return (
         <Link key={index} to={`/${e?.name?.toLowerCase()}`}>

@@ -13,6 +13,7 @@ const Wrapper = styled(motion.div)`
 
   h3 {
     margin-bottom: ${({ theme: { spacing } }) => spacing[1]};
+    word-break: break-all;
   }
 `;
 
